@@ -70,7 +70,7 @@ You must specify the `tool_type_id` property in the request body with the `slack
 | team_url | optional, updatable | String | team_name | The Slack team name, which is the word or phrase before _.slack.com_ in the team URL. |
 | toolchain_bind | optional, updatable, `Default: true` | Boolean | toolchain_bind | Generates `tool added to toolchain` notifications. |
 | toolchain_unbind | optional, updatable, `Default: true` | Boolean | toolchain_unbind | Generates `tool removed from toolchain` notifications. |
-{: caption="Table 1. Slack tool integration parameters" caption-side="bottom"}
+{: caption="Slack tool integration parameters" caption-side="bottom"}
 
 ## Enabling Slack notifications for Tekton Pipelines
 {: #slack_tekton_pipelines}

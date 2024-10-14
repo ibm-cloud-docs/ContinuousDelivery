@@ -41,21 +41,21 @@ Complete the following tasks to configure a pipeline.
 4. Configure the job.
 5. Click **SAVE**.
 
-![Adding a job to a stage](images/AddJob2.png){: caption="Figure 1. Adding a job to a stage" caption-side="bottom"}
+![Adding a job to a stage](images/AddJob2.png){: caption="Adding a job to a stage" caption-side="bottom"}
 
 ## Running a stage
 {: #deliverypipeline_run_stage}
 
 You can manually run a stage by clicking the **Run Stage** icon on the Pipeline page.
 
-![Clicking the Run Stage icon on a stage](images/RunStage.png){: caption="Figure 2. Running a stage" caption-side="bottom"}
+![Clicking the Run Stage icon on a stage](images/RunStage.png){: caption="Running a stage" caption-side="bottom"}
 
 You can also request on-demand builds and deployments from the build history page in one of two ways:
 
 * Drag a build to the box that is under a configured stage.
 * In the LAST EXECUTION RESULT section, click the **Send to** icon and then select a space to deploy to.
 
-![The Execute stage with this build icon](images/deploy_to.png){: caption="Figure 3. Deploying a stage" caption-side="bottom"}
+![The Execute stage with this build icon](images/deploy_to.png){: caption="Deploying a stage" caption-side="bottom"}
 
 To cancel a running stage, on the stage, click **View logs and history**. In the list of jobs, click the running job's number and then click **CANCEL**. You can also cancel jobs individually by clicking a job and then clicking **CANCEL**, or by clicking the **Stop** icon for a job on its stage.
 

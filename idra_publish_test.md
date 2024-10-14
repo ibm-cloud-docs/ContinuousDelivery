@@ -39,7 +39,7 @@ Test results must provide data in one of these supported formats:
 | Static AppScan              | Static App Scans that are provided by IBM Application Security on Cloud  |
 | Dynamic AppScan             | Dynamic App Scans that are provided by IBM Application Security on Cloud |
 | Vulnerability Advisor        | Vulnerability Advisor results from IBM Vulnerability Advisor on Cloud    |
-{: caption="Table 1. Test type and format" caption-side="top"}
+{: caption="Test type and format" caption-side="top"}
 
 The following example script uploads FVT test results to {{site.data.keyword.DRA_short}}:
 
@@ -89,7 +89,7 @@ The `idra` command supports the following `type` values:
 | `staticsecurityscan`  | Static security scan results from IBM Application Security on Cloud  |
 | `dynamicsecurityscan` | Dynamic security scan results from IBM Application Security on Cloud |
 | `vulnerabilityadvisor`| Vulnerability Advisor results from IBM Vulnerability Advisor on Cloud|
-{: caption="Table 2. idra command types" caption-side="top"}
+{: caption="idra command types" caption-side="top"}
 
 To learn more about the `idra` command, see [the grunt-idra3 package's page on npm](https://www.npmjs.com/package/grunt-idra3).
 

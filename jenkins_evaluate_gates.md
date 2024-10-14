@@ -46,7 +46,7 @@ This step requires one parameter. It can also accept two of the three optional p
 | `forceDecision`   | Optional: Set this parameter to `true` to stop the pipeline if the gate fails. Set it to `false` to force the pipeline to continue after a gate fails. By default, the value is false. |
 | `buildNumber`     | Optional: Set value to any string to represent a version number.                                                             |
 | `applicationName` | Optional: Set the application name. When this value is set, the environment variable IBM_CLOUD_DEVOPS_APP_NAME is ignored. |
-{: caption="Table 1. Publishing build records parameters and definitions" caption-side="top"}
+{: caption="Publishing build records parameters and definitions" caption-side="top"}
 
 The following example command includes the parameters. In this command, the pipeline continues running regardless of the gate's decision.
 

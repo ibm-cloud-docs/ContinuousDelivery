@@ -66,7 +66,7 @@ Configure the {{site.data.keyword.deliverypipeline}} to add an npm build job:
 1. On the stage, add a build job.
 1. Configure the build job:
    
-   ![npm build job](images/nexus_npm_job.png){: caption="Figure 1. npm build job" caption-side="bottom"}
+   ![npm build job](images/nexus_npm_job.png){: caption="npm build job" caption-side="bottom"}
 
    a. For the builder type, select **npm (Artifactory or Nexus)**.
 
@@ -100,7 +100,7 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Maven Build job:
 1. On the stage, add a build job.
 1. Configure the build job:
 
-   ![Maven build job](images/nexus_maven_job.png){: caption="Figure 2. Maven build job" caption-side="bottom"}
+   ![Maven build job](images/nexus_maven_job.png){: caption="Maven build job" caption-side="bottom"}
 
    a. For the builder type, select **Maven (Artifactory, Nexus, SonarQube)**.
 
@@ -139,4 +139,4 @@ You must specify the `tool_type_id` property in the request body with the `nexus
 | token | optional, updatable | Password | token | The password or token for authenticating with the Nexus repo. You can use a toolchain secret reference for this parameter. For more information about secret references, see [Protecting your sensitive data in Continuous Delivery](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secure_credentials). |
 | type | required, updatable | String | type | The repo type for your Nexus tool integration. |
 | user_id | optional, updatable | String | user_id | The user ID or email address for authenticating with your Nexus repo. |
-{: caption="Table 1. Nexus tool integration parameters" caption-side="bottom"}
+{: caption="Nexus tool integration parameters" caption-side="bottom"}

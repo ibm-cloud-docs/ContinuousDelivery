@@ -73,4 +73,4 @@ You must specify the `tool_type_id` property in the request body with the `jira`
 | password | optional, updatable | Password | api_token | The api token for your JIRA account. Optional for public projects. You can use a toolchain secret reference for this parameter. For more information, see [Protecting your sensitive data in Continuous Delivery](https://cloud.ibm.com/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secure_credentials). |
 | project_key | required, updatable | String | project_key | The project key of your JIRA project. |
 | username | optional, updatable | String | username | The user name for your JIRA account. Optional for public projects. |
-{: caption="Table 1. JIRA tool integration parameters" caption-side="bottom"}
+{: caption="JIRA tool integration parameters" caption-side="bottom"}

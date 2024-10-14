@@ -103,7 +103,7 @@ Review the default information for the toolchain settings. The toolchain's name 
 The toolchain region can differ from the cluster and registry region.
 {: tip}
 
-![VPC secure app toolchain name and region](images/ds-vpc-setup-welcome.png){: caption="Figure 1. VM secure app toolchain name and region" caption-side="bottom"}
+![VPC secure app toolchain name and region](images/ds-vpc-setup-welcome.png){: caption="VM secure app toolchain name and region" caption-side="bottom"}
 
 ### Select the deployment strategy
 {: #vm-toolchain-select-strategy}
@@ -112,7 +112,7 @@ The toolchain creates a Continuous Deployment Pipeline to deploy the application
 
 1. Click the deployment strategy that you want to use for your toolchain.
 
-   ![Deployment strategies](images/selection-blue-green.png){: caption="Figure 2. Deployment strategies" caption-side="bottom"}
+   ![Deployment strategies](images/selection-blue-green.png){: caption="Deployment strategies" caption-side="bottom"}
    
 1. Click **Continue**.
 
@@ -121,7 +121,7 @@ The toolchain creates a Continuous Deployment Pipeline to deploy the application
 
 In the Application step, the recommended options for the application source code repo are displayed by default. To view all of the available options for the underlying Git integration, click **Advanced Options**. By default, the toolchain uses the default sample that clones the sample app as an IBM-hosted {{site.data.keyword.gitrepos}} repo.
 
-![VPC secure app repo](images/ds-vpc-setup-app-repo.png){: caption="Figure 3. VPC secure app repo" caption-side="bottom"}
+![VPC secure app repo](images/ds-vpc-setup-app-repo.png){: caption="VPC secure app repo" caption-side="bottom"}
 
 You can change the name of the app repo. The region of the repo remains the same as the region of the toolchain.
 
@@ -135,7 +135,7 @@ By default, the application repo template is cloned to your {{site.data.keyword.
 
 The inventory repo records the details of the artifacts that are built by the continuous integration toolchains. You can either create a new inventory repo that is a clone of the [inventory repo template](https://us-south.git.cloud.ibm.com/open-toolchain/compliance-inventory){: external} or use an existing inventory repo that you share between toolchains.
 
-![VPC secure app inventory repo](images/ds-vpc-setup-inventory.png){: caption="Figure 4. VPC secure app inventory repo" caption-side="bottom"}
+![VPC secure app inventory repo](images/ds-vpc-setup-inventory.png){: caption="VPC secure app inventory repo" caption-side="bottom"}
 
 By default, the inventory repo template is cloned to your {{site.data.keyword.gitrepos}} org. To change the org, select **Advanced options** and specify the repo owner.
 {: tip}
@@ -153,11 +153,11 @@ By using hints within a template, a toolchain is automatically populated with pr
 
 This tutorial uses the [IBM Secrets Manager](/docs/secrets-manager?topic=secrets-manager-getting-started) as the secrets vault.
 
-![VPC secure app secrets options](images/ds-vpc-setup-secrets.png){: caption="Figure 5. VPC secure app secrets options" caption-side="bottom"}
+![VPC secure app secrets options](images/ds-vpc-setup-secrets.png){: caption="VPC secure app secrets options" caption-side="bottom"}
 
 IBM Secrets Manager securely stores and applies secrets such as API keys, Image Signature, or HashiCorp credentials that are part of your toolchain.
 
-![Secrets Manager options](images/ds-vpc-setup-secrets-manager.png){: caption="Figure 6. Secrets Manager options" caption-side="bottom"}
+![Secrets Manager options](images/ds-vpc-setup-secrets-manager.png){: caption="Secrets Manager options" caption-side="bottom"}
 
 For more information about managing your secrets in IBM Key Protect or HashiCorp, see [IBM Key Protect](/docs/devsecops?topic=devsecops-cd-devsecops-tekton-ci-compliance#cd-devsecops-key-protect-ci) or [HashiCorp](/docs/devsecops?topic=devsecops-cd-devsecops-tekton-ci-compliance#cd-devsecops-vault-ci).
 
@@ -167,7 +167,7 @@ For more information about managing your secrets in IBM Key Protect or HashiCorp
 
 Configure the deployment target for the toolchain by specifying details for the VPC, Bastion Host, Load Balancer, and Artifact Store. This tutorial uses the Blue-Green deployment strategy.
 
-![Deployment target Blue-Green strategy](images/ds-vpc-setup-dep-target-bg.png){: caption="Figure 7. Deployment target Blue-Green strategy" caption-side="bottom"}
+![Deployment target Blue-Green strategy](images/ds-vpc-setup-dep-target-bg.png){: caption="Deployment target Blue-Green strategy" caption-side="bottom"}
 
 ### Configure VPC details
 {: #vpc-deployment-details}
@@ -204,7 +204,7 @@ Configure the toolchain by specifying information about the Load Balancer:
 * **Blue Backend pool name**: Select the Blue Backend pool that the Terraform template provisions for the Load Balancer.
 * **Green Backend pool name**: Select the Green Backend pool that the Terraform template provisions for the Load Balancer.
 
-![Blue-Green deployment target strategy](images/ds-vpc-setup-dep-target-bg-explain.png){: caption="Figure 8. Blue-Green deployment target strategy" caption-side="bottom"}
+![Blue-Green deployment target strategy](images/ds-vpc-setup-dep-target-bg-explain.png){: caption="Blue-Green deployment target strategy" caption-side="bottom"}
 
 After the details for the `deployment target` steps are populated, proceed to the next step.
 
@@ -214,11 +214,11 @@ After the details for the `deployment target` steps are populated, proceed to th
 
 Any change to the source triggers the continuous integration pipeline. When a continuous integration run succeeds, a build or binary artifact is created and saved in transient storage, and then deployed to the target VSIs. 
 
-![VPC artifact storage](images/ds-vpc-setup-artifact-storage.png){: caption="Figure 9. VPC artifact storage" caption-side="bottom"}
+![VPC artifact storage](images/ds-vpc-setup-artifact-storage.png){: caption="VPC artifact storage" caption-side="bottom"}
 
 You can use {{site.data.keyword.cos_full_notm}} to store transient build artifacts within the toolchain. The continuous integration pipeline builds the executable `.jar` file  for the sample Spring Java App.
 
-![VPC artifact storage Cloud Object Storage](images/ds-vpc-setup-cos.png){: caption="Figure 10. VPC artifact storage Cloud Object Storage" caption-side="bottom"}
+![VPC artifact storage Cloud Object Storage](images/ds-vpc-setup-cos.png){: caption="VPC artifact storage Cloud Object Storage" caption-side="bottom"}
 
 Alternatively, you can use Artifactory if you have an Artifactory instance of your own.
 {: tip}
@@ -242,7 +242,7 @@ On the Summary page, click **Create**. Several steps run automatically to set up
 You can configure the individual toolchain integrations after the pipeline is created.
 {: tip}
 
-![Kubernetes secure app toolchain summary](images/ds-vpc-setup-summary.png){: caption="Figure 11. VPC secure app toolchain summary" caption-side="bottom"}
+![Kubernetes secure app toolchain summary](images/ds-vpc-setup-summary.png){: caption="VPC secure app toolchain summary" caption-side="bottom"}
 
 
 ## Explore your new toolchain
@@ -281,7 +281,7 @@ To start the continuous integration pipeline, merge the continuous integration m
 1. On the continuous integration Toolchain Overview page, on the **Repositories** card, click the `ci-pipeline` repo to start the continuous integration pipeline.
 1. After the continuous integration pipeline run succeeds, you can click the pipeline run to explore the completed steps.
 
-![Continuous integration pipeline success](images/ds-vpc-explore-ci-pipeline-success-bg.png){: caption="Figure 13. Continuous integration pipeline success" caption-side="bottom"}
+![Continuous integration pipeline success](images/ds-vpc-explore-ci-pipeline-success-bg.png){: caption="Continuous integration pipeline success" caption-side="bottom"}
 
 To evaluate if you have any failures in your pipeline run, check the final step of your pipeline, which has a pipeline evaluator.
 {: tip}
@@ -303,17 +303,17 @@ The blue-green deployment strategy that is used in this tutorial demonstrates ho
 * Automatically trigger the continuous delivery pipeline after each `Merge` action in the Inventory repo. After the merge, you must manually trigger the continuous delivery pipeline run.
 * Switch between blue and green deployments for an automated rollback.
 
-![Continuous delivery pipeline triggers for Blue-green Deployment](images/ds-vpc-explore-cd-pipeline-triggers-bg.png){: caption="Figure 14. Continuous delivery pipeline triggers for Blue-Green deployment" caption-side="bottom"}
+![Continuous delivery pipeline triggers for Blue-green Deployment](images/ds-vpc-explore-cd-pipeline-triggers-bg.png){: caption="Continuous delivery pipeline triggers for Blue-Green deployment" caption-side="bottom"}
 
 This tutorial shows how the Blue-Green deployment strategy works by using the sample app.
 
 1. Run the manual trigger from the continuous delivery pipeline to deploy the first version of the app.
 
-   ![Continuous delivery pipeline manual run](images/ds-vpc-explore-cd-manual-run-successful-bg.png){: caption="Figure 15. Continuous delivery pipeline manual run" caption-side="bottom"}
+   ![Continuous delivery pipeline manual run](images/ds-vpc-explore-cd-manual-run-successful-bg.png){: caption="Continuous delivery pipeline manual run" caption-side="bottom"}
 
 1. Locate the app URL within the `release` step of the continuous delivery pipeline and click the URL to verify that the app is running.
 
-   ![App URL location](images/ds-vpc-explore-app-url-bg.png){: caption="Figure 16. App URL location" caption-side="bottom"}
+   ![App URL location](images/ds-vpc-explore-app-url-bg.png){: caption="App URL location" caption-side="bottom"}
 
 1. Update the app code and commit your changes. For the sample app, update the welcome message:
 
@@ -329,7 +329,7 @@ This tutorial shows how the Blue-Green deployment strategy works by using the sa
 
 1. Test the rollback by running the `switch-blue-green` trigger from the continuous delivery pipeline.  Wait until  the switch trigger pipeline run completes successfully. 
 
-   ![Successful continuous delivery pipeline switch trigger](images/ds-vpc-explore-switch-trigger-successful-bg.png){: caption="Figure 17. Successful continuous delivery pipeline switch trigger" caption-side="bottom"}
+   ![Successful continuous delivery pipeline switch trigger](images/ds-vpc-explore-switch-trigger-successful-bg.png){: caption="Successful continuous delivery pipeline switch trigger" caption-side="bottom"}
 
 1. Check the app URL again to confirm that the previous version of the app is displayed.
 

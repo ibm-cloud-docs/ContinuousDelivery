@@ -88,7 +88,7 @@ Alternatively, from the {{site.data.keyword.cloud_notm}} console, click the **Me
 
 Before you start to set up your toolchain, review the prerequisites to discover what items you must first provision and configure. In the Description section, you can access an overview of the toolchain.
 
-![Welcome page](images/cd-only-satellite-welcome.png){: caption="Figure 1. Welcome page" caption-side="bottom"}
+![Welcome page](images/cd-only-satellite-welcome.png){: caption="Welcome page" caption-side="bottom"}
 
 After you review all of this information, click **Start**.
 
@@ -100,7 +100,7 @@ After you review all of this information, click **Start**.
    The toolchain region can differ from the cluster and registry region.
    {: tip}
 
-   ![Toolchain name and region](images/cd-only-satellite-toolchain-settings.png){: caption="Figure 2. Toolchain name and region" caption-side="bottom"}
+   ![Toolchain name and region](images/cd-only-satellite-toolchain-settings.png){: caption="Toolchain name and region" caption-side="bottom"}
 
 2. To proceed to the next step to configure your toolchain, click **Continue**. To create the toolchain by using the current settings, click **Create toolchain**.
 
@@ -111,7 +111,7 @@ The deployment source repo contains all of the deployment source code that is re
 
 1. In the Source repository step, the default options for the deployment source repo are displayed. To view all of the available options for the underlying Source Provider, click **Switch to advanced configuration**. By default, the toolchain uses the sample that clones the sample deployment as an IBM-hosted {{site.data.keyword.gitrepos}} repo.
 
-   ![Deployment source repo](images/cd-only-satellite-deployment-source-repo.png){: caption="Figure 3. Deployment source repo" caption-side="bottom"}
+   ![Deployment source repo](images/cd-only-satellite-deployment-source-repo.png){: caption="Deployment source repo" caption-side="bottom"}
 
 2. Specify the name of the deployment source repo that you want to use. The region of the repo remains the same as the region of the toolchain.
 
@@ -130,7 +130,7 @@ A {{site.data.keyword.deliverypipeline}} automates the continuous deployment of 
 
 The toolchain creates a {{site.data.keyword.deliverypipeline}} to continuously deploy your app to multiple clusters within an {{site.data.keyword.cloud_notm}} {{site.data.keyword.satelliteshort}} cluster group. You must specify a name for the {{site.data.keyword.deliverypipeline}} that will be displayed in your toolchain after it is created.
 
-![Delivery Pipeline name](images/cd-only-satellite-pipeline-settings.png){: caption="Figure 4. Delivery Pipeline name" caption-side="bottom"}
+![Delivery Pipeline name](images/cd-only-satellite-pipeline-settings.png){: caption="Delivery Pipeline name" caption-side="bottom"}
 
 ## Securely store secrets
 {: #satellite-tool-integration-secrets}
@@ -145,11 +145,11 @@ By using hints within a template, a toolchain is automatically populated with pr
 
 This tutorial uses the [IBM Secrets Manager](/docs/secrets-manager?topic=secrets-manager-getting-started) as the secrets vault.
 
-![Secrets options](images/cd-only-satellite-secrets.png){: caption="Figure 5. Secrets options" caption-side="bottom"}
+![Secrets options](images/cd-only-satellite-secrets.png){: caption="Secrets options" caption-side="bottom"}
 
 IBM Secrets Manager securely stores and applies secrets such as API keys, Image Signature, or HashiCorp credentials that are part of your toolchain.
 
-![Secrets Manager details](images/cd-only-satellite-secrets-manager.png){: caption="Figure 6. Secrets Manager details" caption-side="bottom"}
+![Secrets Manager details](images/cd-only-satellite-secrets-manager.png){: caption="Secrets Manager details" caption-side="bottom"}
 
 For more information about managing your secrets in IBM Key Protect or HashiCorp, see [IBM Key Protect](/docs/devsecops?topic=devsecops-cd-devsecops-tekton-ci-compliance#cd-devsecops-key-protect-ci) or [HashiCorp](/docs/devsecops?topic=devsecops-cd-devsecops-tekton-ci-compliance#cd-devsecops-vault-ci).
 
@@ -184,7 +184,7 @@ If the API key has the required access, the following fields automatically load 
 
 * **Configuration name:** Specify the name for the {{site.data.keyword.satelliteshort}} config. This name is used to create {{site.data.keyword.satelliteshort}} config versions that are used to create {{site.data.keyword.satelliteshort}} subscriptions.
 
-![{{site.data.keyword.cloud_notm}} {{site.data.keyword.satelliteshort}} details](images/cd-only-satellite-Sat-config.png){: caption="Figure 7. {{site.data.keyword.cloud_notm}} {{site.data.keyword.satelliteshort}} Config details" caption-side="bottom"}
+![{{site.data.keyword.cloud_notm}} {{site.data.keyword.satelliteshort}} details](images/cd-only-satellite-Sat-config.png){: caption="{{site.data.keyword.cloud_notm}} {{site.data.keyword.satelliteshort}} Config details" caption-side="bottom"}
 
 Click **Continue**.
 
@@ -197,7 +197,7 @@ On the Summary page, click **Create toolchain**. Several steps run automatically
 You can configure more toolchain integrations after the pipeline is created.
 {: tip}
 
-![Toolchain summary](images/cd-only-satellite-summary.png){: caption="Figure 8. Toolchain summary" caption-side="bottom"}
+![Toolchain summary](images/cd-only-satellite-summary.png){: caption="Toolchain summary" caption-side="bottom"}
 
 
 ## Explore your new toolchain
@@ -206,7 +206,7 @@ You can configure more toolchain integrations after the pipeline is created.
 
 After you create your toolchain, each of the tool integrations that you specified during the setup are displayed.
 
-![Example toolchain](images/cd-only-satellite-toolchain-created.png){: caption="Figure 9. Example toolchain" caption-side="bottom"}
+![Example toolchain](images/cd-only-satellite-toolchain-created.png){: caption="Example toolchain" caption-side="bottom"}
 
 ### Explore the {{site.data.keyword.deliverypipeline}}
 {: #cd-only-satellite-delivery-pipeline}
@@ -224,12 +224,12 @@ You can start the delivery pipeline in either of the following ways:
 1. On the Toolchain's Overview page, click the {{site.data.keyword.deliverypipeline}} that you want to run.
 2. Click the **Run pipeline** icon and then select the `manual-run` trigger.
 
-   ![Delivery pipeline triggers](images/cd-only-satellite-toolchain-triggers.png){: caption="Figure 10. Delivery pipeline triggers" caption-side="bottom"}
+   ![Delivery pipeline triggers](images/cd-only-satellite-toolchain-triggers.png){: caption="Delivery pipeline triggers" caption-side="bottom"}
 
 3. Review the trigger properties to make sure that they match your configuration.
 4. Click **Run**.
   
-   ![Successful pipeline run](images/cd-only-satellite-pipeline-run-successful.png){: caption="Figure 11. Successful pipeline run" caption-side="bottom"}
+   ![Successful pipeline run](images/cd-only-satellite-pipeline-run-successful.png){: caption="Successful pipeline run" caption-side="bottom"}
 
 ### Verify that the sample app is running
 {: #cd-only-satellite-check-pipeline}

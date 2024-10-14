@@ -50,4 +50,4 @@ You must specify the `tool_type_id` property in the request body with the `sauce
 | --- | --- | --- | --- | --- |
 | key | required, updatable | Password | access_key | The access key for the Sauce Labs account. You can use a toolchain secret reference for this parameter. For more information about secret references, see [Protecting your sensitive data in {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secure_credentials). |
 | username | required, updatable | String | username | The username of the Sauce Labs account. |
-{: caption="Table 1. Sauce Labs tool integration parameters" caption-side="bottom"}
+{: caption="Sauce Labs tool integration parameters" caption-side="bottom"}

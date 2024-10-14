@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2024
-lastupdated: "2024-10-04"
+lastupdated: "2024-10-09"
 
 keywords: users of a service instance, authorized users, pipeline usage, Git Repos and Issue Tracking limitations, consolidated billing
 
@@ -36,7 +36,7 @@ The following table outlines the pricing plans of {{site.data.keyword.contdelive
 |:-----|:-----|:-------|
 | **Lite** | Free | The Lite plan offers the full capabilities of {{site.data.keyword.contdelivery_short}} with limits on usage. |
 | **Professional** | Paid | The Professional plan offers the full capabilities of {{site.data.keyword.contdelivery_short}} with no limits on usage. |
-{: caption="Table 1. Pricing plans" caption-side="bottom"}
+{: caption="Pricing plans" caption-side="bottom"}
 
 
 
@@ -58,7 +58,7 @@ For more information about the plans, see [pricing plans](https://cloud.ibm.com/
 |:------|:-------|:--------|
 | Authorized users | `AUTHORIZED_USERS_PER_MONTH` | A count of the average number of authorized users of the service instance within a given month. |
 | Pipeline runs | `JOB_EXECUTIONS_PER_MONTH` | A count of the total number of pipeline Tekton step or classic job runs within a given month. |
-{: caption="Table 2. Usage metrics for Lite and Professional plans" caption-side="bottom"}
+{: caption="Usage metrics for Lite and Professional plans" caption-side="bottom"}
 
 
 

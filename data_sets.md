@@ -60,7 +60,7 @@ The following are the seven pre-defined tags that are provided by {{site.data.ke
 | `dynamicsecurityscan`      | Dynamic Security Scan         | Dynamic Security Scan | {{site.data.keyword.Bluemix}} Application Security (xml)   |
 | `staticsecurityscan`       | Static Security Scan          | Static Security Scan  | {{site.data.keyword.Bluemix}} Application Security (xml)   |
 | `vulnerabilityadvisor`     | Vulnerability Advisor         | Vulnerability Advisor | Vulnerability Advisor (JSON)                               |
-{: caption="Table 1. Default {{site.data.keyword.DRA_short}} data sets" caption-side="top"}
+{: caption="Default {{site.data.keyword.DRA_short}} data sets" caption-side="top"}
 
 
 ## Adding custom data sets

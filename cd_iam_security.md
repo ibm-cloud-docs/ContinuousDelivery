@@ -37,14 +37,14 @@ The following table details actions that are mapped to platform management roles
 | Viewer, Operator | View instances of the {{site.data.keyword.contdelivery_short}} service. | Click a {{site.data.keyword.contdelivery_short}} service instance to open its dashboard.|
 | Editor, Administrator | Create, view, update, modify the plan for, and delete instances of the {{site.data.keyword.contdelivery_short}} service. |Provision an instance of {{site.data.keyword.contdelivery_short}} in a resource group.  /n  /n Delete an instance of {{site.data.keyword.contdelivery_short}} from a resource group.  /n  /n Change a {{site.data.keyword.contdelivery_short}} instance plan from Lite to Professional. |
 | Administrator | Update the Authorized Users list. | Add a user to the Authorized Users list.  /n  /n Remove a user from the Authorized Users list.  /n  /n Enable and disable [Consolidated billing](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage#consolidated_billing). |
-{: caption="Table 1. IAM user roles and actions" caption-side="top"}
+{: caption="IAM user roles and actions" caption-side="top"}
 
  The following table details actions that are mapped to service access roles. Service access roles enable users access to {{site.data.keyword.contdelivery_short}} as well as the ability to call the {{site.data.keyword.contdelivery_short}} API.
 
 | Service Access Role | Description of Actions | Example Actions|
 |:-----------------|:-----------------|:-----------------|
 | Writer, Manager | Manage authorized users and usage reporting on the Manage tab of a {{site.data.keyword.contdelivery_short}} service instance. | Add a user to the Authorized Users list.  /n  /n Remove a user from the Authorized Users list.  /n  /n Enable and disable [Consolidated billing](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage#consolidated_billing). |
-{: caption="Table 2. IAM service access roles and actions" caption-side="top"}
+{: caption="IAM service access roles and actions" caption-side="top"}
 
 For information about assigning user roles in the UI, see [Managing IAM access](/docs/account?topic=account-assign-access-resources).
  
@@ -63,4 +63,4 @@ For {{site.data.keyword.contdelivery_short}}, the following actions exist:
 | continuous-delivery.instance.config-auth-users | Reserved for future use. | Administrator, Manager |
 | continuous-delivery.settings.read | View configuration settings, such as [Consolidated billing](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage#consolidated_billing), of a {{site.data.keyword.contdelivery_short}} service instance. | Administrator, Manager, Editor, Operator, Viewer |
 | continuous-delivery.settings.update | Update configuration settings, such as [Consolidated billing](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage#consolidated_billing), of a {{site.data.keyword.contdelivery_short}} service instance. | Administrator, Manager |
-{: caption="Table 3. Service actions and operations" caption-side="top"}
+{: caption="Service actions and operations" caption-side="top"}

@@ -42,7 +42,7 @@ Send the pipeline status to your toolchain by using the **`notifyOTC`** command.
 |--------------|---------------------------------------------------------------------------------------------------------------------------------|
 | `stageName`  | The current pipeline stage's name.                                                                                             |
 | `status`     | The current pipeline stage's status. Using `SUCCESS`, `FAILURE`, or `ABORTED` automatically highlights the text in Slack. |
-{: caption="Table 1. Parameters and definitions for communicating with toolchains" caption-side="top"}
+{: caption="Parameters and definitions for communicating with toolchains" caption-side="top"}
 
 The following examples illustrate how to use the notifyOTC step in both declarative and scripted pipeline definitions:
 

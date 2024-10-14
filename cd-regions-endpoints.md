@@ -23,7 +23,7 @@ Review region and connectivity options for interacting with {{site.data.keyword.
 
 {{site.data.keyword.contdelivery_short}} is available in the following regions (borders and geographic features in the illustration are artistic representations):
 
-![Regions where the {{site.data.keyword.contdelivery_short}} service is available.](images/world-map.svg){: caption="Figure 1. Displays the regions where you can create and manage {{site.data.keyword.contdelivery_short}} resources." caption-side="bottom"}
+![Regions where the {{site.data.keyword.contdelivery_short}} service is available.](images/world-map.svg){: caption="Displays the regions where you can create and manage {{site.data.keyword.contdelivery_short}} resources." caption-side="bottom"}
  
 You can create {{site.data.keyword.contdelivery_short}} resources, including toolchains, in one of the supported {{site.data.keyword.cloud_notm}} regions, which represent the
 geographic area where your {{site.data.keyword.contdelivery_short}} requests are handled and processed. To learn more, see [{{site.data.keyword.contdelivery_short}} high availability and disaster recovery](/docs/ContinuousDelivery?topic=ContinuousDelivery-ha-dr).
@@ -51,7 +51,7 @@ Review the following table to determine the public API endpoints to use when you
 | Osaka            | `jp-osa.devops.cloud.ibm.com`   |
 | Toronto          | `ca-tor.devops.cloud.ibm.com`   |
 | S&atilde;o-Paulo | `br-sao.devops.cloud.ibm.com`   |
-{: caption="Table 1. Public endpoints for interacting with {{site.data.keyword.contdelivery_short}} APIs over IBM Cloud's public network" caption-side="top"}
+{: caption="Public endpoints for interacting with {{site.data.keyword.contdelivery_short}} APIs over IBM Cloud's public network" caption-side="top"}
 
 ### Private endpoints
 {: #private-endpoints}
@@ -71,4 +71,4 @@ Review the following table to determine the private API endpoints to use when yo
 | Washington DC    | `private.us-east.devops.cloud.ibm.com`  |
 | London           | `private.eu-gb.devops.cloud.ibm.com`    |
 | Frankfurt        | `private.eu-de.devops.cloud.ibm.com`    |
-{: caption="Table 2. Private endpoints for interacting with {{site.data.keyword.contdelivery_short}} APIs over IBM Cloud's private network" caption-side="top"}
+{: caption="Private endpoints for interacting with {{site.data.keyword.contdelivery_short}} APIs over IBM Cloud's private network" caption-side="top"}

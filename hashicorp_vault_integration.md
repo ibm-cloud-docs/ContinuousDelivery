@@ -62,7 +62,7 @@ You must specify the `tool_type_id` property in the request body with the `hashi
 | server_url | required, updatable | String | server_url | The server URL for your HashiCorp Vault instance. |
 | token | optional, updatable | Password | token | The authentication token for your HashiCorp Vault instance when you use the `github` and `token` authentication methods. This parameter is ignored for other authentication methods. You can use a toolchain secret reference for this parameter. For more information about secret references, see [Protecting your sensitive data in Continuous Delivery](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secure_credentials). |
 | username | optional, updatable | String | username | The authentication username for your HashiCorp Vault instance when you use the `userpass` authentication method. This parameter is ignored for other authentication methods. |
-{: caption="Table 1. HashiCorp Vault tool integration parameters" caption-side="bottom"}
+{: caption="HashiCorp Vault tool integration parameters" caption-side="bottom"}
 
 ## Learn more about HashiCorp Vault
 {: #learn_hashicorp_vault}

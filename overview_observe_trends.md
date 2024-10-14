@@ -28,7 +28,7 @@ For more information about data sets, see [Managing data sets](/docs/ContinuousD
 
 The following figure shows unit test trends for builds from the master branch, and the number of passed and failed test cases for the build. 
 
-![Deployment Unit Test Trends](images/DRA_unit_test_trends.png){: caption="Figure 1. Quality Trends page" caption-side="bottom"}
+![Deployment Unit Test Trends](images/DRA_unit_test_trends.png){: caption="Quality Trends page" caption-side="bottom"}
 
 The Quality Trends graph correlates with the Quality dashboard, and it is a good reference for noticing patterns in your builds. You can view trends for all of the test data in your Quality Trends dashboard.
 

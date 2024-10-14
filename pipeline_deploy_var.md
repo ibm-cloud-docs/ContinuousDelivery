@@ -54,7 +54,7 @@ The following table lists and describes each of the general-purpose environment 
 | TASK_ID | The unique ID of the job's current run. |
 | TMPDIR | A directory location where temporary files are stored. |
 | WORKSPACE | The path for the current working directory. |
-{: caption="Table 1. General-purpose environment properties" caption-side="top"}
+{: caption="General-purpose environment properties" caption-side="top"}
 
 ### Runtime and tool properties
 {: #runtime_properties}
@@ -71,7 +71,7 @@ The following table lists and describes each of the runtime and tool environment
 | JAVA8_HOME | The path to IBM Java 8. |
 | MAVEN_HOME | The path to Apache Maven 3.2.1. |
 | NODE_HOME | The path to Node.js 0.10.29. |
-{: caption="Table 2. Runtime and tool environment properties" caption-side="top"}
+{: caption="Runtime and tool environment properties" caption-side="top"}
 
 ### Deployment properties
 {: #deployment_properties}
@@ -87,4 +87,4 @@ The following table lists and describes each of the deployment environment prope
 | CF_SPACE_ID | For deployments, the ID of the space to deploy to.  |
 | CF_TARGET_URL | For deployments, the URL of {{site.data.keyword.cloud_notm}}. |
 | IDS_VERSION | For deployments, the version of the app that is being deployed or the source identifier. |
-{: caption="Table 3. Deployment environment properties" caption-side="top"}
+{: caption="Deployment environment properties" caption-side="top"}

@@ -42,7 +42,7 @@ To quickly find the toolchain template that addresses your specific requirements
 
    The diagram in the following image is an example. When you create a toolchain, the diagram shows each tool integration that is part of the toolchain.
 
-   ![Toolchain_diagram](images/toolchain_diagram.png){: caption="Figure 1. Toolchain diagram" caption-side="bottom"}
+   ![Toolchain_diagram](images/toolchain_diagram.png){: caption="Toolchain diagram" caption-side="bottom"}
  
 ## Step 2: Create a toolchain 
 {: #create_a_toolchain}

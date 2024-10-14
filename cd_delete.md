@@ -72,7 +72,7 @@ The following table lists and describes each of the variables that are used in t
 | Variable | Description |
 |:---------|:------------|
 | `SERVICE_NAME_OR_ID` | The name or ID of the {{site.data.keyword.contdelivery_short}} service instance that you want to delete. |
-{: caption="Table 1. Variables for deleting the {{site.data.keyword.contdelivery_short}} service from the CLI" caption-side="top"}
+{: caption="Variables for deleting the {{site.data.keyword.contdelivery_short}} service from the CLI" caption-side="top"}
 
 ## Deleting a {{site.data.keyword.contdelivery_short}} service instance with the API
 {: #deleting_rg_api}
@@ -159,7 +159,7 @@ The following table lists and describes each of the variables that are used in t
 | `{iam_api_key}` | Your IAM API key. |
 | `{instance_id}` | The ID of the {{site.data.keyword.contdelivery_short}} service instance that you want to delete. |
 | `{token}` | A valid IAM bearer token. |
-{: caption="Table 2. Variables for deleting the {{site.data.keyword.contdelivery_short}} service with the API" caption-side="top"}
+{: caption="Variables for deleting the {{site.data.keyword.contdelivery_short}} service with the API" caption-side="top"}
 
 For more information about deleting service instances, see [Deleting resource instances by using the API](/docs/account?topic=account-delete-resource&interface=api#delete-resource-instance-api).
 
@@ -217,4 +217,3 @@ After you delete an instance of the {{site.data.keyword.contdelivery_short}} ser
 To view which service instances are available for restoration and to restore a deleted service, see [Using resource reclamations](/docs/account?topic=account-resource-reclamation). If you try to restore a deleted service and an active {{site.data.keyword.contdelivery_short}} service instance exists, the restoration is blocked. For more information about how to view the details for a resource reclamation, see [Listing reclaimed resources by using the CLI](/docs/account?topic=account-resource-reclamation&interface=cli) or [Listing reclaimed resources by using the API](/docs/account?topic=account-resource-reclamation&interface=api).
 
 You can have one active instance of {{site.data.keyword.contdelivery_short}} only in a region and resource group. After you delete an instance of the {{site.data.keyword.contdelivery_short}} service from a region and resource group, you can restore the deleted service instance to create a service instance again within the data retention period of seven days. Alternatively, you can permanently remove the deleted service instance by using the [`ibmcloud resource reclamation-delete`](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_reclamation_delete) command, and then [create a {{site.data.keyword.contdelivery_short}} service](/docs/ContinuousDelivery?topic=ContinuousDelivery-create_cd_service) instance again.
-

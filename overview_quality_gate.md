@@ -26,7 +26,7 @@ For more information about toolchains, see [Creating a toolchain from an app](/d
 
 For more information about data sets, see [Managing data sets](/docs/ContinuousDelivery?topic=ContinuousDelivery-adding-data-sets).
 
-![Deployment Risk Policy](images/DRA_policy.png){: caption="Figure 1. Policy and rules page" caption-side="bottom"}
+![Deployment Risk Policy](images/DRA_policy.png){: caption="Policy and rules page" caption-side="bottom"}
 
 To go to the Policy Rules page within {{site.data.keyword.DRA_short}}, complete the following steps:
 
@@ -43,7 +43,7 @@ In your pipeline, you can enter a command by using the {{site.data.keyword.Bluem
 ### Build detail page
 {: #build_detail_page}
 
-![Deployment Risk details](images/DRA_risk_details.png){: caption="Figure 2. Build detail" caption-side="bottom"}
+![Deployment Risk details](images/DRA_risk_details.png){: caption="Build detail" caption-side="bottom"}
 
 From the Risk Analysis page, you can view gate decision reports on the Build detail page. The Build detail page has information about your latest report.
 

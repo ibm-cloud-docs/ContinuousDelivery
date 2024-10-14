@@ -54,7 +54,7 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test jo
 1. If you don't have a stage that deploys a test version of your app, create one.
 1. On the stage, add a test job after the deploy job. By placing these jobs in the same stage, they can access the same set of environment properties.   
    
-   ![Test job](images/toolchain_test_job.png){: caption="Figure 1. Test job" caption-side="bottom"}
+   ![Test job](images/toolchain_test_job.png){: caption="Test job" caption-side="bottom"}
 
 1. Configure the stage. On the **ENVIRONMENT PROPERTIES** tab, create the CF_APP_NAME property.
 
@@ -96,4 +96,4 @@ You must specify the `tool_type_id` property in the request body with the `pipel
 | Parameter | Usage | Type | Terraform argument | Description |
 | --- | --- | --- | --- | --- |
 | name | optional, updatable | String | name | The name of this tool integration. |
-{: caption="Table 1. {{site.data.keyword.deliverypipeline}} tool integration parameters" caption-side="bottom"}
+{: caption="{{site.data.keyword.deliverypipeline}} tool integration parameters" caption-side="bottom"}

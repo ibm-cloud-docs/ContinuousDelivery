@@ -49,7 +49,7 @@ In certain scenarios, your {{site.data.keyword.deliverypipeline}} might require 
 
 You might want tighter control of a specific stage. If you do not want a stage to run every time that a change occurs at its input, you can disable the capability. On the **INPUT** tab, in the Stage Trigger section, click **Run jobs only when this stage is run manually**.
 
-![Input tab](images/input_tab_only_execute.png){: caption="Figure 1. Input tab" caption-side="bottom"}
+![Input tab](images/input_tab_only_execute.png){: caption="Input tab" caption-side="bottom"}
 
 More stage trigger options are available for stages that use the Git repository input type. For example, you can choose to run jobs automatically for Git events on the chosen branch. When you choose this trigger type, you must select one or more of the following event types:
 
@@ -57,7 +57,7 @@ More stage trigger options are available for stages that use the Git repository 
 *	**When a pull/merge request is opened or updated** triggers when a pull request or merge request is opened or edited.
 *	**When a pull/merge request is closed** triggers when a pull request or merge request is closed, even without an associated commit.
 
-![Input tab triggers](images/input_tab_only_triggers.png){: caption="Figure 2. Input tab triggers" caption-side="bottom"}
+![Input tab triggers](images/input_tab_only_triggers.png){: caption="Input tab triggers" caption-side="bottom"}
 
 If you select the **When a pull/merge request is opened or updated** checkbox, the status of the pipeline is returned to the Git repo. When a pull request or merge request triggers your pipeline, an inline status check is displayed on the page. A status check is displayed for each of the stages that are run in your pipeline, and links to the logs and history for each stage are provided. As the status check runs, it updates from pending to either successful or failed. If your pipeline contains multiple stages, each stage reports its status in the check list.
 
@@ -112,7 +112,7 @@ The following Builder types are available:
 | Gradle (Artifactory, Nexus, or SonarQube) | Builds and deploys by using Gradle with a Nexus or Artifactory repository. Gradle also integrates with SonarQube. | **Pipeline image version**: Runs in a container by using a built-in docker image, which provides various built-in commands. To adopt newer versions of those commands, use a newer image version.  \n  \n **Repository tool integration instance**: The name of the repository tool integration instance to use with this build job.  \n  \n **Repository tool integration type**: The type of tool integration to get Gradle information from.  \n  \n **SonarQube integration instance**: The name of the SonarQube integration instance to use with this build job.  \n  \n **Build command**: The build command to run whenever the job runs. In the **Script** field, enter a script or reference scripts that are stored in your project’s source control.  \n  \n **Working directory**: Specifies the directory where the script is run.  \n  \n **Build archive directory**: Specifies the directory that contains the job's output to archive for use by a subsequent stage. |
 | Maven (Artifactory, Nexus, or SonarQube) | Builds and deploys by using Maven with a Nexus or Artifactory repository. Maven also integrates with SonarQube. |   **Pipeline image version**: Runs in a container by using a built-in docker image, which provides various built-in commands. To adopt newer versions of those commands, use a newer image version.  \n  \n **Repository tool integration instance**: Name of the repository tool integration instance to use with this build job.  \n  \n **Repository tool integration type**: Type of tool integration to get Gradle information from.  \n  \n **SonarQube integration instance**: Name of the SonarQube integration instance to use with this build job.  \n  \n **Build command**: Build command to run whenever the job runs. In the script field, enter a script or reference scripts that are stored in your project’s source control.  \n  \n **Working directory**: Specifies the directory where the script is run.  \n  \n **Build archive directory**: Specifies the directory that contains the job's output to archive for use by a subsequent stage.|
 | npm (Artifactory or Nexus) | Builds by using npm with a Nexus or Artifactory repository. | **Pipeline image version**: Runs in a container by using a built-in docker image, which provides various built-in commands. To adopt newer versions of those commands, use a newer image version.  \n  \n **Repository tool integration instance**: The name of the repository tool integration instance to use with this build job.  \n  \n **Repository tool integration type**: The type of tool integration to get Gradle information from.   \n  \n **SonarQube integration instance**: The name of the SonarQube integration instance to use with this build job.  \n  \n **Build command**: The build command to run whenever the job runs. In the **Script** field, enter a script or reference scripts that are stored in your project’s source control.  \n  \n **Increment snapshot module version**: Supports continuous delivery by incrementing the module version locally based on the contents of the `package.json` file and the current reported snapshot in the npm registry at the publish step.  \n  \n **Working directory**: Specifies the directory where the script is run.  \n  \n **Build archive directory**: Specifies the directory that contains the job's output to archive for use by a subsequent stage. |
-{: caption="Table 1. Builder types" caption-side="top"}
+{: caption="Builder types" caption-side="top"}
 
 
 ### Deploy stage
@@ -124,7 +124,7 @@ The deploy stage specifies input from a Build stage. The jobs in the deploy stag
 |:-----------------|:-----------------|:-----------------|
 | Custom Docker image | Deploys by using your custom Docker image with fine-grained control over the versions of node, Java&trade;, or other tools. | **Pipeline image version**: Runs in a container by using a built-in docker image that provides various built-in commands. To adopt newer versions of those commands, use a newer image version.  \n  \n **API key**: The IBM Cloud API key to use to provide permissions to account resources.  \n  \n **Docker image name**: The name of the image that this job builds and uploads to the IBM Cloud Container Registry.  \n  \n **Deploy script**: Deploy command to run whenever the job runs. In the script field, enter a script or reference scripts that are stored in your project’s source control.|
 | Kubernetes | Deploys applications to Kubernetes clusters, such as those found within the IBM Cloud Container Service. | **Pipeline image version**: Runs in a container by using a built-in docker image that provides various built-in commands. To adopt newer versions of those commands, use a newer image version.  \n  \n **API key**: The IBM Cloud API key to use to provide permissions to account resources.  \n  \n **Cluster name**: Name of the Kubernetes cluster; the platform that you deploy your Kubernetes components on.  \n  \n **Deploy script**: Deploy command to run whenever the job runs. In the script field, enter a script or reference scripts that are stored in your project’s source control.|
-{: caption="Table 2. Deployer types" caption-side="top"}
+{: caption="Deployer types" caption-side="top"}
 
 
 ### Test stage
@@ -138,7 +138,7 @@ The test stage specifies the test configuration. The jobs in the test stage spec
 | Custom Docker image | Tests by using your custom Docker image with fine-grained control over the versions of node, Java&trade;, or other tools. | **Docker image name**: The name of the Docker image to run the job with. To make sure that your jobs run in a clean context, run them in Docker containers.  \n  \n **Test script**: Test command to run whenever the job runs. In the script field, enter a script or reference scripts that are stored in your project’s source control.  \n  \n **Working directory**: The directory where the test script is run.  \n  \n **Enable test report**: Not used.  \n  \n **Enable code coverage report**: Not used.|
 | Vulnerability Advisor | Runs a compliance and vulnerability check against the specified image, and displays the results. If any issues are found, this stage fails. | **Pipeline image version**: Runs in a container by using a built-in docker image that provides various built-in commands. To adopt newer versions of those commands, use a newer image version.  \n  \n **API key**: The IBM Cloud API key to use to provide permissions to account resources.  \n  \n **Container Registry namespace**: The namespace where your built image is stored.  \n  \n **Docker image name**: The name of the Docker image to run the job with. To make sure that your jobs run in a clean context, run them in Docker containers.  \n  \n **Docker image tag**: A tag for the Docker image that is displayed in the IBM Cloud Container Registry.  \n  \n **Test script**: Test command to run whenever the job runs. In the script field, enter a script or reference scripts that are stored in your project’s source control.  \n  \n **Working directory**: The directory where the test script is run.  \n  \n **Enable test report**: Not used.  \n  \n **Enable code coverage report**: Not used.|
 | Sauce Labs | Runs JavaScript, Node, or Java&trade; tests by using Sauce Labs. | **Pipeline image version**: Runs in a container by using a built-in docker image that provides various built-in commands. To adopt newer versions of those commands, use a newer image version.  \n  \n **Service instance**: Select a configuration instance or create one.|
-{: caption="Table 3. Tester types" caption-side="top"}
+{: caption="Tester types" caption-side="top"}
 
 
 ### Deprecated job types
@@ -179,7 +179,7 @@ Because pipeline jobs run user-created scripts that might use service API keys i
 
 A job is an execution unit within a stage. A stage can contain multiple jobs, and the jobs in a stage run sequentially. By default, if a job fails, subsequent jobs in the stage do not run.
 
-![Build and test jobs within a stage](images/jobs.png){: caption="Figure 3. Build and test jobs within a stage" caption-side="bottom"}
+![Build and test jobs within a stage](images/jobs.png){: caption="Build and test jobs within a stage" caption-side="bottom"}
 
 Jobs run in discrete working directories within Docker containers that are created for each pipeline run. Before a job is run, its working directory is populated with input that is defined at the stage level. For example, you might have a stage that contains a test job and a deploy job. If you install dependencies on one job, they are not available to the other job. However, if you make the dependencies available in the stage's input, they are available to both jobs.
 
@@ -256,18 +256,18 @@ You can examine the environment properties for a pipeline job by running the `en
 
 To define pipeline properties, from the overflow menu on the Pipeline page, select **Configure Pipeline**.
 
-![Pipeline overflow menu](images/OverflowMenu.png){: caption="Figure 4. Pipeline overflow menu" caption-side="bottom"}
+![Pipeline overflow menu](images/OverflowMenu.png){: caption="Pipeline overflow menu" caption-side="bottom"}
 
 From the **ENVIRONMENT PROPERTIES** tab on the Pipeline configuration page, set the pipeline-level environment properties.
 
-![Pipeline properties page](images/PipelineProperties.png){: caption="Figure 5. Pipeline properties page" caption-side="bottom"}
+![Pipeline properties page](images/PipelineProperties.png){: caption="Pipeline properties page" caption-side="bottom"}
 
 ### Stage properties
 {: #pipeline_stage_properties}
 
 To define stage properties, open the Stage configuration page and click the **ENVIRONMENT PROPERTIES** tab.
 
-![Stage properties page](images/StageProperties.png){: caption="Figure 6. Stage properties page" caption-side="bottom"}
+![Stage properties page](images/StageProperties.png){: caption="Stage properties page" caption-side="bottom"}
 
 You can define a stage property by using an initial value (or a blank value), and then overriding that value in a job by exporting an environment variable. By overriding the initial value, subsequent jobs in the stage can see the new value. For example, you can include the following command to set the `$API_KEY` property and make it available to another job within the stage: `export API_KEY=<insert API key here>`
 {: tip}
@@ -301,6 +301,6 @@ A simple pipeline might contain three stages:
 
 This pipeline is shown in the following conceptual diagram:
 
-![A conceptual diagram of stages and jobs in a pipeline](images/diagram.jpg){: caption="Figure 7. Conceptual model of a three-stage pipeline" caption-side="bottom"}
+![A conceptual diagram of stages and jobs in a pipeline](images/diagram.jpg){: caption="Conceptual model of a three-stage pipeline" caption-side="bottom"}
 
 Stages take their input from repositories and build jobs, and jobs within a stage run sequentially and independently of each other. In the example pipeline, the stages run sequentially, even though the Test and Prod stages both take the Build stage's output as their input.

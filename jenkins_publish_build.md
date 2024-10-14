@@ -40,7 +40,7 @@ These variables are required for the pipeline to integrate with {{site.data.keyw
 | `IBM_CLOUD_DEVOPS_API_KEY`      | A unique code that is passed in to an application programming interface (API) to identify the calling application or user. Store the API key as Jenkins credentials. (secret text type). |
 | `IBM_CLOUD_DEVOPS_APP_NAME`     | The name of the application that your toolchain deploys. If applicationName parameter is passed to the step job, then this value is ignored for that step. |
 | `IBM_CLOUD_DEVOPS_TOOLCHAIN_ID` | The ID of your toolchain. |
-{: caption="Table 1. Jenkins environment variables and definitions" caption-side="top"}
+{: caption="Jenkins environment variables and definitions" caption-side="top"}
 
 For each command, you need to specify the toolchain ID to export the environment variable. These environment variables and credentials are used by the {{site.data.keyword.DRA_full}} plug-in to interact with {{site.data.keyword.DRA_short}}. Here is an example of setting them in the declarative pipeline format.
 
@@ -67,7 +67,7 @@ Publish build records with the publishBuildRecord step. This step requires four 
 | `result`          | The result of the build stage. The value is SUCCESS or FAIL.                                                                 |
 | `buildNumber`     | Optional: The set value to any string that represents version number.                                                         |
 | `applicationName` | Optional: Set the application name. If this value is set the environment variable, `IBM_CLOUD_DEVOPS_APP_NAME` is ignored.   |
-{: caption="Table 2. Publishing build records parameters and definitions" caption-side="top"}
+{: caption="Publishing build records parameters and definitions" caption-side="top"}
 
 Here are the parameters in an example command:
 
@@ -111,7 +111,7 @@ The Cloud DevOps plug-in adds four steps to Jenkins pipelines for you to use. Us
 | `publishTestResult`   | Publishes test results       |
 | `publishDeployRecord` | Publishes deployment records |
 | `evaluateGate`        | Enforces policies            |
-{: caption="Table 3. {{site.data.keyword.DRA_short}} steps and uses" caption-side="top"}
+{: caption="{{site.data.keyword.DRA_short}} steps and uses" caption-side="top"}
 
 By default, the version number is set to be {pipeline name}:{build number}, you can also set the custom version number in each step
 

@@ -44,7 +44,7 @@ Publish deployment records with the publishDeployRecord step. This step requires
 | `appUrl`          | Optional: The URL used to access your application.                                                                           |
 | `buildNumber`     | Optional: The set value to any string that represents version number.                                                            |
 | `applicationName` | Optional: Set the application name. If this value is set, the environment variable `IBM_CLOUD_DEVOPS_APP_NAME` is ignored. |
-{: caption="Table 1. Publishing build records parameters and definitions" caption-side="top"}
+{: caption="Publishing build records parameters and definitions" caption-side="top"}
 
 The following example commands include the parameters. The first command publishes the deployment record for a staging environment. The second command publishes the deployment record for a production environment.
 
