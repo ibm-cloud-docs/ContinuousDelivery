@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-09-26"
+lastupdated: "2024-10-16"
 
 keywords: troubleshoot, Delivery Pipeline, toolchains, tool integrations
 
@@ -268,14 +268,18 @@ oc get pods -A  # To verify connection
 {: #troubleshoot-git-clone}
 {: troubleshoot}
 
-Tekton Pipelines that are using the `git-clone-repo` command task might fail with the following error displayed: `Clone was not successful. Code 128 - Retrying shortly...`.
+Tekton Pipelines that are using the `git-clone-repo` command task might fail with the following error displayed: 
+```sh
+Clone was not successful. Code 128 - Retrying shortly... 
+fatal: destination path '.' already exists and is not an empty directory.
+```
 {: tsSymptoms}
 
 The issue is caused by a performance change in the infrastructure of the public managed pipeline workers. 
 {: tsCauses}
 
 To resolve this issue:
-- Locate the tekton definitions of the `clone-repo` step in the `git-clone-repo` task. For more information, see the [Tekton Catalog example](https://github.com/open-toolchain/tekton-catalog/blob/8a9dab995e459eb879cd3552cbb89e8d90be54df/git/task-clone-repo.yaml#L207).
+- Locate the tekton definitions under Settings for your pipeline and find the entry for `git` under Path. Click the repository link to open. Navigate to  `git/task-clone-repo.yaml` and then within that file find the `clone-repo` step. See the [Tekton Catalog example](https://github.com/open-toolchain/tekton-catalog/blob/master/git/task-clone-repo.yaml#L261) for the latest code for reference. 
 - Add `rm -rf "lost+found"` to the definition prior to the `git clone` call. This ensures the directory for cloning is empty.
 - Run the pipeline again.
 {: tsResolve}
