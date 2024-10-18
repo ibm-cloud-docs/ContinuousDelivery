@@ -410,6 +410,7 @@ Run when an issue is created with the specified label:
       body.issue.kind == 'bug'
 ```
 {: codeblock}
+
 #### Checking the event payload
 {: #checking_event_payload}
 
