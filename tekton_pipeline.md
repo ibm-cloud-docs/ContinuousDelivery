@@ -214,13 +214,13 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
 
 You can configure triggers for Tekton pipelines based on various events in your Git repo. Filter Git triggers by using the following options:
 
-1. `Branch`: Trigger the pipeline for a specific branch of the selected repo when the specified event occurs.
-1. `Pattern`: Trigger the pipeline based on a glob match against tags and branch names in the selected repo when the specified event occurs.
-1. `CEL filter`: Trigger the pipeline when the event matches the provided Common Expression Language (CEL) filter.
+* **Branch**: Trigger the pipeline for a specific branch of the selected repo when the specified event occurs.
+* **Pattern**: Trigger the pipeline based on a glob match against tags and branch names in the selected repo when the specified event occurs.
+* **CEL filter**: Trigger the pipeline when the event matches the provided Common Expression Language (CEL) filter.
 
-The `Branch` and `Pattern` options filter events by selecting checkboxes that you can use to specify events such as `commit push`, `pull request opened`, `updated`, or `closed`. Also, you can specify pull request events by switching the `Include draft pull request events` filtering feature to allow or skip pipeline triggers for draft pull requests. Similarly, you can specify if you want to allow pipeline triggers for pull requests from forked repositories through the `Include draft pull request events` toggle. Or, you can select the `Label filters` filtering feature to allow filtering based on pull request labels according to user-defined criteria in the filters table.
+Use the **Branch** and **Pattern** options to specify events such as `commit push`, `pull request opened`, `updated`, or `closed`. Also, you can specify pull request events by switching the **Include draft pull request events** option to allow or skip pipeline triggers for draft pull requests. Similarly, you can specify if you want to allow pipeline triggers for pull requests from forked repositories by using the **Include pull request events from forks** toggle. Additionally you can select the **Label filters** option to enable filtering based on pull request labels according to user-defined criteria in the filters table.
 
-The `CEL filter` option supports more advanced use cases, such as matching against other fields in the event payload. This option supports push events, all pull request events, issues events, issue comments events, as well as release events. The `CEL filter` is also available as an optional feature on the Generic Webhook trigger to provide event filtering based on the webhook payload. 
+The **CEL filter** option supports more advanced use cases, such as matching against other fields in the event payload. This option supports push events, all pull request events, issues events, issue comments events, and release events. This option is also available as an optional feature on the Generic Webhook trigger to provide event filtering based on the webhook payload. 
 
 #### CEL overview
 {: #cel_overview}
@@ -286,13 +286,24 @@ Run when a pull request is opened or updated against the specified branch:
    header['x-github-event'] == 'pull_request' && 
       (body.action == 'opened' || body.action == 'synchronize') && 
       body.pull_request.base.ref == 'main'
-   ```
-      
+```
+{: codeblock}
+
 Run when a commit is pushed to the specified branch:
          
 ```text
    header['x-github-event'] == 'push' && body.ref == 'refs/heads/main'
 ```
+{: codeblock}
+
+Run when a commit is pushed to the specified branch but skip it when the commit message contains a specific string:
+
+```text
+   header['x-github-event'] == 'push' && 
+      body.ref == 'refs/heads/main' && 
+      !body.head_commit.message.contains("skip run")
+```
+{: codeblock}
 
 Run when a comment containing the specified string is added to a pull request:
 
@@ -328,6 +339,16 @@ Run when a commit is pushed to the specified branch:
 ```text
    header['x-gitlab-event'] == 'Push Hook' && body.ref == 'refs/heads/main'
 ```
+{: codeblock}
+
+Run when a commit is pushed to the specified branch but skip it when the commit message contains a specific string:
+
+```text
+   header['x-gitlab-event'] == 'Push Hook' && 
+      body.ref == 'refs/heads/main' &&
+      !body.object_attributes.last_commit.message("skip run")
+```
+{: codeblock}
 
 Run when a comment containing the specified string is added to a merge request:
 
@@ -356,12 +377,23 @@ Run when a pull request is opened or updated against the specified branch:
    (header['x-event-key'] == 'pullrequest:created' || header['x-event-key'] == 'pullrequest:updated') && 
        body.pullrequest.destination.branch.name == 'main'
 ```
-      
+{: codeblock}
+
 Run when a commit is pushed to the specified branch:
 
 ```text
    header['x-event-key'] == 'repo:push' && body.push.changes[0].new.name == 'main'
 ```
+{: codeblock}
+
+Run when a commit is pushed to the specified branch but skip it when the commit message contains a specific string:
+
+```text
+   header['x-event-key'] == 'repo:push' && 
+      body.push.changes[0].new.name == 'main' &&
+      !body.push.changes[0].commits[0].message("skip run")
+```
+{: codeblock}
 
 Run when a comment containing the specified string is added to a pull request:
 
@@ -378,7 +410,6 @@ Run when an issue is created with the specified label:
       body.issue.kind == 'bug'
 ```
 {: codeblock}
-
 #### Checking the event payload
 {: #checking_event_payload}
 
