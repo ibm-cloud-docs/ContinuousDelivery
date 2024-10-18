@@ -1,8 +1,8 @@
 ---
 
 copyright:
-   years: 2021, 2024
-lastupdated: "2024-04-16"
+  years: 2021, 2024
+lastupdated: "2024-10-18"
 
 keywords: deployment strategies, tekton, pipeline, toolchain, CD, CI, automate, automation, continuous delivery, continuous integration, DevOps, shift-left, shift left, secure DevOps, IBM Cloud
 
@@ -102,7 +102,7 @@ To create a **Develop a Kubernetes app** toolchain, click
 
 [![Create toolchain](images/create_toolchain_button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.ibm.com/open-toolchain/secure-app-toolchain&env_id=ibm:yp:us-south){: external}
 
-Alternatively, from the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**. On the **Toolchains** page, click **Create a Toolchain**. On the **Create a Toolchain** page, click **Develop a Kubernetes app**.
+Alternatively, from the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the **Toolchains** page, click **Create a Toolchain**. On the **Create a Toolchain** page, click **Develop a Kubernetes app**.
 {: tip}
 
 

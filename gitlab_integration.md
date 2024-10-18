@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2024
-lastupdated: "2024-08-16"
+lastupdated: "2024-10-18"
 
 keywords: tool integrations, IBM Cloud Public, GitLab
 
@@ -40,7 +40,7 @@ If you are configuring this tool integration as you are creating the toolchain, 
 
 If you have a toolchain and are adding this tool integration to it, follow these steps:
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
 1. Click **Add tool**.
 1. In the Tool Integrations section, click **GitLab**.
 1. Click the GitLab server that you want to use.

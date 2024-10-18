@@ -1,8 +1,8 @@
 ---
 
 copyright:
-   years: 2022, 2024
-lastupdated: "2024-04-16"
+  years: 2022, 2024
+lastupdated: "2024-10-18"
 
 keywords: Satellite, satellite, tekton, pipeline, toolchain, CD, automate, automation, continuous delivery, DevOps, shift-left, shift left, secure DevOps, IBM Cloud
 
@@ -80,7 +80,7 @@ To create a **Deploy your application to multiple clusters** toolchain, click
 [![Create toolchain](images/create_toolchain_button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fus-south.git.cloud.ibm.com%2Fopen-toolchain%2Fsatellite-cd-toolchain&env_id=ibm:yp:us-south){: external} 
 
 
-Alternatively, from the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**. On the **Toolchains** page, click **Create a Toolchain**. On the **Create a Toolchain** page, click **Deploy your application to multiple clusters**.
+Alternatively, from the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the **Toolchains** page, click **Create a Toolchain**. On the **Create a Toolchain** page, click **Deploy your application to multiple clusters**.
 {: tip}
 
 ### Review the Welcome page

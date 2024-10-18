@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-01-25"
+  years: 2015, 2024
+lastupdated: "2024-10-18"
 
 keywords: troubleshoot, toolchains, tool integrations, DevOps Insights
 
@@ -43,7 +43,7 @@ Toolchains with {{site.data.keyword.DRA_short}} appear in the catalog when the c
 
 Update your current location by completing the following steps:
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**.
 2. From the **Location** menu, select your location.
 3. Click **Create a Toolchain** to return to the toolchain templates page.
 {: tsResolve}

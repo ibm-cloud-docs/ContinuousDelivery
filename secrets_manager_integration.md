@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-04-18"
+lastupdated: "2024-10-18"
 
 keywords: tool integrations, IBM Cloud Public, IBM Secrets Manager
 
@@ -42,7 +42,7 @@ For more information about IAM credentials secrets, Arbitrary secrets and Key-va
 Configure {{site.data.keyword.secrets-manager_short}} to securely manage secrets that are part of your toolchain:
 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **{{site.data.keyword.secrets-manager_short}}**. If {{site.data.keyword.secrets-manager_short}} is defined as an optional tool integration, it is located under **More Tools**. Choose to identify this instance by the service instance name. To create an authorization between the toolchain and the **{{site.data.keyword.secrets-manager_short}}** service instance select the **Create an authorization for this toolchain** option from the **Authorization type** dropdown. This grants the toolchain access to the secret material stored in the **{{site.data.keyword.secrets-manager_short}}** service instance.
-1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the {{site.data.keyword.contdelivery_short}} card, click **View toolchain**. Then, click **Overview**.  
+1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the {{site.data.keyword.contdelivery_short}} card, click **View toolchain**. Then, click **Overview**.  
 
    a. Click **Add tool**.
 
@@ -141,7 +141,7 @@ When you configure the {{site.data.keyword.secrets-manager_short}} tool integrat
 Configure {{site.data.keyword.secrets-manager_short}} to securely manage secrets that are part of your toolchain:
 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **{{site.data.keyword.secrets-manager_short}}**. If {{site.data.keyword.secrets-manager_short}} is defined as an optional tool integration, it is located under **More Tools**. Choose to identify this instance by the service instance CRN. To create an authorization between the toolchain and the **{{site.data.keyword.secrets-manager_short}}** service instance select the **Create an authorization for this toolchain** option from the **Authorization type** dropdown. This grants the toolchain access to the secret material stored in the **{{site.data.keyword.secrets-manager_short}}** service instance.
-1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the {{site.data.keyword.contdelivery_short}} card, click **View toolchain**. Then, click **Overview**.  
+1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the {{site.data.keyword.contdelivery_short}} card, click **View toolchain**. Then, click **Overview**.  
 
    a. Click **Add tool**.
 

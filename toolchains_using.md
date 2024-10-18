@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-04-16"
+lastupdated: "2024-10-18"
 
 keywords: user management function, toolchains, tool integrations, user access
 
@@ -30,7 +30,7 @@ Users with access to toolchains might be counted as authorized users of the {{si
 
 You can add tags to your toolchains to organize them and easily find them later. A tag is a label that you assign to a toolchain for easy filtering of toolchains in your toolchains list.
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**. 
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. 
 1. On the Toolchains page, locate the toolchain that you want to add a tag to and click **Add tags**.
 1. Enter a name for the tag that you want to add to the toolchain. You can add multiple tags, which are separated by commas.
 1. Click **Save**.
@@ -42,7 +42,7 @@ For more information about tags, see [Working with tags](/docs/account?topic=acc
 
 You can view your toolchain's connections to Kubernetes clusters and services.
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**. 
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. 
 1. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
 1. Select the **Connections** tab, and select the app, cluster, or service that you want to view.
 
@@ -62,7 +62,7 @@ When you delete a GitHub or {{site.data.keyword.gitrepos}} tool integration, the
 {: #deleting_a_toolchain_ui}
 {: ui}
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**. 
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. 
 1. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
 1. Click the **Actions** menu and select **Delete**. Deleting a toolchain removes all of its tool integrations, which might delete resources that are managed by those integrations.
 1. Confirm the deletion by typing the name of the toolchain and clicking **Delete**.

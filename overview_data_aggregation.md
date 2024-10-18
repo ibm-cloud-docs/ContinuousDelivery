@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-06-28"
+  years: 2019, 2024
+lastupdated: "2024-10-18"
 
 keywords: devops insights, quality, dashboard, code coverage, test, tests, verification, app
 
@@ -30,7 +30,7 @@ The Quality Dashboard page shows rows of information for each app that is associ
 
 You can find the Quality Dashboard page in the {{site.data.keyword.DRA_short}} dashboard. 
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**.
 1. On the Toolchains page, click your toolchain to open its Overview page.
 1. On the **IBM Cloud tools** card, click the {{site.data.keyword.DRA_short}} tool integration.
 1. From the menu, select **Quality Dashboard**. 

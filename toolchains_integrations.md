@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-04-18"
+lastupdated: "2024-10-18"
 
 keywords: tool integrations, IBM Cloud Public, App Configuration, Artifactory, Bitbucket, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Event Notifications, Git Repos and Issue Tracking, GitHub, GitLab, HashiCorp Vault, Jenkins, JIRA, IBM Key Protect, IBM Secrets Manager, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Security and Compliance Center, Slack, SonarQube
 
@@ -42,7 +42,7 @@ The {{site.data.keyword.contdelivery_short}} service is Financial Services Valid
 
 You can add tool integrations to your toolchain by using the console.
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**.
 1. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
 1. To see a list of tool integrations to add, click **Add tool**.
 1. Click a tool integration that you want to add.
@@ -209,7 +209,7 @@ You can add tool integrations to your toolchain with Terraform.
 
 If you deferred the configuration of a tool integration when you created a toolchain, a Configure button is shown on its card. If you configured a tool integration when you created a toolchain, you can update the configuration settings by using the console.
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**. 
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. 
 1. On the Toolchains page, click the toolchain that contains the tool integration that you want to update to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
 1. If you need to configure a tool integration for the first time, on its card, click **Configure**.
 1. When you are finished configuring the tool integration, click **Save Integration**.
@@ -381,7 +381,7 @@ If you configured a tool integration when you created a toolchain, you can updat
 
 You can delete tool integrations from your toolchain by using the console. If you delete a tool integration from your toolchain, the deletion cannot be undone.
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**.
 1. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
 1. On the tool integration that you want to delete, click the **Actions** icon ![Actions icon](../../icons/action-menu-icon.svg) **> Delete**.
 1. Confirm by clicking **Delete**.
