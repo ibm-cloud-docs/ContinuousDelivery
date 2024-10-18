@@ -411,6 +411,7 @@ Run when an issue is created with the specified label:
 ```
 {: codeblock}
 
+
 #### Checking the event payload
 {: #checking_event_payload}
 
@@ -418,7 +419,6 @@ When you write CEL expressions for event filtering, you must understand the stru
 
 To view the event payload, go to the Pipeline Run details page and click **Show context**. You can view the raw webhook payload that triggered the pipeline run and confirm the relevant fields for your CEL expressions to match the conditions that you want.
    
-
 ## Creating a {{site.data.keyword.deliverypipeline}} for Tekton with the API
 {: #create_tekton_pipeline_api}
 {: api}
