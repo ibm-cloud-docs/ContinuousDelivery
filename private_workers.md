@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-06-24"
+lastupdated: "2024-10-18"
 
 keywords: private workers integration, delivery pipeline, Kubernetes cluster, API key, Service ID, pool of workers
 
@@ -54,7 +54,7 @@ Complete the following steps to set up a private worker:
 
 Complete the following steps to configure the {{site.data.keyword.deliverypipeline}} Private Worker tool integration for your toolchain:
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
 
    a. Click **Add tool**.
 
@@ -173,7 +173,7 @@ Configure your Kubernetes cluster with a private worker:
 
 Complete the following steps to use the private worker in your pipeline:
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**.
 1. On the **Delivery pipelines** card, click the pipeline that you want to use the private worker with.
 1. If you are using a Classic pipeline, on the Pipeline page, on the stage, click the **Stage Configuration** icon. Then, click **Configure Stage** and click the **Workers** tab.
 1. If you are using a Tekton pipeline, from the trigger for which you want to specify a worker, select the Workers page. 
@@ -212,7 +212,7 @@ A service ID identifies a service or an application in the same way that a user 
 
 Complete the following steps to create a service ID:
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**.
 1. On the **Delivery pipelines** card, click the private workers tool integration that you want to modify, click the menu, and then click **Configure** to access the configuration options.
 1. Click **Create**.
 1. Enter a name and description for the service ID.
@@ -228,7 +228,7 @@ An API key is a unique code that is passed to an API to identify the application
 
 Complete the following steps to update the API key for use with the {{site.data.keyword.deliverypipeline}} Private Worker tool integration:
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**.
 1. On the **Delivery pipelines** card, go to the {{site.data.keyword.deliverypipeline}} Private Worker that you want to modify, click the menu, and then click **Configure** to access the configuration options.
 1. Specify your new API key. It is recommended that you do not use the API key directly. Instead, use a Secrets Manager to store the API key and add a reference to that stored key in your private worker configuration.
 1. Click **Save Integration**.
@@ -249,7 +249,7 @@ Complete the following steps to delete a private worker:
 
 Complete the following steps to delete the private worker from the pool of workers:
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**.
 1. On the **Delivery pipelines** card, click the {{site.data.keyword.deliverypipeline}} Private Worker tool integration that you want to configure.
 1. Click **Overview**.
 1. Click the menu for the private worker that you want to delete to access the configuration options.
@@ -285,7 +285,7 @@ If you delete the {{site.data.keyword.deliverypipeline}} Private Worker tool int
 
 Complete the following steps to delete a {{site.data.keyword.deliverypipeline}} Private Worker tool integration:
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**.
 1. On the **Delivery pipelines** card, click the {{site.data.keyword.deliverypipeline}} Private Worker tool integration that you want to delete, and then click the menu to access the configuration options.
 1. To delete the tool integration from your toolchain, click **Delete**.
 1. Confirm by clicking **Delete**. The {{site.data.keyword.deliverypipeline}} Private Worker tool integration is removed from the toolchain and is no longer available in the **Workers** tab in the delivery pipeline Stage Configuration page.
@@ -398,7 +398,7 @@ Complete the following steps to view the private worker status on the cluster wh
 
 To verify the overall status of a registered private worker pool, check the Overview page of the {{site.data.keyword.deliverypipeline}} private worker from the toolchain where it is used.
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**.
 1. On the **Delivery pipelines** card, click the private workers tool integration for which you want to view a list of all of the registered workers. This worker pool contains one or more private workers that are installed on different clusters, but share a `ServiceId`. When work is assigned to a private worker pool, any of the private workers that are listed in the pool are eligible to run the workload.
 
    The following information is provided for each worker that is registered in this pool:

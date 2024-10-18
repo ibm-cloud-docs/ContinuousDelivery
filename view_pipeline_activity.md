@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-03-24"
+  years: 2019, 2024
+lastupdated: "2024-10-18"
 
 keywords: devops insights, devops, insights, overview, pipeline data, cd pipeline
 
@@ -42,7 +42,7 @@ You must have at least one {{site.data.keyword.contdelivery_full}} in your toolc
 ## Viewing pipeline analytics
 {: #viewing-analytics}
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**. 
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. 
 2. Select your toolchain on the Toolchains page.
 3. From your toolchain's Overview page, on the **IBM Cloud tools** card, click **{{site.data.keyword.DRA_short}}**.
 4. On the Overview page, you can view the following data:

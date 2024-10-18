@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-03-25"
+  years: 2019, 2024
+lastupdated: "2024-10-18"
 
 keywords: devops insights, publish, build, record, cli, test, tests, app
 
@@ -61,7 +61,7 @@ The `status` field takes the `pass` or `fail` values.
 
 When this build job completes, your CI/CD tool publishes a message to {{site.data.keyword.DRA_short}} that a build is complete. You can view the build record on the Build Frequency page. To view the Build Frequency page, use the following steps.
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**.
 2. Select your toolchain.
 3. From your toolchain's Overview page, on the **IBM Cloud tools** card, click **{{site.data.keyword.DRA_short}}**.
 4. Click **Build Frequency**.  

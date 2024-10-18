@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-10-16"
+lastupdated: "2024-10-18"
 
 keywords: troubleshoot, Delivery Pipeline, toolchains, tool integrations
 
@@ -33,7 +33,7 @@ An eventing problem occurred which caused the GitHub tool integration to fail.
 Configure and save the GitHub tool integration again:
 {: tsResolve}
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**. On the **Toolchains** page, click the toolchain that you created to open the Overview page. Alternatively, on the App Details page in your app, click the toolchain name.
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the **Toolchains** page, click the toolchain that you created to open the Overview page. Alternatively, on the App Details page in your app, click the toolchain name.
 1. On the Toolchain's Overview page, on the **Repositories** card, locate the GitHub tool integration.
 1. Click the menu to access the configuration options, update the settings, and click **Save Integration**.
 1. On the **Delivery pipelines** card, click the {{site.data.keyword.deliverypipeline}} tool integration to view the pipeline setup.
@@ -80,7 +80,7 @@ The access token that the pipeline uses to clone the Git repo is no longer valid
 Configure and save the Git integration again:
 {: tsResolve}
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**. On the **Toolchains** page, click the toolchain that contains the Git integration that you want to update to open its Overview page. Alternatively, on the App Details page in your app, click the toolchain name.
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the **Toolchains** page, click the toolchain that contains the Git integration that you want to update to open its Overview page. Alternatively, on the App Details page in your app, click the toolchain name.
 1. On the Toolchain's Overview page, on the **Repositories** card, locate the Git tool integration.
 1. Click the menu to access the configuration options, select the authorized Git account for the Git integration owner, and click **Save Integration**.
 1. Run your pipeline again.

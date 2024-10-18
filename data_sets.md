@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2023
-lastupdated: "2023-05-25"
+  years: 2019, 2024
+lastupdated: "2024-10-18"
 
 keywords: devops insights, quality, dashboard, trends, data sets, configure data, quality data, managing data sets, code coverage, test, tests, verification, app, sonarqube
 
@@ -28,7 +28,7 @@ For more information about defining a policy, see [Defining policies and rules](
 
 View your current data sets by browsing your Quality Dashboard page. You can rearrange your data in the table to be in a more convenient order. To view your data sets, use the following steps:
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**.
 2. On the Toolchains page, select your toolchain.
 3. From your toolchain's Overview page, on the **IBM Cloud tools** card, click **{{site.data.keyword.DRA_short}}**.
 4. Select **Quality Dashboard**.
@@ -40,7 +40,7 @@ View your current data sets by browsing your Quality Dashboard page. You can rea
 
 To add a data set to the application's test, use the following steps:
 
-1. Click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**.
+1. Click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**.
 2. On the Toolchains page, select your toolchain.
 3. From your toolchain's Overview page, on the **IBM Cloud tools** card, click **{{site.data.keyword.DRA_short}}**.
 4. Click **Quality Dashboard**.
@@ -68,7 +68,7 @@ The following are the seven pre-defined tags that are provided by {{site.data.ke
 
 You can add your own custom data sets. Custom data sets support JUnit or XUnit, Mocha, Cobertura, lcov, and JaCoCo. To add custom data sets, use the following steps:
 
-1. Click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**.
+1. Click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**.
 2. On the Toolchains page, select your toolchain.
 3. From your toolchain's Overview page, on the **IBM Cloud tools** card, click **{{site.data.keyword.DRA_short}}**.
 4. Click **Quality Dashboard**.

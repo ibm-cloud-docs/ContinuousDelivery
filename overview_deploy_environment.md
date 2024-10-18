@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-03-25"
+  years: 2019, 2024
+lastupdated: "2024-10-18"
 
 keywords: devops insights, risk, analysis, application, environment, app, dashboard
 
@@ -30,7 +30,7 @@ Within the Risk Analysis dashboard you can select from two tabs: **Application**
 
 To view the Risk Analysis page, complete the following steps:
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**.
 1. On the Toolchains page, click your toolchain to open its Overview page.
 1. On the **IBM Cloud tools** card, click the {{site.data.keyword.DRA_short}} tool integration.
 1. From the menu, select **Risk Analysis**. 
