@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-10-18"
+lastupdated: "2024-10-25"
 
 keywords: user management function, toolchains, tool integrations, user access
 
@@ -29,6 +29,7 @@ Users with access to toolchains might be counted as authorized users of the {{si
 {: #organizing_toolchains}
 
 You can add tags to your toolchains to organize them and easily find them later. A tag is a label that you assign to a toolchain for easy filtering of toolchains in your toolchains list.
+
 
 1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. 
 1. On the Toolchains page, locate the toolchain that you want to add a tag to and click **Add tags**.
@@ -61,6 +62,7 @@ When you delete a GitHub or {{site.data.keyword.gitrepos}} tool integration, the
 ### Deleting a toolchain by using the console
 {: #deleting_a_toolchain_ui}
 {: ui}
+
 
 1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. 
 1. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
@@ -107,7 +109,7 @@ The following table lists and describes each of the variables that are used in t
 {: api}
 
 1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/toolchain#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
-   
+
    ```bash
    export CD_TOOLCHAIN_AUTH_TYPE=iam && \
    export CD_TOOLCHAIN_APIKEY={iam_api_key} && \
@@ -175,8 +177,8 @@ The following table lists and describes each of the variables that are used in t
    {: codeblock}
    {: java}
 
-The following table lists and describes each of the variables that are used in the previous steps.   
-    
+The following table lists and describes each of the variables that are used in the previous steps.
+
 | Variable | Description |
 |:---------|:------------|
 | `{base_url}` | The Toolchain API endpoint URL, for example `https://api.us-south.devops.cloud.ibm.com/toolchain/v2`. For more information about this endpoint URL, including a list of values, see [Endpoint URL](https://{DomainName}/apidocs/toolchain#endpoint-url){: external}. |
@@ -213,7 +215,7 @@ The following table lists and describes each of the variables that are used in t
    terraform init
    ```
    {: pre}
-   
+
 4. Create a Terraform execution plan. This plan summarizes all of the actions that must run to delete the toolchain.
 
    ```terraform
@@ -227,3 +229,10 @@ The following table lists and describes each of the variables that are used in t
    terraform apply
    ```
    {: pre}
+
+## Managing alternative toolchains in different regions
+{: #cd-ha-dr-alttoolchains}
+
+You can define your toolchain by using Terraform Configuration Language, and then apply and maintain your toolchain definition in two regions: a primary region with active pipelines, and an alternative region with idle pipelines. If you use {{site.data.keyword.gitrepos}}, you can also [mirror your Git repos](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-ha-dr-mirrorgit) from the primary region to the alternative region. Maintaining primary and alternative toolchains and Git repos provides faster failover and redundancy. It also ensures smooth operation if issues arise in the primary region. By codifying your toolchain in Terraform, you can update your toolchain and apply the changes to both regions.
+
+For more information about using Terraform, see [Setting up Terraform for {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-terraform-setup).

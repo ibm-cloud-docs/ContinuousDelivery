@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-09-16"
+lastupdated: "2024-10-25"
 
 keywords: environment properties, environment resources, IBM Java, Tekton environments
 
@@ -12,7 +12,7 @@ subcollection: ContinuousDelivery
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Tekton Pipelines environment and resources
+# Tekton pipelines environment properties and resources
 {: #tekton_environment}
 
 The following information and resources are available by default to an {{site.data.keyword.contdelivery_full}} Tekton `PipelineRun`.
@@ -56,7 +56,7 @@ spec:
       command: ["bash", "-c"]
       args:
         - echo $BUILD_NUMBER;
-          echo "COMPLETED"       
+          echo "COMPLETED"
 
 ```
 
@@ -92,7 +92,7 @@ spec:
           valueFrom:
             configMapKeyRef:
               name: environment-properties
-              key: environment  
+              key: environment
       command: ["/bin/bash", "-c"]
       args:
         - echo -e "environment from ConfigMap is >>";
@@ -120,12 +120,12 @@ spec:
         - configMapRef:
             name: environment-properties
         - secretRef:
-            name: secure-properties     
+            name: secure-properties
       command: ["/bin/bash", "-c"]
       args:
         - echo -e "The environment for this Step is ";
           env
-```         
+```
 
 ## Managed worker virtual machine sizing
 {: #tekton_tshirt_sizing}
@@ -135,6 +135,7 @@ When you run a pipeline by using the IBM Managed Worker pool, a VM with a specif
 Users can specify a label on their tasks to indicate whether a task requires more (or less) memory for a specific task. This ability to identify the specific amount of resources that are required benefits resource usage and eventual cost savings.
 
 To indicate which VM profile to apply to a specific task within a Tekton pipeline, add the `runtimeClassName` label to the task with one of the following VM values. If no label is provided, the default VM profile is used.
+
 
 * `small`: 2Gi
 * `medium`: 4Gi (default)
@@ -150,7 +151,7 @@ metadata:
   labels:
     runtimeClassName: medium
     and so on.
-``` 
+```
 
 You can also specify the same configuration in the `PipelineRun` as part of the `TriggerTemplate`. By specifying the `runtimeClassName` in the `PipelineRun`, users can select the VM profile that they want to use without changing the task definitions.
 
@@ -175,7 +176,7 @@ spec:
 
 
 
- 
+
 
 ## Learn more about Tekton delivery pipelines
 {: #tekton_learn_more}
