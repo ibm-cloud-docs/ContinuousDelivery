@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-06-19"
+lastupdated: "2024-10-31"
 
 keywords: error message, Lite plan, toolchains, IBM Cloud
 
@@ -18,45 +18,15 @@ subcollection: ContinuousDelivery
 Get answers to frequently asked questions about using {{site.data.keyword.contdelivery_full}}.
 {: shortdesc} 
 
-
-## My {{site.data.keyword.contdelivery_short}} service states that Lite plan services are deleted after 30 days of inactivity. What does inactivity mean?
+## Why are Lite plan services deleted after 30 days of inactivity?
 {: #plan_inactivity}
 {: faq}
 {: support}
 
-An instance of the {{site.data.keyword.contdelivery_short}} service is considered active when one or more of the toolchains within the same resource group is active. A toolchain is considered active if users interact with it by way of the user interface, delivery pipeline jobs are triggered, or repositories that are managed by {{site.data.keyword.gitrepos}} are accessed. To be considered inactive, all of these conditions must be absent for all of the toolchains that are associated with the {{site.data.keyword.contdelivery_short}} service, for 30 days.
+An instance of {{site.data.keyword.contdelivery_short}} is considered active when one or more of the toolchains within the same resource group is active. A toolchain is considered active if users interact with it by way of the UI, delivery pipeline jobs are triggered, or repositories that are managed by {{site.data.keyword.gitrepos}} are accessed. 
 
+When these conditions aren't met for all toolchains that are associated with the {{site.data.keyword.contdelivery_short}} service for 30 days, the instance is considered inactive.
 
-## I tried to deploy an app to {{site.data.keyword.cloud_notm}}, why am I getting an error?
-{: #org_outofmemory}
-{: faq}
-
-When trying to deploy an app to {{site.data.keyword.cloud_notm}}, if you get the following error message, the amount of memory that is remaining in your organization is less than the amount of memory that is required by the app that you want to deploy.
-
-`FAILED Server error, status code: 400, error code: 100005, message: You have exceeded your organization's memory limit.`
-
-You can either increase the memory quota of your account or reduce the memory that your apps use. The maximum memory quota for a trial account is 2 GB. To increase the memory quota of your account, convert your trial account to a pay account. For information about how to convert your trial account to a pay account, see [How do I upgrade or change my account?](/docs/account?topic=account-accountfaqs#changeacct). To reduce the memory that your apps use, use either the {{site.data.keyword.cloud_notm}} console or the cf command line interface.
-
-If you use the {{site.data.keyword.cloud_notm}} console, complete the following steps:
-
-1. In the Apps Dashboard, select your app. The app details page opens.
-1. In the runtime pane, you can reduce the maximum memory limit or the numbers of app instances, or both, for your app.
-
-If you use the cf command line interface, complete the following steps:
-
-1. Check how much memory is being used for your apps. The cf apps command lists all the apps that you deployed in your current space. The status of each app is also displayed.
-
-   ```text
-   cf apps
-   ```
-
-1. To reduce the amount of memory that is used by your app, reduce the number of app instances or the maximum memory limit, or both:
-
-   ```text
-   cf push appname -p app_path -i instance_number -m memory_limit
-   ```
-    
-1. Restart your app for the changes to take effect.
 
 
 ## Can I use sample scripts to build and deploy my application?
@@ -65,8 +35,7 @@ If you use the cf command line interface, complete the following steps:
 
 The [open-toolchain/commons](https://github.com/open-toolchain/commons){: external} GitHub repo contains a collection of common scripts that you can use in toolchains and pipelines. For example, you can use one of the shell scripts that is contained in this repo within your own toolchains in various ways.
 
-
-## How do I bring my own code and deploy it by using {{site.data.keyword.contdelivery_short}}
+## How do I bring my own code and deploy it by using {{site.data.keyword.contdelivery_short}}?
 {: #bmoc_deploy}
 {: faq}
 
@@ -104,7 +73,7 @@ You can remove authorized users from the {{site.data.keyword.contdelivery_short}
 * Remove the user from the authorized user list in the {{site.data.keyword.contdelivery_short}} service instance.
 * Remove Developer access from all {{site.data.keyword.gitrepos}} repos that are attached to all of the toolchains in the resource group.
 
-You can maintain an activity log related to authorized users. For more information about viewing, managing, and auditing service-initiated and user-initiated activities in your {{site.data.keyword.contdelivery_full}} instances, see [{{site.data.keyword.at_full_notm}} events](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-at-events). For more information about managing authorized users, see [Authorized users](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage#authorized_users).
+You can maintain an activity log related to authorized users. For more information about viewing, managing, and auditing service-initiated and user-initiated activities in your {{site.data.keyword.contdelivery_full}} instances, see [{{site.data.keyword.atracker_full_notm}} events](/docs/ContinuousDelivery?topic=ContinuousDelivery-at_events). For more information about managing authorized users, see [Authorized users](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage#authorized_users).
 
 
 ## Why is the `AUTHORIZED_USERS_PER_MONTH` quantity reported in {{site.data.keyword.cloud_notm}} Billing and usage different from the actual number of authorized users listed for my {{site.data.keyword.contdelivery_short}} service instance?
