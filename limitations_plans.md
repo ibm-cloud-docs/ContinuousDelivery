@@ -358,9 +358,11 @@ You can link Continuous Delivery and toolchain instances when you're using the A
 * Use an optional header `IBM-CLOUD-API-KEY` to add Continuous Delivery and toolchains while creating a project. Generate the key value for your API key from [here](https://cloud.ibm.com/login?redirect=%2Fiam%2Fapikeys).
 
 
-* Add request parameters `toolchain_ID` and `cd_instance` to link your Git project to a specific Continuous Delivery and toolchain instance.
+* Add one of the required parameters `toolchain_ID` or `cd_instance` to link your Git project to a specific Continuous Delivery and toolchain instance.
 
-   *  The `toolchain_id` parameter supersedes the `cd_instance` parameter. If both are provided, the toolchain ID is used. However, if only the `cd_instance` parameter is given, a default toolchain is automatically created for the specified CD instance.
+   *  If the `cd_instance` parameter is given, a default toolchain is automatically created for the specified CD instance with a git repo tool integration to the repository.
+     
+   *  If the `toolchain_id` parameter is given, the git repo tool integration is created in the given toolchain. The `toolchain_id` parameter supersedes the `cd_instance` parameter. If both are provided, the toolchain ID is used.
 
    *  To successfully use these request parameters, you must use the `IBM-CLOUD-API-KEY` header.
    {: note}
