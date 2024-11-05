@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-10-31"
+lastupdated: "2024-11-05"
 
 keywords: event, security, IBM, activity tracker, Continuous Delivery, toolchain
 
@@ -44,7 +44,7 @@ As of 28 March 2024, the {{site.data.keyword.at_full_notm}} service is deprecate
 
 | Tokyo (`jp-tok`)   | Sydney (`au-syd`)  |  Osaka (`jp-osa`)  | Chennai (`in-che`) |
 |--------------------|--------------------|--------------------|--------------------|
-| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
+| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [No]{: tag-red}    |
 {: caption="Regions from which activity tracking events are sent in Asia Pacific locations" caption-side="top"}
 {: #at-origins-table-2}
 {: tab-title="Asia Pacific"}
@@ -80,7 +80,7 @@ As of 28 March 2024, the {{site.data.keyword.at_full_notm}} service is deprecate
 
 | Tokyo (`jp-tok`)   | Sydney (`au-syd`)  |  Osaka (`jp-osa`)  | Chennai (`in-che`) |
 |--------------------|--------------------|--------------------|--------------------|
-| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
+| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [No]{: tag-red}    |
 {: caption="Regions where activity tracking events are sent in Asia Pacific locations" caption-side="top"}
 {: #at-table-2}
 {: tab-title="Asia Pacific"}
@@ -115,7 +115,7 @@ As of 28 March 2024, the {{site.data.keyword.at_full_notm}} service is deprecate
 
 | Tokyo (`jp-tok`)   | Sydney (`au-syd`)  |  Osaka (`jp-osa`)  | Chennai (`in-che`) |
 |--------------------|--------------------|--------------------|--------------------|
-| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
+| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [No]{: tag-red}    |
 {: caption="Regions where activity tracking events are sent in Asia Pacific locations" caption-side="top"}
 {: #atracker-table-2}
 {: tab-title="Asia Pacific"}
@@ -170,7 +170,7 @@ The following table lists the actions that generate an event for managing servic
 ## Events for {{site.data.keyword.contdelivery_short}}
 {: #at_actions_cd}
 
-The following table lists the actions that generate {{site.data.keyword.contdelivery_short}} management events:
+The following table lists the actions that generate {{site.data.keyword.contdelivery_short}} management and data events:
 
 | Action                           | Description                        |
 |----------------------------------|------------------------------------|
@@ -182,8 +182,6 @@ The following table lists the actions that generate {{site.data.keyword.contdeli
 {: tab-group="componentcd"}
 {: class="simple-tab-table"}
 {: row-headers}
-
-The following table lists the actions that generate {{site.data.keyword.contdelivery_short}} data events:
 
 | Action                           | Description                        |
 |----------------------------------|------------------------------------|
@@ -201,7 +199,7 @@ The following table lists the actions that generate {{site.data.keyword.contdeli
 ## Events for toolchains
 {: #at_actions_toolchain}
 
-The following table lists the actions that generate toolchain management events:
+The following table lists the actions that generate toolchain management and data events:
 
 | Action                           | Description                        |
 |----------------------------------|------------------------------------|
@@ -218,8 +216,6 @@ The following table lists the actions that generate toolchain management events:
 {: tab-group="componenttc"}
 {: class="simple-tab-table"}
 {: row-headers}
-
-The following table lists the actions that generate toolchain data events:
 
 | Action                           | Description                        |
 |----------------------------------|------------------------------------|
@@ -241,7 +237,7 @@ Activity tracking events are different from client bespoke toolchain events. Whe
 ## Events for {{site.data.keyword.DRA_short}}
 {: #at_actions_insights}
 
-The following table lists the actions that generate {{site.data.keyword.DRA_short}} management events:
+The following table lists the actions that generate {{site.data.keyword.DRA_short}} management and data events:
 
 | Action                           | Description                        |
 |----------------------------------|------------------------------------|
@@ -256,8 +252,6 @@ The following table lists the actions that generate {{site.data.keyword.DRA_shor
 {: tab-group="componentdra"}
 {: class="simple-tab-table"}
 {: row-headers}
-
-The following table lists the actions that generate {{site.data.keyword.DRA_short}} data events:
 
 | Action                           | Description                        |
 |----------------------------------|------------------------------------|
@@ -281,7 +275,7 @@ The following table lists the actions that generate {{site.data.keyword.DRA_shor
 ## Events for component {{site.data.keyword.deliverypipeline}}
 {: #at_actions_pipeline}
 
-The following table lists the actions that generate {{site.data.keyword.deliverypipeline}} management events:
+The following table lists the actions that generate {{site.data.keyword.deliverypipeline}} management and data events:
 
 | Action                           | Description                        |
 |----------------------------------|------------------------------------|
@@ -293,8 +287,6 @@ The following table lists the actions that generate {{site.data.keyword.delivery
 {: tab-group="componentdp"}
 {: class="simple-tab-table"}
 {: row-headers}
-
-The following table lists the actions that generate {{site.data.keyword.deliverypipeline}} data events:
 
 | Action                           | Description                        |
 |----------------------------------|------------------------------------|
@@ -314,12 +306,12 @@ The following table lists the actions that generate {{site.data.keyword.delivery
 ## Analyzing {{site.data.keyword.contdelivery_short}} activity tracking events
 {: #at_events_cd_analyze}
 
-When user emails are added to or removed from the authorized users list of a {{site.data.keyword.contdelivery_short}} service instance in a resource group, {{site.data.keyword.contdelivery_short}} sends events to {{site.data.keyword.at_full_notm}} when either of the following methods are used.
+When user emails are added to or removed from the authorized users list of a {{site.data.keyword.contdelivery_short}} service instance in a resource group, {{site.data.keyword.contdelivery_short}} sends events to {{site.data.keyword.atracker_full_notm}} when either of the following methods are used.
 
 * An administrator manually adds or removes a user email from the **Manage** tab of the {{site.data.keyword.contdelivery_short}} service.
 * The system automatically adds one or more user emails in response to user-initiated or service-initiated actions with {{site.data.keyword.contdelivery_short}} toolchains.
 
-The following authorized user events are displayed in {{site.data.keyword.at_full_notm}}:
+The following authorized user events are sent to {{site.data.keyword.atracker_full_notm}}:
 
 * `Continuous Delivery: create auth-user [service name] (auth-user(s): [EMAILS])`
 * `Continuous Delivery: delete auth-user [service name] (auth-user(s): [EMAILS])`
