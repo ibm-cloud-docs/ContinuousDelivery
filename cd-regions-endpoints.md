@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-10-25"
+lastupdated: "2024-11-11"
 
 keywords: Continuous Delivery endpoints, available regions, locations
 
@@ -12,7 +12,7 @@ subcollection: ContinuousDelivery
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Continuous Delivery regions and endpoints
+# {{site.data.keyword.contdelivery_short}} regions and endpoints
 {: #regions}
 
 Review region and connectivity options for interacting with {{site.data.keyword.contdelivery_full}}.
