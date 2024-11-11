@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-06-27"
+lastupdated: "2024-10-31"
 
 keywords: public isolation for IBM Cloud Continuous Delivery, compute isolation for Continuous Delivery, Continuous Delivery architecture, workload isolation in Continuous Delivery
 
@@ -82,8 +82,8 @@ The {{site.data.keyword.contdelivery_short}} service launches its dependencies o
 | Usage metering | Platform | Receives usage metrics from the {{site.data.keyword.contdelivery_short}} service to report usage and compute bills for customer accounts. |
 | {{site.data.keyword.containerlong}} | Service | Hosts clusters of containers in which the internal microservices of the {{site.data.keyword.contdelivery_short}} service run. |
 | {{site.data.keyword.registrylong}} | Service | Stores container images that are used by {{site.data.keyword.deliverypipeline}} jobs and steps. |
-| {{site.data.keyword.la_full}}  | Service | Collects internal log events from the {{site.data.keyword.contdelivery_short}} service for use by IBM specialists in maintaining and supporting the service. |
-| {{site.data.keyword.at_full_notm}}  | Service | Collects action events from the {{site.data.keyword.contdelivery_short}} service so that customers can audit activities with the {{site.data.keyword.contdelivery_short}} service and its components. |
+| {{site.data.keyword.logs_full_notm}} | Service | Collects internal log events from the {{site.data.keyword.contdelivery_short}} service for use by IBM specialists in maintaining and supporting the service. |
+| {{site.data.keyword.atracker_full_notm}}  | Platform | Collects action events from the {{site.data.keyword.contdelivery_short}} service so that customers can audit activities with the {{site.data.keyword.contdelivery_short}} service and its components. |
 | {{site.data.keyword.appid_full}}  | Service | Manages conversions between IBM Cloud user IDs and user email addresses. |
 | {{site.data.keyword.cis_full}} (CIS)  | Service | Provides domain name resolution and traffic routing for the {{site.data.keyword.contdelivery_short}} service. |
 | {{site.data.keyword.cloudantfull}}  | Service | Serves as the primary database for all structured {{site.data.keyword.contdelivery_short}} service and customer-owned data. |
@@ -95,14 +95,13 @@ The {{site.data.keyword.contdelivery_short}} service launches its dependencies o
 | General Parallel File System (GPFS)  | Storage | Provides secure, high-performance distributed file system storage of {{site.data.keyword.gitrepos}} repositories. GPFS runs on nodes within the same clusters that host the {{site.data.keyword.gitrepos}} components. |
 {: caption="{{site.data.keyword.contdelivery_short}} dependencies" caption-side="top"}
 
-For more information about the key components of the {{site.data.keyword.cloud_notm}} Platform, see [What is the {{site.data.keyword.cloud_notm}} Platform?](/docs/overview?topic=overview-whatis-platform)
+See [What is the {{site.data.keyword.cloud_notm}} Platform?](/docs/overview?topic=overview-whatis-platform) for more details about key platform components. 
 
 The following diagram shows the {{site.data.keyword.contdelivery_short}} dependencies.
 
 ![Continuous Delivery dependencies](images/CD_Dependencies_Arch.svg){: caption="Continuous Delivery dependencies" caption-side="bottom"}
 
 Excluding data backups, customer-owned data that is provided to the {{site.data.keyword.contdelivery_short}} service in a specific region is exchanged only with data and logging services in the same region. Data backups are stored in Cloud Object Storage cross-region buckets.
-
 
 ### Object storage location
 {: #cd-object-storage}

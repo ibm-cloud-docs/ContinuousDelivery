@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2024-04-18"
+  years: 2023, 2024
+lastupdated: "2024-10-25"
 
 keywords: private workers integration, delivery pipeline, tekton chains
 
@@ -10,7 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-# What is SLSA?
+# Using Tekton chains to manage supply chain security
 {: #slsa-whatis}
 
 Supply chain Levels for Software Artifacts (SLSA) is a security framework. SLSA is a checklist of standards and controls to prevent tampering, improve integrity, and secure packages and infrastructure in your projects, businesses, or enterprises. SLSA gets you from safe enough to being as resilient as possible, at any link in the chain.
