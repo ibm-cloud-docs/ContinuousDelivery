@@ -15,7 +15,7 @@ subcollection: ContinuousDelivery
 
 # Deleting a {{site.data.keyword.contdelivery_short}} service instance
 {: #delete_cd_service}
-{: help} 
+{: help}
 {: support}
 
 You can delete resource group-based {{site.data.keyword.contdelivery_short}} service instances.
@@ -78,8 +78,8 @@ The following table lists and describes each of the variables that are used in t
 {: #deleting_rg_api}
 {: api}
 
-1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/resource-controller#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables. 
-   
+1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/resource-controller#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
+
    ```bash
    export RESOURCE_CONTROLLER_APIKEY={iam_api_key}
    ```
@@ -152,8 +152,8 @@ The following table lists and describes each of the variables that are used in t
    {: codeblock}
    {: go}
 
-The following table lists and describes each of the variables that are used in the previous steps.   
-    
+The following table lists and describes each of the variables that are used in the previous steps.
+
 | Variable | Description |
 |:---------|:------------|
 | `{iam_api_key}` | Your IAM API key. |
@@ -161,7 +161,7 @@ The following table lists and describes each of the variables that are used in t
 | `{token}` | A valid IAM bearer token. |
 {: caption="Variables for deleting the {{site.data.keyword.contdelivery_short}} service with the API" caption-side="top"}
 
-For more information about deleting service instances, see [Deleting resource instances by using the API](/docs/account?topic=account-delete-resource&interface=api#delete-resource-instance-api).
+For more information about deleting service instances, see [Deleting resource instances by using the API](/docs/account?topic=account-manage_resource&interface=ui#delete-resource#delete-resource-instance-api).
 
 ## Deleting a {{site.data.keyword.contdelivery_short}} service instance with Terraform
 {: #deleting_rg_terraform}
@@ -194,7 +194,7 @@ For more information about deleting service instances, see [Deleting resource in
    terraform init
    ```
    {: pre}
-   
+
 4. Create a Terraform execution plan. This plan summarizes all of the actions that must be run to delete the {{site.data.keyword.contdelivery_short}} service instance.
 
    ```terraform
@@ -212,7 +212,7 @@ For more information about deleting service instances, see [Deleting resource in
 ## Restoring a deleted service instance
 {: #restoring_cd_instance}
 
-After you delete an instance of the {{site.data.keyword.contdelivery_short}} service, you can restore the deleted service instance within the data retention period of seven days. After the seven-day period expires, the service instance is permanently deleted. 
+After you delete an instance of the {{site.data.keyword.contdelivery_short}} service, you can restore the deleted service instance within the data retention period of seven days. After the seven-day period expires, the service instance is permanently deleted.
 
 To view which service instances are available for restoration and to restore a deleted service, see [Using resource reclamations](/docs/account?topic=account-resource-reclamation). If you try to restore a deleted service and an active {{site.data.keyword.contdelivery_short}} service instance exists, the restoration is blocked. For more information about how to view the details for a resource reclamation, see [Listing reclaimed resources by using the CLI](/docs/account?topic=account-resource-reclamation&interface=cli) or [Listing reclaimed resources by using the API](/docs/account?topic=account-resource-reclamation&interface=api).
 

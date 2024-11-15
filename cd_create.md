@@ -15,7 +15,7 @@ subcollection: ContinuousDelivery
 
 # Creating a {{site.data.keyword.contdelivery_short}} service instance
 {: #create_cd_service}
-{: help} 
+{: help}
 {: support}
 
 You must have an {{site.data.keyword.contdelivery_full}} service instance before you can create and use toolchains that contain certain tool integrations. For more information about this limitation, see [Scope of a service instance](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage#service_scope).
@@ -26,7 +26,7 @@ After you create a {{site.data.keyword.contdelivery_short}} service instance, yo
 You can have one active instance of {{site.data.keyword.contdelivery_short}} only in a region and resource group. For information about deleting an existing service instance, see [Deleting a {{site.data.keyword.contdelivery_short}} service instance](/docs/ContinuousDelivery?topic=ContinuousDelivery-delete_cd_service).
 {: important}
 
-If you have multiple {{site.data.keyword.contdelivery_short}} service instances with the Professional plan in an [enterprise](/docs/secure-enterprise?topic=secure-enterprise-what-is-enterprise), you may be able to reduce the total number of authorized users for which your account is billed. To learn more, see [Consolidated billing](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage#consolidated_billing).
+If you have multiple {{site.data.keyword.contdelivery_short}} service instances with the Professional plan in an [enterprise](/docs/enterprise-management?topic=enterprise-management-what-is-enterprise), you may be able to reduce the total number of authorized users for which your account is billed. To learn more, see [Consolidated billing](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage#consolidated_billing).
 {: tip}
 
 ## Creating a {{site.data.keyword.contdelivery_short}} service instance by using the console
@@ -85,14 +85,14 @@ The following table lists and describes each of the variables that are used in t
 | `RESOURCE_GROUP` | The name or ID of the resource group in which to provision the service instance. To find the names and IDs of the available resource groups, run `ibmcloud resource groups`. |
 {: caption="Variables for provisioning the {{site.data.keyword.contdelivery_short}} service from the CLI" caption-side="top"}
 
-For more information about plan IDs or about how to update your service plan after you create an instance, see [Updating your service plan](/docs/billing-usage?topic=billing-usage-changing).
+For more information about plan IDs or about how to update your service plan after you create an instance, see [Updating your service plan](/docs/account?topic=account-changing).
 
 ## Creating a {{site.data.keyword.contdelivery_short}} service instance with the API
 {: #create_cd_service_api}
 {: api}
 
 1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/resource-controller#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
-   
+
    ```bash
    export RESOURCE_CONTROLLER_APIKEY={iam_api_key}
    ```
@@ -189,8 +189,8 @@ For more information about plan IDs or about how to update your service plan aft
    {: codeblock}
    {: go}
 
-The following table lists and describes each of the variables that are used in the previous steps.   
-    
+The following table lists and describes each of the variables that are used in the previous steps.
+
 | Variable | Description |
 |:---------|:------------|
 | `{iam_api_key}` | Your IAM API key. |
@@ -212,8 +212,8 @@ For more information about creating service instances, see [Creating new resourc
 
 2. Create a Terraform configuration file that is named `main.tf`. In this file, add the configuration to create resource instances by using the HashiCorp Configuration Language. For more information about using this configuration language, see the [Terraform documentation](https://developer.hashicorp.com/terraform/language){: external}.
 
-   The following example creates a {{site.data.keyword.contdelivery_short}} service instance by using the `ibm_resource_instance` resource, where `name` is a unique, descriptive name that identifies the resource instance.  
-  
+   The following example creates a {{site.data.keyword.contdelivery_short}} service instance by using the `ibm_resource_instance` resource, where `name` is a unique, descriptive name that identifies the resource instance.
+
    ```terraform
    data "ibm_resource_group" "group" {
      name = "default"
@@ -230,9 +230,9 @@ For more information about creating service instances, see [Creating new resourc
    {: codeblock}
 
    For more information about `ibm_resource_instance`, see the argument reference details in the [Terraform Registry Documentation](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/resource_instance){: external}.
-   
+
    To provision your service instance to use customer-managed encryption, add and populate the parameters attribute with your key management service instance ID and root key ID.
-   
+
    ```terraform
      parameters = {
        kms_instance = <kms_instance_id>
@@ -240,14 +240,14 @@ For more information about creating service instances, see [Creating new resourc
      }
    ```
    {: codeblock}
-  
+
 3. Initialize the Terraform CLI.
 
    ```terraform
    terraform init
    ```
    {: pre}
-   
+
 4. Create a Terraform execution plan. This plan summarizes all of the actions that must be run to create a {{site.data.keyword.contdelivery_short}} service instance.
 
    ```terraform
