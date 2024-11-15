@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-10-31"
+lastupdated: "2024-11-15"
 
 keywords: error message, Lite plan, toolchains, IBM Cloud
 
@@ -16,14 +16,14 @@ subcollection: ContinuousDelivery
 {: #ts_cd}
 
 Get answers to frequently asked questions about using {{site.data.keyword.contdelivery_full}}.
-{: shortdesc} 
+{: shortdesc}
 
 ## Why are Lite plan services deleted after 30 days of inactivity?
 {: #plan_inactivity}
 {: faq}
 {: support}
 
-An instance of {{site.data.keyword.contdelivery_short}} is considered active when one or more of the toolchains within the same resource group is active. A toolchain is considered active if users interact with it by way of the UI, delivery pipeline jobs are triggered, or repositories that are managed by {{site.data.keyword.gitrepos}} are accessed. 
+An instance of {{site.data.keyword.contdelivery_short}} is considered active when one or more of the toolchains within the same resource group is active. A toolchain is considered active if users interact with it by way of the UI, delivery pipeline jobs are triggered, or repositories that are managed by {{site.data.keyword.gitrepos}} are accessed.
 
 When these conditions aren't met for all toolchains that are associated with the {{site.data.keyword.contdelivery_short}} service for 30 days, the instance is considered inactive.
 
@@ -40,7 +40,7 @@ The [open-toolchain/commons](https://github.com/open-toolchain/commons){: extern
 {: faq}
 
 You can choose any of the following options to deploy your own code to {{site.data.keyword.contdelivery_short}}:
- 
+
 * Create a toolchain by using one of the available templates (dependent on the deployment target and tool integrations). On the **Create a Toolchain** page, select the appropriate provider for your source repository, and then specify the link to your source code repo. After you create your toolchain, you might need to adjust the pipeline scripts for your deployment goals.
 * Create an empty toolchain, and then add tool integrations to deploy your app. For more information about using this method to deploy your code to {{site.data.keyword.contdelivery_short}}, see [Deploy an app on Kubernetes](/docs/ContinuousDelivery?topic=ContinuousDelivery-tutorial-cd-kubernetes).
 
@@ -59,7 +59,7 @@ You can find the Status page by choosing either of the following options:
 * Access it directly at [{{site.data.keyword.cloud_notm}} - System Status](https://cloud.ibm.com/status){: external}.
 
 
-For more information about the {{site.data.keyword.cloud_notm}} Status page, see [Viewing {{site.data.keyword.cloud_notm}} status](/docs/get-support?topic=get-support-viewing-cloud-status#viewing-cloud-status).
+For more information about the {{site.data.keyword.cloud_notm}} Status page, see [Viewing {{site.data.keyword.cloud_notm}} status](docs/account?topic=account-viewing-status#viewing-cloud-status).
 
 
 ## How do I remove authorized users from the {{site.data.keyword.contdelivery_short}} service?
@@ -129,4 +129,4 @@ When you use Terraform to manage resources such as {{site.data.keyword.contdeliv
 
 If you circumvent Terraform by directly changing resources, you might cause [resource drift](https://developer.hashicorp.com/terraform/tutorials/state/resource-drift){: external}, a situation in which the states of your actual resources on {{site.data.keyword.cloud_notm}} deviate from the definition of the resources in Terraform. The next time that you apply the Terraform configuration, Terraform attempts to update your resources to bring them back in alignment with the Terraform configuration. This action might lead to unintended consequences, such as reverting changes or deleting and then re-creating resources.
 
-For more information about resource drift, see [Manage Resource Drift](https://developer.hashicorp.com/terraform/tutorials/state/resource-drift){: external}. 
+For more information about resource drift, see [Manage Resource Drift](https://developer.hashicorp.com/terraform/tutorials/state/resource-drift){: external}.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2024
-lastupdated: "2024-10-31"
+lastupdated: "2024-11-15"
 
 keywords: users of a service instance, authorized users, pipeline usage, Git Repos and Issue Tracking limitations, consolidated billing
 
@@ -66,7 +66,7 @@ For more information, see [pricing plans](https://cloud.ibm.com/catalog/services
 ## Consolidated billing
 {: #consolidated_billing}
 
-By default, {{site.data.keyword.contdelivery_short}} service instances report usage independently of each other. If you have organized your toolchains into multiple resource groups in a stand-alone account or across several accounts in an [enterprise](/docs/secure-enterprise?topic=secure-enterprise-what-is-enterprise), users of your toolchains might be reported as authorized users multiple times from corresponding multiple instances of the {{site.data.keyword.contdelivery_short}} service.
+By default, {{site.data.keyword.contdelivery_short}} service instances report usage independently of each other. If you have organized your toolchains into multiple resource groups in a stand-alone account or across several accounts in an [enterprise](/docs/enterprise-management?topic=enterprise-management-what-is-enterprise), users of your toolchains might be reported as authorized users multiple times from corresponding multiple instances of the {{site.data.keyword.contdelivery_short}} service.
 
 For example, a developer on a Git Repos and Issue Tracking project that is integrated into two toolchains in different resource groups will be counted and, under the Professional plan, billed for twice.
 
@@ -88,7 +88,7 @@ To enable consolidated billing, complete the following steps:
 1. Enter `Continuous Delivery` to filter the list to your existing instances.
 1. Click the name of the instance to which you want to consolidate billing.
 1. Click **Manage** > **Consolidated billing**.
-1. Click **On** in the Enable consolidated billing section. 
+1. Click **On** in the Enable consolidated billing section.
 1. Review the list of email addresses to ensure it is complete and correct in the Consolidated authorized users section.
 
 Consolidated billing details are available only in {{site.data.keyword.contdelivery_short}} service instances with the Professional plan located in the enterprise account (the top most account in the enterprise hierarchy).
@@ -112,8 +112,8 @@ A list of authorized users from all instances in the region and account hierarch
 
 To review the consolidated list of authorized user email addresses:
 
-1. From your resource list, enter `Continuous Delivery` to filter the list to your instances. 
-1. Click the name of the instance in which consolidated billing is enabled. 
+1. From your resource list, enter `Continuous Delivery` to filter the list to your instances.
+1. Click the name of the instance in which consolidated billing is enabled.
 1. Click **Manage** > **Consolidated billing**.
 1. Review the list of email addresses in the Consolidated authorized users section. The list read-only, because it is generated from the authorized users lists of all service instances in the enterprise hierarchy.
 
@@ -124,10 +124,10 @@ When consolidated billing is enabled for a service instance, the **Manage** > **
 {: #consolidated_billing_limitations}
 
 * An enterprise account hierarchy is required. You can't enable consolidated billing across resource groups in a stand-alone account.
-* The Professional plan is required. 
-   * You can't enable consolidated billing for a {{site.data.keyword.contdelivery_short}} instance with any other plan. 
+* The Professional plan is required.
+   * You can't enable consolidated billing for a {{site.data.keyword.contdelivery_short}} instance with any other plan.
    * Authorized users are consolidated only from {{site.data.keyword.contdelivery_short}} instances with the Professional plan. In other words, instances with Lite plans do not participate in consolidated billing.
-* You can enable consolidated billing only for a service instance in the enterprise account. And, you can enable it for at most one instance in the enterprise account. 
+* You can enable consolidated billing only for a service instance in the enterprise account. And, you can enable it for at most one instance in the enterprise account.
 * Consolidated billing applies to authorized users only. It does not affect how pipeline runs are reported.
 * Consolidated billing is confined to a single given region. Usage cannot be consolidated from one region to another.
 * Even though you might enable consolidated billing for a specific instance, zero authorized users are reported for all other Professional plan instances of the service in the enterprise hierarchy, even though the authorized users of those instances are still listed.
@@ -138,9 +138,9 @@ When you delete an instance in an enterprise account in which consolidated billi
 ## Managing authorized users
 {: #authorized_users}
 
-{{site.data.keyword.contdelivery_short}} pricing plans are defined and priced based on the number of authorized users for an instance. Authorized users are added automatically to an instance in response to usage of the instance. 
+{{site.data.keyword.contdelivery_short}} pricing plans are defined and priced based on the number of authorized users for an instance. Authorized users are added automatically to an instance in response to usage of the instance.
 
-You can review and manage the list of authorized users from the **Manage** > **Consolidated billing** tab for each instance. 
+You can review and manage the list of authorized users from the **Manage** > **Consolidated billing** tab for each instance.
 
 If consolidated billing is enabled, you can also review the list of authorized users from the Consolidated billing tab for each instance in an enterprise account.
 
@@ -176,10 +176,10 @@ The method that you use to organize toolchains in resource groups directly impac
 
 Complete the following steps to manage the list of authorized users of {{site.data.keyword.contdelivery_short}} instances:  on the **Manage** tab from the {{site.data.keyword.contdelivery_short}} instance.
 
-1. From your resource list, enter `Continuous Delivery` to filter the list to your instances.  
-1. Click the name of an instance to navigate to the instance details. 
+1. From your resource list, enter `Continuous Delivery` to filter the list to your instances.
+1. Click the name of an instance to navigate to the instance details.
    * Click **Manage** > **Authorized users** to view, add, or remove users from the list of authorized users as needed.
-   * If you enabled consolidated billing, click **Manage** > **Consolidated billing** to view the consolidated list of authorized users.   
+   * If you enabled consolidated billing, click **Manage** > **Consolidated billing** to view the consolidated list of authorized users.
 
     Users are automatically added or re-added when they use the {{site.data.keyword.contdelivery_short}} instance.
     {: tip}
@@ -202,7 +202,7 @@ The AUTHORIZED_USERS_PER_MONTH metric is calculated based on a monthly average o
 
 The Lite service plan includes certain limitations, such as limitations on the number of authorized users of the service and on the number of Classic Delivery Pipeline jobs or Tekton steps that can run per month. If any of the plan limitations are exceeded in a billing period, the service is suspended. For example, Classic Delivery Pipeline jobs and Tekton pipeline steps do not run for the remainder of the billing period. For more information about the plan, see the [{{site.data.keyword.contdelivery_short}} details in the catalog](https://cloud.ibm.com/catalog/services/continuous-delivery) {: external}.
 
-You avoid the limitations of the Lite service plan and reactivate your instance by upgrading to the Professional plan as described in the following sections. 
+You avoid the limitations of the Lite service plan and reactivate your instance by upgrading to the Professional plan as described in the following sections.
 
 ### Upgrading your service plan in the UI
 {: #change_service_plan}
@@ -212,7 +212,7 @@ You avoid the limitations of the Lite service plan and reactivate your instance 
 1. Click **Plan** on the instance dashboard.
 1. In the Change pricing plan section, select **Professional** , and click **Save**.
 
-After you upgrade the plan, you must restage your app: 
+After you upgrade the plan, you must restage your app:
 
 1. Go to your resource list and locate the app that the service is bound to.
 1. Open the **Actions** menu, and select **Restart App**.
@@ -325,7 +325,7 @@ You can use the console or an API to link your instance and toolchain instance t
 #### Linking a new project
 {: #git_projects_cd_instance_linking_validating-ui-new}
 
-You're required to use the UI to link {{site.data.keyword.contdelivery_short}} and toolchain instances when you create a new project. 
+You're required to use the UI to link {{site.data.keyword.contdelivery_short}} and toolchain instances when you create a new project.
 
 #### Linking an existing project
 {: #git_projects_cd_instance_linking_validating-ui-new}
@@ -356,6 +356,6 @@ Complete the following steps to find the IDs of your {{site.data.keyword.contdel
    1. In the console, click the **Navigation Menu** ![Navigation Menu icon](../icons/icon_hamburger.svg "Menu") > **Resource list**.
    1. From your list of resources, click the required toolchain or {{site.data.keyword.contdelivery_short}} instance.
    1. Click **Details** to view and copy the GUID and CRN details.
-   
+
       For `toolchain_ID` parameter, use the toolchain's GUID. For `cd_instance` parameter, use either GUID or CRN as its value.
       {: note}
