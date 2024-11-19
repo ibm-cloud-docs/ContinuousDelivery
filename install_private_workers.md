@@ -16,7 +16,7 @@ subcollection: ContinuousDelivery
 # Installing {{site.data.keyword.deliverypipeline}} Private Workers
 {: #install-private-workers}
 
-Install and register a {{site.data.keyword.deliverypipeline}} Private Worker so that {{site.data.keyword.contdelivery_full}} Development teams can use the private worker in their toolchain configuration. Developers can run workloads within the network scope of the private worker installation without any inbound network connectivity. 
+Install and register a {{site.data.keyword.deliverypipeline}} Private Worker so that {{site.data.keyword.contdelivery_full}} Development teams can use the private worker in their toolchain configuration. Developers can run workloads within the network scope of the private worker installation without any inbound network connectivity.
 {: shortdesc}
 
 The {{site.data.keyword.deliverypipeline}} uses public and private workers to run pipeline jobs. By default, pipeline jobs are run by using public workers on IBM-managed public shared infrastructure. Pipeline jobs can access resources only on the public network (both within and outside of IBM) and are limited to 60 minutes run time per job.
@@ -34,18 +34,18 @@ Before you install a private worker, make sure that you have an {{site.data.keyw
 
    * {{site.data.keyword.containerlong_notm}} version 1.21 or higher to run workloads in isolation on {{site.data.keyword.cloud_notm}} Public.
    * {{site.data.keyword.openshiftlong}} version 4.9 or later.
-  
+
 * Network access:
 
    * Inbound: Not required.
-   * Outbound network access uses `(TCP:443)` where the region matches the delivery pipeline location and is either au-syd (Sydney, Australia), eu-de (Frankfurt, Germany), eu-gb (London, United Kingdom), jp-tok (Tokyo, Japan), jp-osa (Osaka, Japan), us-south (Dallas, US), us-east (Washington DC, US), br-sao (Sao Paulo), or ca-tor (Toronto, CA). For example, for the Frankfurt region specify `https://private-worker-service.eu-de.devops.cloud.ibm.com (TCP:443)`. For network access to the global endpoint for API key validation, use `https://iam.cloud.ibm.com (TCP:443)`. 
-  
+   * Outbound network access uses `(TCP:443)` where the region matches the delivery pipeline location and is either Sydney (au-syd), Frankfurt (eu-de), London (eu-gb), Tokyo (jp-tok), Osaka (jp-osa), Dallas (us-south), Washington DC (us-east), Sao Paulo (br-sao), or Toronto (ca-tor). For example, for the Frankfurt region specify `https://private-worker-service.eu-de.devops.cloud.ibm.com (TCP:443)`. For network access to the global endpoint for API key validation, use `https://iam.cloud.ibm.com (TCP:443)`.
+
 * Permissions to pull images from icr.io. Private workers require the tekton-pipelines infrastructure and must be able to pull tekton-releases images from icr.io to complete the private worker installation.
 
    To pull images from the `icr.io` container registry, you might need to [define a specific Kubernetes ClusterImagePolicy](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_pipeline_private_workers&interface=ui#pipeline_private_worker_image_policy).
    {: tip}
-   
-* Optional. If you want to install the private worker by using the Operator Lifecycle Manager (OLM), the OLM operator framework must be [installed on your cluster](https://operator-framework.github.io/olm-book/docs/install-olm.html){: external}. This framework is preinstalled by default on all {{site.data.keyword.openshiftlong}} clusters. 
+
+* Optional. If you want to install the private worker by using the Operator Lifecycle Manager (OLM), the OLM operator framework must be [installed on your cluster](https://operator-framework.github.io/olm-book/docs/install-olm.html){: external}. This framework is preinstalled by default on all {{site.data.keyword.openshiftlong}} clusters.
 
    A previous version of the {{site.data.keyword.containerlong_notm}} was provided on clusters that were created before v1.23. To use OLM on an {{site.data.keyword.containerlong_notm}} cluster, you must first update the cluster to v1.23. Next, you must upgrade to a current version of OLM by uninstalling the previous version of OLM and reinstalling OLM.
 
@@ -60,20 +60,20 @@ Before you install a private worker, make sure that you have an {{site.data.keyw
    kubectl delete crd catalogsources.operators.coreos.com
    kubectl delete crd clusterserviceversions.operators.coreos.com
    kubectl delete crd installplans.operators.coreos.com
-   kubectl delete sa -n ibm-system olm-operator-serviceaccount 
+   kubectl delete sa -n ibm-system olm-operator-serviceaccount
    kubectl delete clusterrole system:controller:operator-lifecycle-manager
-   kubectl delete clusterrolebinding olm-operator-binding-ibm-system 
-   kubectl delete clusterrole aggregate-olm-edit                                                     
+   kubectl delete clusterrolebinding olm-operator-binding-ibm-system
+   kubectl delete clusterrole aggregate-olm-edit
    kubectl delete clusterrole aggregate-olm-view
    ```
 
    For instructions about how to install the new OLM framework, see [How do I install OLM?](https://operator-framework.github.io/olm-book/docs/install-olm.html){: external}.
 
 Because private workers are not compatible with {{site.data.keyword.redhat_openshift_notm}} Pipelines, it is recommended that you do not install them on a cluster with {{site.data.keyword.redhat_openshift_notm}} pipelines.
-{: important}  
+{: important}
 
 ## Installing a {{site.data.keyword.deliverypipeline}} Private Worker
-{: #install_pw}  
+{: #install_pw}
 
 To install a private worker, you must have Administrator level access to a cluster. Private worker installation can be completed only by way of the command line since no graphical user interface is available.
 {: important}
@@ -96,18 +96,18 @@ To install the framework directly on a cluster, you must have admin access to th
    ```text
    kubectl apply --filename "https://private-worker-service.{REGION}.devops.cloud.ibm.com/install"
    ```
-   
+
    Where `{REGION}` is the location of the toolchain's pipeline. You can specify any of the following values for the `{REGION}`:
-   
-   - `au-syd` (Sydney, Australia)
-   - `eu-de` (Frankfurt, Germany)
-   - `eu-gb` (London, United Kingdom)
-   - `jp-tok` (Tokyo, Japan)
-   - `jp-osa` (Osaka, Japan)
-   - `us-south` (Dallas, US)
-   - `us-east` (Washington DC, US)
-   - `ca-tor` (Toronto, CA)
-   - `br-sao` (Sao Paulo, Brazil)
+
+   - Sydney `au-syd`
+   - Frankfurt `eu-de`
+   - London `eu-gb`
+   - Tokyo `jp-tok`
+   - Osaka `jp-osa`
+   - Dallas `us-south`
+   - Washington DC `us-east`
+   - Toronto `ca-tor`
+   - Sao Paulo `br-sao`
 
 #### Installing by using the OLM
 {: #olm_install_pw_cli}
@@ -120,47 +120,47 @@ Type the following command to install the framework for automatic updates on a {
    ```text
    kubectl apply --filename "https://private-worker-service.{REGION}.devops.cloud.ibm.com/install?type=openshift&olm=true"
    ```
-    
+
    Where `{REGION}` is the location of the toolchain's pipeline. You can specify any of the following values for the `{REGION}`:
-   
-   - `au-syd` (Sydney, Australia)
-   - `eu-de` (Frankfurt, Germany)
-   - `eu-gb` (London, United Kingdom)
-   - `jp-tok` (Tokyo, Japan)
-   - `jp-osa` (Osaka, Japan)
-   - `us-south` (Dallas, US)
-   - `us-east` (Washington DC, US)
-   - `ca-tor` (Toronto, CA)
-   - `br-sao` (Sao Paulo, Brazil)
+
+   - Sydney `au-syd`
+   - Frankfurt `eu-de`
+   - London `eu-gb`
+   - Tokyo `jp-tok`
+   - Osaka `jp-osa`
+   - Dallas `us-south`
+   - Washington DC `us-east`
+   - Toronto `ca-tor`
+   - Sao Paulo `br-sao`
 
    The following code snippet shows an example of a private worker OLM installation in the Dallas region on {{site.data.keyword.openshiftlong}}:
-   
+
    ```text
    $ kubectl apply --filename "https://private-worker-service.us-south.devops.cloud.ibm.com/install?type=openshift&olm=true"
    catalogsource.operators.coreos.com/private-worker-agent created
    subscription.operators.coreos.com/private-agent-subscription created
    ```
-    
+
 Type the following command to install the framework for automatic updates on an {{site.data.keyword.cloud_notm}} Kubernetes cluster:
-  
+
    ```text
    kubectl apply --filename "https://private-worker-service.{REGION}.devops.cloud.ibm.com/install?type=iks&olm=true"
    ```
- 
+
    Where `{REGION}` is the location of the toolchain's pipeline. You can specify any of the following values for the `{REGION}`:
-   
-   - `au-syd` (Sydney, Australia)
-   - `eu-de` (Frankfurt, Germany)
-   - `eu-gb` (London, United Kingdom)
-   - `jp-tok` (Tokyo, Japan)
-   - `jp-osa` (Osaka, Japan)
-   - `us-south` (Dallas, US)
-   - `us-east` (Washington DC, US)
-   - `ca-tor` (Toronto, CA)
-   - `br-sao` (Sao Paulo, Brazil)
+
+   - Sydney `au-syd`
+   - Frankfurt `eu-de`
+   - London `eu-gb`
+   - Tokyo `jp-tok`
+   - Osaka `jp-osa`
+   - Dallas `us-south`
+   - Washington DC `us-east`
+   - Toronto `ca-tor`
+   - Sao Paulo `br-sao`
 
    The following code snippet shows an example of a private worker OLM installation in the Dallas region on {{site.data.keyword.cloud_notm}} Kubernetes:
-   
+
    ```text
    $ kubectl apply --filename "https://private-worker-service.us-south.devops.cloud.ibm.com/install?type=iks&olm=true"
    catalogsource.operators.coreos.com/private-worker-agent created
@@ -171,7 +171,7 @@ Type the following command to install the framework for automatic updates on an 
 
 To set up a pool of private workers, repeat this process with more Kubernetes clusters.
 {: tip}
-  
+
 ## Registering a {{site.data.keyword.deliverypipeline}} Private Worker
 {: #register_pw}
 
@@ -188,7 +188,7 @@ A service ID represents a pool of one or more private workers that act together.
 2. Go to [https://cloud.ibm.com/iam/serviceids](https://cloud.ibm.com/iam/serviceids){: external}.
 3. Click **Create**.
 4. Enter a name and description for the service ID. If you are creating a service ID for a pool of private workers, specify the name of the private workers pool, for example: **Pipeline Private Workers for Acme**.
-5. Click **Create**. 
+5. Click **Create**.
 6. Save your service ID for later use. The service ID is required on the Kubernetes cluster that is targeted for the {{site.data.keyword.deliverypipeline}} Private Worker installation.
 
 #### Creating a service ID by using the CLI
@@ -276,15 +276,15 @@ You must register a private worker with the specific {{site.data.keyword.cloud_n
 
    You can specify any of the following values for the `{REGION}`:
 
-      * au-syd (Sydney, Australia)
-      * eu-de (Frankfurt, Germany)
-      * eu-gb  (London, United Kingdom)
-      * jp-tok (Tokyo, Japan)
-      * jp-osa (Osaka, Japan)
-      * us-south (Dallas, US)
-      * us-east (Washington DC, US)
-      * ca-tor (Toronto, CA)
-      * br-sao (Sao Paulo, Brazil)
+      * Sydney `au-syd`
+      * Frankfurt `eu-de`
+      * London `eu-gb`
+      * Tokyo `jp-tok`
+      * Osaka `jp-osa`
+      * Dallas `us-south`
+      * Washington DC `us-east`
+      * Toronto `ca-tor`
+      * Sao Paulo `br-sao`
    {: tip}
 
 3. To verify that the agent is registered correctly, type the following command:
@@ -317,10 +317,10 @@ By default, private workers use public endpoints for communication. A cluster ad
 
    Where `{REGION}` is the location of the toolchain's pipeline. Private endpoints are available in the following regions:
 
-    * `us-south (Dallas, US)`
-    * `us-east (Washington, US)`
-    * `eu-de (Frankfurt, DE)`
-    * `eu-gb (London, GB)`
+    * Dallas `us-south'
+    * Washington `us-east`
+    * Frankfurt `eu-de`
+    * London `eu-gb`
 
    You must have a [VRF enabled](/docs/account?topic=account-vrf-service-endpoint&interface=ui) {{site.data.keyword.cloud_notm}} account to use this feature.
    {: important}
@@ -341,9 +341,9 @@ By default, private workers use public endpoints for communication. A cluster ad
    ```text
    private-worker-service.{REGION}.devops.cloud.ibm.com
    ```
-    
+
    Where `{REGION}` is the location of the toolchain's pipeline.
-   
+
 2. Create a configmap in the private worker namespace that maps the public endpoints to the Satellite link endpoints:
 
    ```text
@@ -355,12 +355,12 @@ By default, private workers use public endpoints for communication. A cluster ad
       iam.cloud.ibm.com: <default IAM satellite link endpoint for your satellite location>
       private-worker-service.{REGION}.devops.cloud.ibm.com: <satellite link endpoint created in step 1)>
    ```
-     
+
    You can add endpoints to the configmap, such as these [default Satellite link endpoints](/docs/satellite?topic=satellite-default-link-endpoints).
    {: tip}
-     
+
 ## Updating the {{site.data.keyword.deliverypipeline}} Private Worker installation
-{: #install_pw_update} 
+{: #install_pw_update}
 
 If the private worker is reported as inactive, you must update the installation.
 
@@ -378,5 +378,4 @@ You can reuse the `apikey` that you used for the existing private worker.
 {: tip}
 
 For more information about {{site.data.keyword.deliverypipeline}} Private Workers, see [Troubleshooting for {{site.data.keyword.deliverypipeline}} Private Workers](/docs/ContinuousDelivery?topic=ContinuousDelivery-troubleshoot-pipeline-private-workers#troubleshoot-pw-images) and [FAQs for Pipeline Private Workers](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_pipeline_private_workers&interface=ui).
-{: tip} 
-
+{: tip}
