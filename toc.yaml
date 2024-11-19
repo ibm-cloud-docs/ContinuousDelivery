@@ -237,6 +237,7 @@ toc:
               label: IBM Garage
               href: https://www.ibm.com/garage
       - ha-dr.md
+      - data_portability.md
   - navgroup:
       id: help
       topics:
