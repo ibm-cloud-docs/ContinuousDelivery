@@ -28,9 +28,8 @@ You can evaluate gates by using idra (deprecated) to integrate your {{site.data.
 ## Before you begin
 {: #prereqs-gates-idra}
 
-Before you evaluate gates, you must publish your test results. For more information, see [Publishing test results by using idra (deprecated)](/docs/ContinuousDelivery?topic=ContinuousDelivery-publish-test-idra).
-
-Create a policy with rules. For more information, see [Defining policies and rules](/docs/ContinuousDelivery?topic=ContinuousDelivery-defining-policies-rules).
+* Publish your test results. For more information, see [Publishing test results by using idra (deprecated)](/docs/ContinuousDelivery?topic=ContinuousDelivery-publish-test-idra).
+* Create a policy with rules. For more information, see [Defining policies and rules](/docs/ContinuousDelivery?topic=ContinuousDelivery-gate-ensure-quality#defining-policies-rules).
 
 
 ## Defining gates (deprecated)

@@ -28,9 +28,8 @@ You can evaluate gates by using other continuous integration and continuous deli
 ## Before you begin
 {: #prereqs-gates-cicd}
 
-Before you evaluate a gate policy on an application build, you must publish test records. For more information, see [Publishing test results by using other CI/CD tools](/docs/ContinuousDelivery?topic=ContinuousDelivery-publish-test-cicd).
-
-Create a policy with rules. For more information, see [Defining policies and rules](/docs/ContinuousDelivery?topic=ContinuousDelivery-defining-policies-rules).
+* Publish test records. For more information, see [Publishing test results by using other CI/CD tools](/docs/ContinuousDelivery?topic=ContinuousDelivery-publish-test-cicd).
+* Create a policy with rules. For more information, see [Defining policies and rules](/docs/ContinuousDelivery?topic=ContinuousDelivery-gate-ensure-quality#defining-policies-rules).
 
 
 ## Defining gates for other CI/CD tools

@@ -28,9 +28,8 @@ subcollection: ContinuousDelivery
 ## Before you begin
 {: #prereqs-gates-cli}
 
-[Publish your test results](/docs/ContinuousDelivery?topic=ContinuousDelivery-publish-test-cli).
-
-[Create a policy with rules](/docs/ContinuousDelivery?topic=ContinuousDelivery-defining-policies-rules).
+* [Publish your test results](/docs/ContinuousDelivery?topic=ContinuousDelivery-publish-test-cli).
+* [Create a policy with rules](/docs/ContinuousDelivery?topic=ContinuousDelivery-gate-ensure-quality#defining-policies-rules).
 
 
 ## Defining gates for {{site.data.keyword.contdelivery_short}}
