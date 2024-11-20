@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2023
-lastupdated: "2023-05-25"
+  years: 2019, 2024
+lastupdated: "2024-11-20"
 
 keywords: devops insights, publish, test, results, cli, code coverage, tests, verification, app, sonarqube, dashboard
 
@@ -101,7 +101,7 @@ When your pipeline runs, it publishes the test result data to {{site.data.keywor
 3. From your toolchain's Overview page, on the **IBM Cloud tools** card, click **{{site.data.keyword.DRA_short}}**.
 4. Click **Quality Dashboard** in the navigation to open the page.
 
-For more information about the Quality Dashboard page, see [DevOps data aggregation](/docs/ContinuousDelivery?topic=ContinuousDelivery-devops-data-aggregation).
+For more information about the Quality Dashboard page, see [DevOps data aggregation](/docs/ContinuousDelivery?topic=ContinuousDelivery-aggregating-multiple-sources#devops-data-aggregation).
 
 ## Next steps
 {: #next-test-cli}

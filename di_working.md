@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2024
-lastupdated: "2024-10-18"
+lastupdated: "2024-11-20"
 
 keywords: code quality, risk management, interactions of your team, devops insights, getting started, devops, insights, tutorial, code coverage, test, tests, gate, gate failing, verification, install, app, dashboard
 
@@ -66,7 +66,7 @@ Explore the Quality Dashboard page to see the data aggregated from {{site.data.k
 
 You can view details about the Weather Application and the quality of the code that was analyzed. These tests are available where the policy gates passed: code coverage, unit test, and the functional verification test. You can click the build ID, for example, `master:1`, to view a summary for that specific test. Click **View trends** to view trend details.
 
-For more information about the quality dashboard, see [DevOps data aggregation](/docs/ContinuousDelivery?topic=ContinuousDelivery-devops-data-aggregation).
+For more information about the quality dashboard, see [DevOps data aggregation](/docs/ContinuousDelivery?topic=ContinuousDelivery-aggregating-multiple-sources#devops-data-aggregation).
 
 
 ## Step 4. Test a gate against a {{site.data.keyword.DRA_short}} policy decision

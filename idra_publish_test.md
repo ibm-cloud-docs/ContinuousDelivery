@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2023
-lastupdated: "2023-05-25"
+  years: 2019, 2024
+lastupdated: "2024-11-20"
 
 keywords: devops insights, publish, test, results, idra, code coverage, tests, verification, app, sonarqube, dashboard
 
@@ -97,7 +97,7 @@ To learn more about the `idra` command, see [the grunt-idra3 package's page on n
 ## Viewing test results
 {: #view-test-idra}
 
-When your pipeline runs, it publishes the test result data to {{site.data.keyword.DRA_short}}. To view the test result data in {{site.data.keyword.DRA_short}}, go to the Quality Dashboard page. For more information, see [DevOps data aggregation](/docs/ContinuousDelivery?topic=ContinuousDelivery-devops-data-aggregation).
+When your pipeline runs, it publishes the test result data to {{site.data.keyword.DRA_short}}. To view the test result data in {{site.data.keyword.DRA_short}}, go to the Quality Dashboard page. For more information, see [DevOps data aggregation](/docs/ContinuousDelivery?topic=ContinuousDelivery-aggregating-multiple-sources#devops-data-aggregation).
 
 
 ## Next steps
