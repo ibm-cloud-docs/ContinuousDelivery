@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-11-15"
+lastupdated: "2024-11-20"
 
 keywords: error message, Lite plan, toolchains, IBM Cloud
 
@@ -59,7 +59,7 @@ You can find the Status page by choosing either of the following options:
 * Access it directly at [{{site.data.keyword.cloud_notm}} - System Status](https://cloud.ibm.com/status){: external}.
 
 
-For more information about the {{site.data.keyword.cloud_notm}} Status page, see [Viewing {{site.data.keyword.cloud_notm}} status](docs/account?topic=account-viewing-status#viewing-cloud-status).
+For more information about the {{site.data.keyword.cloud_notm}} Status page, see [Viewing {{site.data.keyword.cloud_notm}} status](/docs/account?topic=account-viewing-status).
 
 
 ## How do I remove authorized users from the {{site.data.keyword.contdelivery_short}} service?
