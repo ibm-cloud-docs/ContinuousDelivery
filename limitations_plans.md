@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2024
-lastupdated: "2024-11-15"
+lastupdated: "2024-11-21"
 
 keywords: users of a service instance, authorized users, pipeline usage, Git Repos and Issue Tracking limitations, consolidated billing
 
@@ -328,7 +328,7 @@ You can use the console or an API to link your instance and toolchain instance t
 You're required to use the UI to link {{site.data.keyword.contdelivery_short}} and toolchain instances when you create a new project.
 
 #### Linking an existing project
-{: #git_projects_cd_instance_linking_validating-ui-new}
+{: #git_projects_cd_instance_linking_validating-ui-exist}
 
 1. Go to **Projects** > **General** > **Settings**.
 1. Select the project that you want to add instances to.
