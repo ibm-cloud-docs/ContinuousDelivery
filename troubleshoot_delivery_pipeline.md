@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-10-18"
+lastupdated: "2024-11-27"
 
 keywords: troubleshoot, Delivery Pipeline, toolchains, tool integrations
 
@@ -313,5 +313,5 @@ This behavior is by design to prevent inadvertent execution of pipelines.
 
 To enable pipelines to execute on events from forked repositories do the following:
 
-Tekton Pipelines: On the git trigger panel, enable the `Include pull request events from forks` toggle
-Classic Pipelines: On the Input tab of the stage configuration, enable the `Include pull request events from forks` toggle 
+- Tekton Pipelines: On the git trigger panel, enable the `Include pull request events from forks` toggle
+- Classic Pipelines: On the Input tab of the stage configuration, enable the `Include pull request events from forks` toggle
