@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-10-18"
+lastupdated: "2024-11-27"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -130,7 +130,7 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
    Triggers are based on [Tekton trigger definitions](https://github.com/tektoncd/triggers){: external}. Git repo triggers use the event listener that they are mapped to to extract information from the incoming event payload and create Kubernetes resources. These resources are applied to a Tekton `PipelineRun` resource.
    {: tip}
 
-   Triggered pipeline runs are run concurrently unless you configure the trigger to serialize runs by using the `Limit concurrent runs` option. When this option is enabled, you can limit the number of simultaneous runs that can be started by this trigger. For example, if the maximum limit is set to 1, only one pipeline run for this trigger runs at a time and any others are queued in a waiting state. A maximum of 10 runs (4 if you are using IBM Managed Workers) are queued in a waiting state before subsequent requests are automatically cancelled.
+   Triggered pipeline runs are run concurrently unless you configure the trigger to serialize runs by using the `Limit concurrent runs` option. When this option is enabled, you can limit the number of simultaneous runs that can be started by this trigger. For example, if the maximum limit is set to 1, only one pipeline run for this trigger runs at a time and any others are queued in a waiting state. A maximum of 20 runs (5 if you are using IBM Managed Workers) are queued in a waiting state before subsequent requests are automatically cancelled. By default, all Timed triggers are limited to one concurrent run when using IBM Managed Workers
    {: tip}
 
    **Manual triggers** run when you click the **Run** pipeline button and select the trigger.
@@ -148,10 +148,10 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
     * `0 * * NOV,DEC 1` - The trigger runs every hour on Mondays during November and December.
 
    **Generic webhook triggers** run when a POST request that is configured with the secret setting goes to the generic webhook URL. Generic webhook triggers provide a unique webhook URL for POST requests. 
- 
+
    Because the PipelineRun UI does not hide the generic webhook payload values in the event payload section, do not include sensitive data in the payload. Instead, secure any data that is required by a generic webhook by using trigger properties, such as passwords or API key secrets.
-   {: important} 
- 
+   {: important}
+
    You can secure generic webhook triggers to work with Git, a Slack outgoing webhook, an Artifactory webhook, and more by using any of the following methods:
 
    * Token matches to compare the saved token and the token that is passed within the POST request. Supported token sources include a header, query, or payload. Token matches are used by GitLab webhooks and Slack outgoing webhooks.
@@ -702,7 +702,7 @@ Pipeline runs can be in any of the following states:
 * **Failed**: `PipelineRun` failed. Review the log file for the run to determine the cause.
 * **Queued**: `PipelineRun` is accepted for processing and runs when worker capacity is available.
 * **Waiting**: `PipelineRun` is waiting to be queued.
-* **Cancelled**: `PipelineRun` was cancelled by the system or by the user. The system cancels `PipelineRun` when the number of waiting runs exceeds the allowed limit.
+* **Cancelled**: `PipelineRun` was cancelled by the system or by the user. The system cancels a `PipelineRun` when the number of waiting runs exceeds the allowed limit.
 * **Error**: `PipelineRun` contains errors that prevented it from being applied on the cluster. For more information about the cause of the error, see the run details.
 
 For detailed information about a selected run, click any row in the table to view the `Task` definition and the steps in each `PipelineRun` definition. You can also view the status, logs, and details of each `Task` definition and step, and the overall status of the `PipelineRun` definition.
