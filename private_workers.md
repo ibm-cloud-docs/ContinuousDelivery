@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-10-18"
+lastupdated: "2024-12-04"
 
 keywords: private workers integration, delivery pipeline, Kubernetes cluster, API key, Service ID, pool of workers
 
@@ -434,11 +434,6 @@ Complete the following steps to update a private worker to use the latest versio
 The private worker installation script pulls required images from the global {{site.data.keyword.registrylong}}. It pulls the most recent images of pipeline private workers and respective Tekton framework images that include fixes for any vulnerability found. 
 
 The image URL for the pipeline private worker is `icr.io/continuous-delivery/pipeline/pipeline-private-worker:<agent version>`.
-
-| Pipeline private worker image version | {{site.data.keyword.registrylong}} version | Known vulnerabilities
-|:-----------------|:-----------------|:-----------------|
-| 0.18.0 | `icr.io/continuous-delivery/pipeline/pipeline-private-worker:0.18.0` | - |
-{: caption="Private Worker images" caption-side="top"}
 
 The private worker installation also pulls the following supporting open source images to the cluster:
 
