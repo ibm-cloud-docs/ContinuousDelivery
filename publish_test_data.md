@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2023
-lastupdated: "2023-05-25"
+  years: 2019, 2024
+lastupdated: "2024-11-20"
 
 keywords: devops insights, uploading data types, data types, test data format, test data, unit test, code coverage, test, tests, verification, app, sonarqube, dashboard
 
@@ -18,7 +18,7 @@ subcollection: ContinuousDelivery
 Users can upload test results to {{site.data.keyword.DRA_full}} from any continuous integration and continuous delivery (CI/CD) tools and see all of those test results in the {{site.data.keyword.DRA_short}} Quality Dashboard page. A CI/CD tool refers to tools like Jenkins, Travis CI, and {{site.data.keyword.deliverypipelinelong}} that are used to create builds, run tests, and perform deployments.
 {: shortdesc}
 
-For more information about the Quality Dashboard page, see [DevOps data aggregation](/docs/ContinuousDelivery?topic=ContinuousDelivery-devops-data-aggregation).
+For more information about the Quality Dashboard page, see [DevOps data aggregation](/docs/ContinuousDelivery?topic=ContinuousDelivery-aggregating-multiple-sources#devops-data-aggregation).
 
 
 ## Supported test data format in {{site.data.keyword.DRA_short}}

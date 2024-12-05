@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-18"
+lastupdated: "2024-11-21"
 
 keywords: Satellite, satellite, tekton, pipeline, toolchain, CD, automate, automation, continuous delivery, DevOps, shift-left, shift left, secure DevOps, IBM Cloud
 
@@ -57,9 +57,9 @@ Before you start this tutorial, make sure that you have the following resources 
    ```text
    ibmcloud cr namespace-add <my namespace>
    ```
-   
+
    Alternatively, you can create a namespace on the [Container Registry](https://cloud.ibm.com/registry/namespaces) page. For more information about creating a namespace in this location, see [IBM Cloud Container Registry](https://cloud.ibm.com/docs/Registry?topic=Registry-getting-started#getting-started) service.
-   
+
 ### Related content
 {: #satellite-only-related-content}
 {: step}
@@ -77,7 +77,7 @@ In this step, you create a **Deploy your application to multiple clusters** tool
 
 To create a **Deploy your application to multiple clusters** toolchain, click
 
-[![Create toolchain](images/create_toolchain_button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fus-south.git.cloud.ibm.com%2Fopen-toolchain%2Fsatellite-cd-toolchain&env_id=ibm:yp:us-south){: external} 
+[![Create toolchain](images/create_toolchain_button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fus-south.git.cloud.ibm.com%2Fopen-toolchain%2Fsatellite-cd-toolchain&env_id=ibm:yp:us-south){: external}
 
 
 Alternatively, from the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the **Toolchains** page, click **Create a Toolchain**. On the **Create a Toolchain** page, click **Deploy your application to multiple clusters**.
@@ -133,12 +133,12 @@ The toolchain creates a {{site.data.keyword.deliverypipeline}} to continuously d
 ![Delivery Pipeline name](images/cd-only-satellite-pipeline-settings.png){: caption="Delivery Pipeline name" caption-side="bottom"}
 
 ## Securely store secrets
-{: #satellite-tool-integration-secrets}
+{: #only-satellite-tool-integration-secrets}
 {: step}
 
 Several tools within this toolchain require secrets, such as an {{site.data.keyword.cloud_notm}} API key. You must securely store all secrets in a secrets vault and reference them as required by the toolchain.
 
-Using {{site.data.keyword.cloud_notm}}, you can choose from various secrets management and data protection offerings that help you to protect your sensitive data and centralize your secret. In the Secrets step, you can specify which secret vault integrations to add or remove from your toolchain. For more information about adding and removing vault integrations, including prerequisites and by using hints, see [Managing {{site.data.keyword.cloud_notm}} secrets](/docs/secrets-manager?topic=secrets-manager-manage-secrets-ibm-cloud). 
+Using {{site.data.keyword.cloud_notm}}, you can choose from various secrets management and data protection offerings that help you to protect your sensitive data and centralize your secret. In the Secrets step, you can specify which secret vault integrations to add or remove from your toolchain. For more information about adding and removing vault integrations, including prerequisites and by using hints, see [Managing {{site.data.keyword.cloud_notm}} secrets](/docs/secrets-manager?topic=secrets-manager-manage-secrets-ibm-cloud).
 
 By using hints within a template, a toolchain is automatically populated with preconfigured secrets; you don't need to manually select secrets from vault integrations that are attached to the toolchain.
 {: tip}
@@ -228,7 +228,7 @@ You can start the delivery pipeline in either of the following ways:
 
 3. Review the trigger properties to make sure that they match your configuration.
 4. Click **Run**.
-  
+
    ![Successful pipeline run](images/cd-only-satellite-pipeline-run-successful.png){: caption="Successful pipeline run" caption-side="bottom"}
 
 ### Verify that the sample app is running

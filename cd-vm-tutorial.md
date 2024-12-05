@@ -2,7 +2,7 @@
 
 copyright:
    years: 2021, 2024
-lastupdated: "2024-10-18"
+lastupdated: "2024-11-21"
 
 keywords: deployment strategies, tekton, pipeline, toolchain, CD, CI, automate, automation, continuous delivery, continuous integration, DevOps, shift-left, shift left, secure DevOps, IBM Cloud
 
@@ -113,7 +113,7 @@ The toolchain creates a Continuous Deployment Pipeline to deploy the application
 1. Click the deployment strategy that you want to use for your toolchain.
 
    ![Deployment strategies](images/selection-blue-green.png){: caption="Deployment strategies" caption-side="bottom"}
-   
+
 1. Click **Continue**.
 
 ### Configure the application source code repo
@@ -146,7 +146,7 @@ By default, the inventory repo template is cloned to your {{site.data.keyword.gi
 
 Several tools within this toolchain require secrets, such as an {{site.data.keyword.cloud_notm}} API key. You must securely store all secrets in a secrets vault and reference them as required by the toolchain.
 
-Using {{site.data.keyword.cloud_notm}}, you can choose from various secrets management and data protection offerings that help you to protect your sensitive data and centralize your secret. In the Secrets step, you can specify which secret vault integrations to add or remove from your toolchain. For more information about adding and removing vault integrations, including prerequisites and by using hints, see [Managing {{site.data.keyword.cloud_notm}} secrets](/docs/secrets-manager?topic=secrets-manager-manage-secrets-ibm-cloud). 
+Using {{site.data.keyword.cloud_notm}}, you can choose from various secrets management and data protection offerings that help you to protect your sensitive data and centralize your secret. In the Secrets step, you can specify which secret vault integrations to add or remove from your toolchain. For more information about adding and removing vault integrations, including prerequisites and by using hints, see [Managing {{site.data.keyword.cloud_notm}} secrets](/docs/secrets-manager?topic=secrets-manager-manage-secrets-ibm-cloud).
 
 By using hints within a template, a toolchain is automatically populated with preconfigured secrets; you don't need to manually select secrets from vault integrations that are attached to the toolchain.
 {: tip}
@@ -180,16 +180,16 @@ You provisioned the VPC and VSI by using {{site.data.keyword.bplong}} and Terraf
 * **Virtual Private Cloud Region**: Select the region in which you provisioned the VPC.
 * **Virtual Private Cloud Name**: Select the VPC that you provisioned by using the Terraform template. Options include all of the available VPCs in the selected region.
 * **Username for VPC Instances**: Specify the username that you configured when you provisioned the VPC instance. All of the VSIs in your VPC require a username and an SSH key to log in and deploy that instance.
-* **Base64 Encoded SSH Key for VPC Instances**: Specify the private SSH key in base64-encoded form for the public SSH key that you configured when you provisioned the VPC instances.         
+* **Base64 Encoded SSH Key for VPC Instances**: Specify the private SSH key in base64-encoded form for the public SSH key that you configured when you provisioned the VPC instances.
 
 ### Configure Bastion host details
 {: #bastion-deployment-details}
 
 The Terraform template also creates a VSI for use as a Bastion host. A Bastion host provides a secure way to connect to the VSIs within your VPC to complete deployment and maintenance tasks. The Bastion host connects to the VSIs over SSH by using the credentials (username and SSH key) that you configured in the VPC details.
 
-The toolchain requires that you to log in to the VSIs within the VPC to deploy the app binary, start and stop the app, and download the third-party dependency to run the app. All of these tasks are achieved by using SSH-Tunneling with the Bastion host. The toolchain uses the same credentials to log in to the Bastion host that are used by the Bastion host to connect to the VSIs. 
+The toolchain requires that you to log in to the VSIs within the VPC to deploy the app binary, start and stop the app, and download the third-party dependency to run the app. All of these tasks are achieved by using SSH-Tunneling with the Bastion host. The toolchain uses the same credentials to log in to the Bastion host that are used by the Bastion host to connect to the VSIs.
 
-* **Bastion Host**: Select the VSI that is provisioned as a Bastion host by the Terraform template. 
+* **Bastion Host**: Select the VSI that is provisioned as a Bastion host by the Terraform template.
 
 ### Configure Load Balancer details
 {: #load-balancer-deployment-details}
@@ -212,7 +212,7 @@ After the details for the `deployment target` steps are populated, proceed to th
 {: #configure-artifact-storage}
 {: step}
 
-Any change to the source triggers the continuous integration pipeline. When a continuous integration run succeeds, a build or binary artifact is created and saved in transient storage, and then deployed to the target VSIs. 
+Any change to the source triggers the continuous integration pipeline. When a continuous integration run succeeds, a build or binary artifact is created and saved in transient storage, and then deployed to the target VSIs.
 
 ![VPC artifact storage](images/ds-vpc-setup-artifact-storage.png){: caption="VPC artifact storage" caption-side="bottom"}
 
@@ -227,7 +227,7 @@ Alternatively, you can use Artifactory if you have an Artifactory instance of yo
 {: #vm-optional-tools}
 {: step}
 
-You can add the {{site.data.keyword.DRA_full}} tool integration to your toolchain without any additional configuration. 
+You can add the {{site.data.keyword.DRA_full}} tool integration to your toolchain without any additional configuration.
 
 [{{site.data.keyword.DRA_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-di_working) is included in the created toolchain. You do not need to provide any configuration steps for {{site.data.keyword.DRA_short}}. The continuous integration pipeline automatically uses the {{site.data.keyword.DRA_short}} instance that is included in the toolchain. {{site.data.keyword.DRA_short}} aggregates code, test, build, and deployment data to provide visibility into the velocity and quality of all of your teams and releases.
 
@@ -257,12 +257,12 @@ After you create your toolchain, it shows each of the tool integrations that are
 You can explore the pipelines to understand the toolchain flow and the different operations that run within each pipeline. The toolchain that you just created contains three pipelines:
 
 * **Pull request pipeline:** Runs when a developer merges changes from their development branch to the master branch, or to any other branch in the repo. The pull request pipeline runs the Unit Test and Static Scans on the Application Source Code.
-* **Continuous integration pipeline:** Runs when you merge a change into the master branch of the Application Source Code repo. The continuous integration pipeline runs the Unit Test, Code Coverage, and Static Scans on the Application Source Code, CIS check, and Bill Of Materials (BOM) check. The continuous delivery pipeline also generates the binary build artifacts and uploads them to the {{site.data.keyword.containerlong}}, as configured in the toolchain. And the continuous integration pipeline generates the metadata of the build artifacts and stores it in the Inventory repo. 
+* **Continuous integration pipeline:** Runs when you merge a change into the master branch of the Application Source Code repo. The continuous integration pipeline runs the Unit Test, Code Coverage, and Static Scans on the Application Source Code, CIS check, and Bill Of Materials (BOM) check. The continuous delivery pipeline also generates the binary build artifacts and uploads them to the {{site.data.keyword.containerlong}}, as configured in the toolchain. And the continuous integration pipeline generates the metadata of the build artifacts and stores it in the Inventory repo.
 * **Continuous deployment pipeline:** Deploys build artifacts to the deployment environment. The pipeline verifies the successful deployment of the app by running the health check. You must manually trigger this pipeline after the continuous integration pipeline successfully completes. Depending on the deployment strategy that you selected, more triggers are added to the continuous delivery pipeline.
 
 
 ### Run the pull request and continuous integration pipelines
-{: #cd-pr-ci-pipeline-run}
+{: #cd-pr-ci-pipeline-run-vpc}
 
 To start the pull request pipeline, create a merge request in your app repo:
 
@@ -327,7 +327,7 @@ This tutorial shows how the Blue-Green deployment strategy works by using the sa
 
 1. Check the app URL again to confirm that the updated app is deployed. Both of the app versions are running simultaneously. All of the network traffic is flowing to the updated app.
 
-1. Test the rollback by running the `switch-blue-green` trigger from the continuous delivery pipeline.  Wait until  the switch trigger pipeline run completes successfully. 
+1. Test the rollback by running the `switch-blue-green` trigger from the continuous delivery pipeline.  Wait until  the switch trigger pipeline run completes successfully.
 
    ![Successful continuous delivery pipeline switch trigger](images/ds-vpc-explore-switch-trigger-successful-bg.png){: caption="Successful continuous delivery pipeline switch trigger" caption-side="bottom"}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2024
-lastupdated: "2024-10-25"
+lastupdated: "2024-11-20"
 
 keywords: devops insights, create, policy, rule, gate, code coverage, test, tests, gate failing, verification, app, dashboard
 
@@ -20,11 +20,7 @@ A gate policy is a set of rules that can be used to ensure that a build meets ce
 
 {{site.data.keyword.DRA_full}} supports many popular formats for test data like unit tests, functional verification tests, and custom data sets, {{site.data.keyword.DRA_short}} supports JUnit or XUnit, and Mocha. For code coverage and custom data sets, {{site.data.keyword.DRA_short}} supports Cobertura, lcov, and JaCoCo. You can use any tool within your toolchain to run your unit tests, code coverage tests, functional verification tests, and then capture your test results in any one of the supported formats.
 
-For more information about policies, see [Defining policies and rules](/docs/ContinuousDelivery?topic=ContinuousDelivery-defining-policies-rules).
-
-For more information about toolchains, see [Creating a toolchain from an app](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app).
-
-For more information about data sets, see [Managing data sets](/docs/ContinuousDelivery?topic=ContinuousDelivery-adding-data-sets).
+For more information about toolchains, see [Creating a toolchain from an app](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app). For more information about data sets, see [Managing data sets](/docs/ContinuousDelivery?topic=ContinuousDelivery-adding-data-sets).
 
 ![Deployment Risk Policy](images/DRA_policy.png){: caption="Policy and rules page" caption-side="bottom"}
 

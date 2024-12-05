@@ -317,7 +317,7 @@ By default, private workers use public endpoints for communication. A cluster ad
 
    Where `{REGION}` is the location of the toolchain's pipeline. Private endpoints are available in the following regions:
 
-    * Dallas `us-south'
+    * Dallas `us-south`
     * Washington `us-east`
     * Frankfurt `eu-de`
     * London `eu-gb`

@@ -161,7 +161,7 @@ The following table lists and describes each of the variables that are used in t
 | `{token}` | A valid IAM bearer token. |
 {: caption="Variables for deleting the {{site.data.keyword.contdelivery_short}} service with the API" caption-side="top"}
 
-For more information about deleting service instances, see [Deleting resource instances by using the API](/docs/account?topic=account-manage_resource&interface=ui#delete-resource#delete-resource-instance-api).
+For more information about deleting service instances, see [Deleting resource instances by using the API](/docs/account?topic=account-manage_resource&interface=api#delete-resource-instance-api).
 
 ## Deleting a {{site.data.keyword.contdelivery_short}} service instance with Terraform
 {: #deleting_rg_terraform}

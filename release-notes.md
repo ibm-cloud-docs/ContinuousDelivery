@@ -49,14 +49,14 @@ Enabling Direct Integration with an Existing Git Repository
 
 
 ## 09 July 2024
-{: #ContinuousDelivery-july2424}
+{: #ContinuousDelivery-09july2424}
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
 :   Upgraded to [GitLab 17.0.3](https://about.gitlab.com/releases/2024/06/26/patch-release-gitlab-17-1-1-released/){: external}.
 
 ## 01 July 2024
-{: #ContinuousDelivery-july2424}
+{: #ContinuousDelivery-01july2424}
 {: release-note}
 
 {{site.data.keyword.gitrepos}}

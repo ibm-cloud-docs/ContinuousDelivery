@@ -30,7 +30,7 @@ You can evaluate gates by using Jenkins to integrate your project with {{site.da
 {: #prereqs-gates-jenkins}
 
 * Before you evaluate a gate policy on an application build, you must publish test records. For more information, see [Publishing test results by using Jenkins](/docs/ContinuousDelivery?topic=ContinuousDelivery-publish-test-jenkins).
-* Create a policy with rules. For more information, see [Defining policies and rules](/docs/ContinuousDelivery?topic=ContinuousDelivery-defining-policies-rules).
+* Create a policy with rules. For more information, see [Defining policies and rules](/docs/ContinuousDelivery?topic=ContinuousDelivery-gate-ensure-quality#defining-policies-rules).
 
 
 ## Defining gates 

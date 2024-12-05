@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-04-16"
+lastupdated: "2024-11-20"
 
 keywords: devops insights, publish, test, results, jenkins, code coverage, tests, verification, app, sonarqube, dashboard
 
@@ -133,7 +133,7 @@ stage ("SonarQube Quality Gate") {
 ## Viewing test results
 {: #view-test-jenkins}
 
-When your pipeline runs, it publishes the test result data to {{site.data.keyword.DRA_short}}. To view the test result data, go to the Quality Dashboard page. For more information, see [DevOps data aggregation](/docs/ContinuousDelivery?topic=ContinuousDelivery-devops-data-aggregation).
+When your pipeline runs, it publishes the test result data to {{site.data.keyword.DRA_short}}. To view the test result data, go to the Quality Dashboard page. For more information, see [DevOps data aggregation](/docs/ContinuousDelivery?topic=ContinuousDelivery-aggregating-multiple-sources#devops-data-aggregation).
 
 
 ## Next steps
