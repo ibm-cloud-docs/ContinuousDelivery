@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-10-25"
+lastupdated: "2024-12-09"
 
 keywords: high availability, disaster recovery, toolchains
 
@@ -71,8 +71,6 @@ To save and restore a toolchain, complete the following steps:
 
 Backing up your toolchain creates a copy of the toolchain itself, but it does not copy all of the data that is referenced by the toolchain. Consider the following limitations when you back up a toolchain to a different region:
 
-* You cannot back up and restore Tekton pipelines.
-* You cannot back up and restore pipelines that use pipeline private workers.
 * Pipeline logs and artifacts are not included in the copied toolchain.
 * Tool configuration secrets that are stored in Key Protect or HashiCorp Vault are not included in the copied toolchain.
 * {{site.data.keyword.DRA_short}} data is not included in the copied toolchain.
