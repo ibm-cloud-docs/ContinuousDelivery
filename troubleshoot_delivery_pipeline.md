@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-11-27"
+lastupdated: "2024-12-09"
 
 keywords: troubleshoot, Delivery Pipeline, toolchains, tool integrations
 
@@ -33,7 +33,7 @@ An eventing problem occurred which caused the GitHub tool integration to fail.
 Configure and save the GitHub tool integration again:
 {: tsResolve}
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the **Toolchains** page, click the toolchain that you created to open the Overview page. Alternatively, on the App Details page in your app, click the toolchain name.
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![Hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the **Toolchains** page, click the toolchain that you created to open the Overview page. Alternatively, on the App Details page in your app, click the toolchain name.
 1. On the Toolchain's Overview page, on the **Repositories** card, locate the GitHub tool integration.
 1. Click the menu to access the configuration options, update the settings, and click **Save Integration**.
 1. On the **Delivery pipelines** card, click the {{site.data.keyword.deliverypipeline}} tool integration to view the pipeline setup.
@@ -80,7 +80,7 @@ The access token that the pipeline uses to clone the Git repo is no longer valid
 Configure and save the Git integration again:
 {: tsResolve}
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the **Toolchains** page, click the toolchain that contains the Git integration that you want to update to open its Overview page. Alternatively, on the App Details page in your app, click the toolchain name.
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![Hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the **Toolchains** page, click the toolchain that contains the Git integration that you want to update to open its Overview page. Alternatively, on the App Details page in your app, click the toolchain name.
 1. On the Toolchain's Overview page, on the **Repositories** card, locate the Git tool integration.
 1. Click the menu to access the configuration options, select the authorized Git account for the Git integration owner, and click **Save Integration**.
 1. Run your pipeline again.
@@ -125,7 +125,7 @@ For more information about accessing the exact version of kubectl that you requi
 {: #troubleshoot-cd-pipeline-cr}
 {: troubleshoot}
 
-The {{site.data.keyword.registrylong}} pipeline pushes and pulls images to and from the [{{site.data.keyword.registrylong_notm}}](/docs/Registry?topic=Registry-registry_overview). The {{site.data.keyword.registrylong_notm}} service plan determines the amount of storage and pull traffic that you can use for your private images.
+The {{site.data.keyword.registrylong}} pipeline pushes and pulls images to and from the [{{site.data.keyword.registrylong_notm}}](/docs/Registry?topic=Registry-registry_overview). The {{site.data.keyword.registrylong_notm}} service plan determines the amount of storage and pulls traffic that you can use for your private images.
 {: tip}
 
 When I attempt to run a pipeline, I receive the following error message:
@@ -154,7 +154,7 @@ Your app requires more than 4 GB of memory to compile in a single pipeline job.
 To build your app in a single pipeline job:
 {: tsResolve}
 
-1. Create an [{{site.data.keyword.contdelivery_full}} Pipeline Private Worker](/docs/ContinuousDelivery?topic=ContinuousDelivery-install-private-workers).
+1. Create an [{{site.data.keyword.contdelivery_full}} Pipeline Private worker](/docs/ContinuousDelivery?topic=ContinuousDelivery-install-private-workers).
 1. Configure your build job to use the [private worker](/docs/ContinuousDelivery?topic=ContinuousDelivery-private-workers#configure_private_worker_integration).
   
 ## Why can't the {{site.data.keyword.deliverypipeline}} communicate through a firewall?
@@ -193,11 +193,11 @@ If a matching repo integration is located in the toolchain, the pipeline attempt
 
 If you see one of these notifications, but no warnings or errors are displayed in the configuration, no further action is required. If warnings or errors still appear, you might need to update or create the trigger or definition again. 
 
-## Why does my pipeline time out when it tries to connect to {{site.data.keyword.cos_full_notm}} private endpoints?
+## Why does my pipeline timeout when it tries to connect to {{site.data.keyword.cos_full_notm}} private endpoints?
 {: #troubleshoot-private-endpoints}
 {: troubleshoot}
 
-When you run a pipeline, requests to the {{site.data.keyword.cos_full_notm}} that use a private endpoint time out with no response. This time out can cause the pipeline to fail.
+When you run a pipeline, requests to the {{site.data.keyword.cos_full_notm}} that use a private endpoint timeout with no response. This timeout can cause the pipeline to fail.
 {: tsSymptoms}
 
 {{site.data.keyword.cos_full_notm}} private endpoints are not accessible from all {{site.data.keyword.cloud_notm}} cluster types. Private {{site.data.keyword.cos_full_notm}} endpoints are not accessible from private workers that run on clusters within an {{site.data.keyword.vpc_full}} (VPC).
@@ -229,7 +229,7 @@ Make sure that your pipeline specifies only those secure properties that are req
 An error appears on the {{site.data.keyword.deliverypipeline}} page in relation to fetching the pipeline definition. Alternatively, the error appears when attempting to trigger a PipelineRun.
 {: tsSymptoms}
 
-There are a number of reasons why a failure can occur when fetching the definition for a pipeline. For example, if the definition is defined in a very large repository, the request to fetch the definition can time out due to a delay in cloning the large repository before building the definition. Another example is when a definition input is targeted at a branch or path that no longer exists in the repository.
+There are a number of reasons why a failure can occur when fetching the definition for a pipeline. For example, if the definition is defined in a large repository, the request to fetch the definition can time out due to a delay in cloning the large repository before building the definition. Another example is when a definition input is targeted at a branch or path that no longer exists in the repository.
 {: tsCauses}
 
 Try resolving the problem by using one of the following options:
@@ -238,8 +238,8 @@ Try resolving the problem by using one of the following options:
 * Reload the page to initiate a new request to fetch the definition. If this fails repeatedly, continue with the following options.
 * Validate that all referenced branches and paths in your definition inputs match with resources that exist in the repository.
 * Reduce the size of the repository containing your Tekton definition. Remove unnecessary files from the repository and update your `.gitignore` to exclude uploading any unnecessary files.
-* Only include the minimum necessary files of your pipeline definition -- do not target your entire repository. Move all Tekton definition related files to a subfolder of your repository, then edit the definition input in your {{site.data.keyword.deliverypipeline}} settings to target the path at the subfolder. This option reduces the time necessary to clone the definition files from your repository.
-* For large Tekton definitions, consider splitting the definition into multiple folders or multiple repositories. Then update the definition inputs in your {{site.data.keyword.deliverypipeline}} to target the necessary folders or repos.
+* Only include the minimum necessary files of your pipeline definition -- do not target your entire repository. Move all Tekton definition-related files to a subfolder of your repository, then edit the definition input in your {{site.data.keyword.deliverypipeline}} settings to target the path at the subfolder. This option reduces the time necessary to clone the definition files from your repository.
+* For large Tekton definitions, consider splitting the definition into multiple folders or multiple repositories. Then, update the definition inputs in your {{site.data.keyword.deliverypipeline}} to target the necessary folders or repos.
 
 The computed pipeline definition size limit is 1 MB. If you encounter errors when you save or run your pipeline, you might need to reduce the size of your pipeline definition, or split it into multiple pipelines.
 {: important}
@@ -251,7 +251,7 @@ The computed pipeline definition size limit is 1 MB. If you encounter errors whe
 Pipelines that attempt an `oc login` can't log in to the target cluster that's running {{site.data.keyword.openshiftlong_notm}} version 4.13 and later.
 {: tsSymptoms}
 
-The issue is caused by change that is introduced in version 4.13 of [{{site.data.keyword.openshiftlong_notm}}](/docs/openshift?topic=openshift-cs_versions_413).  
+The issue is caused by a change that is introduced in version 4.13 of [{{site.data.keyword.openshiftlong_notm}}](/docs/openshift?topic=openshift-cs_versions_413).  
 {: tsCauses}
 
 To work around the issue, use the following process:
@@ -264,7 +264,7 @@ oc get pods -A  # To verify connection
 ```
 {: tsResolve}
 
-## Why does my pipeline fail when executing a Git clone command?
+## Why does my pipeline fail when running a Git clone command?
 {: #troubleshoot-git-clone}
 {: troubleshoot}
 
@@ -275,20 +275,20 @@ fatal: destination path '.' already exists and is not an empty directory.
 ```
 {: tsSymptoms}
 
-The issue is caused by a performance change in the infrastructure of the public managed pipeline workers. 
+The issue is caused by a performance change in the infrastructure of the publicly managed pipeline workers. 
 {: tsCauses}
 
 To resolve this issue:
-- Locate the tekton definitions under Settings for your pipeline and find the entry for `git` under Path. Click the repository link to open. Navigate to  `git/task-clone-repo.yaml` and then within that file find the `clone-repo` step. See the [Tekton Catalog example](https://github.com/open-toolchain/tekton-catalog/blob/master/git/task-clone-repo.yaml#L261) for the latest code for reference. 
-- Add `rm -rf "lost+found"` to the definition prior to the `git clone` call. This ensures the directory for cloning is empty.
+- Locate the tekton definitions under Settings for your pipeline and find the entry for `git` under Path. Click the repository link to open. Navigate to  `git/task-clone-repo.yaml` and then within that file find the `clone-repo` step. See the [Tekton catalog example](https://github.com/open-toolchain/tekton-catalog/blob/master/git/task-clone-repo.yaml#L261) for the latest code for reference. 
+- Add `rm -rf "lost+found"` to the definition before the `git clone` call. This ensures that the directory for cloning is empty.
 - Run the pipeline again.
 {: tsResolve}
 
-## Why does my pipeline fail to start on managed workers when executed from a trial account?
+## Why does my pipeline fail to start on managed workers when run from a trial account?
 {: #troubleshoot-trial-account}
 {: troubleshoot}
 
-Classic pipelines that are executed from a trial account won't start due to the following error:
+Classic pipelines that are run from a trial account won't start due to the following error:
 ```text
 This type of account is not entitled to use managed workers. Private workers can be used instead or to gain access managed worker capability the account must be upgraded to a paid plan.
 ```
@@ -298,7 +298,7 @@ This behavior is caused by a revision of the permissions for trial accounts.
 {: tsCauses}
 
 Try the following options to resolve this issue:
-- Execute your pipelines using a private worker running on your own cluster.
+- Run your pipelines by using a private worker running on your own cluster.
 - Upgrade your trial account to a [Pay-As-You-Go](/docs/account?topic=account-accounts) account with a Lite plan.
 
 ## Why does my pipeline fail to trigger for pull request events from forked repositories?
@@ -311,7 +311,7 @@ Pipelines by default do not respond to pull request events from forked repositor
 This behavior is by design to prevent inadvertent execution of pipelines.
 {: tsCauses}
 
-To enable pipelines to execute on events from forked repositories do the following:
+To enable pipelines to run on events from forked repositories do the following:
 
-- Tekton Pipelines: On the git trigger panel, enable the `Include pull request events from forks` toggle
+- Tekton Pipelines: On the Git trigger window, enable the `Include pull request events from forks` toggle
 - Classic Pipelines: On the Input tab of the stage configuration, enable the `Include pull request events from forks` toggle
