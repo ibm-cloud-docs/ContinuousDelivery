@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-11-21"
+  years: 2022, 2025
+lastupdated: "2025-02-13"
 
 keywords: Satellite, satellite, tekton, pipeline, toolchain, CD, automate, automation, continuous delivery, DevOps, shift-left, shift left, secure DevOps, IBM Cloud
 
@@ -245,6 +245,6 @@ After your toolchain is set up and the {{site.data.keyword.deliverypipeline}} su
 ## Looking for help?
 {: #cd-satelliteonly-tutorial-help}
 
-Get help from the {{site.data.keyword.contdelivery_full}} development teams by joining us on [Slack](https://ic-devops-slack-invite.us-south.devops.cloud.ibm.com/){: external}.
+{{site.data.keyword.cloud_notm}}'s AI assistant, which is powered by {{site.data.keyword.IBM_notm}}'s watsonx, is designed to help you learn about working in {{site.data.keyword.cloud_notm}} and building solutions with the catalog of available products and services. See [Getting help from the AI assistant](/docs/overview?topic=overview-ask-ai-assistant).
 
 For more support options, see [Getting help and support for {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-help-and-support).
