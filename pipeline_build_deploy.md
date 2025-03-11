@@ -79,7 +79,7 @@ You can deploy a previous build. On the stage that contains the build, click **V
 ### Adding services to apps
 {: #deliverypipeline_add_services}
 
-You can add services to your apps and manage those services from your {{site.data.keyword.cloud_notm}} dashboard. For more information about adding services, see [Connecting services to external apps](/docs/account?topic=account-externalapp).
+You can add services to your apps and manage those services from your {{site.data.keyword.cloud_notm}} dashboard. For more information about adding services, see [Connecting services to external apps](/docs/account?topic=account-service_credentials).
 
 ## Viewing logs
 {: #deliverypipeline_view_logs}
@@ -122,7 +122,7 @@ You can download the log file for a pipeline job from a script and save the `PIP
      -o job_log.txt \
      "$JOB_LOG"
    ```
-   
+
 1. Check the `X-More-Data` header. If the header is set to `true`, the log file is being generated or processed. If the header is set to `false`, the log file is ready for use.
 
    ```shell
@@ -150,7 +150,7 @@ You can download the artifacts for a pipeline Build job from a script and save t
    ```shell
    export JOB_ARTIFACT="$PIPELINE_ARTIFACT_URL"
    ```
-   
+
 1. Use the `PIPELINE_ARTIFACT_URL` in a later job within the same stage to download the artifacts to export them to a different system. Use an IBM Cloud bearer token to access the artifacts.
 
    ```shell
@@ -164,7 +164,7 @@ You can download the artifacts for a pipeline Build job from a script and save t
 
    curl -O  "$DOWNLOAD_URL"
    ```
-   
+
 1. Upload the artifacts to your system.
 
    ```shell

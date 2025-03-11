@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-10-18"
+lastupdated: "2025-03-11"
 
 keywords: tool integrations, IBM Cloud Public, Event Notifications
 
@@ -10,7 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{{site.data.keyword.attribute-definition-list}}   
+{{site.data.keyword.attribute-definition-list}}
 
 # Configuring {{site.data.keyword.en_short}}
 {: #event-notifications-integration}
@@ -18,7 +18,7 @@ subcollection: ContinuousDelivery
 You can use the {{site.data.keyword.en_full}} service to receive information about critical events that occur in your {{site.data.keyword.cloud}} account. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like Toolchains, Monitoring, Security and Compliance Center, and Secrets Manager to communication channels like PagerDuty, Slack, email, SMS, push notifications, webhook, Microsoft&reg; Teams, ServiceNow, and {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}.
 {: shortdesc}
 
-Before you configure an {{site.data.keyword.en_short}} tool integration, make sure that you provision an instance of the [{{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-en-create-en-instance) service.
+Before you configure an {{site.data.keyword.en_short}} tool integration, make sure that you provision an instance of the [{{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-getting-started) service.
 {: important}
 
 By connecting a toolchain to an {{site.data.keyword.en_short}} service instance, the {{site.data.keyword.en_short}} tool integration enables the toolchain and its associated tool integration instances to send built-in and client bespoke events to any of the destinations that are supported by the {{site.data.keyword.en_short}} service. For more information about how toolchains process events, see [How events are collected and sent by toolchains](/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd#event-notifications-how-cd).
@@ -28,7 +28,7 @@ Make sure that the selected {{site.data.keyword.en_short}} service instance has 
 
 Configure {{site.data.keyword.en_short}} to send critical events from toolchains and tool integration instances:
 
-1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.  
+1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
 
    a. Click **Add tool**.
 
@@ -60,7 +60,7 @@ You must specify the `tool_type_id` property in the request body with the `event
 
 You can configure a Tekton Pipeline to send events to {{site.data.keyword.en_short}} integrations.
 
-1. From your toolchain's Overview page, on the **Delivery pipelines** card, click the **Delivery Pipeline** to open the Tekton Delivery Pipeline dashboard. 
+1. From your toolchain's Overview page, on the **Delivery pipelines** card, click the **Delivery Pipeline** to open the Tekton Delivery Pipeline dashboard.
 1. On the **Settings** > **Advanced Settings** page, enable **Event Notifications**.
 1. Save your changes.
 

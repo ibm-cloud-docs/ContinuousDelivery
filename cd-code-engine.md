@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-02-13"
+lastupdated: "2025-03-11"
 
 keywords: deployment strategies, toolchain, CD, automate, automation, continuous delivery, continuous integration, DevOps, IBM Cloud
 
@@ -45,14 +45,14 @@ Before you start this tutorial, make sure that you have the following resources 
 
 * An instance of the [{{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started) service.
 
-* Optional. Secrets that are stored in a secrets management vault and managed centrally from a single location. For more information about choosing from the various secrets management and data protection offerings, see [Managing {{site.data.keyword.cloud_notm}} secrets](/docs/secrets-manager?topic=secrets-manager-manage-secrets-ibm-cloud). If you don't already have an instance of the secrets management vault provider of your choice, create one.
+* Optional. Secrets that are stored in a secrets management vault and managed centrally from a single location. For more information about choosing from the various secrets management and data protection offerings, see [Managing {{site.data.keyword.cloud_notm}} secrets](/docs/secrets-manager?topic=secrets-manager-use-case-kubernetes-secrets). If you don't already have an instance of the secrets management vault provider of your choice, create one.
 
 * Optional. A namespace that is created by using the container registry command line. To create a namespace, type the following command from the command line:
 
    ```text
    ibmcloud cr namespace-add <my namespace>
    ```
-   
+
    Alternatively, you can create a namespace on the [Container Registry](https://cloud.ibm.com/registry/namespaces) page. For more information about creating a namespace in this location, see [IBM Cloud Container Registry](https://cloud.ibm.com/docs/Registry?topic=Registry-getting-started#getting-started) service.
 
 
@@ -115,7 +115,7 @@ By default, the Application repo template is cloned to your {{site.data.keyword.
 
 Several tools within this toolchain require secrets, such as an {{site.data.keyword.cloud_notm}} API key. You must securely store all secrets in a secrets vault and reference them as required by the toolchain.
 
-1. Using {{site.data.keyword.cloud_notm}}, you can choose from various secrets management and data protection offerings that help you to protect your sensitive data and centralize your secret. In the Secrets step, you can specify which secret vault integrations to add or remove from your toolchain. For more information about adding and removing vault integrations, including prerequisites and by using hints, see [Managing {{site.data.keyword.cloud_notm}} secrets](/docs/secrets-manager?topic=secrets-manager-manage-secrets-ibm-cloud). 
+1. Using {{site.data.keyword.cloud_notm}}, you can choose from various secrets management and data protection offerings that help you to protect your sensitive data and centralize your secret. In the Secrets step, you can specify which secret vault integrations to add or remove from your toolchain. For more information about adding and removing vault integrations, including prerequisites and by using hints, see [Managing {{site.data.keyword.cloud_notm}} secrets](/docs/secrets-manager?topic=secrets-manager-use-case-kubernetes-secrets).
 
    By using hints within a template, a toolchain is automatically populated with preconfigured secrets; you don't need to manually select secrets from vault integrations that are attached to the toolchain.
    {: tip}
@@ -130,7 +130,7 @@ Several tools within this toolchain require secrets, such as an {{site.data.keyw
 
 1. Click **Continue**.
 
-For more information about managing your secrets in IBM Key Protect or HashiCorp, see [IBM Key Protect](/docs/devsecops?topic=devsecops-cd-devsecops-tekton-ci-compliance#cd-devsecops-key-protect-ci) or [HashiCorp](/docs/devsecops?topic=devsecops-cd-devsecops-tekton-ci-compliance#cd-devsecops-vault-ci).
+For more information about managing your secrets in IBM Key Protect or HashiCorp, see [Secrets](/docs/devsecops?topic=devsecops-tutorial-tekton-ci-compliance#tutorial-tekton-ci-secrets).
 
 ## Configure the deployment target
 {: #codeengine-deployment-target}
@@ -199,7 +199,7 @@ After you create your toolchain, it shows each of the tool integrations that are
 You can explore the pipelines to understand the toolchain flow and the different operations that run within each pipeline. The toolchain that you created contains the following pipelines:
 
 * **Pull request pipeline:** Runs when a developer merges changes from their development branch to the master branch, or to any other branch in the repo. The pull request pipeline runs the Unit Test and Static Scans on the Application Source Code.
-* **Continuous integration pipeline:** Runs when you merge a change into the master branch of the Application Source Code repo. The continuous integration pipeline runs the Unit Test, Code Coverage, and Static Scans on the Application Source Code, CIS check, and Bill Of Materials (BOM) check. The continuous delivery pipeline also generates the binary build artifacts and uploads them to the {{site.data.keyword.containerlong}}, as configured in the toolchain. And the continuous integration pipeline generates the metadata of the build artifacts and stores it in the Inventory repo. 
+* **Continuous integration pipeline:** Runs when you merge a change into the master branch of the Application Source Code repo. The continuous integration pipeline runs the Unit Test, Code Coverage, and Static Scans on the Application Source Code, CIS check, and Bill Of Materials (BOM) check. The continuous delivery pipeline also generates the binary build artifacts and uploads them to the {{site.data.keyword.containerlong}}, as configured in the toolchain. And the continuous integration pipeline generates the metadata of the build artifacts and stores it in the Inventory repo.
 * **Continuous deployment pipeline:** Deploys a Code Engine component image (that the continuous integration pipeline builds and deploys) to a different Code Engine component to be hosted in a different project.
 
 ### Run the pull request and continuous integration pipelines
@@ -240,7 +240,7 @@ If you want to deploy the Code Engine component (that the continuous integration
 
 1. Expand the **deploy-component** task and click the **execute** step. Click the **Logs** tab, and scroll to the end of the log. Click the link to your deployed Code Engine app to view the running app.
 
-If you want to remove the sample app that is running on {{site.data.keyword.codeengineshort}}, follow these steps: 
+If you want to remove the sample app that is running on {{site.data.keyword.codeengineshort}}, follow these steps:
 
 1. Go to the {{site.data.keyword.codeengineshort}} [Projects](https://cloud.ibm.com/codeengine/projects){: external} page.
 
