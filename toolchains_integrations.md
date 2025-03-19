@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2024
-lastupdated: "2024-10-18"
+  years: 2015, 2025
+lastupdated: "2025-03-19"
 
 keywords: tool integrations, IBM Cloud Public, App Configuration, Artifactory, Bitbucket, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Event Notifications, Git Repos and Issue Tracking, GitHub, GitLab, HashiCorp Vault, Jenkins, JIRA, IBM Key Protect, IBM Secrets Manager, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Security and Compliance Center, Slack, SonarQube
 
@@ -10,12 +10,12 @@ subcollection: ContinuousDelivery
 
 ---
 
-{{site.data.keyword.attribute-definition-list}}  
+{{site.data.keyword.attribute-definition-list}}
 
 # Working with tool integrations
 {: #integrations}
 
-You can add, update, and delete tool integrations by using the console, with the API, or with Terraform. You can configure tool integrations that support development, deployment, and operations tasks while you create an open toolchain, or you can add and configure tool integrations to customize an existing toolchain.  
+You can add, update, and delete tool integrations by using the console, with the API, or with Terraform. You can configure tool integrations that support development, deployment, and operations tasks while you create an open toolchain, or you can add and configure tool integrations to customize an existing toolchain.
 {: shortdesc}
 
 ## Understanding tool integrations with {{site.data.keyword.cloud_notm}} for Financial Services
@@ -44,7 +44,7 @@ You can add tool integrations to your toolchain by using the console.
 
 1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**.
 1. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
-1. To see a list of tool integrations to add, click **Add tool**.
+1. To see a list of tool integrations to add, click **Add**.
 1. Click a tool integration that you want to add.
 1. Enter any required information to configure the tool integration.
 1. Click **Create Integration** to add the tool integration to your toolchain.
@@ -56,7 +56,7 @@ You can add tool integrations to your toolchain by using the console.
 You can add tool integrations to your toolchain with the API.
 
 1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/toolchain#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
-   
+
    ```bash
    export CD_TOOLCHAIN_AUTH_TYPE=iam && \
    export CD_TOOLCHAIN_APIKEY={iam_api_key} && \
@@ -67,7 +67,7 @@ You can add tool integrations to your toolchain with the API.
 1. [Look up the ID of the toolchain](https://{DomainName}/apidocs/toolchain#list-toolchains){: external} in which you want to create your tool integration.
 1. [Look up the `tool_type_id` value](#integrations) that corresponds to the tool integration that you want to add.
 1. Add the tool integration within the targeted toolchain.
-   
+
    ```curl
    curl -X POST --location --header "Authorization: Bearer {iam_token}" \
      --header "Accept: application/json" \
@@ -142,8 +142,8 @@ You can add tool integrations to your toolchain with the API.
    {: codeblock}
    {: java}
 
-The following table lists and describes each of the variables that are used in the previous steps.   
-    
+The following table lists and describes each of the variables that are used in the previous steps.
+
 | Variable | Description |
 |:---------|:------------|
 | `{base_url}` | The Toolchain API endpoint URL. For more information about supported values, see [Endpoint URL](https://{DomainName}/apidocs/toolchain#endpoint-url){: external}. |
@@ -164,13 +164,13 @@ You can add tool integrations to your toolchain with Terraform.
 1. To install the Terraform CLI and configure the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform, follow the tutorial for [Getting started with Terraform on {{site.data.keyword.cloud}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started).
 1. Create a Terraform configuration file that is named `main.tf`. In this file, add the configuration to create resource instances by using the HashiCorp Configuration Language (HCL). For more information about using this configuration language, see the [Terraform documentation](https://developer.hashicorp.com/terraform/language){: external}.
 
-   The following example creates a {{site.data.keyword.deliverypipeline}} tool integration by using the `ibm_cd_toolchain_tool_pipeline` resource, where `toolchain_id` is a GUID that represents the toolchain in which to create the tool integration. 
-   
+   The following example creates a {{site.data.keyword.deliverypipeline}} tool integration by using the `ibm_cd_toolchain_tool_pipeline` resource, where `toolchain_id` is a GUID that represents the toolchain in which to create the tool integration.
+
    ```terraform
    data "ibm_cd_toolchain" "cd_toolchain" {
      toolchain_id = {toolchain_id}
    }
-   
+
    resource "ibm_cd_toolchain_tool_pipeline" "cd_pipeline" {
      toolchain_id = data.ibm_cd_toolchain.cd_toolchain.id
      parameters {
@@ -188,7 +188,7 @@ You can add tool integrations to your toolchain with Terraform.
    terraform init
    ```
    {: pre}
-   
+
 1. Create a Terraform execution plan. This plan summarizes all of the actions that must run to create the tool integration.
 
    ```terraform
@@ -209,7 +209,7 @@ You can add tool integrations to your toolchain with Terraform.
 
 If you deferred the configuration of a tool integration when you created a toolchain, a Configure button is shown on its card. If you configured a tool integration when you created a toolchain, you can update the configuration settings by using the console.
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. 
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**.
 1. On the Toolchains page, click the toolchain that contains the tool integration that you want to update to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
 1. If you need to configure a tool integration for the first time, on its card, click **Configure**.
 1. When you are finished configuring the tool integration, click **Save Integration**.
@@ -223,7 +223,7 @@ If you deferred the configuration of a tool integration when you created a toolc
 If you configured a tool integration when you created a toolchain, you can update the configuration settings with the API.
 
 1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/toolchain#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
-   
+
    ```bash
    export CD_TOOLCHAIN_AUTH_TYPE=iam && \
    export CD_TOOLCHAIN_APIKEY={iam_api_key} && \
@@ -234,7 +234,7 @@ If you configured a tool integration when you created a toolchain, you can updat
 1. [Look up the ID of the toolchain](https://{DomainName}/apidocs/toolchain#list-toolchains){: external} where the tool integration exists.
 1. Using the ID of the toolchain, [look up the ID of the tool integration](https://{DomainName}/apidocs/toolchain#list-tools).
 1. Update the tool integration within the targeted toolchain.
-   
+
    ```curl
    curl -X PATCH --location --header "Authorization: Bearer {iam_token}" \
      --header "Accept: application/json" \
@@ -290,7 +290,7 @@ If you configured a tool integration when you created a toolchain, you can updat
          "name": {new_tool_name},
          "parameters": {new_tool_parameters}
       }
-   ) 
+   )
    ```
    {: codeblock}
    {: python}
@@ -314,8 +314,8 @@ If you configured a tool integration when you created a toolchain, you can updat
    {: codeblock}
    {: java}
 
-The following table lists and describes each of the variables that are used in the previous steps.   
-    
+The following table lists and describes each of the variables that are used in the previous steps.
+
 | Variable | Description |
 |:---------|:------------|
 | `{base_url}` | The Toolchain API endpoint URL, for example `https://api.us-south.devops.cloud.ibm.com/toolchain/v2`. For more information about this endpoint URL, including a list of values, see [Endpoint URL](https://{DomainName}/apidocs/toolchain#endpoint-url){: external}. |
@@ -336,13 +336,13 @@ If you configured a tool integration when you created a toolchain, you can updat
 1. Install the Terraform CLI and configure the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform by following the tutorial for [Getting started with Terraform on {{site.data.keyword.cloud_notm}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started){: external}.
 1. Use the Terraform configuration file that you used to create the tool integration. If your tool integration was not created with Terraform, run `terraform import` to avoid creating another tool integration. For more information about using this configuration language, see the [Terraform documentation](https://developer.hashicorp.com/terraform/language){: external}.
 
-   The following example updates the name of an existing {{site.data.keyword.deliverypipeline}} tool integration by using the `ibm_cd_toolchain_tool_pipeline` resource, where `toolchain_id` is a GUID that represents the toolchain where the tool integration exists.  
-   
+   The following example updates the name of an existing {{site.data.keyword.deliverypipeline}} tool integration by using the `ibm_cd_toolchain_tool_pipeline` resource, where `toolchain_id` is a GUID that represents the toolchain where the tool integration exists.
+
    ```terraform
    data "ibm_cd_toolchain" "cd_toolchain" {
      toolchain_id = {toolchain_id}
    }
-   
+
    resource "ibm_cd_toolchain_tool_pipeline" "cd_pipeline" {
      toolchain_id = data.ibm_cd_toolchain.cd_toolchain.id
      parameters {
@@ -360,7 +360,7 @@ If you configured a tool integration when you created a toolchain, you can updat
    terraform init
    ```
    {: pre}
-   
+
 1. Create a Terraform execution plan. This plan summarizes all of the actions that must run to modify the tool integration.
 
    ```terraform
@@ -393,7 +393,7 @@ You can delete tool integrations from your toolchain by using the console. If yo
 You can delete tool integrations from your toolchain with the API. If you delete a tool integration from your toolchain, the deletion cannot be undone.
 
 1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/toolchain#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
-   
+
    ```bash
    export CD_TOOLCHAIN_AUTH_TYPE=iam && \
    export CD_TOOLCHAIN_APIKEY={iam_api_key} && \
@@ -404,7 +404,7 @@ You can delete tool integrations from your toolchain with the API. If you delete
 2. [Look up the ID of the toolchain](https://{DomainName}/apidocs/toolchain#list-toolchains){: external} where the tool integration exists.
 3. Using the ID of the toolchain, [look up the ID of the tool integration](https://{DomainName}/apidocs/toolchain#list-tools){: external}.
 4. Delete the tool integration within the targeted toolchain.
-   
+
    ```curl
    curl -X DELETE --location --header "Authorization: Bearer {iam_token}" \
      "{base_url}/toolchains/{toolchain_id}/tools/{tool_id}"
@@ -465,8 +465,8 @@ You can delete tool integrations from your toolchain with the API. If you delete
    {: codeblock}
    {: java}
 
-The following table lists and describes each of the variables that are used in the previous steps.   
-    
+The following table lists and describes each of the variables that are used in the previous steps.
+
 | Variable | Description |
 |:---------|:------------|
 | `{base_url}` | The Toolchain API endpoint URL. For more information about this endpoint URL, including a list of values, see [Endpoint URL](https://{DomainName}/apidocs/toolchain#endpoint-url) for a list of values. |
@@ -490,7 +490,7 @@ You can delete tool integrations from your toolchain with Terraform. If you dele
    terraform init
    ```
    {: pre}
-   
+
 4. Create a Terraform execution plan. This plan summarizes all of the actions that must run to delete the tool integration.
 
    ```terraform
@@ -526,6 +526,7 @@ If you are using the [{{site.data.keyword.contdelivery_short}} Toolchain API to 
 |[{{site.data.keyword.DRA_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-dra)		|draservicebroker | ![Checkmark icon](../icons/checkmark-icon.svg)			|
 |[{{site.data.keyword.en_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-integration)	|eventnotifications | ![Checkmark icon](../icons/checkmark-icon.svg)		|
 |[{{site.data.keyword.gitrepos}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-grit)	|hostedgit |		|
+|[{{site.data.keyword.cos_full_notm}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-cos_integration)|cloudobjectstorage	|		|
 |[GitHub](/docs/ContinuousDelivery?topic=ContinuousDelivery-github)		|githubconsolidated |		|
 |[GitLab](/docs/ContinuousDelivery?topic=ContinuousDelivery-gitlab)		|gitlab |		|
 |[HashiCorp Vault](/docs/ContinuousDelivery?topic=ContinuousDelivery-hashicorpvault)		|hashicorpvault |		|

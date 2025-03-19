@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2024
-lastupdated: "2024-10-18"
+  years: 2015, 2025
+lastupdated: "2025-03-19"
 
 keywords: tool integrations, IBM Cloud Public, Git Repos and Issue Tracking
 
@@ -10,15 +10,15 @@ subcollection: ContinuousDelivery
 
 ---
 
-{{site.data.keyword.attribute-definition-list}}  
+{{site.data.keyword.attribute-definition-list}}
 
 # Configuring {{site.data.keyword.gitrepos}}
 {: #grit}
 
-The [{{site.data.keyword.gitrepos}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-git_working) tool integration is based on GitLab Community Edition, which is a web-based hosting service for Git repositories (repos). You can have both local and remote copies of your repos. To learn more, see [{{site.data.keyword.gitrepos}}](https://us-south.git.cloud.ibm.com/help){: external}. 
+The [{{site.data.keyword.gitrepos}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-git_working) tool integration is based on GitLab Community Edition, which is a web-based hosting service for Git repositories (repos). You can have both local and remote copies of your repos. To learn more, see [{{site.data.keyword.gitrepos}}](https://us-south.git.cloud.ibm.com/help){: external}.
 {: shortdesc}
 
-If you are configuring {{site.data.keyword.gitrepos}} as you are creating the toolchain, follow these steps:    
+If you are configuring {{site.data.keyword.gitrepos}} as you are creating the toolchain, follow these steps:
 
 1. In the Configurable Integrations section, click **{{site.data.keyword.gitrepos}}**.
 1. Review the default target locations for the Git repos. Those repos are cloned from the sample repos. If needed, change the names of the target repos.
@@ -29,7 +29,7 @@ These instructions apply to toolchains that already contain the Git repo that yo
 {: tip}
 
 1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
-1. Click **Add tool**.
+1. Click **Add**.
 1. In the Tool Integrations section, click **{{site.data.keyword.gitrepos}}**.
 1. Select the server that you want to deploy code changes to. After you create the integration, you can edit it to manage the list of servers that you are authorized to work with. Click **Manage Authorization** to view a list of all of the servers and to delete the token that you provided to authorize with the server.
 1. To create a copy of the Git repo, for the repository type, click **Clone**. Type a new repo name and the URL for the source repo.
@@ -42,17 +42,17 @@ These instructions apply to toolchains that already contain the Git repo that yo
 After you clone the Git repo, you can remove it from your toolchain.
 {: tip}
 
-If you have a toolchain and are adding {{site.data.keyword.gitrepos}} to it, follow these steps:    
+If you have a toolchain and are adding {{site.data.keyword.gitrepos}} to it, follow these steps:
 
 1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
 1. Click **Add tool**.
 1. In the Tool Integrations section, click **{{site.data.keyword.gitrepos}}**.
 1. Select the server that you want to deploy code changes to. After you create the integration, you can edit it to manage the list of servers that you are authorized to work with. Click **Manage Authorization** to view a list of all of the servers and to delete the token that you provided to authorize with the server.
-1. Select a repository type:     
+1. Select a repository type:
 
-   a. To create an empty repo, for the repository type, click **New** and type a repository name.    
-   b. To fork a Git repo so that you can contribute changes through merge requests, for the repository type, click **Fork**. Type the URL for the source repo.    
-   c. To create a copy of a Git repo, for the repository type, click **Clone**. Type a new repo name and the URL for the source repo.     
+   a. To create an empty repo, for the repository type, click **New** and type a repository name.
+   b. To fork a Git repo so that you can contribute changes through merge requests, for the repository type, click **Fork**. Type the URL for the source repo.
+   c. To create a copy of a Git repo, for the repository type, click **Clone**. Type a new repo name and the URL for the source repo.
    d. If you have a Git repo and want to use it, for the repository type, click **Existing**. Type the URL for the source repo.
 
 1. Your username is automatically selected to assign ownership of this new integration to yourself. After the integration is created, another authorized user can reassign ownership of the integration to themself when they edit it.
@@ -60,7 +60,7 @@ If you have a toolchain and are adding {{site.data.keyword.gitrepos}} to it, fol
 1. If you want to use Issues for issue tracking, select the **Enable Issues** checkbox.
 1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** checkbox. For more information, see [Track where your code is deployed with toolchains](https://www.ibm.com/blog/announcement/track-code-deployed-toolchains/){: external}.
 1. Click **Create Integration**.
-1. From your toolchain's Overview page, on the **Repositories** card, click the Git repo that you want to work with. Your project overview page opens.    
+1. From your toolchain's Overview page, on the **Repositories** card, click the Git repo that you want to work with. Your project overview page opens.
 
 If you don't have Master or Owner privileges for the repo that you are linking to, your integration is limited because you can't use a webhook. Webhooks are required to automatically run a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
 {: tip}
