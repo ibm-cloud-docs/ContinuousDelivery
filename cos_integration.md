@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-03-19"
+lastupdated: "2025-03-20"
 
 keywords: tool integrations, cos bucket tool integration
 
@@ -12,7 +12,7 @@ subcollection: ContinuousDelivery
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Configuring {{site.data.keyword.cos_full_notm}}
+# Configuring Cloud {{site.data.keyword.cos_short}}
 {: #cos_integration}
 
 {{site.data.keyword.cos_full}} is used to securely store large volumes of data, ensuring compliance and optimizing cost.
@@ -28,6 +28,7 @@ To store and access evidences or other artifacts securely for your toolchain, co
 
 1. If you are configuring this tool integration as you are creating the toolchain, and a Cloud {{site.data.keyword.cos_short}} Bucket exists, within the template that you are configuring, click the Cloud {{site.data.keyword.cos_short}} Bucket tab. Alternatively, in the **More tools** section, click Cloud {{site.data.keyword.cos_short}} Bucket.
 1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
+
    a. Click **Add**.
 
    b. In the Tool Integrations section, click **Cloud {{site.data.keyword.cos_short}} Bucket**.

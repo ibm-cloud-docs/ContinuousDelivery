@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-03-19"
+lastupdated: "2025-03-20"
 
 keywords: tool integrations, IBM Cloud Public, Security and Compliance Center
 
@@ -21,7 +21,7 @@ You can use the {{site.data.keyword.compliance_full}} to embed security checks i
 Currently, you can use this tool integration only with toolchains that are created from the DevSecOps continuous delivery (CD) and continuous compliance (CC) templates. Before you configure a {{site.data.keyword.compliance_short}} tool integration, make sure that you have any of the following resources configured for evidence locking:
 1. Git repository (repo) for your toolchain and a configured Git tool integration that points to this repo.
 1. {{site.data.keyword.cos_full}} (COS) bucket and a {{site.data.keyword.cos_full_notm}} Bucket integration in the toolchain using this bucket.
-{: important}
+
 
 This tool integration verifies the security and compliance posture of your toolchain by identifying the location of the evidence locker and the path to the evidence summary. For more information about evidence format and structure, see [Evidence](/docs/devsecops?topic=devsecops-devsecops-evidence).
 
@@ -30,7 +30,8 @@ This tool integration verifies the security and compliance posture of your toolc
 Configure {{site.data.keyword.compliance_short}} to embed security checks into your workflows to monitor for security and compliance:
 
 1. If you are configuring this tool integration as you are creating the toolchain, and a {{site.data.keyword.compliance_short}} tool integration exists within the template that you are configuring, click the **{{site.data.keyword.compliance_short}}** tab. Alternatively, in the **More tools** section, click **{{site.data.keyword.compliance_short}}**.
-1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
+1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, clickcd
+ the ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
 
    a. Click **Add**.
 
