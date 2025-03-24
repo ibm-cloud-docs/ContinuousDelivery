@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2024
-lastupdated: "2024-11-27"
+  years: 2019, 2025
+lastupdated: "2025-03-24"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -411,6 +411,23 @@ Run when an issue is created with the specified label:
 ```
 {: codeblock}
 
+### Filters
+
+Filters allow users to refine pull requests based on specific criteria. The filter field currently supports specifying labels in pull requests, thereby controlling pipeline execution based on their presence or absence. However, it does not trigger a pipeline when labels are added or removed; rather, it verifies the PR's labels before permitting pipeline execution.
+
+**How it Works**:
+- If a PR event happens (like a new commit is added), the pipeline checks the labels on the PR.
+- If the PR meets the label conditions (e.g., has the "approved" label), the pipeline runs.
+- If the PR does not meet the label conditions, the pipeline will not execute.
+
+**Example Configuration**
+
+The screenshot below shows an example where the trigger is configured for the labels "approved" and "reviewed".
+
+- The PR pipeline will only be triggered if both labels are present.
+- If either label is missing, the pipeline will not run.
+
+![Configuring Label Filters for PR Pipeline Execution](images/filters.png){: caption="Configuring Label Filters for PR Pipeline Execution" caption-side="bottom"}
 
 #### Checking the event payload
 {: #checking_event_payload}
