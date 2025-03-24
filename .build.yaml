@@ -1,10 +1,7 @@
 includes:
-  - https://github.ibm.com/cloud-docs/code-risk-analyzer-cli-plugin
-  - https://github.ibm.com/cloud-docs/devops-insights-cli-plugin
   - https://github.ibm.com/cloud-docs/cli
 translation:
   exclude:
     byFilePath:
       - file-dont-translate.md
       - folder-dont-translate/
-
