@@ -109,6 +109,26 @@ To install the framework directly on a cluster, you must have admin access to th
    - Toronto `ca-tor`
    - Sao Paulo `br-sao`
 
+#### Installing directly on a firewalled cluster
+{: #firewall_install_pw_cli}
+{: cli}
+
+To install the framework directly on a cluster, you must have admin access to the cluster. From the {{site.data.keyword.cloud_notm}} CLI, type the following command:
+
+   ```text
+   kubectl apply --filename "https://private-worker-service.{REGION}.devops.cloud.ibm.com/install?private=true"
+   ```
+
+   Where `{REGION}` is the location of the toolchain's pipeline. You can specify any of the following values for the `{REGION}`:
+
+   - Frankfurt `eu-de`
+   - London `eu-gb`
+   - Dallas `us-south`
+   - Washington DC `us-east`
+
+You must have a [VRF enabled](/docs/account?topic=account-vrf-service-endpoint&interface=ui) {{site.data.keyword.cloud_notm}} account to use this feature.
+{: important}
+
 #### Installing by using the OLM
 {: #olm_install_pw_cli}
 {: cli}
@@ -287,7 +307,23 @@ You must register a private worker with the specific {{site.data.keyword.cloud_n
       * Sao Paulo `br-sao`
    {: tip}
 
-3. To verify that the agent is registered correctly, type the following command:
+3. To register an agent to use private endpoints use the optional `private` query parameter as follows:
+
+   ```text
+      $ kubectl create secret generic {WORKER_NAME}-auth -n default --from-literal=apikey={API_KEY} && kubectl apply --filename "https://private-worker-service.{REGION}.devops.cloud.ibm.com/install/worker?serviceId={SERVICE_ID}&name={WORKER_NAME}&private=true"
+   ```
+
+   You must specify one of the following values for the `{REGION}`:
+
+      * Frankfurt `eu-de`
+      * London `eu-gb`
+      * Dallas `us-south`
+      * Washington DC `us-east`
+
+Note: The use of the `private` query parameter when registering an agent is required if the host cluster is in a firewalled environment
+{: important}   
+
+4. To verify that the agent is registered correctly, type the following command:
 
    ```text
    $ kubectl get workeragents
