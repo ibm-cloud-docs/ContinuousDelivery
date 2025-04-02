@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-03-20"
+lastupdated: "2025-04-02"
 
 keywords: tool integrations, IBM Cloud Public, App Configuration, Artifactory, Bitbucket, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Event Notifications, Git Repos and Issue Tracking, GitHub, GitLab, HashiCorp Vault, Jenkins, JIRA, IBM Key Protect, IBM Secrets Manager, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Security and Compliance Center, Slack, SonarQube
 
@@ -526,7 +526,6 @@ If you are using the [{{site.data.keyword.contdelivery_short}} Toolchain API to 
 |[{{site.data.keyword.DRA_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-dra)		|draservicebroker | ![Checkmark icon](../icons/checkmark-icon.svg)			|
 |[{{site.data.keyword.en_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-integration)	|eventnotifications | ![Checkmark icon](../icons/checkmark-icon.svg)		|
 |[{{site.data.keyword.gitrepos}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-grit)	|hostedgit |		|
-|[Cloud {{site.data.keyword.cos_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-cos_integration)| cloudobjectstorage	|		|
 |[GitHub](/docs/ContinuousDelivery?topic=ContinuousDelivery-github)		|githubconsolidated |		|
 |[GitLab](/docs/ContinuousDelivery?topic=ContinuousDelivery-gitlab)		|gitlab |		|
 |[HashiCorp Vault](/docs/ContinuousDelivery?topic=ContinuousDelivery-hashicorpvault)		|hashicorpvault |		|

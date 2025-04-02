@@ -63,7 +63,6 @@ toc:
               - event_notifications_integration.md
               - github_integration.md
               - grit_integration.md
-              - cos_integration.md
               - gitlab_integration.md
               - hashicorp_vault_integration.md
               - jenkins_integration.md
