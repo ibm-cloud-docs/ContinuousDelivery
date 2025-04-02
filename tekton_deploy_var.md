@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-10-25"
+  years: 2020, 2025
+lastupdated: "2025-03-14"
 
 keywords: environment properties, environment resources, IBM Java, Tekton environments
 
@@ -59,6 +59,7 @@ spec:
           echo "COMPLETED"
 
 ```
+{: codeblock}
 
 ## PipelineRun `ConfigMap` and `Secret`
 {: #tekton_envprop}
@@ -101,6 +102,7 @@ spec:
           echo -e "apikey from Secrets is >>";
           echo $SECURE_VALUE
 ```
+{: codeblock}
 
 ### Accessing all values
 {: #tekton_access_values}
@@ -126,6 +128,7 @@ spec:
         - echo -e "The environment for this Step is ";
           env
 ```
+{: codeblock}
 
 ## Managed worker virtual machine sizing
 {: #tekton_tshirt_sizing}
@@ -170,6 +173,7 @@ spec:
       taskPodTemplate:
         runtimeClassName: medium
 ```
+{: codeblock}
 
 
 
@@ -177,6 +181,84 @@ spec:
 
 
 
+
+## Log format
+{: #tekton_log_format}
+
+This section describes the features and functionality of the log viewer provided on the PipelineRun details page, and the supported log format to take advantage of these features.
+
+### Basic functionality
+{: #tekton_log_basic}
+
+The log viewer supports ANSI colour codes and text styles, and will automatically detect URLs in log content and render them as clickable links opening in a new window.
+
+### Toolbar
+{: #tekton_log_toolbar}
+
+The toolbar displayed in the log viewer includes a number of additional features, including:
+
+- maximize: increase the area available to the log viewer by hiding the task list and run header. This allows the user to eliminate distractions from other parts of the app and focus on the log content.
+- user preferences: these are persisted locally in the browser and applied to all logs in the app. See the following sections for more details.
+
+### Timestamps
+{: #tekton_log_timestamps}
+
+IBM-managed workers, and private workers with agent version 0.20.5 or later, produce log lines prefixed with timestamps by default. The user may show or hide these timestamps in the log viewer by toggling the option in the settings menu in the toolbar at the top of the log viewer.
+
+The displayed timestamps are localised based on the user's browser settings, with the raw timestamp value received from the worker provided as a tooltip on hover.
+
+### Log levels
+{: #tekton_log_levels}
+
+The log viewer parses log lines to detect the associated log level and decorate them accordingly to help with log consumability. The format supported is described below.
+
+```
+<timestamp> ::<level>::<message>
+```
+
+- `timestamp` is provided by the worker
+- `level` is one of `error`, `warning`, `notice`, `info`, `debug`
+   - `debug` logs are hidden by default
+   - any log line without an explicit `level` is considered as `info`, but will not display the log level badge to avoid redundancy in the UI where users are not using the supported log format
+- `message` is any other content on the line, and may contain ANSI codes for formatting, etc.
+
+For example, the following snippet would output a log line at the `warning` level:
+
+```sh
+echo '::warning::Something that may require attention but is non-blocking…'
+```
+{: codeblock}
+
+The displayed log levels can be changed via the settings menu in the toolbar at the top of the log viewer.
+
+###  Log groups
+{: #tekton_log_groups}
+
+In addition to log levels, the log viewer also supports collapsible groups within the logs. The supported format is described below.
+
+```
+<timestamp> ::group::<message>
+…
+<timestamp> ::endgroup::
+```
+
+A `group` command marks the beginning of the group. The content of `message` is displayed as the title / summary of the group along with an indicator of the group's current state (i.e. expanded or collapsed). Clicking the summary will toggle the state of the group.
+
+Groups are rendered in the collapsed state by default unless the step is still in progress when the logs are viewed. The user can expand or collapse groups as desired and their state will be maintained until the user navigates to a different view.
+
+Log groups cannot be mixed with log levels on the same line, the `group`, `endgroup`, and log level commands are mutually exclusive. However, logs contained within a group can use log levels as normal.
+
+Nesting groups is not supported. A `group` command will implicitly terminate any prior unterminated group.
+
+For example, the following snippet would output a log group with the summary 'Additional config' containing a number of messages at the `info` level:
+
+```sh
+echo '::group::Additional config'
+echo 'This extends the base config'
+echo '::info:: More info about the config…'
+echo '::endgroup::'
+```
+{: codeblock}
 
 ## Learn more about Tekton delivery pipelines
 {: #tekton_learn_more}

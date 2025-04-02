@@ -2,7 +2,7 @@
 
 copyright:
    years: 2021, 2025
-lastupdated: "2025-02-13"
+lastupdated: "2025-03-11"
 
 keywords: deployment strategies, tekton, pipeline, toolchain, CD, CI, automate, automation, continuous delivery, continuous integration, DevOps, shift-left, shift left, secure DevOps, IBM Cloud
 
@@ -70,7 +70,7 @@ Before you start this tutorial, make sure that you have the following resources 
 
 * An instance of the [{{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started) service.
 
-* Optional. A set of secrets that are stored in a secrets management vault and managed centrally from a single location. For more information about selecting a secrets management and data protection offering, see [Managing {{site.data.keyword.cloud_notm}} secrets](/docs/secrets-manager?topic=secrets-manager-manage-secrets-ibm-cloud). If you don't already have an instance of the secrets management vault provider of your choice, create one.
+* Optional. A set of secrets that are stored in a secrets management vault and managed centrally from a single location. For more information about selecting a secrets management and data protection offering, see [Managing {{site.data.keyword.cloud_notm}} secrets](/docs/secrets-manager?topic=secrets-manager-use-case-kubernetes-secrets). If you don't already have an instance of the secrets management vault provider of your choice, create one.
 
 ### Related content
 {: #vm-related-content}
@@ -146,7 +146,7 @@ By default, the inventory repo template is cloned to your {{site.data.keyword.gi
 
 Several tools within this toolchain require secrets, such as an {{site.data.keyword.cloud_notm}} API key. You must securely store all secrets in a secrets vault and reference them as required by the toolchain.
 
-Using {{site.data.keyword.cloud_notm}}, you can choose from various secrets management and data protection offerings that help you to protect your sensitive data and centralize your secret. In the Secrets step, you can specify which secret vault integrations to add or remove from your toolchain. For more information about adding and removing vault integrations, including prerequisites and by using hints, see [Managing {{site.data.keyword.cloud_notm}} secrets](/docs/secrets-manager?topic=secrets-manager-manage-secrets-ibm-cloud).
+Using {{site.data.keyword.cloud_notm}}, you can choose from various secrets management and data protection offerings that help you to protect your sensitive data and centralize your secret. In the Secrets step, you can specify which secret vault integrations to add or remove from your toolchain. For more information about adding and removing vault integrations, including prerequisites and by using hints, see [Managing {{site.data.keyword.cloud_notm}} secrets](/docs/secrets-manager?topic=secrets-manager-use-case-kubernetes-secrets).
 
 By using hints within a template, a toolchain is automatically populated with preconfigured secrets; you don't need to manually select secrets from vault integrations that are attached to the toolchain.
 {: tip}
@@ -159,7 +159,7 @@ IBM Secrets Manager securely stores and applies secrets such as API keys, Image 
 
 ![Secrets Manager options](images/ds-vpc-setup-secrets-manager.png){: caption="Secrets Manager options" caption-side="bottom"}
 
-For more information about managing your secrets in IBM Key Protect or HashiCorp, see [IBM Key Protect](/docs/devsecops?topic=devsecops-cd-devsecops-tekton-ci-compliance#cd-devsecops-key-protect-ci) or [HashiCorp](/docs/devsecops?topic=devsecops-cd-devsecops-tekton-ci-compliance#cd-devsecops-vault-ci).
+For more information about managing your secrets in IBM Key Protect or HashiCorp, see [Secrets](/docs/devsecops?topic=devsecops-tutorial-tekton-ci-compliance#tutorial-tekton-ci-secrets).
 
 ## Configure the deployment target
 {: #vm-deployment-target}

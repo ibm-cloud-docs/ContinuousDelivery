@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2024
-lastupdated: "2024-11-27"
+  years: 2019, 2025
+lastupdated: "2025-03-25"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -208,6 +208,30 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
 
    Save your changes.
 
+   In addition, generic webhook triggers support passing properties in the body of the webhook request. This allows properties to be overrided for the PipelineRun that is triggered by the webhook, or to pass in additional properties that supplement the pipeline/trigger properties used in the PipelineRun.
+   
+   If you require to pass in sensitive data in the payload properties, such as passwords or API key secrets, then you should use property type `SECURE` for such properties so that they are not displayed in plain text in the UI.
+   {: important}
+
+   Furthermore, an optional description can be passed in the request body that describes the PipelineRun that is triggered, and which is displayed in the UI when viewing the PipelineRun details in a browser.
+   
+   The following example shows how to use the curl command with a generic webhook while passing in a text property, a secure property and a description:
+
+   ```text
+   curl -X POST \
+   https://devops-api.us-south.devops.cloud.ibm.com/v1/tekton-webhook/588236be-749b-4c67-ae57-a561abbbc9a8/run/7e82880e-4223-4c98-8ca9-ef6df36bb6dc \
+   -H 'Content-Type: application/json' \
+   -H 'token: 48a0f92c0932890048596906a22ae189c48c5619fbcf9600' \
+   -d '{
+     "description":"This text can be used to describe the PipelineRun that will be triggered by this request.",
+     "properties":[
+       {"name":"mytextprop","type":"TEXT","value":"my text value"},
+       {"name":"mysecureprop","type":"SECURE","value":"mysecret"}
+     ]
+   }'
+   ```
+   {: codeblock}
+
 ### Configuring {{site.data.keyword.deliverypipeline}} triggers for Tekton pipelines
 {: #configure_triggering_events}
 {: ui}
@@ -411,6 +435,23 @@ Run when an issue is created with the specified label:
 ```
 {: codeblock}
 
+### Filters
+
+Filters allow users to refine pull requests based on specific criteria. The filter field currently supports specifying labels in pull requests, thereby controlling pipeline execution based on their presence or absence. However, it does not trigger a pipeline when labels are added or removed; rather, it verifies the PR's labels before permitting pipeline execution.
+
+**How it Works**:
+- If a PR event happens (like a new commit is added), the pipeline checks the labels on the PR.
+- If the PR meets the label conditions (e.g., has the "approved" label), the pipeline runs.
+- If the PR does not meet the label conditions, the pipeline will not execute.
+
+**Example Configuration**
+
+The screenshot below shows an example where the trigger is configured for the labels "approved" and "reviewed".
+
+- The PR pipeline will only be triggered if both labels are present.
+- If either label is missing, the pipeline will not run.
+
+![Configuring Label Filters for PR Pipeline Execution](images/filters.png){: caption="Configuring Label Filters for PR Pipeline Execution" caption-side="bottom"}
 
 #### Checking the event payload
 {: #checking_event_payload}

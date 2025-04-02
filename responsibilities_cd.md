@@ -23,7 +23,7 @@ You can integrate third-party tools (such as Public GitHub), or tools that you m
 
 Review the following sections for the specific responsibilities for you and for {{site.data.keyword.IBM_notm}} when you use {{site.data.keyword.contdelivery_short}}. For the overall terms of use, see [{{site.data.keyword.cloud_notm}} Terms and Notices](/docs/overview?topic=overview-terms).
 
-  
+
 ## Incident and operations management
 {: #incident-and-ops}
 
@@ -31,7 +31,7 @@ Incident and operations management includes tasks such as monitoring, event mana
 
 | Task | IBM responsibilities | Your responsibilities |
 |----------|-----------------------|--------|
-|Maintain high availability and respond to incidents.| Operate the {{site.data.keyword.contdelivery_short}} service in accordance with the {{site.data.keyword.cloud_notm}} Public [Service Level Agreements (SLAs)](/docs/overview?topic=overview-slas).  | Plan the deployment of your apps and data to meet your availability objectives. For more information about managing availability, see [How do I ensure zero downtime?](/docs/overview?topic=overview-zero-downtime) |
+|Maintain high availability and respond to incidents.| Operate the {{site.data.keyword.contdelivery_short}} service in accordance with the {{site.data.keyword.cloud_notm}} Public [Service Level Agreements (SLAs)](/docs/overview?topic=overview-slas).  | Plan the deployment of your apps and data to meet your availability objectives. For more information about managing availability, see [How do I ensure zero downtime?](/docs/resiliency?topic=resiliency-ha-redundancy) |
 {: caption="Responsibilities for incident and operations" caption-side="top"}
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-02-13"
+lastupdated: "2025-03-19"
 
 keywords: deployment strategies, tekton, pipeline, toolchain, CD, CI, automate, automation, continuous delivery, continuous integration, DevOps, shift-left, shift left, secure DevOps, IBM Cloud
 
@@ -71,16 +71,16 @@ Before you start this tutorial, make sure that you have the following resources 
 
 * An instance of the [{{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started) service.
 
-* **Optional**. Secrets that are stored in a secrets management vault and managed centrally from a single location. For more information about choosing from the various secrets management and data protection offerings, see [Managing {{site.data.keyword.cloud_notm}} secrets](/docs/secrets-manager?topic=secrets-manager-manage-secrets-ibm-cloud). If you don't already have an instance of the secrets management vault provider of your choice, create one.
+* **Optional**. Secrets that are stored in a secrets management vault and managed centrally from a single location. For more information about choosing from the various secrets management and data protection offerings, see [Managing {{site.data.keyword.cloud_notm}} secrets](/docs/secrets-manager?topic=secrets-manager-use-case-kubernetes-secrets). If you don't already have an instance of the secrets management vault provider of your choice, create one.
 
 * **Optional**. A namespace that is created by using the container registry command line. To create a namespace, type the following command from the command line:
 
    ```text
    ibmcloud cr namespace-add <my namespace>
    ```
-   
+
    Alternatively, you can create a namespace on the [Container Registry](https://cloud.ibm.com/registry/namespaces) page. For more information about creating a namespace in this location, see [IBM Cloud Container Registry](https://cloud.ibm.com/docs/Registry?topic=Registry-getting-started#getting-started) service.
-   
+
 
 
 ### Related content
@@ -124,7 +124,7 @@ The toolchain creates a Continuous Deployment Pipeline to deploy the application
 1. Click the deployment strategy that you want to use for your toolchain.
 
    ![Kubernetes secure app deployment strategies](images/ds_kub_setup_ds-selection_rolling.png){: caption="Deployment strategies" caption-side="bottom"}
-   
+
 1. Click **Continue**.
 
 
@@ -158,7 +158,7 @@ By default, the inventory repo template is cloned to your {{site.data.keyword.gi
 
 Several tools within this toolchain require secrets, such as an {{site.data.keyword.cloud_notm}} API key. You must securely store all secrets in a secrets vault and reference them as required by the toolchain.
 
-Using {{site.data.keyword.cloud_notm}}, you can choose from various secrets management and data protection offerings that help you to protect your sensitive data and centralize your secret. In the Secrets step, you can specify which secret vault integrations to add or remove from your toolchain. For more information about adding and removing vault integrations, including prerequisites and by using hints, see [Managing {{site.data.keyword.cloud_notm}} secrets](/docs/secrets-manager?topic=secrets-manager-manage-secrets-ibm-cloud). 
+Using {{site.data.keyword.cloud_notm}}, you can choose from various secrets management and data protection offerings that help you to protect your sensitive data and centralize your secret. In the Secrets step, you can specify which secret vault integrations to add or remove from your toolchain. For more information about adding and removing vault integrations, including prerequisites and by using hints, see [Managing {{site.data.keyword.cloud_notm}} secrets](/docs/secrets-manager?topic=secrets-manager-use-case-kubernetes-secrets).
 
 By using hints within a template, a toolchain is automatically populated with preconfigured secrets; you don't need to manually select secrets from vault integrations that are attached to the toolchain.
 {: tip}
@@ -171,7 +171,7 @@ IBM Secrets Manager securely stores and applies secrets such as API keys, Image 
 
 ![Kubernetes secure app secrets options](images/ds_kub_setup_sm.png){: caption="Kubernetes Secure app secrets options" caption-side="bottom"}
 
-For more information about managing your secrets in IBM Key Protect or HashiCorp, see [IBM Key Protect](/docs/devsecops?topic=devsecops-cd-devsecops-tekton-ci-compliance#cd-devsecops-key-protect-ci) or [HashiCorp](/docs/devsecops?topic=devsecops-cd-devsecops-tekton-ci-compliance#cd-devsecops-vault-ci).
+For more information about managing your secrets in IBM Key Protect or HashiCorp, see [Secrets](/docs/devsecops?topic=devsecops-tutorial-tekton-ci-compliance#tutorial-tekton-ci-secrets).
 
 ## Configure the deployment target
 {: #kubernetes-deployment-target}
@@ -209,7 +209,7 @@ If you selected the Canary deployment strategy, you must specify extra deploymen
 {: #kubernetes-optional-tools}
 {: step}
 
-You can add the {{site.data.keyword.DRA_full}} tool integration to your toolchain without any additional configuration. 
+You can add the {{site.data.keyword.DRA_full}} tool integration to your toolchain without any additional configuration.
 
 [{{site.data.keyword.DRA_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-di_working) is included in the created toolchain. You do not need to provide any configuration steps for {{site.data.keyword.DRA_short}}. The continuous integration pipeline automatically uses the {{site.data.keyword.DRA_short}} instance that is included in the toolchain. {{site.data.keyword.DRA_short}} aggregates code, test, build, and deployment data to provide visibility into the velocity and quality of all of your teams and releases.
 
@@ -240,7 +240,7 @@ After you create your toolchain, it shows each of the tool integrations that are
 You can explore the pipelines to understand the toolchain flow and the different operations that run within each pipeline. The toolchain that you just created contains three pipelines:
 
 * **Pull request pipeline:** Runs when a developer merges changes from their development branch to the master branch, or to any other branch in the repo. The pull request pipeline runs the Unit Test and Static Scans on the Application Source Code.
-* **Continuous integration pipeline:** Runs when you merge a change into the master branch of the Application Source Code repo. The continuous integration pipeline runs the Unit Test, Code Coverage, and Static Scans on the Application Source Code, CIS check, and Bill Of Materials (BOM) check. The continuous delivery pipeline also generates the binary build artifacts and uploads them to the {{site.data.keyword.containerlong}}, as configured in the toolchain. And the continuous integration pipeline generates the metadata of the build artifacts and stores it in the Inventory repo. 
+* **Continuous integration pipeline:** Runs when you merge a change into the master branch of the Application Source Code repo. The continuous integration pipeline runs the Unit Test, Code Coverage, and Static Scans on the Application Source Code, CIS check, and Bill Of Materials (BOM) check. The continuous delivery pipeline also generates the binary build artifacts and uploads them to the {{site.data.keyword.containerlong}}, as configured in the toolchain. And the continuous integration pipeline generates the metadata of the build artifacts and stores it in the Inventory repo.
 * **Continuous deployment pipeline:** Deploys build artifacts to the deployment environment. The pipeline verifies the successful deployment of the app by running the health check. You must manually trigger this pipeline after the continuous integration pipeline successfully completes. Depending on the deployment strategy that you selected, more triggers are added to the continuous delivery pipeline.
 
 
@@ -313,7 +313,7 @@ After the continuous delivery pipeline run succeeds, you can locate the app URL 
 ## Next steps
 {: #kubernetes-next-steps}
 
-If you want to remove the sample app that is running on Kubernetes, you must clean the Kubernetes cluster: 
+If you want to remove the sample app that is running on Kubernetes, you must clean the Kubernetes cluster:
 
 1. Go to the [Kubernetes Cluster](https://cloud.ibm.com/kubernetes/clusters){: external} home page.
 

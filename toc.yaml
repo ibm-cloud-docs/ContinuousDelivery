@@ -200,7 +200,7 @@ toc:
       - topicgroup:
           label: CLI reference
           topics:
-          - include: ../devops-insights-cli-plugin/devops-insights-cli.md
+          - devops-insights-cli.md
       - link:
           label: Open Toolchain Templates SDK
           href: https://github.com/open-toolchain/sdk/wiki
@@ -220,7 +220,7 @@ toc:
       - topicgroup:
           label: Command reference
           topics:
-          - include: ../code-risk-analyzer-cli-plugin/cra-cli.md
+          - cra-cli.md
           - include: ../cli/idt/commands.md
           - link:
               label: grunt-idra3 (deprecated)
