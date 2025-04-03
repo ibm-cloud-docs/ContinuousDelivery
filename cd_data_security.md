@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2024
-lastupdated: "2024-07-25"
+  years: 2018, 2025
+lastupdated: "2025-02-01"
 
 keywords: secure environment, data, Data, high availability, access
 
@@ -68,11 +68,15 @@ Make sure that you consider the following prerequisites for specifying a secrets
 
 When you work outside of the console, such as with the API or Terraform, use the following format for secrets references by name:
 
+* `{vault::SECRET_STORE_INTEGRATION_NAME.SECRET_NAME}` when you reference secrets that are contained within {{site.data.keyword.keymanagementserviceshort}}.
+* `{vault::SECRET_STORE_INTEGRATION_NAME.SECRET_GROUP_NAME.SECRET_NAME}` when you reference secrets that are contained within {{site.data.keyword.secrets-manager_short}}.
+* `{vault::SECRET_STORE_INTEGRATION_NAME.SECRET_NAME.FIELD_NAME}` when you reference secrets that are contained within HashiCorp Vault.
+
 Secret value: 
 * `ref://secrets-manager.REGION.RESOURCE-GROUP.SECRETS-MANAGER-INSTANCE-NAME1/SECRETS-GROUP-NAME/SECRET-NAME` when you reference secrets that are contained within {{site.data.keyword.keymanagementserviceshort}}.
 * `ref://secrets-manager.eu-de.EU-RG.SM-1/default/api-key` when you reference secrets that are contained within {{site.data.keyword.secrets-manager_short}}.
 
-For example, if the secert is of a key value, then you can select the key:
+For example, if the secret is of a key value, then you can select the key:
 * `ref://secrets-manager.eu-gb.Default.Secrets%20Manager-zc/Default/mk-kv-pair?key=ibmcloud-api-key` 
 
 where:
