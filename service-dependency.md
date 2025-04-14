@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2025-03-11"
+lastupdated: "2025-04-10"
 
 keywords:
 
@@ -101,7 +101,6 @@ The following table provides the dependency listing of this service following a 
 | SOS Inventory Management| Security compliance | No | Both |  Same region  |
 | SOS Compliance Reporting| Security compliance | No | Both |  Same region  |
 | Slack| none | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
-| IBM Log Analysis & IBM Cloud Activity Tracker| Access management, Operations, Security compliance | No | Both |  Same region  |
 | SOS SIEM| Security compliance | No | Both |  Same region  |
 | SOS Tenable| Security compliance | No | Both |  Same region  |
 | SOS File Integrity Monitoring| Security compliance | No | Both |  Same region  |
