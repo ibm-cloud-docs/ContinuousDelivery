@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2025
-lastupdated: "2025-03-14"
+lastupdated: "2025-04-14"
 
 keywords: environment properties, environment resources, IBM Java, Tekton environments
 
@@ -47,7 +47,7 @@ metadata:
 spec:
   steps:
     - name: simple-step
-      image: ubuntu
+      image: icr.io/continuous-delivery/pipeline/pipeline-base-image:2.69
       env:
         - name: BUILD_NUMBER
           valueFrom:
@@ -82,7 +82,7 @@ metadata:
 spec:
   steps:
     - name: cm-show-props
-      image: ubuntu
+      image: icr.io/continuous-delivery/pipeline/pipeline-base-image:2.69
       env:
         - name: SECURE_VALUE
           valueFrom:
@@ -117,7 +117,7 @@ metadata:
 spec:
   steps:
     - name: cm-show-full-env
-      image: ubuntu
+      image: icr.io/continuous-delivery/pipeline/pipeline-base-image:2.69
       envFrom:
         - configMapRef:
             name: environment-properties
