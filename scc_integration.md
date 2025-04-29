@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-04-02"
+lastupdated: "2025-04-29"
 
 keywords: tool integrations, IBM Cloud Public, Security and Compliance Center
 
@@ -18,32 +18,36 @@ subcollection: ContinuousDelivery
 You can use the {{site.data.keyword.compliance_full}} to embed security checks into your everyday workflows to monitor for security and compliance. By monitoring for risks, you can identify security vulnerabilities and quickly work to mitigate the impact and fix the issues.
 {: shortdesc}
 
+Currently, you can use this tool integration only with toolchains that are created from the DevSecOps continuous delivery (CD) and continuous compliance (CC) templates. Before you configure a {{site.data.keyword.compliance_short}} tool integration, make sure that you have any of the following resources configured for evidence locking:
+1. Git repository (repo) for your toolchain and a configured Git tool integration that points to this repo.
+1. {{site.data.keyword.cos_full}} (COS) bucket and a {{site.data.keyword.cos_full_notm}} Bucket integration in the toolchain using this bucket.
 
-Currently, you can use this tool integration only with toolchains that are created from the DevSecOps continuous delivery (CD) and continuous compliance (CC) templates. Before you configure a {{site.data.keyword.compliance_short}} tool integration, make sure that you have a Git repository (repo) that contains the evidence locker for your toolchain and a configured Git tool integration that points to this repo.
-{: important}
 
 This tool integration verifies the security and compliance posture of your toolchain by identifying the location of the evidence locker and the path to the evidence summary. For more information about evidence format and structure, see [Evidence](/docs/devsecops?topic=devsecops-devsecops-evidence).
 
-{{site.data.keyword.compliance_short}} can scan an account or resource group. Those scans can find toolchains and associated evidence, as configured in the **Name**, **Evidence repository name or URL**, and **Evidence namespace** fields within the {{site.data.keyword.compliance_short}} tool integration.
+{{site.data.keyword.compliance_short}} can scan an account or resource group. Those scans can find toolchains and associated evidence, as configured in the **Name**, **Evidence repository name or URL** or **Cloud Object Storage bucket name**, and **Evidence namespace** fields within the {{site.data.keyword.compliance_short}} tool integration.
 
 Configure {{site.data.keyword.compliance_short}} to embed security checks into your workflows to monitor for security and compliance:
 
 1. If you are configuring this tool integration as you are creating the toolchain, and a {{site.data.keyword.compliance_short}} tool integration exists within the template that you are configuring, click the **{{site.data.keyword.compliance_short}}** tab. Alternatively, in the **More tools** section, click **{{site.data.keyword.compliance_short}}**.
-1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
 
-   a. Click **Add tool**.
+1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click
+ the ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
+
+   a. Click **Add**.
 
    b. In the Tool Integrations section, click **{{site.data.keyword.compliance_short}}**.
 
 1. Type the name that you want to display for this tool integration on the {{site.data.keyword.compliance_short}} card in your toolchain. This name is used to identify the tool integration in your toolchain.
 
-1. Specify the **Evidence repository name or URL**. This is the name or URL of the repo that stores the evidence locker for your toolchain. This repo must correspond to the Git tool integration that you previously added to your toolchain to store your evidence. Currently, only GitHub, GitLab, and IBM-hosted Git are supported. {{site.data.keyword.compliance_short}} scans run with the user credentials that are configured in the {{site.data.keyword.compliance_short}} scope. That user must have Git OAuth credentials for this toolchain's region and read access to the evidence repo.
+1. Choose a **Git repository** or **Cloud Object Storage bucket** as an evidence locker.
+
+1. If you choose a **Git repository** for evidence locking, specify the **Evidence repository name or URL**. This is the name or URL of the repo that stores the evidence locker for your toolchain. This repo must correspond to the Git tool integration that you previously added to your toolchain to store your evidence. Currently, only GitHub, GitLab, and IBM-hosted Git are supported. {{site.data.keyword.compliance_short}} scans run with the user credentials that are configured in the {{site.data.keyword.compliance_short}} scope. That user must have Git OAuth credentials for this toolchain's region and read access to the evidence repo.
+
+1. If you choose **Cloud Object Storage bucket** for evidence locking, specify the **Cloud Object Storage bucket name** . This is the name of the {{site.data.keyword.cos_short}} bucket that stores evidences for your toolchain. This bucket must correspond to {{site.data.keyword.cos_short}} tool integration that you previously added to your toolchain to store your evidence. To know more about {{site.data.keyword.cos_short}} bucket creation, see [Create COS bucket](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage#gs-create-buckets). To know more about {{site.data.keyword.cos_short}} tool integration, see [Create COS bucket tool integration](/docs/ContinuousDelivery?topic=ContinuousDelivery-cos_integration).
+
 1. Click **Create Integration**.
 1. On your Toolchain's Overview page, on the **IBM Cloud tools** card, click **{{site.data.keyword.compliance_short}}**.
-
-
-
-
 
 ## Configuring {{site.data.keyword.compliance_short}} by using the API
 {: #scc-config-parameters}
@@ -67,6 +71,8 @@ You must specify the `tool_type_id` property in the request body with the `secur
 {: caption="{{site.data.keyword.compliance_short}} tool integration parameters" caption-side="bottom"}
 
 
+`evidence_locker_type` and `cos_bucket_name` are not available in Terraform as of now.
+{: important}
 
 ## Learn more about {{site.data.keyword.compliance_short}}
 {: #learn_scc}
