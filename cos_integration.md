@@ -10,9 +10,15 @@ subcollection: ContinuousDelivery
 
 ---
 
+{{site.data.keyword.attribute-definition-list}}
+
+# Configuring Cloud {{site.data.keyword.cos_short}}
+{: #cos_integration}
+
 {{site.data.keyword.cos_full}} is used to securely store large volumes of data, ensuring compliance and optimizing cost.
 You can integrate {{site.data.keyword.cos_full_notm}} Bucket to store evidence.
 You can also use this tool integration for specific storage requirements of your toolchains.
+
 ## Prerequisites
 {: #cos_prerequisites}
 
