@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023, 2024
-lastupdated: "2024-11-11"
+  years: 2023, 2025
+lastupdated: "2025-05-05"
 
 keywords: Continuous Delivery endpoints, available regions, locations
 
@@ -53,6 +53,16 @@ Review the following table to determine the public API endpoints to use when you
 | S&atilde;o-Paulo | `br-sao.devops.cloud.ibm.com`   |
 {: caption="Public endpoints for interacting with {{site.data.keyword.contdelivery_short}} APIs over IBM Cloud's public network" caption-side="top"}
 
+The following table lists the public endpoints for the Delivery Pipeline [private worker service](/docs/ContinuousDelivery?topic=ContinuousDelivery-install-private-workers).
+
+| Region           | Private endpoints                                      |
+| ---------------- | ------------------------------------------------------ |
+| Dallas           | `private-worker-service.us-south.devops.cloud.ibm.com` |
+| Washington DC    | `private-worker-service.us-east.devops.cloud.ibm.com`  |
+| London           | `private-worker-service.eu-gb.devops.cloud.ibm.com`    |
+| Frankfurt        | `private-worker-service.eu-de.devops.cloud.ibm.com`    |
+{: caption="Private endpoints for interacting with the private worker service" caption-side="top"}
+
 ### Private endpoints
 {: #private-endpoints}
 
@@ -63,6 +73,16 @@ To learn more about VRF, see
 
 To learn how to configure Delivery Pipeline Private Workers to connect to {{site.data.keyword.contdelivery_short}} by using private endpoints, see [Configuring the Delivery Pipeline Private Worker to use private endpoints](/docs/ContinuousDelivery?topic=ContinuousDelivery-install-private-workers#install_pw_agent_pse).
 
+The following table lists the private endpoints for the Delivery Pipeline private worker service.
+
+| Region           | Private endpoints                                              |
+| ---------------- | -------------------------------------------------------------- |
+| Dallas           | `private-worker-service.private.us-south.devops.cloud.ibm.com` |
+| Washington DC    | `private-worker-service.private.us-east.devops.cloud.ibm.com`  |
+| London           | `private-worker-service.private.eu-gb.devops.cloud.ibm.com`    |
+| Frankfurt        | `private-worker-service.private.eu-de.devops.cloud.ibm.com`    |
+{: caption="Private endpoints for interacting with the private worker service" caption-side="top"}
+
 Review the following table to determine the private API endpoints to use when you connect to the [{{site.data.keyword.contdelivery_short}} API](https://cloud.ibm.com/docs?tab=api-docs&category=devops&subCategory=ContinuousDelivery){: external}.
 
 | Region           | Private endpoints                       |
@@ -72,3 +92,5 @@ Review the following table to determine the private API endpoints to use when yo
 | London           | `private.eu-gb.devops.cloud.ibm.com`    |
 | Frankfurt        | `private.eu-de.devops.cloud.ibm.com`    |
 {: caption="Private endpoints for interacting with {{site.data.keyword.contdelivery_short}} APIs over IBM Cloud's private network" caption-side="top"}
+
+  
