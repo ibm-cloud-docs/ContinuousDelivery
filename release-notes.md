@@ -21,6 +21,12 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years.
 {: shortdesc}
 
+## 29 April 2025
+{: #ContinuousDelivery-apr2925}
+{: release-note}
+
+Private worker installation no longer supports the Operator Lifecycle Manager (OLM) framework.
+
 ## 25 September 2024
 {: #ContinuousDelivery-sep2524}
 {: release-note}

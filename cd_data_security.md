@@ -515,6 +515,11 @@ To learn more about tool integrations, see [Configuring tool integrations](/docs
 
 The ability of {{site.data.keyword.gitrepos}} to share information is typical of many social coding platforms. However, such sharing might conflict with regulatory controls that apply to your business. After you create a project in {{site.data.keyword.gitrepos}}, but before you entrust any files, issues, records, or other data with the project, review the project settings and change any settings that you deem necessary to protect your data. Settings to review include visibility levels, email notifications, integrations, web hooks, access tokens, deploy tokens, and deploy keys.
 
+### Project and file naming
+{: #cd_secure_grit_naming}
+
+In {{site.data.keyword.gitrepos}}, the name of a project and the path names of files stored in the project repository become segments in URLs that you use to interact with the project, whether through the browser, APIs, or Terraform. You should assume that URLs are not secure. Therefore, do not use or embed sensitive information in project names and repository file path names.
+
 ### Project visibility levels
 {: #cd_secure_grit_visibility}
 
