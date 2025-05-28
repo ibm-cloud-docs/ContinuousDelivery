@@ -45,30 +45,6 @@ Before you install a private worker, make sure that you have an {{site.data.keyw
    To pull images from the `icr.io` container registry, you might need to [define a specific Kubernetes ClusterImagePolicy](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_pipeline_private_workers&interface=ui#pipeline_private_worker_image_policy).
    {: tip}
 
-* Optional. If you want to install the private worker by using the Operator Lifecycle Manager (OLM), the OLM operator framework must be [installed on your cluster](https://operator-framework.github.io/olm-book/docs/install-olm.html){: external}. This framework is preinstalled by default on all {{site.data.keyword.openshiftlong}} clusters.
-
-   A previous version of the {{site.data.keyword.containerlong_notm}} was provided on clusters that were created before v1.23. To use OLM on an {{site.data.keyword.containerlong_notm}} cluster, you must first update the cluster to v1.23. Next, you must upgrade to a current version of OLM by uninstalling the previous version of OLM and reinstalling OLM.
-
-   To uninstall the previous OLM framework from an {{site.data.keyword.containerlong_notm}} cluster, run the following commands:
-
-   ```text
-   kubectl delete deployment -n ibm-system catalog-operator
-   kubectl delete deployment -n ibm-system olm-operator
-   kubectl delete crd operatorgroups.operators.coreos.com
-   kubectl delete crd operators.operators.coreos.com
-   kubectl delete crd subscriptions.operators.coreos.com
-   kubectl delete crd catalogsources.operators.coreos.com
-   kubectl delete crd clusterserviceversions.operators.coreos.com
-   kubectl delete crd installplans.operators.coreos.com
-   kubectl delete sa -n ibm-system olm-operator-serviceaccount
-   kubectl delete clusterrole system:controller:operator-lifecycle-manager
-   kubectl delete clusterrolebinding olm-operator-binding-ibm-system
-   kubectl delete clusterrole aggregate-olm-edit
-   kubectl delete clusterrole aggregate-olm-view
-   ```
-
-   For instructions about how to install the new OLM framework, see [How do I install OLM?](https://operator-framework.github.io/olm-book/docs/install-olm.html){: external}.
-
 Because private workers are not compatible with {{site.data.keyword.redhat_openshift_notm}} Pipelines, it is recommended that you do not install them on a cluster with {{site.data.keyword.redhat_openshift_notm}} pipelines.
 {: important}
 
@@ -84,8 +60,6 @@ To install a private worker, you must have Administrator level access to a clust
 
 The following steps are intended for Administrators who are preparing environments and private workers for multiple people or teams. To install private workers for your own use, see [Setting up a Delivery Pipeline Private Worker](/docs/ContinuousDelivery?topic=ContinuousDelivery-private-workers#set_up_private_worker).
 {: tip}
-
-You can install the private worker framework directly on either an {{site.data.keyword.cloud_notm}} Kubernetes cluster or a {{site.data.keyword.openshiftlong}} cluster, or you can install the framework by using the [Operator Lifecycle Manager (OLM)](https://docs.openshift.com/container-platform/4.9/operators/understanding/olm/olm-understanding-olm.html){: external}.
 
 #### Installing directly on a cluster
 {: #direct_install_pw_cli}
@@ -129,68 +103,8 @@ To install the framework directly on a cluster, you must have admin access to th
 You must have a [VRF enabled](/docs/account?topic=account-vrf-service-endpoint&interface=ui) {{site.data.keyword.cloud_notm}} account to use this feature.
 {: important}
 
-#### Installing by using the OLM
-{: #olm_install_pw_cli}
-{: cli}
-
-The OLM handles the installation and sets the framework for automatic updates. This method ensures that your private worker is always up to date with the latest release. You can use the OLM on both {{site.data.keyword.openshiftlong}} and {{site.data.keyword.cloud_notm}} Kubernetes clusters. For more information about how to install the OLM framework, see [How do I install OLM?](https://operator-framework.github.io/olm-book/docs/install-olm.html){: external}.
-
-Type the following command to install the framework for automatic updates on a {{site.data.keyword.openshiftlong}} cluster:
-
-   ```text
-   kubectl apply --filename "https://private-worker-service.{REGION}.devops.cloud.ibm.com/install?type=openshift&olm=true"
-   ```
-
-   Where `{REGION}` is the location of the toolchain's pipeline. You can specify any of the following values for the `{REGION}`:
-
-   - Sydney `au-syd`
-   - Frankfurt `eu-de`
-   - London `eu-gb`
-   - Tokyo `jp-tok`
-   - Osaka `jp-osa`
-   - Dallas `us-south`
-   - Washington DC `us-east`
-   - Toronto `ca-tor`
-   - Sao Paulo `br-sao`
-
-   The following code snippet shows an example of a private worker OLM installation in the Dallas region on {{site.data.keyword.openshiftlong}}:
-
-   ```text
-   $ kubectl apply --filename "https://private-worker-service.us-south.devops.cloud.ibm.com/install?type=openshift&olm=true"
-   catalogsource.operators.coreos.com/private-worker-agent created
-   subscription.operators.coreos.com/private-agent-subscription created
-   ```
-
-Type the following command to install the framework for automatic updates on an {{site.data.keyword.cloud_notm}} Kubernetes cluster:
-
-   ```text
-   kubectl apply --filename "https://private-worker-service.{REGION}.devops.cloud.ibm.com/install?type=iks&olm=true"
-   ```
-
-   Where `{REGION}` is the location of the toolchain's pipeline. You can specify any of the following values for the `{REGION}`:
-
-   - Sydney `au-syd`
-   - Frankfurt `eu-de`
-   - London `eu-gb`
-   - Tokyo `jp-tok`
-   - Osaka `jp-osa`
-   - Dallas `us-south`
-   - Washington DC `us-east`
-   - Toronto `ca-tor`
-   - Sao Paulo `br-sao`
-
-   The following code snippet shows an example of a private worker OLM installation in the Dallas region on {{site.data.keyword.cloud_notm}} Kubernetes:
-
-   ```text
-   $ kubectl apply --filename "https://private-worker-service.us-south.devops.cloud.ibm.com/install?type=iks&olm=true"
-   catalogsource.operators.coreos.com/private-worker-agent created
-   catalogsource.operators.coreos.com/tekton-framework created
-   operatorgroup.operators.coreos.com/agent-operator-group created
-   subscription.operators.coreos.com/private-agent-subscription created
-   ```
-
-To set up a pool of private workers, repeat this process with more Kubernetes clusters.
-{: tip}
+It is possible to set up a pool of private workers by repeating this process on additional Kubernetes clusters. Load will be shared across all workers in the pool.
+{:tip }
 
 ## Registering a {{site.data.keyword.deliverypipeline}} Private Worker
 {: #register_pw}
