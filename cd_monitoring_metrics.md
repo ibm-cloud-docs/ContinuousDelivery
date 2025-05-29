@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-04-16"
+  years: 2021, 2025
+lastupdated: "2025-05-29"
 
 keywords: IBM Cloud, monitoring, supertenant
 
@@ -137,6 +137,7 @@ You cannot change the Default dashboard. To customize the dashboard, you can cre
 | Metric Name |Lite|Professional|
 |:-----------|:--------|:--------|
 | [Pipeline queue time](#cd_ibm_toolchain_pipeline_queue_time_seconds) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) |
+| [Pipeline run duration](#cd_ibm_toolchain_pipeline_run_duration_seconds) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) |
 {: caption="Table 3: Metrics available by plan names" caption-side="top"}
 
 
@@ -166,6 +167,19 @@ The elapsed time in seconds between the {{site.data.keyword.contdelivery_short}}
 | `Value Type`  | `second` |
 | `Segment By` | `Service instance, Service instance name, Private worker pool ID` |
 {: caption="Table 5: Pipeline queue time metric metadata" caption-side="top"}
+
+### Pipeline run duration
+{: #cd_ibm_toolchain_pipeline_run_duration_seconds}
+
+The elapsed time in seconds from when a pipeline run begins executing on a worker until all tasks complete, indicating the total active runtime of the pipeline.
+
+| Metadata | Description |
+|:----------|:-------------|
+| `Metric Name` | `ibm_toolchain_pipeline_run_duration_seconds`|
+| `Metric Type` | `gauge` |
+| `Value Type`  | `second` |
+| `Segment By` | `Pipeline ID and Trigger name` |
+{: caption="Table 5: Pipeline run duration metric metadata" caption-side="top"}
 
 
 ## Attributes for segmentation
