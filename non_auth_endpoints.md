@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-04-18"
+  years: 2025
+lastupdated: "2025-01-01"
 
 keywords: endpoints, authentication, IBM Cloud Public
 
@@ -39,7 +39,7 @@ The following table lists the Code Risk Analyzer endpoints that do not require a
 | `https://vcurator.[region].devopsinsights.cloud.ibm.com/alive` | Get the liveness status of the service component |
 | `https://vcurator.[region].devopsinsights.cloud.ibm.com/ready` | Get the readiness status of the service component |
 | `https://vcurator.[region].devopsinsights.cloud.ibm.com/status` | Get the status of the service component |
-{: caption="Code Risk Analyzer" caption-side="top"}
+{: caption="Table 1. Code Risk Analyzer" caption-side="top"}
 
 ## {{site.data.keyword.deliverypipeline}}
 {: #delivery_pipeline}
@@ -62,15 +62,21 @@ The following table lists the {{site.data.keyword.deliverypipeline}} endpoints t
 | `https://pipeline-support-service.[region].devops.cloud.ibm.com/status` | Get the status of the Pipeline Support Service service component |
 | `https://pipeline-support-service.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
 | `https://pipeline-ui.[region].devops.cloud.ibm.com/readiness` | Get the readiness status of the service component |
-| `https://pipeline-ui.[region].devops.cloud.ibm.com/status` | Get the status of the Pipeline-ui service component |
+| `https://pipeline-ui.[region].devops.cloud.ibm.com/status` | Get the status of the Pipeline UI service component |
 | `https://pipeline-ui.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
 | `https://private-worker-service.[region].devops.cloud.ibm.com/chains/public_key` | Get the public key used by chains for signing |
 | `https://private-worker-service.[region].devops.cloud.ibm.com/install` | Get the install script to install the private worker agent on the internal or external platform |
 | `https://private-worker-service.[region].devops.cloud.ibm.com/status` | Get the status of the Private Worker Service service component |
 | `https://private-worker-service.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
+| `https://pwp-meter.[region].devops.cloud.ibm.com/pwprun` |  |
+| `https://pwp-meter.[region].devops.cloud.ibm.com/status` | Get the status of the Pipeline Worker Pool meter |
+| `https://pwp-meter.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
+| `https://pwp-service.[region].devops.cloud.ibm.com/:poolId/subscriptions/:subscriptionId` |  |
+| `https://pwp-service.[region].devops.cloud.ibm.com/status` | Get the status of the Pipeline Worker Pool Service service component |
+| `https://pwp-service.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
 | `https://tekton-pipeline-service.[region].devops.cloud.ibm.com/status` | Get the status of the Tekton Pipeline Service service component |
 | `https://tekton-pipeline-service.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
-{: caption="{{site.data.keyword.deliverypipeline}}" caption-side="top"}
+{: caption="Table 2. {{site.data.keyword.deliverypipeline}}" caption-side="top"}
 
 ## {{site.data.keyword.DRA_short}}
 {: #devops_insights}
@@ -93,7 +99,7 @@ The following table lists the {{site.data.keyword.DRA_short}} endpoints that do 
 | `https://rcbroker.[region].devopsinsights.cloud.ibm.com/status` | Get the status of the service component |
 | `https://tagging.[region].devopsinsights.cloud.ibm.com/livenessprobe` | Get the liveness status of the service component |
 | `https://tagging.[region].devopsinsights.cloud.ibm.com/status` | Get the readiness status of the service component |
-{: caption="{{site.data.keyword.DRA_short}}" caption-side="top"}
+{: caption="Table 3. {{site.data.keyword.DRA_short}}" caption-side="top"}
 
 ## {{site.data.keyword.gitrepos}}
 {: #git_repos_and_issue_tracking}
@@ -111,7 +117,7 @@ The following table lists the {{site.data.keyword.gitrepos}} endpoints that do n
 | `https://hosted-git-monitor.[region].devops.cloud.ibm.com/scorecard` | Get the status of the scorecard |
 | `https://hosted-git-monitor.[region].devops.cloud.ibm.com/status` | Get the status of the service component |
 | `https://hosted-git-monitor.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
-{: caption="{{site.data.keyword.gitrepos}}" caption-side="top"}
+{: caption="Table 4. {{site.data.keyword.gitrepos}}" caption-side="top"}
 
 ## Metrics
 {: #metrics}
@@ -125,7 +131,7 @@ The following table lists the Metrics endpoints that do not require authenticati
 | `https://otc-consumption.[region].devops.cloud.ibm.com/version` | Get the version of the application |
 | `https://otc-metrics-listener.[region].devops.cloud.ibm.com/status` | Get the status of the service component |
 | `https://otc-metrics-listener.[region].devops.cloud.ibm.com/version` | Get the version of the service component |
-{: caption="Metrics" caption-side="top"}
+{: caption="Table 5. Metrics" caption-side="top"}
 
 ## Third-party tool integrations
 {: #third-party_tool_integrations}
@@ -151,7 +157,7 @@ The following table lists the third-party tool integration endpoints that do not
 | `https://otc-toolint-broker.[region].devops.cloud.ibm.com/status` | Get the status of the Tools Integration Broker service component |
 | `https://otc-toolint-broker.[region].devops.cloud.ibm.com/toolint-broker/api/v1/form` | Forwards the Authenticate, Populate, and Validate (APV) requests to the appropriate broker |
 | `https://otc-toolint-broker.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
-{: caption="Third-party tool integrations" caption-side="top"}
+{: caption="Table 6. Third-party tool integrations" caption-side="top"}
 
 ## Toolchain platform
 {: #toolchain_platform}
@@ -177,8 +183,4 @@ The following table lists the Toolchain platform endpoints that do not require a
 | `https://otc-ui.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
 | `https://otc-webhook-manager.[region].devops.cloud.ibm.com/status` | Get the status of the service component |
 | `https://otc-webhook-manager.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
-| `https://ref-resolver.[region].devops.cloud.ibm.com/accounts/{account_id}` |  |
-| `https://ref-resolver.[region].devops.cloud.ibm.com/accounts/{account_id}/providers` |  |
-| `https://ref-resolver.[region].devops.cloud.ibm.com/accounts/{account_id}/providers/{provider_id}` |  |
-| `https://ref-resolver.[region].devops.cloud.ibm.com/accounts/{account_id}/providers/{provider_id}/apis/{api_id}` |  |
-{: caption="Toolchain platform" caption-side="top"}
+{: caption="Table 7. Toolchain platform" caption-side="top"}
