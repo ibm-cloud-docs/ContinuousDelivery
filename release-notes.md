@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2024
+  years: 2019, 2025
 
-lastupdated: "2024-10-08"
+lastupdated: "2025-06-06"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -99,6 +99,13 @@ The {{site.data.keyword.contdelivery_short}} toolchain API provides a new, beta 
 
 {{site.data.keyword.gitrepos}}
 :   Upgraded to [GitLab 16.5.3](https://about.gitlab.com/releases/2023/11/30/security-release-gitlab-16-6-1-released/){: external}.
+
+## 24 November 2023
+{: #ContinuousDelivery-nov2423}
+{: release-note}
+
+{{site.data.keyword.contdelivery_full}} is now available in the Madrid region.
+:   Each location has three different data centers and provides a full cloud service stack to enable high availability, redundancy, and geographical dispersion.
 
 ## 16 November 2023
 {: #ContinuousDelivery-nov1623}
