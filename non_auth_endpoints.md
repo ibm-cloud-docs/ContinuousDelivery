@@ -1,8 +1,8 @@
----
+-
 
 copyright:
   years: 2025
-lastupdated: "2025-01-01"
+lastupdated: "2025-06-06"
 
 keywords: endpoints, authentication, IBM Cloud Public
 
@@ -10,15 +10,15 @@ subcollection: ContinuousDelivery
 
 ---
 
-{{site.data.keyword.attribute-definition-list}}  
-  
-# Endpoints that do not require authentication in {{site.data.keyword.contdelivery_short}}  
-{: #non-auth-endpoints-cd}  
-  
-{{site.data.keyword.contdelivery_full}} provides many internet-accessible endpoints. Although most endpoints authenticate the caller before processing requests, some endpoints intentionally do not authenticate the caller.  
+{{site.data.keyword.attribute-definition-list}}
+
+# Endpoints that do not require authentication in {{site.data.keyword.contdelivery_short}}
+{: #non-auth-endpoints-cd}
+
+{{site.data.keyword.contdelivery_full}} provides many internet-accessible endpoints. Although most endpoints authenticate the caller before processing requests, some endpoints intentionally do not authenticate the caller.
 {: shortdesc}
 
-The following inventory of endpoints that do not require authentication is organized by the major components of the {{site.data.keyword.contdelivery_short}} service.  
+The following inventory of endpoints that do not require authentication is organized by the major components of the {{site.data.keyword.contdelivery_short}} service.
 
 {{site.data.keyword.contdelivery_short}} is a regional service. In each of the documented endpoints, `[region]` represents the ID of [any region in which {{site.data.keyword.contdelivery_short}} is available](/docs/overview?topic=overview-locations#table-mzr). For example, regions include `us-south`, `us-east`, `eu-gb`, and `jp-tok`.
 {: tip}
