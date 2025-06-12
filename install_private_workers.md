@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2024
-lastupdated: "2024-02-26"
+  years: 2019, 2025
+lastupdated: "2025-06-06"
 
 keywords: Delivery Pipeline Private Workers, Installation, Kubernetes cluster, private worker
 
@@ -38,8 +38,9 @@ Before you install a private worker, make sure that you have an {{site.data.keyw
 * Network access:
 
    * Inbound: Not required.
-   * Outbound network access uses `(TCP:443)` where the region matches the delivery pipeline location and is either Sydney (au-syd), Frankfurt (eu-de), London (eu-gb), Tokyo (jp-tok), Osaka (jp-osa), Dallas (us-south), Washington DC (us-east), Sao Paulo (br-sao), or Toronto (ca-tor). For example, for the Frankfurt region specify `https://private-worker-service.eu-de.devops.cloud.ibm.com (TCP:443)`. For network access to the global endpoint for API key validation, use `https://iam.cloud.ibm.com (TCP:443)`.
 
+   * Outbound network access uses `(TCP:443)` where the region matches the delivery pipeline location and is either `au-syd` (Sydney, Australia), `eu-de` (Frankfurt, Germany), `eu-es` (Madrid, Spain), `eu-gb` (London, United Kingdom), `jp-tok` (Tokyo, Japan), `jp-osa` (Osaka, Japan), `us-south` (Dallas, US), `us-east` (Washington DC, US), `br-sao` (Sao Paulo), or `ca-tor` (Toronto, CA). For example, for the Frankfurt region specify `https://private-worker-service.eu-de.devops.cloud.ibm.com (TCP:443)`. For network access to the global endpoint for API key validation, use `https://iam.cloud.ibm.com (TCP:443)`. 
+  
 * Permissions to pull images from icr.io. Private workers require the tekton-pipelines infrastructure and must be able to pull tekton-releases images from icr.io to complete the private worker installation.
 
    To pull images from the `icr.io` container registry, you might need to [define a specific Kubernetes ClusterImagePolicy](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_pipeline_private_workers&interface=ui#pipeline_private_worker_image_policy).
@@ -72,16 +73,18 @@ To install the framework directly on a cluster, you must have admin access to th
    ```
 
    Where `{REGION}` is the location of the toolchain's pipeline. You can specify any of the following values for the `{REGION}`:
+   
+   - `au-syd` (Sydney, Australia)
+   - `eu-de` (Frankfurt, Germany)
+   - `eu-es` (Madrid, Spain)
+   - `eu-gb` (London, United Kingdom)
+   - `jp-tok` (Tokyo, Japan)
+   - `jp-osa` (Osaka, Japan)
+   - `us-south` (Dallas, US)
+   - `us-east` (Washington DC, US)
+   - `ca-tor` (Toronto, CA)
+   - `br-sao` (Sao Paulo, Brazil)
 
-   - Sydney `au-syd`
-   - Frankfurt `eu-de`
-   - London `eu-gb`
-   - Tokyo `jp-tok`
-   - Osaka `jp-osa`
-   - Dallas `us-south`
-   - Washington DC `us-east`
-   - Toronto `ca-tor`
-   - Sao Paulo `br-sao`
 
 #### Installing directly on a firewalled cluster
 {: #firewall_install_pw_cli}
@@ -95,10 +98,18 @@ To install the framework directly on a cluster, you must have admin access to th
 
    Where `{REGION}` is the location of the toolchain's pipeline. You can specify any of the following values for the `{REGION}`:
 
-   - Frankfurt `eu-de`
-   - London `eu-gb`
-   - Dallas `us-south`
-   - Washington DC `us-east`
+   
+   - `au-syd` (Sydney, Australia)
+   - `eu-de` (Frankfurt, Germany)
+   - `eu-es` (Madrid, Spain)
+   - `eu-gb` (London, United Kingdom)
+   - `jp-tok` (Tokyo, Japan)
+   - `jp-osa` (Osaka, Japan)
+   - `us-south` (Dallas, US)
+   - `us-east` (Washington DC, US)
+   - `ca-tor` (Toronto, CA)
+   - `br-sao` (Sao Paulo, Brazil)
+
 
 You must have a [VRF enabled](/docs/account?topic=account-vrf-service-endpoint&interface=ui) {{site.data.keyword.cloud_notm}} account to use this feature.
 {: important}
@@ -210,15 +221,17 @@ You must register a private worker with the specific {{site.data.keyword.cloud_n
 
    You can specify any of the following values for the `{REGION}`:
 
-      * Sydney `au-syd`
-      * Frankfurt `eu-de`
-      * London `eu-gb`
-      * Tokyo `jp-tok`
-      * Osaka `jp-osa`
-      * Dallas `us-south`
-      * Washington DC `us-east`
-      * Toronto `ca-tor`
-      * Sao Paulo `br-sao`
+      * `au-syd` (Sydney, Australia)
+      * `eu-de` (Frankfurt, Germany)
+      * `eu-es` (Madrid, Spain)
+      * `eu-gb`  (London, United Kingdom)
+      * `jp-tok` (Tokyo, Japan)
+      * `jp-osa` (Osaka, Japan)
+      * `us-south` (Dallas, US)
+      * `us-east` (Washington DC, US)
+      * `ca-tor` (Toronto, CA)
+      * `br-sao` (Sao Paulo, Brazil)
+
    {: tip}
 
 3. To register an agent to use private endpoints use the optional `private` query parameter as follows:

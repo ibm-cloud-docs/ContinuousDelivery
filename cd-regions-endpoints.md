@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2025
-lastupdated: "2025-05-05"
+lastupdated: "2025-06-06"
 
 keywords: Continuous Delivery endpoints, available regions, locations
 
@@ -46,6 +46,7 @@ Review the following table to determine the public API endpoints to use when you
 | Washington DC    | `us-east.devops.cloud.ibm.com`  |
 | London           | `eu-gb.devops.cloud.ibm.com`    |
 | Frankfurt        | `eu-de.devops.cloud.ibm.com`    |
+| Madrid           | `eu-es.devops.cloud.ibm.com`    |
 | Sydney           | `au-syd.devops.cloud.ibm.com`   |
 | Tokyo            | `jp-tok.devops.cloud.ibm.com`   |
 | Osaka            | `jp-osa.devops.cloud.ibm.com`   |
