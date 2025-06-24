@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2024
-lastupdated: "2024-12-09"
+  years: 2015, 2025
+lastupdated: "2025-06-18"
 
 keywords: troubleshoot, Delivery Pipeline, toolchains, tool integrations
 
@@ -315,3 +315,17 @@ To enable pipelines to run on events from forked repositories do the following:
 
 - Tekton Pipelines: On the Git trigger window, enable the `Include pull request events from forks` toggle
 - Classic Pipelines: On the Input tab of the stage configuration, enable the `Include pull request events from forks` toggle
+
+
+## Why do I sometimes see `ExceededNodeResources` in the Pod events for my pipeline run?
+{: #troubleshoot-pod-exceeded-node-resources}
+{: troubleshoot}
+
+Sometimes when a task takes longer to start than expected, messages with a `reason` value of `ExceededNodeResources` can be seen in the pod events view of the task on the pipelineRun details page.
+{: tsSymptoms}
+
+This commonly occurs if a task is trying use a volume already mounted on a node that is overloaded. This also can occur when the cluster is overloaded and may take time to bring up a new node during a cluster auto-scale event.
+{: tsCauses}
+
+These messages are likely normal operational messages from your Kubernetes cluster. No user intervention is usually required for these types of messages. These occur either when an autoscaling event occurs, freeing up resources for use or when resources become available subsequently. The pipeline thus proceeds once the pod is scheduled. Essentially, the pipeline waits for the necessary resources to become available through autoscaling or other means, allowing the pod to be deployed and the pipeline to continue.
+{: tsResolve}
