@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2024
-lastupdated: "2024-11-21"
+  years: 2016, 2025
+lastupdated: "2025-06-27"
 
 keywords: users of a service instance, authorized users, pipeline usage, Git Repos and Issue Tracking limitations, consolidated billing
 
@@ -183,6 +183,9 @@ Complete the following steps to manage the list of authorized users of {{site.da
 
     Users are automatically added or re-added when they use the {{site.data.keyword.contdelivery_short}} instance.
     {: tip}
+
+When a user logs in to their {{site.data.keyword.cloud_notm}} account with an associated email address and selects a trusted profile, it is considered an authorized user. When a trusted profile is applied to an identity without an email address, such as a service id, the trusted profile is not classified or counted as an authorized user.
+{: note}
 
 ## Viewing billing and usage details
 {: #view_billing_usage}

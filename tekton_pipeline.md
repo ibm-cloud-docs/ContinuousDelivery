@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-06-24"
+lastupdated: "2025-06-27"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -984,12 +984,12 @@ The following table lists and describes each of the variables that are used in t
 
 You can trigger pipelines using either the web UI or a command-line/API call. This is commonly used for pipelines such as [CI](/docs/devsecops?topic=devsecops-cd-devsecops-ci-pipeline), [CD](/docs/devsecops?topic=devsecops-cd-devsecops-cd-pipeline), or [CC](/docs/devsecops?topic=devsecops-devsecops-cc-pipeline) pipelines.
 
-### 1. Triggering the Pipeline via Command Line or API
+### Triggering the Pipeline via Command Line or API
 {: #trigger-pipeline-Command}
 
 You can trigger a pipeline from the command line using either the IBM Cloud CLI or by making a direct API call using `curl`.
 
-#### 1.1. Using IBM Cloud CLI
+#### Using IBM Cloud CLI
 {: #trigger-pipeline-CLI}
 
 You can trigger the pipeline using the IBM Cloud CLI. For more information about CLI commands, refer to the [IBM Cloud CLI docs](https://cloud.ibm.com/docs/cli).
@@ -998,7 +998,7 @@ You can trigger the pipeline using the IBM Cloud CLI. For more information about
    ```bash
    ibmcloud login --sso
    ```
-2. Trigger the pipeline manually
+1. Trigger the pipeline manually
    ```bash
    ibmcloud dev tekton-trigger run <pipeline_id> --trigger-name "<trigger_name>"
    ```
@@ -1013,13 +1013,13 @@ Pipeline started successfully.
 
 You can then verify that your pipeline has been triggered by opening your respective toolchain in the UI.
 
-#### 1.2. Using `curl` to Trigger the Pipeline via API
+#### Using `curl` to Trigger the Pipeline via API
 {: #trigger-pipeline-API}
 
 You can trigger the pipeline directly via API using `curl`. For more information on how to trigger Tekton pipelines via API, see the [IBM Cloud API Docs/
 CD Tekton Pipeline](https://cloud.ibm.com/apidocs/tekton-pipeline#trigger-a-pipeline-run).
 
-1. Authentication Process
+**Authentication Process**
 - If you don't already have an API Key, go to [IBM Cloud API Keys](https://cloud.ibm.com/iam/apikeys) to generate one.
 
 - Once you have your API key, generate an IAM token using the following `curl` command:
