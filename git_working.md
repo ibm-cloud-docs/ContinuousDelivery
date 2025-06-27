@@ -61,6 +61,9 @@ Your {{site.data.keyword.cloud_notm}} login and password are only used to authen
 
 The display name that appears for you throughout {{site.data.keyword.gitrepos}} is populated from your {{site.data.keyword.cloud_notm}} login information. This name might be visible to other users when they search for users to add to their projects. You can update the name that is displayed for you throughout {{site.data.keyword.gitrepos}} from your [Profile page](#git_update_name).
 
+Trusted Profiles are neither required nor permitted to authenticate with Git Repos and Issue Tracking. When you log in to Git Repos and Issue Tracking, you must log in as a regular user. If you attempt to select a Trusted Profile to log in, you cannot access Git Repos and Issue Tracking.
+{: restriction}
+
 ### Creating a personal access token
 {: #create_pat}
 
