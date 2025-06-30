@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-06-27"
+lastupdated: "2025-06-30"
 
 keywords: tool integrations, IBM Cloud Public, Git Repos and Issue Tracking
 
@@ -93,6 +93,6 @@ You must specify the `tool_type_id` property in the request body with the `hoste
 | type | required, immutable | String | type | The operation to perform to initialize the new tool integration. Use `new` to create a Git repo, `clone` to clone an existing Git repo into a new Git repo, `fork` to fork an existing Git repo, or `link` to link to an existing Git repo. |
 {: caption="{{site.data.keyword.gitrepos}} tool integration parameters" caption-side="bottom"}
 
-If you are logged into IBM Cloud using a Trusted Profile, when configuring a Git Repos and Issue Tracking tool integration, you must use the Personal Access Token authentication method. The OAuth authentication method is incompatible with Trusted Profiles.The Personal Access Token (PAT) authentication allows you to configure the integration of Git Repos and Issue Tracking tool either using GUI, API, or Teraform. This is because the PAT is tied to the actual user who owns the trusted profile. Users can use their Personal Access Tokens to create or re-configure Git Repos and Issue Tracking tool integrations in the toolchain.
+If you are logged into IBM Cloud using a Trusted Profile, when configuring a Git Repos and Issue Tracking tool integration, you must use the Personal Access Token authentication method. The OAuth authentication method is incompatible with Trusted Profiles.The Personal Access Token (PAT) authentication allows you to configure the integration of Git Repos and Issue Tracking tool either using GUI, API, or Terraform. This is because the PAT is tied to the actual user who owns the trusted profile. Users can use their Personal Access Tokens to create or re-configure Git Repos and Issue Tracking tool integrations in the toolchain.
 However, they should log in as a regular user to access the actual Git repo UI.
 {: exception}
