@@ -132,24 +132,6 @@ toc:
               - cli_publish_test.md
               - cli_evaluate_gates.md
           - topicgroup:
-              label: Using idra (deprecated) to integrate IBM Continuous Delivery Pipeline with DevOps Insights
-              topics:
-              - idra_publish_build.md
-              - idra_publish_deploy.md
-              - idra_publish_test.md
-              - idra_evaluate_gates.md
-          - topicgroup:
-              label: Integrating Jenkins with DevOps Insights
-              topics:
-              - jenkins_publish_build.md
-              - jenkins_publish_deploy.md
-              - jenkins_publish_test.md
-              - jenkins_evaluate_gates.md
-              - jenkins_communicate_toolchain.md
-              - link:
-                  label: Using Jenkins to integrate DevOps Insights
-                  href: https://plugins.jenkins.io/ibm-cloud-devops
-          - topicgroup:
               label: Integrating other CI/CD tools with DevOps Insights
               topics:
               - cicd_setting_values.md

@@ -41,7 +41,7 @@ Because this tool integration is built on GitLab Community Edition and hosted by
 ## Using {{site.data.keyword.gitrepos}} with toolchains
 {: #git_toolchains}
 
-You can use a template that contains either a {{site.data.keyword.gitrepos}} or GitHub tool integration as a starting point to create a toolchain that you can add Git repositories (repos) to. Alternatively, you can start with an empty toolchain and add either a {{site.data.keyword.gitrepos}} or GitHub tool integration to it. By using a toolchain, you can associate Git repos with your resource groups and your {{site.data.keyword.contdelivery_short}} service instance. 
+You can use a template that contains either a {{site.data.keyword.gitrepos}} or GitHub tool integration as a starting point to create a toolchain that you can add Git repositories (repos) to. Alternatively, you can start with an empty toolchain and add either a {{site.data.keyword.gitrepos}} or GitHub tool integration to it. By using a toolchain, you can associate Git repos with your resource groups and your {{site.data.keyword.contdelivery_short}} service instance.
 
 For more information about using toolchains with Git, see [Creating toolchains with Git](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_git).
 
@@ -49,7 +49,7 @@ For more information about using toolchains with Git, see [Creating toolchains w
 ## Using {{site.data.keyword.gitrepos}} locally
 {: #git_locally}
 
-You can locally access the Git repos that are stored in {{site.data.keyword.gitrepos}}. For instructions to set up Git locally, see [Start using Git on the command line](https://us-south.git.cloud.ibm.com/help/gitlab-basics/start-using-git){: external}.
+You can locally access the Git repos that are stored in {{site.data.keyword.gitrepos}}. For instructions to set up Git locally, check [Start using Git on the command line](https://us-south.git.cloud.ibm.com/help/topics/git/get_started.md){: external}.
 
 {{site.data.keyword.gitrepos}} supports HTTPS connections only that use TLS1.2. If you use Eclipse to connect, you might be required to specify this protocol for your Java&trade; version by adding `-Dhttps.protocols=TLSv1.2` to your eclipse.ini file and then restarting Eclipse.
 {: tip}
@@ -79,7 +79,7 @@ To authenticate with your Git repo over HTTPS, you must create a personal access
 
 To learn more, see [Personal access tokens](https://us-south.git.cloud.ibm.com/help/user/profile/personal_access_tokens.md){: external}.
 
-### Creating an SSH key  
+### Creating an SSH key
 {: #create_ssh}
 
 To create an SSH key, see [Generate an SSH key pair](https://us-south.git.cloud.ibm.com/help/user/ssh.md#generate-an-ssh-key-pair){: external}. Accessing your repositories with SSH authentication might require more configuration for proxies and firewalls.
@@ -89,7 +89,7 @@ To learn more, see [Use SSH keys to communicate with GitLab](https://us-south.gi
 ### Verifying host key fingerprints
 {: #verify_fingerprints}
 
-The first time that you connect to a server by way of Git over SSH, the Git client prompts you to accept the host key fingerprint of the server. You can use the following host key fingerprints to verify SSH connections with the {{site.data.keyword.cloud_notm}} {{site.data.keyword.gitrepos}} servers. Proceed with the connection only if the host key fingerprint matches the specified value for the server that is provided in the following code snippets. 
+The first time that you connect to a server by way of Git over SSH, the Git client prompts you to accept the host key fingerprint of the server. You can use the following host key fingerprints to verify SSH connections with the {{site.data.keyword.cloud_notm}} {{site.data.keyword.gitrepos}} servers. Proceed with the connection only if the host key fingerprint matches the specified value for the server that is provided in the following code snippets.
 
 ```text
 au-syd.git.cloud.ibm.com:
@@ -270,9 +270,9 @@ You can update your firewall configuration to allow webhook messages from {{site
 You can update the display name that appears for you throughout {{site.data.keyword.gitrepos}}.
 
 1. On the {{site.data.keyword.gitrepos}} User Settings dashboard, from the menu, click your avatar and select **Edit profile**. Click **Profile**. On the Profile page, in the **Main settings** section, update your full name.
-1. Click **Update profile settings** to change the name that is displayed for you throughout {{site.data.keyword.gitrepos}}. 
+1. Click **Update profile settings** to change the name that is displayed for you throughout {{site.data.keyword.gitrepos}}.
 
 ## Physical file and repo size limits
 {: #git_limits}
 
-Files are strictly limited to 100 MB. The suggested repo size limit is 1 GB. If your repo exceeds 1 GB, you might receive an email with a request to reduce the size of the repo. 
+Files are strictly limited to 100 MB. The suggested repo size limit is 1 GB. If your repo exceeds 1 GB, you might receive an email with a request to reduce the size of the repo.

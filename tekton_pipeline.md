@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-06-27"
+lastupdated: "2025-07-17"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -127,10 +127,13 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
 
 1. On the Pipeline Overview page, click **Add** to create a trigger, select the type of trigger to add, and associate the trigger with an event listener. The list of available event listeners contains the listeners that are defined in the pipeline code repo.
 
-   Triggers are based on [Tekton trigger definitions](https://github.com/tektoncd/triggers){: external}. Git repo triggers use the event listener that they are mapped to to extract information from the incoming event payload and create Kubernetes resources. These resources are applied to a Tekton `PipelineRun` resource.
+   Triggers are based on [Tekton trigger definitions](https://github.com/tektoncd/triggers){: external}. Git repo triggers use the event listener to which they are mapped, to extract information from the incoming event payload and create Kubernetes resources. These resources are applied to a Tekton `PipelineRun` resource.
    {: tip}
 
-   Triggered pipeline runs are run concurrently unless you configure the trigger to serialize runs by using the `Limit concurrent runs` option. When this option is enabled, you can limit the number of simultaneous runs that can be started by this trigger. For example, if the maximum limit is set to 1, only one pipeline run for this trigger runs at a time and any others are queued in a waiting state. A maximum of 20 runs (5 if you are using IBM Managed Workers) are queued in a waiting state before subsequent requests are automatically cancelled. By default, all Timed triggers are limited to one concurrent run when using IBM Managed Workers
+   Triggered pipeline runs are run concurrently unless you configure the trigger to serialize runs by using the `Limit concurrent runs` option. When this option is enabled, you can limit the number of simultaneous runs that can be started by this trigger. For example, if the maximum limit is set to 1, only one pipeline run for this trigger runs at a time and any others are queued in a "Waiting" state. A maximum of 20 runs (5 if you are using IBM Managed Workers) are queued in a waiting state before subsequent requests are automatically cancelled. By default, all Timed triggers are limited to one concurrent run when using IBM Managed Workers
+   {: tip}
+
+   When a trigger exceeds its concurrent runs limit, new pipeline runs are placed in a "Waiting" state until capacity becomes available. If desired, this behaviour can be modified so that only the most recent run can be in "Waiting" state and other such runs are automatically cancelled. This can be useful, for example, for Git triggers if you only wish to build the most recent commit when multiple runs are triggered in a short time frame. To enable this feature a "Limit to one waiting run" toggle is available in the trigger configuration panel, which can also be set via API using the `limit_waiting_runs` property ([see API docs](https://cloud.ibm.com/apidocs/tekton-pipeline#create-tekton-pipeline-trigger)). Note that this setting only applies to runs in the "Waiting" state and does not affect active runs.
    {: tip}
 
    **Manual triggers** run when you click the **Run** pipeline button and select the trigger.
