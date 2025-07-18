@@ -49,7 +49,7 @@ For more information about using toolchains with Git, see [Creating toolchains w
 ## Using {{site.data.keyword.gitrepos}} locally
 {: #git_locally}
 
-You can locally access the Git repos that are stored in {{site.data.keyword.gitrepos}}. For instructions to set up Git locally, see [Start using Git on the command line](https://us-south.git.cloud.ibm.com/help/topics/git/get_started.md){: external}.
+You can locally access the Git repos that are stored in {{site.data.keyword.gitrepos}}. For instructions to set up Git locally, check [Start using Git on the command line](https://us-south.git.cloud.ibm.com/help/topics/git/get_started.md){: external}.
 
 {{site.data.keyword.gitrepos}} supports HTTPS connections only that use TLS1.2. If you use Eclipse to connect, you might be required to specify this protocol for your Java&trade; version by adding `-Dhttps.protocols=TLSv1.2` to your eclipse.ini file and then restarting Eclipse.
 {: tip}
