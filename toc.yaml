@@ -132,7 +132,7 @@ toc:
               - cli_publish_test.md
               - cli_evaluate_gates.md
           - topicgroup:
-              label: Integrating other CI/CD tools with DevOps Insights
+              label: Integrating CI/CD tools with DevOps Insights
               topics:
               - cicd_setting_values.md
               - cicd_publish_build.md
