@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2024
-lastupdated: "2024-04-15"
+  years: 2015, 2025
+lastupdated: "2025-08-07"
 
 keywords: Git Repos, Issue Tracking, Collaborate, Git repository, authentication, personal access token, SSH key
 
@@ -102,6 +102,23 @@ au-syd.git.cloud.ibm.com:
   RSA:
     SHA256:y+QM+SbgQ7SqzQXqwmJTPD0jni+qsDdqZg/sOgOFWbY
     MD5:70:71:95:b5:2a:b4:04:ad:12:b4:77:c6:cf:fe:35:c8
+```
+{: screen}
+
+Montreal (ca-mon) is a limited-availability region and not generally available.
+{: important}
+
+```text
+ca-mon.git.cloud.ibm.com:
+  ECDSA:
+    SHA256:67fZl1fFTEeUf10+YbHYclyXwrBu4RX6WrDwvwBV2U8
+    MD5:7e:6e:3f:fa:1f:a4:cb:90:a4:2c:dd:aa:8e:4f:25:fa
+  ED25519:
+    SHA256:jD94tCHyFMgujOcYNYz0lj/KvnunOzOgNnVgMQjKnYY
+    MD5:ec:54:83:84:de:f4:64:61:37:b2:a8:57:c7:1b:1e:55
+  RSA:
+    SHA256:MKOOcEfETUq1e3LjJ0jRDOIzX8Iobdqufi1dl+7iaNI
+    MD5:b3:98:ec:9e:83:5e:72:98:7f:e4:33:18:26:f4:d9:12
 ```
 {: screen}
 

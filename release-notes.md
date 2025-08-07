@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2025
 
-lastupdated: "2025-06-06"
+lastupdated: "2025-08-07"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -20,6 +20,16 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years.
 {: shortdesc}
+
+## 1 August 2025
+{: #ContinuousDelivery-aug0125}
+{: release-note}
+
+{{site.data.keyword.contdelivery_full}} is now available in the Montreal Region.
+:   Each location has three different data centers and provides a full cloud service stack to enable high availability, redundancy, and geographical dispersion.
+
+Montreal (ca-mon) is a limited-availability region and not generally available.
+{: important}
 
 ## 29 April 2025
 {: #ContinuousDelivery-apr2925}
