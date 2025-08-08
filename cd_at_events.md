@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2025
-lastupdated: "2025-07-18"
+lastupdated: "2025-08-07"
 
 keywords: event, security, IBM, Continuous Delivery, toolchain
 
@@ -24,15 +24,17 @@ You can use {{site.data.keyword.atracker_full_notm}}, a platform service, to rou
 
 You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on events that are generated in your account and routed by {{site.data.keyword.atracker_full_notm}} to an {{site.data.keyword.logs_full_notm}} instance.
 
+Montreal (ca-mon) is a limited-availability region and not generally available.
+{: important}
 
 ## Locations where activity tracking events are generated
 {: #at-locations}
 
 {{site.data.keyword.contdelivery_short}} sends activity tracking events from the regions that are indicated in the following table.
 
-| Dallas (`us-south`) | Washington (`us-east`) | Toronto (`ca-tor`) | Sao Paulo (`br-sao`) |
-|---------------------|------------------------|--------------------|----------------------|
-| [Yes]{: tag-green}  | [Yes]{: tag-green}     | [Yes]{: tag-green} | [Yes]{: tag-green}   |
+| Dallas (`us-south`) | Washington (`us-east`) | Toronto (`ca-tor`) | Montreal (`ca-mon`)  | Sao Paulo (`br-sao`) |
+|---------------------|------------------------|--------------------|----------------------|----------------------|
+| [Yes]{: tag-green}  | [Yes]{: tag-green}     | [Yes]{: tag-green} | [Yes]{: tag-green}   | [Yes]{: tag-green}   |
 {: caption="Regions from which activity tracking events are sent in Americas locations" caption-side="top"}
 {: #at-origins-table-1}
 {: tab-title="Americas"}
@@ -65,9 +67,9 @@ You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on event
 
 {{site.data.keyword.contdelivery_short}} sends activity tracking events to {{site.data.keyword.at_full_notm}} hosted event search in the regions that are indicated in the following table.
 
-| Dallas (`us-south`) | Washington (`us-east`) | Toronto (`ca-tor`) | Sao Paulo (`br-sao`) |
-|---------------------|------------------------|--------------------|----------------------|
-| [Yes]{: tag-green}  | [Yes]{: tag-green}     | [Yes]{: tag-green} | [Yes]{: tag-green}   |
+| Dallas (`us-south`) | Washington (`us-east`) | Toronto (`ca-tor`) | Montreal (`ca-mon`)  | Sao Paulo (`br-sao`) |
+|---------------------|------------------------|--------------------|----------------------|----------------------|
+| [Yes]{: tag-green}  | [Yes]{: tag-green}     | [Yes]{: tag-green} | [Yes]{: tag-green}   | [Yes]{: tag-green}   |
 
 {: caption="Regions where activity tracking events are sent in Americas locations" caption-side="top"}
 {: #at-table-1}
@@ -101,9 +103,9 @@ You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on event
 
 {{site.data.keyword.contdelivery_short}} sends activity tracking events by {{site.data.keyword.atracker_full_notm}} in the regions that are indicated in the following table.
 
-| Dallas (`us-south`) | Washington (`us-east`) | Toronto (`ca-tor`) | Sao Paulo (`br-sao`) |
-|---------------------|------------------------|--------------------|----------------------|
-| [Yes]{: tag-green}  | [Yes]{: tag-green}     | [Yes]{: tag-green} | [Yes]{: tag-green}   |
+| Dallas (`us-south`) | Washington (`us-east`) | Toronto (`ca-tor`) | Montreal (`ca-mon`)  | Sao Paulo (`br-sao`) |
+|---------------------|------------------------|--------------------|----------------------|----------------------|
+| [Yes]{: tag-green}  | [Yes]{: tag-green}     | [Yes]{: tag-green} | [Yes]{: tag-green}   | [Yes]{: tag-green}   |
 {: caption="Regions where activity tracking events are sent in Americas locations" caption-side="top"}
 {: #atracker-table-1}
 {: tab-title="Americas"}

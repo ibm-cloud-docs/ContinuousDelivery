@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-3-15"
+  years: 2023, 2025
+lastupdated: "2025-08-07"
 
 keywords: IBM Cloud Public, firewall configuration
 
@@ -21,6 +21,9 @@ You can update your firewall configuration to allow webhook messages from {{site
 {: shortdesc}
 
 To allow Git webhook messages, open traffic to the following subnet ranges for your specific region.
+
+Montreal (ca-mon) is a limited-availability region and not generally available.
+{: important}
 
 ```text
 au-syd
@@ -44,6 +47,14 @@ br-sao
 163.109.70.192/27
 169.57.162.64/27
 169.57.175.144/28
+====
+ca-mon
+10.46.73.151/32
+10.46.77.151/32
+10.46.81.151/32
+64.5.42.134/32
+64.5.44.189/32
+64.5.50.234/32
 ====
 ca-tor
 10.11.30.0/26

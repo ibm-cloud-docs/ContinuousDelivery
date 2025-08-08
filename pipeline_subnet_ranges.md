@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023, 2024
-lastupdated: "2024-7-11"
+  years: 2023, 2025
+lastupdated: "2025-08-07"
 
 keywords: IBM Cloud Public, firewall configuration, network zones
 
@@ -22,6 +22,9 @@ If your firewall configuration prevents the {{site.data.keyword.deliverypipeline
 
 Use the following subnet ranges for your specific region.
 
+Montreal (ca-mon) is a limited-availability region and not generally available.
+{: important}
+
 ```text
 jp-tok
 10.129.50.128/27
@@ -32,9 +35,6 @@ jp-tok
 10.223.197.15/32
 10.223.210.248/32
 10.223.221.179/32
-10.223.191.112/32
-10.223.209.31/32
-10.223.221.163/32
 128.168.108.0/26
 128.168.130.29
 128.168.68.192/27
@@ -44,9 +44,6 @@ jp-tok
 165.192.130.197
 165.192.70.32/27
 169.56.10.128/26
-162.133.134.72/32
-128.168.129.225/32
-165.192.132.159/32
 ====
 jp-osa
 10.10.15.128/26
@@ -76,6 +73,8 @@ au-syd
 130.198.80.128/28
 130.198.85.32/27
 135.90.132.97
+135.90.66.176/28
+135.90.66.96/27
 159.23.98.163
 168.1.36.32/27
 168.1.59.208/28
@@ -177,6 +176,14 @@ eu-es
 13.122.67.208/28
 13.122.70.96/27
 13.122.88.31
+====
+ca-mon
+10.46.73.154/32
+10.46.77.154/32
+10.46.81.154/32
+64.5.42.143/32
+64.5.44.192/32
+64.5.50.236/32
 ====
 ca-tor
 10.11.30.0/26
