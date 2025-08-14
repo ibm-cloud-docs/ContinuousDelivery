@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-07-17"
+lastupdated: "2025-08-14"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -439,6 +439,7 @@ Run when an issue is created with the specified label:
 {: codeblock}
 
 ### Filters
+{: #tekton-filters}
 
 Filters allow users to refine pull requests based on specific criteria. The filter field currently supports specifying labels in pull requests, thereby controlling pipeline execution based on their presence or absence. However, it does not trigger a pipeline when labels are added or removed; rather, it verifies the PR's labels before permitting pipeline execution.
 
@@ -447,7 +448,7 @@ Filters allow users to refine pull requests based on specific criteria. The filt
 - If the PR meets the label conditions (e.g., has the "approved" label), the pipeline runs.
 - If the PR does not meet the label conditions, the pipeline will not execute.
 
-**Example Configuration**
+**Example Configuration**:
 
 The screenshot below shows an example where the trigger is configured for the labels "approved" and "reviewed".
 
@@ -751,7 +752,7 @@ Pipeline runs can be in any of the following states:
 
 For detailed information about a selected run, click any row in the table to view the `Task` definition and the steps in each `PipelineRun` definition. You can also view the status, logs, and details of each `Task` definition and step, and the overall status of the `PipelineRun` definition.
 
-The retention period for PipelineRuns and their logs depends on the plan that is selected for the {{site.data.keyword.contdelivery_short}} service instance. Tekton pipelines under the Professional plan are retained for one year. Tekton pipelines under the Lite plan are retained for 30 days. To retain any `PipelineRuns` beyond the retention period, in the PipelineRuns section, select **Actions > **Download** to download a .zip file.
+The retention period for PipelineRuns and their logs depends on the plan that is selected for the {{site.data.keyword.contdelivery_short}} service instance. Tekton pipelines under the Professional plan are retained for one year. Tekton pipelines under the Lite plan are retained for 30 days. To retain any `PipelineRuns` beyond the retention period, in the PipelineRuns section, select **Actions** > **Download** to download a .zip file.
 {: important}
 
 ### Viewing a {{site.data.keyword.deliverypipeline}} with the API
@@ -989,11 +990,13 @@ You can trigger pipelines using either the web UI or a command-line/API call. Th
 
 ### Triggering the Pipeline via Command Line or API
 {: #trigger-pipeline-Command}
+{: api}
 
 You can trigger a pipeline from the command line using either the IBM Cloud CLI or by making a direct API call using `curl`.
 
 #### Using IBM Cloud CLI
 {: #trigger-pipeline-CLI}
+{: api}
 
 You can trigger the pipeline using the IBM Cloud CLI. For more information about CLI commands, refer to the [IBM Cloud CLI docs](https://cloud.ibm.com/docs/cli).
 
@@ -1018,6 +1021,7 @@ You can then verify that your pipeline has been triggered by opening your respec
 
 #### Using `curl` to Trigger the Pipeline via API
 {: #trigger-pipeline-API}
+{: api}
 
 You can trigger the pipeline directly via API using `curl`. For more information on how to trigger Tekton pipelines via API, see the [IBM Cloud API Docs/
 CD Tekton Pipeline](https://cloud.ibm.com/apidocs/tekton-pipeline#trigger-a-pipeline-run).
