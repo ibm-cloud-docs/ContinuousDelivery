@@ -898,6 +898,8 @@ The following table lists and describes each of the variables that are used in t
 
 ## Deleting a {{site.data.keyword.deliverypipeline}}
 {: #deleting-pipeline}
+{: api}
+{: terraform}
 
 You can delete a pipeline by using the API, or with Terraform.
 
