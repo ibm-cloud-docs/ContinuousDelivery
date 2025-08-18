@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-08-14"
+lastupdated: "2025-08-18"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -896,7 +896,13 @@ The following table lists and describes each of the variables that are used in t
    ```
    {: pre}
 
-## Deleting a {{site.data.keyword.deliverypipeline}} with the API
+## Deleting a {{site.data.keyword.deliverypipeline}}
+{: #deleting-pipeline}
+
+You can delete a pipeline by using the API, or with Terraform.
+
+
+### Deleting a {{site.data.keyword.deliverypipeline}} with the API
 {: #deleting-pipeline-api}
 {: api}
 
@@ -980,6 +986,62 @@ The following table lists and describes each of the variables that are used in t
 | `{pipeline_id}` | The ID of the pipeline that you want to delete. |
 | `{iam_token}` | A valid IAM bearer token. |
 {: caption="Variables for deleting the {{site.data.keyword.deliverypipeline}} with the API" caption-side="top"}
+
+### Deleting a {{site.data.keyword.deliverypipeline}} with Terraform
+{: #deleting-pipeline-terraform}
+{: terraform}
+
+1. Locate the Terraform file (for example, `main.tf`) that contains the `resource` block for the existing pipeline.
+
+   The `resource` in the following example describes an existing pipeline.
+
+   ```terraform
+   data "ibm_resource_group" "group" {
+     name = "default"
+   }
+
+   resource "ibm_cd_toolchain" "my_toolchain" {
+     name              = "terraform_toolchain"
+     resource_group_id = data.ibm_resource_group.group.id
+   }
+
+   resource "ibm_cd_toolchain_tool_pipeline" "my_pipeline_tool" {
+     parameters {
+        name = "terraform-pipeline-integration"
+     }
+     toolchain_id = ibm_cd_toolchain.my_toolchain.id
+   }
+
+   resource "ibm_cd_tekton_pipeline" "my_tekton_pipeline" {
+    worker {
+        id = "public"
+    }
+    pipeline_id = ibm_cd_toolchain_tool_pipeline.my_pipeline_tool.tool_id
+   }
+   ```
+   {: codeblock}
+
+1. Remove the `ibm_cd_toolchain_tool_pipeline` and `ibm_cd_tekton_pipeline` `resource` blocks from your Terraform file.
+1. Initialize the Terraform CLI, if required.
+
+   ```terraform
+   terraform init
+   ```
+   {: pre}
+
+1. Create a Terraform execution plan. This plan summarizes all of the actions that must run to delete the pipeline.
+
+   ```terraform
+   terraform plan
+   ```
+   {: pre}
+
+1. Apply the Terraform execution plan. Terraform takes all of the required actions to delete the pipeline.
+
+   ```terraform
+   terraform apply
+   ```
+   {: pre}
 
 
 ## Using Triggers
@@ -1080,61 +1142,6 @@ CD Tekton Pipeline](https://cloud.ibm.com/apidocs/tekton-pipeline#trigger-a-pipe
    
 - When the command runs successfully, the pipeline is triggered. Once triggered, the response includes details of the pipeline run.
 
-## Deleting a {{site.data.keyword.deliverypipeline}} with Terraform
-{: #deleting-pipeline-terraform}
-{: terraform}
-
-1. Locate the Terraform file (for example, `main.tf`) that contains the `resource` block for the existing pipeline.
-
-   The `resource` in the following example describes an existing pipeline.
-
-   ```terraform
-   data "ibm_resource_group" "group" {
-     name = "default"
-   }
-
-   resource "ibm_cd_toolchain" "my_toolchain" {
-     name              = "terraform_toolchain"
-     resource_group_id = data.ibm_resource_group.group.id
-   }
-
-   resource "ibm_cd_toolchain_tool_pipeline" "my_pipeline_tool" {
-     parameters {
-        name = "terraform-pipeline-integration"
-     }
-     toolchain_id = ibm_cd_toolchain.my_toolchain.id
-   }
-
-   resource "ibm_cd_tekton_pipeline" "my_tekton_pipeline" {
-    worker {
-        id = "public"
-    }
-    pipeline_id = ibm_cd_toolchain_tool_pipeline.my_pipeline_tool.tool_id
-   }
-   ```
-   {: codeblock}
-
-1. Remove the `ibm_cd_toolchain_tool_pipeline` and `ibm_cd_tekton_pipeline` `resource` blocks from your Terraform file.
-1. Initialize the Terraform CLI, if required.
-
-   ```terraform
-   terraform init
-   ```
-   {: pre}
-
-1. Create a Terraform execution plan. This plan summarizes all of the actions that must run to delete the pipeline.
-
-   ```terraform
-   terraform plan
-   ```
-   {: pre}
-
-1. Apply the Terraform execution plan. Terraform takes all of the required actions to delete the pipeline.
-
-   ```terraform
-   terraform apply
-   ```
-   {: pre}
 
 ## Viewing details for a TaskRun pod
 {: #view_pod_details}
