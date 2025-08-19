@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-08-18"
+lastupdated: "2025-08-19"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -898,11 +898,21 @@ The following table lists and describes each of the variables that are used in t
 
 ## Deleting a {{site.data.keyword.deliverypipeline}}
 {: #deleting-pipeline}
+{: ui}
 {: api}
 {: terraform}
 
-You can delete a pipeline by using the API, or with Terraform.
+You can delete a pipeline by using the console UI, the API, or with Terraform. The deletion cannot be undone.
 
+### Deleting a toolchain by using the console UI
+{: #deleting-pipeline-ui}
+{: ui}
+
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. 
+1. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
+1. In the "Delivery Pipelines" section, find the pipeline you wish to delete.
+1. Click the **Menu** icon for that pipeline and click the **Delete** option.
+1. Confirm the deletion by clicking **Delete** on the dialog.
 
 ### Deleting a {{site.data.keyword.deliverypipeline}} with the API
 {: #deleting-pipeline-api}
