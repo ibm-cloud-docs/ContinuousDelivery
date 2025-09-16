@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-09-05"
+lastupdated: "2025-09-16"
 
 keywords: pipeline versioned base image, image version, pipeline job
 
@@ -62,157 +62,157 @@ After version 2.0, images no longer include grunt or python. If these tools are 
 
 Images are available on the IBM Cloud Container Registry. To list these hosted images, run the `ibmcloud cr images --restrict continuous-delivery` command when you target the global IBM Cloud Container Registry.
 
-| Base image version | IBM Cloud Container Registry version |sha256 value|Creation date|
-| -------------------- | -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------|
-| 3.69| `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.69| sha256:99c4ac5ed1df0f49861fc592debf75c4dc173e6150498e1746e051c9dcdd16df |2025-09-02|
-| 3.68| `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.68| sha256:8e745d5784d1fca77947a52ddbbc2f2fc88d97682e211433189ae0020db3381a |2025-08-11|
-| 3.66| `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.66`| sha256:a11a0d23e0a45f1946ca87949d78df3452f457b9f88d287a24d2d8b250ab9b19 |2025-07-17|
-| 3.65| `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.65`| sha256:2d2b83c7a75e11f7d231394b4950118d46338256416a52411eabd5b7472f8056 |2025-07-02|
-| 3.64| `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.64`| sha256:f930594cca258222080b0baab90a8be1042825b7f8ec173bd54cb0842c40547e |2025-06-06|
-| 3.63| `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.63`| sha256:ae598c70447989f22e822fbec052e6bef37643b67405008b16d5fadb7a71606a |2025-05-23|
-| 3.62 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.62`| sha256:f3a1b3e681c7a452a859f7dea8983b7ce73e2350591645e5c7493af99cc1f2b1 |2025-05-09|
-| 3.61 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.61`| sha256:ba6f6afeba5cb55f0bfa10b63ada8e9d9074d4c5733af1293011a40b7aa08733 |2025-04-24|
-| 3.60 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.60`| sha256:8bdae7a1b67b99aa28d1a4cbc6cb86aaa0e71e81b27330ca1fb5b2d4cb3ff5e1 |2025-04-11|
-| 3.59 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.59`| sha256:b0738e17d8f67a7808ed01666d2d2ab9cb6b182ec69b0f1f868c61c4c4fc8a20 |2025-03-20|
-| 3.58 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.58`| sha256:56ff5486de5311e7158bbeea41d03a7c59c1a91ab92a28eee2a20982058353aa |2025-03-03|
-| 3.57 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.57`| sha256:ab62d1a829ced5af5773fde4ab25976376dd32cee5514deb92f6ed739cfeb328 |2025-02-20|
-| 3.56 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.56`| sha256:9ebfb9db6f8db6900bf25cf040c6f416bc86db186314b6687efd7058abb10a74 |2025-02-10|
-| 3.55 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.55`| sha256:a730d308fcc1581c21ffb7d18efac5bd8c6471c147c1a5063353c71db18d9d0f|2025-01-24|
-| 3.54 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.54`| sha256:5642cdc037c26aac6ab61c9f74f84c14e276dbdf88a053bbfcf00c5658b2e9dc|2024-11-25|
-| 3.53 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.53`| sha256:1d4533b6eb2db019d78992a8cff910d773a126269811c0338b5f3dff99aa7414|2024-10-28|
-| 3.52 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.52`| sha256:f2049542eb1cbac4c31c899e6563a6728155b7c46d9b5f1254c590261ce98706|2024-10-07|
-| 3.51 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.51`| sha256:35bca00e4129c058d4cb59e923d1bf011d05cc55a5f3d0b089e2aaa919fe939b|2024-09-20|
-| 3.50 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.50`| sha256:ef5794fcb0c7e4a037609fac7ac59536faa9af529efc811a22c6e178dbfbfbb2|2024-09-03|
-| 3.49 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.49`| sha256:63f81c27a83f4e9e005f40543c2ef6e34ce92e04b1c714850ef7ff95af684558|2024-08-12|
-| 3.48 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.48`| sha256:52a600bbd2008c4dc10e5833eeb09c557637fae06c61e23708d03d4161701b07|2024-07-23|
-| 3.47 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.47`| sha256:09c85e42cf5b0ab3b0267ef8f67b09b3c3db93d5908d75f0cf5b62f52446c74a|2024-07-05|
-| 3.46 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.46`| sha256:876e56444b536c3bc85e52603ea9076a631f0bbef73a5980e37003503a47bbb9|2024-06-16|
-| 3.45 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.45`| sha256:4ce20cb4a724f6db59785a8eba874c6cef3b9be2dadb98bdba2a2491cf47280e|2024-06-04|
-| 3.44 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.44`| sha256:b89d9994a5d2e1b6f3106176637270311c4288a0c5725af01d63d4414dd33b3b|2024-06-03|
-| 3.43 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.43`| sha256:9bc1f733295d7e512cd412fccf8e88a95049eca79ad2bfdc9b5b3f09881e68f9|2024-05-10|
-| 3.42 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.42`| sha256:06824cdeefb23b49b8900d4d1759dcefef5398a1dfab369add47f3fba04ad635|2024-04-23|
-| 3.41 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.41`| sha256:6106eed4ebeac26e807ede55c88d891d9d6e531d09d28e5b14b8c450113b3a9b|2024-04-05|
-| 3.40 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.40`| sha256:00adc1293f70e54b23e184c8a0975e656f8920b2a23052667726d5ea15f27003|2024-03-08|
-| 3.39 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.39`| sha256:29e7b1b744b142f9cf8b80e9961ce9fd1fac1859d9f48601f004cc01c83fff10|2024-03-08|
-| 3.38 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.38`| sha256:216e41f2bda393b7ee4ba16193a0f0b2c5c40219554ebea521b9ada5a1c4a54e|2024-02-07|
-| 3.37 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.37`| sha256:631a925744b4ef2e82b0f163eefbe254e3dd8f856e6a32994bc023b6112d98d5|2024-01-22|
-| 3.36 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.36`| sha256:d31bba17e7a8714a0d971d897ac5b18943cb15136a97dfeddfee0e6c2d813b20|2024-01-11|
-| 3.35 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.35`| sha256:39c2461cefd1791bf578f6ba19648808916c48ab7767f1d88081994faf014d14|2023-12-12|
-| 3.34 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.33`| sha256:73e5545fdbb3da94d1d29a8d7ca38cfe7feb6da0ba63c7036a08b78cbc8531c1|2023-12-04|
-| 3.33 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.33`| sha256:18582e3d0d58ea5f07c809a210e7d5a9b2e2b99b85c93b72de4a5ed92d94511c|2023-11-16|
-| 3.32 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.32`| sha256:91fa57abe53a5c3f86a8c0358defc01111aab4ea69f59aaa852baae2d3432c69|2023-11-07|
-| 3.31 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.31`| sha256:98c9e91bfe7a5aa5b97267fad1a2ac4d01081f396bd03a2d4b9604a3487a07fe|2023-10-30|
-| 3.30 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.30`| sha256:b5d2f4026ee171a67edf24ab5e952f19f1ecebd1875e3da051d4d73bf398f0d9|2023-10-12|
-| 3.29 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.29`| sha256:36c8642cefc2182dfd283510319bf9741bc8c386c46364e3a391fe9797c3d79a|2023-09-29|
-| 3.28 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.28`| sha256:aa7f4f2e5bdd12ab0b59de1b8b031799e11d38aa45712424b3023c6e8471e8ba|2023-09-01|
-| 3.27 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.27`| sha256:70708bdc8bfb23bfda9fa5effc644901cdd9e7314c91ac6c1cbc62bfb9e0a1a2|2023-08-18|
-| 3.26 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.26`| sha256:de8ee389e3cb5818eb3c65a015b86c1042c2adf0bad64467cd3ccd3d8c66e26d|2023-08-02|
-| 3.25 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.25`| sha256:dd2000b525336acd00e9b95b74f15696797764725adbb25fa720e9431d558cbf|2023-07-05|
-| 3.24 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.24`| sha256:7a52b892ae7704a7b6c4cf03a292356240305c0d7bc9c275d10df19d12db99c5|2023-06-19|
-| 3.23 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.23`| sha256:e62fe158ebc7d875a0be5263da6872250fd8038b00cef0aada4b9f14f06dd827|2023-05-29|
-| 3.21 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.21`| sha256:94b77206bbc38a0d0ecd7006c00c9773d4ddd6e864525736b3bc4ca87c64b991|2023-04-17|
-| 3.20 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.20`| sha256:82e68006004eeca8bdf838e2756d6b7fbb787baa42817feba8e847d8b1a27106|2023-04-03|
-| 3.19 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.19`| sha256:ffb0bb00c37c4c2af01a53afc3597494275ed99a1e8ac3d4e653f105937509f0|2023-03-13|
-| 3.18 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.18`| sha256:ba072e693cd646664711f60c7d3b4c34a25b4578bdc445a2d6855eff595fe67c|2023-02-21|
-| 3.17 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.17`| sha256:3e2cbec3d0781b0e9ea9293d0a88e5b654635c065864718e74130a5124965197|2023-02-06|
-| 3.16 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.16`| sha256:a09c7918889289fa2106e54ba527793aad7152847a50e6584d59266ecc40d498|2023-01-24|
-| 3.15 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.15`| sha256:506e7b8e96ad40fbf098b6b0a337bca7c9d07fa5cf58058e857c38d9e7625497|2023-01-16|
-| 3.14 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.14`| sha256:b6f80270c9328c3014766fdb2dca9aea4f593f05c1bcaf5037d126bf042ebffe|2022-12-14|
-| 3.13 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.13`| sha256:ae7f9e80bcc7947ae4df8d94a326240ca648c807183a72e232ecb03043348f20|2022-11-28|
-| 3.12 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.12`| sha256:6f457e7ec323eac3ae05c6ca5bfaacee1ed669c50cdb5983c893c5351a184331|2022-11-10|
-| 3.11 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.11`| sha256:d4f4a2e59127ff11426789bf1d86c88fcac3e9746241755f6af7ff9e79fd62f1|2022-10-04|
-| 3.10 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.10`| sha256:8fae15566254a0300315e3c752021d6eabdea73aaa3372f86c6218579692eb67|2022-08-30|
-| 3.9 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.9`| sha256:d1d42755854accd4957979e974c620cf892e8d38b123e5eac06abf378b353879|2022-07-28|
-| 3.8 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.8`| sha256:8d0c33a4e5651a7d412ebfd751a45b613a6efde6167c70f1f1e8938d1bd8c613|2022-06-22|
-| 3.7 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.7`| sha256:0444aa3cc5032ba4d7f7a59a4177dd43dc1126ad902f09079b0a66156bbe4bcf|2022-04-20|
-| 3.6 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.6`| sha256:4bfa333cd47ee9d0e369edb147451ff008169f0dd84a115c16205b5cd0de64f6|2022-02-22|
-| 3.5 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.5`| sha256:543249c585e351c14d5b9f16664625236e20e4ba85098ac26adb0d8cecbbcc97|2022-01-18|
-| 3.4 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.4`| sha256:4aaabf49950796d9004f6e4f04ff53ab24dcd3fd29d8cc719a9b81f7546d31f2|2021-11-29|
-| 3.3 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.3`| sha256:5b8f7e1964c0a82995689d636b60a1761dd08ce422b9195aadc0249e5da90dae|2021-09-24|
-| 3.2 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.2`| sha256:d59863621d3ba1b9bd47f76950c751e842405f9c303d0d4d4298d964b664ee85|2021-09-02|
-| 3.1 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.1`| sha256:c2468d28f15fa6970f13510c01477326f91a043881c2b4cd8f2b1ff8ed8c22a1|2021-06-10|
-| 3.0 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.0`| sha256:42318979f165cc1ffd4d707022ceb5461360a9b6cd1216bc0c63391bdd042726|2021-04-07|
-| 2.82 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.82`| sha256:ebd864bd02105b3d2ff5a1291a205fea60681b5012a2815f05f21958a48e9a70 |2025-09-01|
-| 2.81 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.81`| sha256:cedfbd029c902d212c2e2c42c41c7c12fdf815c32e5b1905c81a8bdd771c3b67 |2025-08-11|
-| 2.79 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.79`| sha256:eb811dfa993dbac88aa77f099bd250d02363ca828f16883985e455dfee60bd19 |2025-07-17|
-| 2.78 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.78`| sha256:daf99b135fb44366a2652d7fc71b8e5249afa2fd9332675030552ccc0581ea72 |2025-07-02|
-| 2.77 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.77`| sha256:b7fcdacfd27d7e08ccbe7cfcace150f1847149685dd6edf93121cd1daa35f069 |2025-06-06|
-| 2.76 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.76`| sha256:7dc32ccf6a1e4638f9b43ede07a640d5eb51a7f33e93dfd88563128c1920e620 |2025-05-23|
-| 2.75 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.75`| sha256:c606a81e96c8bb9048f59af57a4f9e01b393ec21b49772f29fb7b110621e39e4 |2025-05-09|
-| 2.74 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.74`| sha256:6eb87e83265cd062ea8dd79ab2ecb860ee1cece1585e2ff794d95c21c464eeec |2025-04-24|
-| 2.73 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.73`| sha256:8f132cec297682a2f0085483e2e894637401c1773c4de3c84da279a75457e461 |2025-04-11|
-| 2.72 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.72`| sha256:3efdfd4a43acb5477cf197e4c33bf7b19d7541e050ca2d4970ecdb17a166d061 |2025-03-20|
-| 2.71 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.71`| sha256:26d4304fefd898495faae3f5438c70ec0a5326be6c1fcd34a001323faffbe04f |2025-03-03|
-| 2.70 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.70`| sha256:c1049a6f56b3c11a68869b1e97a3a13c26d5388b1a75c34d481433c2c6290dd2 |2025-02-20|
-| 2.69 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.69`| sha256:da4e9babd88f125b79d5a03968f688713286f632c24e289cf8392af52a6461bd|2025-02-10|
-| 2.68 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.68`| sha256:fa49d0f315e3da67d245618bcd6f01969314cdac660f35ebe4914bcd31a45172|2025-01-24|
-| 2.67 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.67`| sha256:4829a0b7f7195599405f28c2a65a5ce8ff57fc79cc0f7a3f33f8b2ed6fe66814|2024-11-25|
-| 2.66 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.66`| sha256:6b6b84faef28fdfd059df1975fcfac7e955c9bd63f4c18b8f7e4e7bc52cd49ad|2024-10-28|
-| 2.65 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.65`| sha256:8b51ab42cb0f6b9a94217c01d3d729e74919d137400ce6764212b8658b460ab3|2024-10-07|
-| 2.64 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.64`| sha256:ac8fde7275dce8d6f2be1a11e90ceed9ae9df82bd3b8d4454a196a0c2c65e8a1|2024-09-20|
-| 2.63 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.63`| sha256:c17f242f0dad99cb9fead6196f4a26a577b2790fe8df5654b69bdb155c3518fa|2024-09-03|
-| 2.62 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.62`| sha256:c0c7bd61969ec2e63eccd94a50734a9e97e7cea8f915ffface5a3d20fc4025e5|2024-08-12|
-| 2.61 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.61`| sha256:14802d84daaae24e6d0ca0997b468fffc9ea642276717316a043ca760db326f9|2024-07-23|
-| 2.60 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.60`| sha256:8f3cfc383183286df79fc50af5c58b2eade27febc4f14d7f7a0b6d9448ad0673|2024-07-05|
-| 2.59 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.59`| sha256:39ec8303cf8c6e46a55203d043aa6f8c6562599b5c42ca2c9cb7d9aafda47bb0|2024-06-16|
-| 2.58 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.58`| sha256:254a1e7d1c1de9d6a17ff9b42312bfbb8cb1bd634cbfa3ff0386d84e14e2541b|2024-06-04|
-| 2.57 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.57`| sha256:d651951d583b5ef61ca4637fb9e3971f3b6be946727e0d985b0c0b808c4dd652|2024-06-03|
-| 2.56 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.56`| sha256:00b5b33cc37ef11efffb5ad5f37b6c064a65bef860f4c13d764385dfa57e7641|2024-05-10|
-| 2.55 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.55`| sha256:22ea2e62edb45fe96f2dc73d6943d0fcba9e33680320d48c29c28b70afc37e45|2024-04-23|
-| 2.54 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.54`| sha256:4588456c13b9bcb03598af79919c63fea2130e1198a655fcec172ff0f11c89eb|2024-04-05|
-| 2.53 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.53`| sha256:98d90f0890296cc3a490a21b6c78464c426b4cbe5f8b717f058e2ec5451245f2|2024-03-08|
-| 2.52 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.52`| sha256:b41351d72091a4f85ea83772ce6f362608d0a32db64afaf6541991a1671eae51|2024-03-08|
-| 2.51 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.51`| sha256:9c6505fe3f0df07a66696b978ee78da09faa627cc919880b74cde52eabf4f78e|2024-02-07|
-| 2.50 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.50`| sha256:5001d953356bb67b3aa7dc3fddb540303896e790f43d894c0122cd51ec692706|2024-01-22|
-| 2.49 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.49`| sha256:703b5c9e3fbe368dff314382cba0ad90c0fbaef7e4b038bf1011d002939dc994|2024-01-08|
-| 2.48 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.48`| sha256:7abe5cb8f2bf8a2744f2ec94f63e59599272b9cc8b11f07c8b9e0ce4b9ed1dd7|2023-12-12|
-| 2.47 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.46`| sha256:672e066fb55e8f24cde117b8e004a8e22ab446a04ffc447754ad3211fbf09c3f|2023-12-04|
-| 2.46 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.46`| sha256:7e60e820e6e9922e6d51618d6daba7f78866028fd68a190ad01f532a8c203366|2023-11-16|
-| 2.45 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.45`| sha256:5eca901f0fc2206d4da3b1af155435e0adb53f66dd138c2cba8350f24469ff7b|2023-11-07|
-| 2.44 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.44`| sha256:39530628b7228175b372a0cfc7da1a03657e57c81f92a7e7f1665475f33f9937|2023-10-30|
-| 2.43 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.43`| sha256:7305777d729bf89e0fe33911b9b29e0d7f969e6d35207ecc2ea21b55f55cc6e6|2023-10-12|
-| 2.42 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.42`| sha256:0a479499f54b67a81a1959761105da7f19b6f4d314bd34881b6d7fedbcce9d4b|2023-09-29|
-| 2.41 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.41`| sha256:7bf1281cd55814485ad7ddbc90982e34046148abec3806fdb3e613c352a0d20e|2023-09-01|
-| 2.40 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.40`| sha256:8164d04f6c812be3a3a0790c541c72a9fd7ea65a8bc0a0264b8c4e82e0ed1868|2023-08-18|
-| 2.39 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.39`| sha256:499559f10a289300828536196947da164c09cece319e3ce3f30fd408cde55c5d|2023-08-02|
-| 2.38 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.38`| sha256:2f11f01c9710ec711a17a9269be04f584e173c89b27b116c27ec93ec31981c07|2023-07-05|
-| 2.37 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.37`| sha256:229503f75f9837a1fd0e8d38918d8904d3719eaeae84e8aaf94201e8409d78fd|2023-06-19|
-| 2.36 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.36`| sha256:caf29e1e2ce8e1df165c4eb7a3124ae17b6438e2b04b8766dd0dfad502a79350|2023-05-31|
-| 2.35 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.35`| sha256:f78e02d91386dbd9a2e1fb9686df130c36666ae67cfc0bc483f1f4ee34cdf9e2|2023-05-30|
-| 2.33 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.33`| sha256:dc3a6d2a352b0019f8ce7ea4c10afd4017e45c48cb22ca692ab0b02b028538cc|2023-04-17|
-| 2.32 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.32`| sha256:e66e380e37ad1f84891fbc9c708b7685356987895f2c397c20db0a5fae1efbed|2023-04-03|
-| 2.31 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.31`| sha256:24d3c769801314b7502390c5c7054b303c534c2b3eceee3b87f1cb35f10f3e26|2023-03-13|
-| 2.30 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.30`| sha256:2377117ad8e1305cd51e57aad59ca6bf7dedc028d128898df646f2854229a0de|2023-02-21|
-| 2.29 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.29`| sha256:9454cc4fc70a21a1f5b59ede38910b30d29db69e5331e9e37a4d3516427ce66d|2023-02-06|
-| 2.28 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.28`| sha256:5ce2b19d67e1e05bc70b0f5639ea7e7696cfac37aea62e9f2e75249f54d97c08|2023-01-24|
-| 2.27 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.27`| sha256:e212bfbfa48f88f7b12ac77aa21fdc41d8eccf9ff89a2405706430738d09e24b|2023-01-16|
-| 2.26 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.26`| sha256:31bd71102552d6d76b6660c4ca2cbae930367ff3d644acc0673e861085a23b12|2022-12-14|
-| 2.25 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.25`| sha256:31f01a325fcb53651742fbb4af1d9a3ec425fc9b2662e1894c01389ff37426bf|2022-11-28|
-| 2.24 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.24`| sha256:a97c10d27cdf8ee543cad4b29980ccdd5a697164f40ade7f399a0b7a3619f2ea|2022-11-10|
-| 2.23 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.23`| sha256:8582554fda2c36c0750d734c78b692b96ac0f983d4d2e11a186e224ec2fa554f|2022-10-04|
-| 2.22 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.22`| sha256:0653ba3abbdadf347fde238667b510757ecd9625dd7f7d53c512d7a5a2762612|2022-08-30|
-| 2.21 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.21`| sha256:4ce661dc331005bc3cb828a677c760b2dda3c2951415141a91aeb0c0b9a351da|2022-07-28|
-| 2.20 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.20`| sha256:655330f36771d274082b6c16a60620350597a9d6f2489a6246b9d2833d021211|2022-06-20|
-| 2.19 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.19`| sha256:482d28e51d5acc65471b366bbdcabc97f69e49da933337a7c42f45907cd63173|2022-04-20|
-| 2.18 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.18`| sha256:56cc0a6562e786f1b87b490e6a34ed655fa2c376ae3c8622690912dce7d9a608|2022-02-22|
-| 2.17 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.17`| sha256:c1e9d5a9674a093635c386f96d35781aea7cad6cc1da86991ee1a85c854216f8|2022-01-18|
-| 2.16 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.16`| sha256:3a3b5a981caed4238ef7297bb54b4a32b974b0499b12744347bc661d3f323916|2021-11-29|
-| 2.15 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.15`| sha256:f4bff8348fbfdb738c3c681cb6da04cb215f742abe5e09b5d2f5ef07dcfbf21b|2021-09-24|
-| 2.14 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.14`| sha256:7bad3379f15fce2d169ae066520b6bdfe719ee4fc8ae271988b4ca772ffb69d5|2021-09-02|
-| 2.13 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.13`| sha256:916d4a7cac5ee3102b5fbbbbda67387051a6f7a545353e4ba4bd489246ec8855|2021-06-10|
-| 2.12 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.12`| sha256:ff4053b0bca784d6d105fee1d008cfb20db206011453071e86b69ca3fde706a4|2021-04-07|
-| 2.11 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.11`| sha256:61d35cdad7e77dbcedbf6ab47591b38121b03c5a4f41041f2d628cb8485602e1|2021-01-08|
-| 2.10 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.10`| sha256:c59986a7a4e5931f1172ba3c6fc5f535edbbcc60daf6f3e092df9851283f8ceb|2020-12-11|
-| 2.9 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.9`| sha256:2976e1374e87f5cddabcf80179d9708868d52dbf656fdde60f803553be633db2|2020-09-21|
-| 2.8 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.8`| sha256:119e05bad27ccc899df5b895ccba41135fd5edbc5786a77c1c763621b00dee0f|2020-07-27|
-| 2.7 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.7`| sha256:282677e79ccb9d20c699d384a54093894de03675752cd848a3133266c898c14c|2020-05-20|
-| 2.6 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.6`| sha256:7f588468622a981f89cf5e1212aaf75fface9da6169b5345ca52ab63d8215907|2019-12-09|
-| 2.5 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.5`| sha256:90bdb361ba94b75dfd7feb7c6a2577ece9f91e0392f20a5b4e9808120041b3e2|2019-12-02|
-| 2.4 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.4.1`| sha256:ade4209bbc6923c02a3315c7e6dcc4376afc355db2765b792205be9b33f4243d|2019-10-01|
-| 2.3 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.3`| sha256:1451dab959183c6378a804ce0744913028623e10c401e5ebc1a1f88c82443ba4|2019-07-24|
-| 2.2 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.2`| sha256:2073c470e83418abf2c11ec92554c139aadd18f0c63fffb92c2c3f5e90c46ba6|2019-07-10|
-| 2.1 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.1`| sha256:b5be69c4ae42a7af28a9d7ad25df548c77959b006507367507c9ff0f992306f2|2019-06-17|
-| 2.0 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.0`| sha256:cc13eadecb8e99a7fe56a071427c2caa34149c31d1ad84f4f03c96f111dd0154|2019-05-08|
+| Base image version | IBM Cloud Container Registry version |Creation date|sha256 value|
+| -------------------- | -------------------------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 3.69 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.69`|2025-09-02|sha256:99c4ac5ed1df0f49861fc592debf75c4dc173e6150498e1746e051c9dcdd16df|
+| 3.68 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.68`|2025-08-11|sha256:8e745d5784d1fca77947a52ddbbc2f2fc88d97682e211433189ae0020db3381a|
+| 3.66 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.66`|2025-07-17|sha256:a11a0d23e0a45f1946ca87949d78df3452f457b9f88d287a24d2d8b250ab9b19|
+| 3.65 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.65`|2025-07-02|sha256:2d2b83c7a75e11f7d231394b4950118d46338256416a52411eabd5b7472f8056|
+| 3.64 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.64`|2025-06-06|sha256:f930594cca258222080b0baab90a8be1042825b7f8ec173bd54cb0842c40547e|
+| 3.63 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.63`|2025-05-23|sha256:ae598c70447989f22e822fbec052e6bef37643b67405008b16d5fadb7a71606a|
+| 3.62 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.62`|2025-05-09|sha256:f3a1b3e681c7a452a859f7dea8983b7ce73e2350591645e5c7493af99cc1f2b1|
+| 3.61 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.61`|2025-04-24|sha256:ba6f6afeba5cb55f0bfa10b63ada8e9d9074d4c5733af1293011a40b7aa08733|
+| 3.60 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.60`|2025-04-11|sha256:8bdae7a1b67b99aa28d1a4cbc6cb86aaa0e71e81b27330ca1fb5b2d4cb3ff5e1|
+| 3.59 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.59`|2025-03-20|sha256:b0738e17d8f67a7808ed01666d2d2ab9cb6b182ec69b0f1f868c61c4c4fc8a20|
+| 3.58 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.58`|2025-03-03|sha256:56ff5486de5311e7158bbeea41d03a7c59c1a91ab92a28eee2a20982058353aa|
+| 3.57 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.57`|2025-02-20|sha256:ab62d1a829ced5af5773fde4ab25976376dd32cee5514deb92f6ed739cfeb328|
+| 3.56 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.56`|2025-02-10|sha256:9ebfb9db6f8db6900bf25cf040c6f416bc86db186314b6687efd7058abb10a74|
+| 3.55 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.55`|2025-01-24|sha256:a730d308fcc1581c21ffb7d18efac5bd8c6471c147c1a5063353c71db18d9d0f|
+| 3.54 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.54`|2024-11-25|sha256:5642cdc037c26aac6ab61c9f74f84c14e276dbdf88a053bbfcf00c5658b2e9dc|
+| 3.53 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.53`|2024-10-28|sha256:1d4533b6eb2db019d78992a8cff910d773a126269811c0338b5f3dff99aa7414|
+| 3.52 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.52`|2024-10-07|sha256:f2049542eb1cbac4c31c899e6563a6728155b7c46d9b5f1254c590261ce98706|
+| 3.51 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.51`|2024-09-20|sha256:35bca00e4129c058d4cb59e923d1bf011d05cc55a5f3d0b089e2aaa919fe939b|
+| 3.50 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.50`|2024-09-03|sha256:ef5794fcb0c7e4a037609fac7ac59536faa9af529efc811a22c6e178dbfbfbb2|
+| 3.49 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.49`|2024-08-12|sha256:63f81c27a83f4e9e005f40543c2ef6e34ce92e04b1c714850ef7ff95af684558|
+| 3.48 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.48`|2024-07-23|sha256:52a600bbd2008c4dc10e5833eeb09c557637fae06c61e23708d03d4161701b07|
+| 3.47 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.47`|2024-07-05|sha256:09c85e42cf5b0ab3b0267ef8f67b09b3c3db93d5908d75f0cf5b62f52446c74a|
+| 3.46 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.46`|2024-06-16|sha256:876e56444b536c3bc85e52603ea9076a631f0bbef73a5980e37003503a47bbb9|
+| 3.45 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.45`|2024-06-04|sha256:4ce20cb4a724f6db59785a8eba874c6cef3b9be2dadb98bdba2a2491cf47280e|
+| 3.44 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.44`|2024-06-03|sha256:b89d9994a5d2e1b6f3106176637270311c4288a0c5725af01d63d4414dd33b3b|
+| 3.43 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.43`|2024-05-10|sha256:9bc1f733295d7e512cd412fccf8e88a95049eca79ad2bfdc9b5b3f09881e68f9|
+| 3.42 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.42`|2024-04-23|sha256:06824cdeefb23b49b8900d4d1759dcefef5398a1dfab369add47f3fba04ad635|
+| 3.41 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.41`|2024-04-05|sha256:6106eed4ebeac26e807ede55c88d891d9d6e531d09d28e5b14b8c450113b3a9b|
+| 3.40 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.40`|2024-03-08|sha256:00adc1293f70e54b23e184c8a0975e656f8920b2a23052667726d5ea15f27003|
+| 3.39 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.39`|2024-03-08|sha256:29e7b1b744b142f9cf8b80e9961ce9fd1fac1859d9f48601f004cc01c83fff10|
+| 3.38 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.38`|2024-02-07|sha256:216e41f2bda393b7ee4ba16193a0f0b2c5c40219554ebea521b9ada5a1c4a54e|
+| 3.37 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.37`|2024-01-22|sha256:631a925744b4ef2e82b0f163eefbe254e3dd8f856e6a32994bc023b6112d98d5|
+| 3.36 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.36`|2024-01-11|sha256:d31bba17e7a8714a0d971d897ac5b18943cb15136a97dfeddfee0e6c2d813b20|
+| 3.35 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.35`|2023-12-12|sha256:39c2461cefd1791bf578f6ba19648808916c48ab7767f1d88081994faf014d14|
+| 3.34 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.33`|2023-12-04|sha256:73e5545fdbb3da94d1d29a8d7ca38cfe7feb6da0ba63c7036a08b78cbc8531c1|
+| 3.33 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.33`|2023-11-16|sha256:18582e3d0d58ea5f07c809a210e7d5a9b2e2b99b85c93b72de4a5ed92d94511c|
+| 3.32 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.32`|2023-11-07|sha256:91fa57abe53a5c3f86a8c0358defc01111aab4ea69f59aaa852baae2d3432c69|
+| 3.31 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.31`|2023-10-30|sha256:98c9e91bfe7a5aa5b97267fad1a2ac4d01081f396bd03a2d4b9604a3487a07fe|
+| 3.30 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.30`|2023-10-12|sha256:b5d2f4026ee171a67edf24ab5e952f19f1ecebd1875e3da051d4d73bf398f0d9|
+| 3.29 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.29`|2023-09-29|sha256:36c8642cefc2182dfd283510319bf9741bc8c386c46364e3a391fe9797c3d79a|
+| 3.28 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.28`|2023-09-01|sha256:aa7f4f2e5bdd12ab0b59de1b8b031799e11d38aa45712424b3023c6e8471e8ba|
+| 3.27 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.27`|2023-08-18|sha256:70708bdc8bfb23bfda9fa5effc644901cdd9e7314c91ac6c1cbc62bfb9e0a1a2|
+| 3.26 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.26`|2023-08-02|sha256:de8ee389e3cb5818eb3c65a015b86c1042c2adf0bad64467cd3ccd3d8c66e26d|
+| 3.25 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.25`|2023-07-05|sha256:dd2000b525336acd00e9b95b74f15696797764725adbb25fa720e9431d558cbf|
+| 3.24 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.24`|2023-06-19|sha256:7a52b892ae7704a7b6c4cf03a292356240305c0d7bc9c275d10df19d12db99c5|
+| 3.23 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.23`|2023-05-29|sha256:e62fe158ebc7d875a0be5263da6872250fd8038b00cef0aada4b9f14f06dd827|
+| 3.21 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.21`|2023-04-17|sha256:94b77206bbc38a0d0ecd7006c00c9773d4ddd6e864525736b3bc4ca87c64b991|
+| 3.20 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.20`|2023-04-03|sha256:82e68006004eeca8bdf838e2756d6b7fbb787baa42817feba8e847d8b1a27106|
+| 3.19 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.19`|2023-03-13|sha256:ffb0bb00c37c4c2af01a53afc3597494275ed99a1e8ac3d4e653f105937509f0|
+| 3.18 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.18`|2023-02-21|sha256:ba072e693cd646664711f60c7d3b4c34a25b4578bdc445a2d6855eff595fe67c|
+| 3.17 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.17`|2023-02-06|sha256:3e2cbec3d0781b0e9ea9293d0a88e5b654635c065864718e74130a5124965197|
+| 3.16 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.16`|2023-01-24|sha256:a09c7918889289fa2106e54ba527793aad7152847a50e6584d59266ecc40d498|
+| 3.15 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.15`|2023-01-16|sha256:506e7b8e96ad40fbf098b6b0a337bca7c9d07fa5cf58058e857c38d9e7625497|
+| 3.14 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.14`|2022-12-14|sha256:b6f80270c9328c3014766fdb2dca9aea4f593f05c1bcaf5037d126bf042ebffe|
+| 3.13 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.13`|2022-11-28|sha256:ae7f9e80bcc7947ae4df8d94a326240ca648c807183a72e232ecb03043348f20|
+| 3.12 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.12`|2022-11-10|sha256:6f457e7ec323eac3ae05c6ca5bfaacee1ed669c50cdb5983c893c5351a184331|
+| 3.11 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.11`|2022-10-04|sha256:d4f4a2e59127ff11426789bf1d86c88fcac3e9746241755f6af7ff9e79fd62f1|
+| 3.10 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.10`|2022-08-30|sha256:8fae15566254a0300315e3c752021d6eabdea73aaa3372f86c6218579692eb67|
+| 3.9 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.9`|2022-07-28|sha256:d1d42755854accd4957979e974c620cf892e8d38b123e5eac06abf378b353879|
+| 3.8 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.8`|2022-06-22|sha256:8d0c33a4e5651a7d412ebfd751a45b613a6efde6167c70f1f1e8938d1bd8c613|
+| 3.7 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.7`|2022-04-20|sha256:0444aa3cc5032ba4d7f7a59a4177dd43dc1126ad902f09079b0a66156bbe4bcf|
+| 3.6 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.6`|2022-02-22|sha256:4bfa333cd47ee9d0e369edb147451ff008169f0dd84a115c16205b5cd0de64f6|
+| 3.5 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.5`|2022-01-18|sha256:543249c585e351c14d5b9f16664625236e20e4ba85098ac26adb0d8cecbbcc97|
+| 3.4 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.4`|2021-11-29|sha256:4aaabf49950796d9004f6e4f04ff53ab24dcd3fd29d8cc719a9b81f7546d31f2|
+| 3.3 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.3`|2021-09-24|sha256:5b8f7e1964c0a82995689d636b60a1761dd08ce422b9195aadc0249e5da90dae|
+| 3.2 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.2`|2021-09-02|sha256:d59863621d3ba1b9bd47f76950c751e842405f9c303d0d4d4298d964b664ee85|
+| 3.1 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.1`|2021-06-10|sha256:c2468d28f15fa6970f13510c01477326f91a043881c2b4cd8f2b1ff8ed8c22a1|
+| 3.0 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.0`|2021-04-07|sha256:42318979f165cc1ffd4d707022ceb5461360a9b6cd1216bc0c63391bdd042726|
+| 2.82 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.82`|2025-09-01|sha256:ebd864bd02105b3d2ff5a1291a205fea60681b5012a2815f05f21958a48e9a70 |
+| 2.81 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.81`|2025-08-11|sha256:cedfbd029c902d212c2e2c42c41c7c12fdf815c32e5b1905c81a8bdd771c3b67 |
+| 2.79 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.79`|2025-07-17|sha256:eb811dfa993dbac88aa77f099bd250d02363ca828f16883985e455dfee60bd19 |
+| 2.78 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.78`|2025-07-02|sha256:daf99b135fb44366a2652d7fc71b8e5249afa2fd9332675030552ccc0581ea72 |
+| 2.77 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.77`|2025-06-06|sha256:b7fcdacfd27d7e08ccbe7cfcace150f1847149685dd6edf93121cd1daa35f069 |
+| 2.76 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.76`|2025-05-23|sha256:7dc32ccf6a1e4638f9b43ede07a640d5eb51a7f33e93dfd88563128c1920e620 |
+| 2.75 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.75`|2025-05-09|sha256:c606a81e96c8bb9048f59af57a4f9e01b393ec21b49772f29fb7b110621e39e4 |
+| 2.74 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.74`|2025-04-24|sha256:6eb87e83265cd062ea8dd79ab2ecb860ee1cece1585e2ff794d95c21c464eeec |
+| 2.73 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.73`|2025-04-11|sha256:8f132cec297682a2f0085483e2e894637401c1773c4de3c84da279a75457e461 |
+| 2.72 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.72`|2025-03-20|sha256:3efdfd4a43acb5477cf197e4c33bf7b19d7541e050ca2d4970ecdb17a166d061 |
+| 2.71 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.71`|2025-03-03|sha256:26d4304fefd898495faae3f5438c70ec0a5326be6c1fcd34a001323faffbe04f |
+| 2.70 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.70`|2025-02-20|sha256:c1049a6f56b3c11a68869b1e97a3a13c26d5388b1a75c34d481433c2c6290dd2 |
+| 2.69 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.69`|2025-02-10|sha256:da4e9babd88f125b79d5a03968f688713286f632c24e289cf8392af52a6461bd|
+| 2.68 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.68`|2025-01-24|sha256:fa49d0f315e3da67d245618bcd6f01969314cdac660f35ebe4914bcd31a45172|
+| 2.67 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.67`|2024-11-25|sha256:4829a0b7f7195599405f28c2a65a5ce8ff57fc79cc0f7a3f33f8b2ed6fe66814|
+| 2.66 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.66`|2024-10-28|sha256:6b6b84faef28fdfd059df1975fcfac7e955c9bd63f4c18b8f7e4e7bc52cd49ad|
+| 2.65 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.65`|2024-10-07|sha256:8b51ab42cb0f6b9a94217c01d3d729e74919d137400ce6764212b8658b460ab3|
+| 2.64 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.64`|2024-09-20|sha256:ac8fde7275dce8d6f2be1a11e90ceed9ae9df82bd3b8d4454a196a0c2c65e8a1|
+| 2.63 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.63`|2024-09-03| sha256:c17f242f0dad99cb9fead6196f4a26a577b2790fe8df5654b69bdb155c3518fa|
+| 2.62 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.62`|2024-08-12| sha256:c0c7bd61969ec2e63eccd94a50734a9e97e7cea8f915ffface5a3d20fc4025e5|
+| 2.61 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.61`|2024-07-23| sha256:14802d84daaae24e6d0ca0997b468fffc9ea642276717316a043ca760db326f9|
+| 2.60 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.60`|2024-07-05| sha256:8f3cfc383183286df79fc50af5c58b2eade27febc4f14d7f7a0b6d9448ad0673|
+| 2.59 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.59`|2024-06-16| sha256:39ec8303cf8c6e46a55203d043aa6f8c6562599b5c42ca2c9cb7d9aafda47bb0|
+| 2.58 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.58`|2024-06-04| sha256:254a1e7d1c1de9d6a17ff9b42312bfbb8cb1bd634cbfa3ff0386d84e14e2541b|
+| 2.57 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.57`|2024-06-03| sha256:d651951d583b5ef61ca4637fb9e3971f3b6be946727e0d985b0c0b808c4dd652|
+| 2.56 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.56`|2024-05-10| sha256:00b5b33cc37ef11efffb5ad5f37b6c064a65bef860f4c13d764385dfa57e7641|
+| 2.55 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.55`|2024-04-23| sha256:22ea2e62edb45fe96f2dc73d6943d0fcba9e33680320d48c29c28b70afc37e45|
+| 2.54 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.54`|2024-04-05| sha256:4588456c13b9bcb03598af79919c63fea2130e1198a655fcec172ff0f11c89eb|
+| 2.53 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.53`|2024-03-08| sha256:98d90f0890296cc3a490a21b6c78464c426b4cbe5f8b717f058e2ec5451245f2|
+| 2.52 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.52`|2024-03-08| sha256:b41351d72091a4f85ea83772ce6f362608d0a32db64afaf6541991a1671eae51|
+| 2.51 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.51`|2024-02-07| sha256:9c6505fe3f0df07a66696b978ee78da09faa627cc919880b74cde52eabf4f78e|
+| 2.50 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.50`|2024-01-22| sha256:5001d953356bb67b3aa7dc3fddb540303896e790f43d894c0122cd51ec692706|
+| 2.49 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.49`|2024-01-08| sha256:703b5c9e3fbe368dff314382cba0ad90c0fbaef7e4b038bf1011d002939dc994|
+| 2.48 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.48`|2023-12-12| sha256:7abe5cb8f2bf8a2744f2ec94f63e59599272b9cc8b11f07c8b9e0ce4b9ed1dd7|
+| 2.47 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.46`|2023-12-04| sha256:672e066fb55e8f24cde117b8e004a8e22ab446a04ffc447754ad3211fbf09c3f|
+| 2.46 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.46`|2023-11-16| sha256:7e60e820e6e9922e6d51618d6daba7f78866028fd68a190ad01f532a8c203366|
+| 2.45 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.45`|2023-11-07| sha256:5eca901f0fc2206d4da3b1af155435e0adb53f66dd138c2cba8350f24469ff7b|
+| 2.44 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.44`|2023-10-30| sha256:39530628b7228175b372a0cfc7da1a03657e57c81f92a7e7f1665475f33f9937|
+| 2.43 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.43`|2023-10-12| sha256:7305777d729bf89e0fe33911b9b29e0d7f969e6d35207ecc2ea21b55f55cc6e6|
+| 2.42 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.42`|2023-09-29| sha256:0a479499f54b67a81a1959761105da7f19b6f4d314bd34881b6d7fedbcce9d4b|
+| 2.41 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.41`|2023-09-01| sha256:7bf1281cd55814485ad7ddbc90982e34046148abec3806fdb3e613c352a0d20e|
+| 2.40 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.40`|2023-08-18| sha256:8164d04f6c812be3a3a0790c541c72a9fd7ea65a8bc0a0264b8c4e82e0ed1868|
+| 2.39 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.39`|2023-08-02| sha256:499559f10a289300828536196947da164c09cece319e3ce3f30fd408cde55c5d|
+| 2.38 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.38`|2023-07-05| sha256:2f11f01c9710ec711a17a9269be04f584e173c89b27b116c27ec93ec31981c07|
+| 2.37 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.37`|2023-06-19| sha256:229503f75f9837a1fd0e8d38918d8904d3719eaeae84e8aaf94201e8409d78fd|
+| 2.36 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.36`|2023-05-31| sha256:caf29e1e2ce8e1df165c4eb7a3124ae17b6438e2b04b8766dd0dfad502a79350|
+| 2.35 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.35`|2023-05-30| sha256:f78e02d91386dbd9a2e1fb9686df130c36666ae67cfc0bc483f1f4ee34cdf9e2|
+| 2.33 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.33`|2023-04-17| sha256:dc3a6d2a352b0019f8ce7ea4c10afd4017e45c48cb22ca692ab0b02b028538cc|
+| 2.32 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.32`|2023-04-03| sha256:e66e380e37ad1f84891fbc9c708b7685356987895f2c397c20db0a5fae1efbed|
+| 2.31 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.31`|2023-03-13| sha256:24d3c769801314b7502390c5c7054b303c534c2b3eceee3b87f1cb35f10f3e26|
+| 2.30 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.30`|2023-02-21| sha256:2377117ad8e1305cd51e57aad59ca6bf7dedc028d128898df646f2854229a0de|
+| 2.29 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.29`|2023-02-06| sha256:9454cc4fc70a21a1f5b59ede38910b30d29db69e5331e9e37a4d3516427ce66d|
+| 2.28 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.28`|2023-01-24| sha256:5ce2b19d67e1e05bc70b0f5639ea7e7696cfac37aea62e9f2e75249f54d97c08|
+| 2.27 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.27`|2023-01-16| sha256:e212bfbfa48f88f7b12ac77aa21fdc41d8eccf9ff89a2405706430738d09e24b|
+| 2.26 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.26`|2022-12-14| sha256:31bd71102552d6d76b6660c4ca2cbae930367ff3d644acc0673e861085a23b12|
+| 2.25 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.25`|2022-11-28| sha256:31f01a325fcb53651742fbb4af1d9a3ec425fc9b2662e1894c01389ff37426bf|
+| 2.24 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.24`|2022-11-10| sha256:a97c10d27cdf8ee543cad4b29980ccdd5a697164f40ade7f399a0b7a3619f2ea|
+| 2.23 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.23`|2022-10-04| sha256:8582554fda2c36c0750d734c78b692b96ac0f983d4d2e11a186e224ec2fa554f|
+| 2.22 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.22`|2022-08-30| sha256:0653ba3abbdadf347fde238667b510757ecd9625dd7f7d53c512d7a5a2762612|
+| 2.21 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.21`|2022-07-28| sha256:4ce661dc331005bc3cb828a677c760b2dda3c2951415141a91aeb0c0b9a351da|
+| 2.20 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.20`|2022-06-20| sha256:655330f36771d274082b6c16a60620350597a9d6f2489a6246b9d2833d021211|
+| 2.19 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.19`|2022-04-20| sha256:482d28e51d5acc65471b366bbdcabc97f69e49da933337a7c42f45907cd63173|
+| 2.18 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.18`|2022-02-22| sha256:56cc0a6562e786f1b87b490e6a34ed655fa2c376ae3c8622690912dce7d9a608|
+| 2.17 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.17`|2022-01-18| sha256:c1e9d5a9674a093635c386f96d35781aea7cad6cc1da86991ee1a85c854216f8|
+| 2.16 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.16`|2021-11-29| sha256:3a3b5a981caed4238ef7297bb54b4a32b974b0499b12744347bc661d3f323916|
+| 2.15 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.15`|2021-09-24| sha256:f4bff8348fbfdb738c3c681cb6da04cb215f742abe5e09b5d2f5ef07dcfbf21b|
+| 2.14 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.14`|2021-09-02| sha256:7bad3379f15fce2d169ae066520b6bdfe719ee4fc8ae271988b4ca772ffb69d5|
+| 2.13 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.13`|2021-06-10| sha256:916d4a7cac5ee3102b5fbbbbda67387051a6f7a545353e4ba4bd489246ec8855|
+| 2.12 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.12`|2021-04-07| sha256:ff4053b0bca784d6d105fee1d008cfb20db206011453071e86b69ca3fde706a4|
+| 2.11 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.11`|2021-01-08| sha256:61d35cdad7e77dbcedbf6ab47591b38121b03c5a4f41041f2d628cb8485602e1|
+| 2.10 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.10`|2020-12-11| sha256:c59986a7a4e5931f1172ba3c6fc5f535edbbcc60daf6f3e092df9851283f8ceb|
+| 2.9 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.9`|2020-09-21| sha256:2976e1374e87f5cddabcf80179d9708868d52dbf656fdde60f803553be633db2|
+| 2.8 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.8`|2020-07-27| sha256:119e05bad27ccc899df5b895ccba41135fd5edbc5786a77c1c763621b00dee0f|
+| 2.7 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.7`|2020-05-20| sha256:282677e79ccb9d20c699d384a54093894de03675752cd848a3133266c898c14c|
+| 2.6 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.6`|2019-12-09| sha256:7f588468622a981f89cf5e1212aaf75fface9da6169b5345ca52ab63d8215907|
+| 2.5 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.5`|2019-12-02| sha256:90bdb361ba94b75dfd7feb7c6a2577ece9f91e0392f20a5b4e9808120041b3e2|
+| 2.4 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.4.1`|2019-10-01| sha256:ade4209bbc6923c02a3315c7e6dcc4376afc355db2765b792205be9b33f4243d|
+| 2.3 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.3`|2019-07-24| sha256:1451dab959183c6378a804ce0744913028623e10c401e5ebc1a1f88c82443ba4|
+| 2.2 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.2`|2019-07-10| sha256:2073c470e83418abf2c11ec92554c139aadd18f0c63fffb92c2c3f5e90c46ba6|
+| 2.1 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.1`|2019-06-17| sha256:b5be69c4ae42a7af28a9d7ad25df548c77959b006507367507c9ff0f992306f2|
+| 2.0 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.0`|2019-05-08| sha256:cc13eadecb8e99a7fe56a071427c2caa34149c31d1ad84f4f03c96f111dd0154|
 {: caption="Mapping between versioned based images and IBM Cloud Registry versions with sha256 values" caption-side="top"}
 
 The following available image versions are listed in descending order, starting with the current version.
