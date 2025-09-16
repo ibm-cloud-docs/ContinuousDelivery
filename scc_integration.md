@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-04-29"
+lastupdated: "2025-09-12"
 
 keywords: tool integrations, IBM Cloud Public, Security and Compliance Center
 
@@ -66,7 +66,7 @@ You must specify the `tool_type_id` property in the request body with the `secur
 | `name` | required, updatable | String | name | The name of this tool integration. |
 | `profile_name` | optional, updatable | String | profile_name | The name of a {{site.data.keyword.compliance_short}} profile. You can use the predefined profile "IBM Cloud Framework for Financial Services", which contains the DevSecOps Toolchain rules. Or, use a user-authored customized profile that has been configured to contain those rules. This parameter is only relevant when the `use_profile_attachment` parameter is `enabled`. |
 | `profile_version` | optional, updatable | String | profile_version | The version of a {{site.data.keyword.compliance_short}} profile, in SemVer format, like '0.0.0'. This parameter is only relevant when the `use_profile_attachment` parameter is `enabled`. |
-| `scc_api_key` | optional, updatable | Password | scc_api_key | The IBM Cloud API key used to access the {{site.data.keyword.compliance_short}} service, for the use profile with attachment setting. This parameter is only relevant when the `use_profile_attachment` parameter is `enabled`. You can use a toolchain secret reference for this parameter. For more information, see [Protecting your sensitive data in Continuous Delivery](https://cloud.ibm.com/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secure_credentials). |
+| `scc_api_key` | optional, updatable | Password | scc_api_key | The IBM Cloud API key used to access the {{site.data.keyword.compliance_short}} service, for the use profile with attachment setting. This parameter is only relevant when the `use_profile_attachment` parameter is `enabled`. You can use a toolchain secret reference for this parameter. For more information, see [Protecting your sensitive data in Continuous Delivery](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secure_credentials). |
 | `use_profile_attachment` | optional, updatable | String | use_profile_attachment | Set to `enabled` to enable use profile with attachment, so that the scripts in the pipeline can interact with the {{site.data.keyword.compliance_short}} service. When enabled, other parameters become relevant; `scc_api_key`, `instance_crn`, `profile_name`, `profile_version`, `attachment_id`. |
 {: caption="{{site.data.keyword.compliance_short}} tool integration parameters" caption-side="bottom"}
 
