@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-09-19"
+lastupdated: "2025-09-29"
 
 keywords: pipeline versioned base image, image version, pipeline job
 
@@ -133,7 +133,7 @@ Images are available on the IBM Cloud Container Registry. To list these hosted i
 | 3.2 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.2`|2021-09-02|sha256:d59863621d3ba1b9bd47f76950c751e842405f9c303d0d4d4298d964b664ee85|
 | 3.1 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.1`|2021-06-10|sha256:c2468d28f15fa6970f13510c01477326f91a043881c2b4cd8f2b1ff8ed8c22a1|
 | 3.0 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.0`|2021-04-07|sha256:42318979f165cc1ffd4d707022ceb5461360a9b6cd1216bc0c63391bdd042726|
-| 2.83 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.82`|2025-09-15|sha256:6df3db3251200bc61aa4b85ffec03132c351f4dc4549d21a5446fff8ccadaca5 |
+| 2.83 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.83`|2025-09-15|sha256:6df3db3251200bc61aa4b85ffec03132c351f4dc4549d21a5446fff8ccadaca5 |
 | 2.82 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.82`|2025-09-01|sha256:ebd864bd02105b3d2ff5a1291a205fea60681b5012a2815f05f21958a48e9a70 |
 | 2.81 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.81`|2025-08-11|sha256:cedfbd029c902d212c2e2c42c41c7c12fdf815c32e5b1905c81a8bdd771c3b67 |
 | 2.79 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.79`|2025-07-17|sha256:eb811dfa993dbac88aa77f099bd250d02363ca828f16883985e455dfee60bd19 |
