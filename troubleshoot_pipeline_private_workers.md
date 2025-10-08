@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2024
-lastupdated: "2024-04-16"
+  years: 2015, 2025
+lastupdated: "2025-10-08"
 
 keywords: troubleshoot, private workers
 
@@ -28,15 +28,23 @@ Private workers within a pool of workers can be in one of the following states:
 
 * Active with the current, supported version of private workers
 * Inactive with an unsupported version of private workers
-* Inactive
+* Inactive and Unregistered
 
 Your private worker is inactive. Inactive private workers cannot handle incoming run requests. Pipeline stages that use an inactive private worker cannot complete.
 {: tsSymptoms}
    
-There is an issue with your Kubernetes cluster and the worker cannot be contacted. Or, the version of the private worker that you are running is no longer supported.
+An agent can become inactive
+
+1. if there is an issue with your Kubernetes cluster and the worker cannot communicate with the regional control plan services
+2. if the version of the private worker that you are running is no longer supported
+3. if the agent on the cluster has become Unregistered
 {: tsCauses}
 
-To activate your {{site.data.keyword.deliverypipeline}} private worker, [install](/docs/ContinuousDelivery?topic=ContinuousDelivery-install-private-workers#install_pw) the private worker again. Then, [register](/docs/ContinuousDelivery?topic=ContinuousDelivery-install-private-workers#register_pw) the {{site.data.keyword.deliverypipeline}} private worker on the Kubernetes cluster again.
+If the agent is reporting Unregistered after previously working, you can attempt to fix the registration by running the following command
+
+`kubectl patch worke${AGENT_NAME} --subresource=status --type=merge -p '{"status": {"registrationStatus": {"state": "Succeeded"}}}'`
+
+If the preceding command fails or if your {{site.data.keyword.deliverypipeline}} private worker is registered but still is inactive you can install the private worker again. Register the {{site.data.keyword.deliverypipeline}} private worker on the Kubernetes cluster again.
 {: tsResolve}
 
 ## I tried to install support for {{site.data.keyword.deliverypipeline}} Private Workers in Kubernetes. Why did the installation fail?
