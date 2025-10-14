@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-04-18"
+  years: 2022, 2025
+lastupdated: "2025-10-14"
 
 keywords: Terraform, toolchains, Continuous Delivery
 
@@ -100,6 +100,33 @@ Before you begin, make sure that you have the [required access](/docs/Continuous
 8. From the [{{site.data.keyword.cloud_notm}} resource list](/resources){: external}, expand the Developer tools section, then select the toolchain resource that you created and note the instance ID.
 
 9. Verify that the access policy is successfully assigned.
+
+## Enabling Platform Logs for a {{site.data.keyword.contdelivery_short}} service instance with Terraform
+{: #enable_logs_cd_service_terraform}
+{: terraform}
+
+The {{site.data.keyword.contdelivery_short}} service supports the ability to send Tekton `PipelineRun` logs as platform logs. This allows receiving all Tekton `PipelineRun` logs for the current region and resource group into your account, and you can configure your account to forward these received logs to a target such as {{site.data.keyword.logs_full_notm}}.
+
+1. In your Terraform configuration file adjust the configuration to include the `platform_logging_pipelineruns_enabled` parameter with a value of `true`.
+
+   ```terraform
+   data "ibm_resource_group" "group" {
+     name = "default"
+   }
+
+   resource "ibm_resource_instance" "cd_instance" {
+     name              = "my_cd"
+     service           = "continuous-delivery"
+     plan              = "professional"
+     location          = "us-south"
+     resource_group_id = data.ibm_resource_group.default_rg.id
+     
+     parameters = {
+       platform_logging_pipelineruns_enabled = "true"
+     }
+   }
+   ```
+   {: codeblock}
 
 ## What's next?
 {: #terraform-setup-next}

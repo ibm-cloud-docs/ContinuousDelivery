@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-08-19"
+lastupdated: "2025-10-14"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -896,6 +896,111 @@ The following table lists and describes each of the variables that are used in t
    ```
    {: pre}
 
+
+## Viewing logs for a {{site.data.keyword.deliverypipeline}} for Tekton 
+{: #view_tekton_logs}
+
+You can view the logs of `PipelineRuns` by using the console UI, the API, or you can download the logs. Additionally you can configure your "Continuous Delivery" service instance to route Tekton `PipelineRun` logs to an {{site.data.keyword.logs_full_notm}} instance in the same account.
+
+### Viewing logs of a {{site.data.keyword.deliverypipeline}} run by using the console
+{: #viewing-pipeline-logs-console}
+{: ui}
+
+You can view PipelineRuns logs of your Tekton pipeline by using the console UI. To access the logs for each step of a run, click on individual runs in the table on the Tekton {{site.data.keyword.deliverypipeline}} Overview page and open the **Run Details** page.
+
+Click **Show Context** to view additional metadata about the `PipelineRun`, and click on **Agent Logs** to see logs from the worker agent that processed and executed the run. The agent log contains useful information such as the name of the cluster that the `PipelineRun` was executed on, the version number of the worker agent, details about `git` cloning operations, and other processing steps taken by the agent when preparing to execute the `PipelineRun`. These logs can also contain useful error and debugging info if the run has encountered problems.
+{: tip}
+
+On the `PipelinRun` details page you can also download a `PipelineRun` zip bundle that contains all of the logs, as well as some files containing metadata about the `PipelineRun`. This can be downloaded by clicking **Actions** > **Download** on the `PipelineRun` details page.
+
+### Viewing logs of a {{site.data.keyword.deliverypipeline}} run in {{site.data.keyword.logs_full_notm}}
+{: #viewing-pipeline-logs-icl}
+{: ui}
+
+The logs for PipelineRuns of your Tekton pipeline can be sent to an {{site.data.keyword.logs_full_notm}} instance, so that the logs can be viewed, filtered, or searched there. In order to enable this feature there are a few steps required:
+
+1. An instance of {{site.data.keyword.logs_full_notm}} is required in the same account and resource group as your "Continuous Delivery" instance. Go to **Observability** -> **Logging** -> **Instances** to see your existing {{site.data.keyword.logs_full_notm}} instances, or to create a new {{site.data.keyword.logs_full_notm}} instance.
+1. Go to **Observability** -> **Logging** -> **Routing**. Click **Set target** in the table for the region in which your Tekton pipeline(s) and Continuous Delivery service instance are located.
+1. Select your {{site.data.keyword.logs_full_notm}} instance from the table listing your instances. You may need to click the "Authorize" button first before your instances are listed.
+1. Open your "Continuous Delivery" service instance from the "Resources" page of IBM Cloud.
+1. Go to the **Manage** page and open the **Settings** tab. Then click the toggle for "Enable Tekton pipeline platform logs".
+
+Once you have completed the above configuration the logs for any new PipelineRuns will be forwarded to your {{site.data.keyword.logs_full_notm}} instance. To view the logs in {{site.data.keyword.logs_full_notm}}:
+
+1. Open the **Dashboard** of your {{site.data.keyword.logs_full_notm}} instance and go to the **Logs** page.
+1. In the **Filters** section click the checkbox for **ibm-platform-logs** under the **Application** filter, and **toolchain** under the **app** filter.
+1. Select a date range.
+1. The logs data that appears here contains metadata as well as the logs themselves. You can customize the columns that are displayed in this view to show the relevant log data, and filter based on these properties. For example:
+   * `message.log` - This contains the text of a single log line.
+   * `message.timestamp` - The timestamp associated with this log line.
+   * `message.lineNumber` - This represents the line number of this log line within the step logs.
+   * `message.pipelineId` - The ID of the pipeline that owns the run that generated this log.
+   * `message.region` - The name of the region where this `PipelinRun` ran.
+   * `message.regionId` - The ID of the region where this `PipelinRun` ran.
+   * `message.severity` - The severity associated with this log line, e.g. `error`, `debug`, `info`.
+   * `message.pipelineMetadata` contains useful data such as:
+     * `accountId` - The ID of the IBM Cloud account that owns this `PipelineRun`.
+     * `buildNumber` - The build number of the associated `PipelineRun`.
+     * `pipelineName` - The name of the pipeline that owns this run.
+     * `pipelineRunId` - The ID of the `PipelineRun` that generated this log line.
+     * `stepName` - The name of the step that generated this log line.
+     * `taskName` - The name of the task associated with this logv.
+     * `toolchainId` - The ID of the toolchain containing the pipeline that owns the run.
+     * `triggerName` - The name of the pipeline trigger that created the run that generated this log line.
+
+### Viewing logs of a {{site.data.keyword.deliverypipeline}} run by using the API
+{: #viewing-pipeline-logs-api}
+{: api}
+
+1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/tekton-pipeline#authentication){: external}.
+
+1. Get a list of log objects available for a PipelineRun.
+
+   ```curl
+   curl -X GET \
+     https://api.{region}.devops.cloud.ibm.com/pipeline/v2/tekton_pipelines/{pipeline_id}/pipeline_runs/{run_id}/logs \
+     -H 'Authorization: Bearer {iam_token}' \
+     -H 'Accept: application/json`
+   ```
+   {: pre}
+   {: curl}
+
+   This API request returns an array of log objects, where each object contains details about one log entry from the PipelineRun:
+
+   ```json
+   {
+      "logs": [
+         {
+            "name": "pipelinerun-sample/step-0",
+            "id": "{sample_log_id}",
+            "href": "https://api.us-south.devops.cloud.ibm.com/pipeline/v2/tekton_pipelines/{pipeline_id}/pipeline_runs/{run_id}/logs/{sample_log_id}"
+         }
+      ]
+   }
+   ```
+   {: pre}
+
+3. Each log object entry maps to a step from the PipelineRun. To fetch the step logs, make a request using the `href` value from the associated log object:
+
+   ```curl
+   curl -X GET \
+     https://api.{region}.devops.cloud.ibm.com/pipeline/v2/tekton_pipelines/{pipeline_id}/pipeline_runs/{run_id}/logs/{sample_log_id} \
+     -H 'Authorization: Bearer {iam_token}' \
+     -H 'Accept: application/json`
+   ```
+   {: pre}
+   {: curl}
+
+   This request returns an object in the response, containing the logs and the log_id:
+
+   ```json
+   {
+      "data": "log content",
+      "id": "{sample_log_id}"
+   }
+   ```
+   {: pre}
+
 ## Deleting a {{site.data.keyword.deliverypipeline}}
 {: #deleting-pipeline}
 {: ui}
@@ -908,7 +1013,7 @@ You can delete a pipeline by using the console UI, the API, or with Terraform. T
 {: #deleting-pipeline-ui}
 {: ui}
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. 
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**.
 1. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
 1. In the "Delivery Pipelines" section, find the pipeline you wish to delete.
 1. Click the **Menu** icon for that pipeline and click the **Delete** option.
@@ -927,7 +1032,7 @@ You can delete a pipeline by using the console UI, the API, or with Terraform. T
 
 1. [Determine the region and ID of the toolchain](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started&interface=api#viewing-toolchain-api) that you want to add the {{site.data.keyword.DRA_short}} tool integration to.
 1. Delete the pipeline.
-   
+
    ```curl
    curl -X DELETE \
      https://api.{region}.devops.cloud.ibm.com/toolchain/v2/toolchains/{toolchain_id}/tools/{pipeline_id} \
