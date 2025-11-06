@@ -106,10 +106,10 @@ install_filename="updated-private-worker-install.yaml"
 curl -o $install_filename
 https://private-worker-service.$region.devops.cloud.ibm.com/install
 cat $install_filename | grep -e
-'gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd' -e 'image:' \\
-| sed 's/- gcr.io/gcr.io/g' \\
-| sed 's/- image: gcr.io/gcr.io/g' \\
-| sed 's/image: gcr.io/gcr.io/g' \\
+'ghcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd' -e 'image:' \\
+| sed 's/- ghcr.io/ghcr.io/g' \\
+| sed 's/- image: ghcr.io/ghcr.io/g' \\
+| sed 's/image: ghcr.io/ghcr.io/g' \\
 | sed 's/image://g' \\
 | awk '{$1=$1;print}' \\
 | while read -r image ; do
@@ -125,8 +125,8 @@ fi
 
 # replace the sha id reference in the tag if any
 new_image_tag="${new_image_tag@sha256}"
-# replace gcr.io to the target cr domain
-new_image_tag="${new_image_tag/gcr.io/$target_cr}"
+# replace ghcr.io to the target cr domain
+new_image_tag="${new_image_tag/ghcr.io/$target_cr}"
 docker tag $image $new_image_tag
 docker push $new_image_tag
 # replace the image reference in the installation.yaml file
@@ -160,4 +160,3 @@ You can provide pipeline users with access to the base images (`icr.io/continuou
 You can use Terraform or APIs to add, update, or remove {{site.data.keyword.deliverypipeline}} private worker tool integrations in a toolchain. For more information about working with the {{site.data.keyword.deliverypipeline}} private worker tool integration, see [Working with tool integrations](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations) and [Configuring {{site.data.keyword.deliverypipeline}} Private Worker](/docs/ContinuousDelivery?topic=ContinuousDelivery-privateworker).
 
 You cannot use Terraform or APIs to manage {{site.data.keyword.deliverypipeline}} private workers. Instead, use the console or the CLI to install, register, configure, and update private workers. For more information about these tasks, see [Installing {{site.data.keyword.deliverypipeline}} Private Workers](/docs/ContinuousDelivery?topic=ContinuousDelivery-install-private-workers). 
-
