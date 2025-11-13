@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-11-11"
+lastupdated: "2025-11-13"
 
 keywords: pipeline versioned base image, image version, pipeline job
 
@@ -53,10 +53,10 @@ If you choose the `Latest` option, the pipeline jobs are run with the current im
 Ubuntu based versioned based images are tagged as 2.x versions. Red Hat UBI based versioned base images are tagged as 3.x versions.
 
 To add tools in a Red Hat UBI-based image, you must use the `yum` command. `apt-get` or `apt` commands are exclusively reserved for Ubuntu images. Because of these command restrictions, you cannot update existing pipelines to use version 3.x images without modifying the scripts. {: important}
- 
+
 ## Image version contents
 {: #image_version_contents}
- 
+
 After version 2.0, images no longer include grunt or python. If these tools are required for your build, you can install them manually. To install grunt, run `npm install -g grunt-cli`. Make sure that you don't change the Node.js version after you install grunt. To install python on a 2.x vbi, run `apt-get -qq update && apt-get -qq install -y python`. If you are using a 3.x vbi, you can use `yum update -yq && yum install -yq python3-pip`.
 {: important}
 
@@ -222,7 +222,7 @@ Images are available on the IBM Cloud Container Registry. To list these hosted i
 {: caption="Mapping between versioned based images and IBM Cloud Registry versions with sha256 values" caption-side="top"}
 
 The following available image versions are listed in descending order, starting with the current version.
- 
+
 The version of `yq` that is preinstalled in the images corresponds to the yq tool created by [Mike Farah](https://github.com/mikefarah/yq){: external}.
 {: tip}
 
@@ -274,7 +274,7 @@ Copyright IBM Corp. 2014, 2025
 # ibmcloud plugins
 Listing installed plug-ins...
 
-Plugin Name                                     Version   Status             Private endpoints supported   
+Plugin Name                                     Version   Status             Private endpoints supported
 cloud-internet-services[cis]                    1.18.1                       true
 cloud-logs[logs]                                0.3.0                        true
 code-engine[ce]                                 1.55.2                       true
@@ -386,7 +386,7 @@ v3.0.2
 # tkn
 0.42.0
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.71
 {: #version_3_71}
@@ -439,7 +439,7 @@ Copyright IBM Corp. 2014, 2025
 # ibmcloud plugins
 Listing installed plug-ins...
 
-Plugin Name                                     Version   Status   Private endpoints supported   
+Plugin Name                                     Version   Status   Private endpoints supported
 cloud-internet-services[cis]                    1.18.1             true
 cloud-logs[logs]                                0.2.0              true
 code-engine[ce]                                 1.55.2             true
@@ -551,7 +551,7 @@ v3.0.2
 # tkn
 0.42.0
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.70
 {: #version_3_70}
@@ -604,7 +604,7 @@ Copyright IBM Corp. 2014, 2025
 # ibmcloud plugins
 Listing installed plug-ins...
 
-Plugin Name                                     Version   Status   Private endpoints supported   
+Plugin Name                                     Version   Status   Private endpoints supported
 cloud-internet-services[cis]                    1.18.1             true
 cloud-logs[logs]                                0.2.0              true
 code-engine[ce]                                 1.54.5             true
@@ -714,7 +714,7 @@ on linux_amd64
 # cosign
 v2.6.0
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.69
 {: #version_3_69}
@@ -767,7 +767,7 @@ Copyright IBM Corp. 2014, 2025
 # ibmcloud plugins
 Listing installed plug-ins...
 
-Plugin Name                                     Version   Status   Private endpoints supported   
+Plugin Name                                     Version   Status   Private endpoints supported
 cloud-internet-services[cis]                    1.18.1             true
 cloud-logs[logs]                                0.2.0              true
 code-engine[ce]                                 1.54.3             true
@@ -866,7 +866,7 @@ on linux_amd64
 # cosign
 v2.5.3
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.68
 {: #version_3_68}
@@ -1029,7 +1029,7 @@ on linux_amd64
 # cosign
 v2.5.3
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.66
 {: #version_3_66}
@@ -1192,7 +1192,7 @@ on linux_amd64
 # cosign
 v2.5.2
 ```
-{: codeblock}
+{: screen}
 
 
 ### Version 3.65
@@ -1356,7 +1356,7 @@ on linux_amd64
 # cosign
 v2.5.2
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.64
 {: #version_3_64}
@@ -1519,7 +1519,7 @@ on linux_amd64
 # cosign
 v2.5.0
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.63
 {: #version_3_63}
@@ -1678,7 +1678,7 @@ on linux_amd64
 # cosign
 v2.5.0
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.62
 {: #version_3_62}
@@ -1837,7 +1837,7 @@ on linux_amd64
 # cosign
 v2.5.0
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.61
 {: #version_3_61}
@@ -1996,7 +1996,7 @@ on linux_amd64
 # cosign
 v2.5.0
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.60
 {: #version_3_60}
@@ -2153,7 +2153,7 @@ on linux_amd64
 # cosign
 v2.5.0
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.59
 {: #version_3_59}
@@ -2311,7 +2311,7 @@ on linux_amd64
 # cosign
 v2.4.3
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.58
 {: #version_3_58}
@@ -2469,7 +2469,7 @@ on linux_amd64
 # cosign
 v2.4.3
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.57
 {: #version_3_57}
@@ -2627,7 +2627,7 @@ on linux_amd64
 # cosign
 v2.4.2
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.56
 {: #version_3_56}
@@ -2785,7 +2785,7 @@ on linux_amd64
 # cosign
 v2.4.2
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.55
 {: #version_3_55}
@@ -2943,7 +2943,7 @@ on linux_amd64
 # cosign
 v2.4.1
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.54
 {: #version_3_54}
@@ -3102,7 +3102,7 @@ on linux_amd64
 # cosign
 v2.4.1
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.53
 {: #version_3_53}
@@ -3260,7 +3260,7 @@ on linux_amd64
 # cosign
 v2.4.1
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.52
 {: #version_3_52}
@@ -3418,7 +3418,7 @@ on linux_amd64
 # cosign
 v2.4.1
 ```
-{: codeblock}
+{: screen}
 
 
 ### Version 3.51
@@ -3577,7 +3577,7 @@ on linux_amd64
 # cosign
 v2.4.0
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.50
 {: #version_3_50}
@@ -3734,7 +3734,7 @@ on linux_amd64
 # cosign
 v2.4.0
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.49
 {: #version_3_49}
@@ -3891,7 +3891,7 @@ on linux_amd64
 # cosign
 v2.4.0
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.48
 {: #version_3_48}
@@ -4045,7 +4045,7 @@ on linux_amd64
 # cosign
 v2.3.0
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.47
 {: #version_3_47}
@@ -4198,7 +4198,7 @@ on linux_amd64
 # cosign
 v2.2.4
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.46
 {: #version_3_46}
@@ -4351,7 +4351,7 @@ on linux_amd64
 # cosign
 v2.2.4
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.45
 {: #version_3_45}
@@ -4504,7 +4504,7 @@ on linux_amd64
 # cosign
 v2.2.4
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.44
 {: #version_3_44}
@@ -4657,7 +4657,7 @@ on linux_amd64
 # cosign
 2.2.4
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.43
 {: #version_3_43}
@@ -4810,7 +4810,7 @@ on linux_amd64
 # cosign
 v2.2.4
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.42
 {: #version_3_42}
@@ -4963,7 +4963,7 @@ on linux_amd64
 # cosign
 v2.2.4
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.41
 {: #version_3_41}
@@ -5116,7 +5116,7 @@ on linux_amd64
 # cosign
 v2.2.3
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.40
 {: #version_3_40}
@@ -5266,7 +5266,7 @@ Client Version: v3.27.2 Git commit: 402c0b381
 Terraform v1.7.4
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.39
 {: #version_3_39}
@@ -5416,7 +5416,7 @@ Client Version: v3.27.2 Git commit: 402c0b381
 Terraform v1.7.4
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.38
 {: #version_3_38}
@@ -5566,7 +5566,7 @@ Client Version: v3.27.0 Git commit: 711528eeb
 Terraform v1.7.2
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.37
 {: #version_3_37}
@@ -5716,7 +5716,7 @@ Client Version: v3.26.3 Git commit: bdb7878af
 Terraform v1.7.0
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.36
 {: #version_3_36}
@@ -5829,7 +5829,7 @@ Client Version: v3.26.3 Git commit: bdb7878af
 Terraform v1.6.5
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.35
 {: #version_3_35}
@@ -5979,7 +5979,7 @@ Client Version: v3.26.3 Git commit: bdb7878af
 Terraform v1.6.5
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.34
 {: #version_3_34}
@@ -6129,7 +6129,7 @@ Client Version: v3.26.3 Git commit: bdb7878af
 Terraform v1.6.5
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.33
 {: #version_3_33}
@@ -6278,7 +6278,7 @@ Client Version: v3.26.3 Git commit: bdb7878af
 Terraform v1.6.4
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.32
 {: #version_3_32}
@@ -6424,7 +6424,7 @@ skopeo version 1.11.2-dev
 Terraform v1.6.3
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.31
 {: #version_3_31}
@@ -6570,7 +6570,7 @@ skopeo version 1.11.2-dev
 Terraform v1.6.2
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.30
 {: #version_3_30}
@@ -6716,12 +6716,12 @@ skopeo version 1.11.2-dev
 Terraform v1.6.1
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.29
 {: #version_3_29}
 
-To view the contents of version 3.29, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is based on `ubi8`. 
+To view the contents of version 3.29, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is based on `ubi8`.
 
 This image also contains the Terraform CLI.
 
@@ -6862,12 +6862,12 @@ skopeo version 1.11.2-dev
 Terraform v1.5.7
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.28
 {: #version_3_28}
 
-To view the contents of version 3.28, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is based on `ubi8`. 
+To view the contents of version 3.28, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is based on `ubi8`.
 
 This image also contains the Terraform CLI.
 
@@ -7007,12 +7007,12 @@ skopeo version 1.11.2-dev
 Terraform v1.5.6
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.27
 {: #version_3_27}
 
-To view the contents of version 3.27, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is based on `ubi8`. 
+To view the contents of version 3.27, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is based on `ubi8`.
 
 This image also contains the Terraform CLI.
 
@@ -7152,12 +7152,12 @@ skopeo version 1.11.2-dev
 Terraform v1.5.5
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.26
 {: #version_3_26}
 
-To view the contents of version 3.26, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is based on `ubi8`. 
+To view the contents of version 3.26, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is based on `ubi8`.
 
 This image also contains the Terraform CLI.
 
@@ -7298,12 +7298,12 @@ skopeo version 1.11.2-dev
 Terraform v1.5.4
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.25
 {: #version_3_25}
 
-To view the contents of version 3.25, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is still based on `ubi8` because `ubi9` doesn't provide the correct version of `openssl`. 
+To view the contents of version 3.25, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is still based on `ubi8` because `ubi9` doesn't provide the correct version of `openssl`.
 
 This image also contains the Terraform CLI.
 
@@ -7443,12 +7443,12 @@ skopeo version 1.11.2-dev
 Terraform v1.5.2
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.24
 {: #version_3_24}
 
-To view the contents of version 3.24, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is still based on `ubi8` because `ubi9` doesn't provide the correct version of `openssl`. 
+To view the contents of version 3.24, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is still based on `ubi8` because `ubi9` doesn't provide the correct version of `openssl`.
 
 This image also contains the Terraform CLI.
 
@@ -7585,12 +7585,12 @@ skopeo version 1.11.2-dev
 Terraform v1.5.0
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.23
 {: #version_3_23}
 
-To view the contents of version 3.23, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is still based on `ubi8` because `ubi9` doesn't provide the correct version of `openssl`. 
+To view the contents of version 3.23, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is still based on `ubi8` because `ubi9` doesn't provide the correct version of `openssl`.
 
 This image also contains the Terraform CLI.
 
@@ -7726,12 +7726,12 @@ skopeo version 1.11.2-dev
 # terraform
 opt/IBM/pipeline/bin/default_versions.sh: line 33: terraform: command not found
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.21
 {: #version_3_21}
 
-To view the contents of version 3.21, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is still based on `ubi8` because `ubi9` doesn't provide the correct version of `openssl`. 
+To view the contents of version 3.21, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is still based on `ubi8` because `ubi9` doesn't provide the correct version of `openssl`.
 
 This image also contains the Terraform CLI.
 
@@ -7913,12 +7913,12 @@ skopeo version 1.9.4-dev
 Terraform v1.4.5
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.20
 {: #version_3_20}
 
-To view the contents of version 3.20, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is still based on `ubi8` because `ubi9` doesn't provide the correct version of `openssl`. 
+To view the contents of version 3.20, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is still based on `ubi8` because `ubi9` doesn't provide the correct version of `openssl`.
 
 This image also contains the Terraform CLI.
 
@@ -8074,12 +8074,12 @@ skopeo version 1.9.4-dev
 Terraform v1.4.4
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.19
 {: #version_3_19}
 
-To view the contents of version 3.19, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is still based on `ubi8` because `ubi9` doesn't provide the correct version of `openssl`. 
+To view the contents of version 3.19, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is still based on `ubi8` because `ubi9` doesn't provide the correct version of `openssl`.
 
 This image also contains the Terraform CLI.
 
@@ -8235,13 +8235,13 @@ skopeo version 1.9.4-dev
 Terraform v1.4.0
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 
 ### Version 3.18
 {: #version_3_18}
 
-To view the contents of version 3.18, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is still based on `ubi8` because `ubi9` doesn't provide the correct version of `openssl`. 
+To view the contents of version 3.18, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is still based on `ubi8` because `ubi9` doesn't provide the correct version of `openssl`.
 
 This image also contains the Terraform CLI.
 
@@ -8397,12 +8397,12 @@ skopeo version 1.9.4-dev
 Terraform v1.3.9
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.17
 {: #version_3_17}
 
-To view the contents of version 3.17, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is still based on `ubi8` because `ubi9` doesn't provide the correct version of `openssl`. 
+To view the contents of version 3.17, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is still based on `ubi8` because `ubi9` doesn't provide the correct version of `openssl`.
 
 This image also contains the Terraform CLI.
 
@@ -8559,12 +8559,12 @@ skopeo version 1.9.3
 Terraform v1.3.7
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.16
 {: #version_3_16}
 
-To view the contents of version 3.16, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is still based on `ubi8` because `ubi9` doesn't provide the correct version of `openssl`. 
+To view the contents of version 3.16, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is still based on `ubi8` because `ubi9` doesn't provide the correct version of `openssl`.
 
 This image also contains the Terraform CLI.
 
@@ -8712,12 +8712,12 @@ skopeo version 1.9.3
 Terraform v1.3.7
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.15
 {: #version_3_15}
 
-To view the contents of version 3.15, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is still based on `ubi8` because `ubi9` doesn't provide the correct version of `openssl`. 
+To view the contents of version 3.15, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is still based on `ubi8` because `ubi9` doesn't provide the correct version of `openssl`.
 
 This image also contains the Terraform CLI.
 
@@ -8864,7 +8864,7 @@ skopeo version 1.9.3
 Terraform v1.3.7
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.14
 {: #version_3_14}
@@ -9010,7 +9010,7 @@ GNU ed 1.14.2
 # skopeo --version
 skopeo version 1.9.3
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.13
 {: #version_3_13}
@@ -9156,7 +9156,7 @@ GNU ed 1.14.2
 # skopeo --version
 skopeo version 1.9.3
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.12
 {: #version_3_12}
@@ -9302,7 +9302,7 @@ GNU ed 1.14.2
 # skopeo --version
 skopeo version 1.9.3
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.11
 {: #version_3_11}
@@ -9344,15 +9344,15 @@ ibmcloud version 2.11.1+c18277d-2022-09-23T21:49:24+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status   Private endpoints supported   
-cloud-functions[wsk/functions/fn]          1.0.61             false   
-cloud-internet-services[cis]               1.14.8             true   
-code-engine[ce]                            1.39.3             true   
-container-registry                         1.0.1              true   
-container-service[kubernetes-service/ks]   1.0.454            false   
-cra                                        1.0.2              false   
-doi                                        0.3.9              false   
-schematics                                 1.12.2             true   
+Plugin Name                                Version   Status   Private endpoints supported
+cloud-functions[wsk/functions/fn]          1.0.61             false
+cloud-internet-services[cis]               1.14.8             true
+code-engine[ce]                            1.39.3             true
+container-registry                         1.0.1              true
+container-service[kubernetes-service/ks]   1.0.454            false
+cra                                        1.0.2              false
+doi                                        0.3.9              false
+schematics                                 1.12.2             true
 
 
 # ibmcloud dev --version
@@ -9448,7 +9448,7 @@ GNU ed 1.14.2
 # skopeo --version
 skopeo version 1.8.0
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.10
 {: #version_3_10}
@@ -9490,15 +9490,15 @@ ibmcloud version 2.10.0+e37e09e-2022-08-24T17:31:27+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status   Private endpoints supported   
-cloud-functions[wsk/functions/fn]          1.0.59             false   
-cloud-internet-services[cis]               1.14.5             true   
-code-engine[ce]                            1.39.1             true   
-container-registry                         0.1.579            true   
-container-service[kubernetes-service/ks]   1.0.439            false   
-cra                                        1.0.0              false   
-doi                                        0.3.9              false   
-schematics                                 1.12.2             true   
+Plugin Name                                Version   Status   Private endpoints supported
+cloud-functions[wsk/functions/fn]          1.0.59             false
+cloud-internet-services[cis]               1.14.5             true
+code-engine[ce]                            1.39.1             true
+container-registry                         0.1.579            true
+container-service[kubernetes-service/ks]   1.0.439            false
+cra                                        1.0.0              false
+doi                                        0.3.9              false
+schematics                                 1.12.2             true
 
 
 # ibmcloud dev --version
@@ -9594,7 +9594,7 @@ GNU ed 1.14.2
 # skopeo --version
 skopeo version 1.8.0
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.9
 {: #version_3_9}
@@ -9634,15 +9634,15 @@ ibmcloud version 2.9.0+6abd6f8-2022-07-05T14:46:06+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status             Private endpoints supported   
-cloud-functions[wsk/functions/fn]          1.0.59                       false   
-cloud-internet-services[cis]               1.14.4                       true   
-code-engine[ce]                            1.38.1                       true   
-container-registry                         0.1.571                      true   
-container-service[kubernetes-service/ks]   1.0.431                      false   
-cra                                        0.1.22                       false   
-doi                                        0.3.8                        false   
-schematics                                 1.12.1                       true   
+Plugin Name                                Version   Status             Private endpoints supported
+cloud-functions[wsk/functions/fn]          1.0.59                       false
+cloud-internet-services[cis]               1.14.4                       true
+code-engine[ce]                            1.38.1                       true
+container-registry                         0.1.571                      true
+container-service[kubernetes-service/ks]   1.0.431                      false
+cra                                        0.1.22                       false
+doi                                        0.3.8                        false
+schematics                                 1.12.1                       true
 
 
 # ibmcloud dev --version
@@ -9737,7 +9737,7 @@ GNU ed 1.14.2
 # skopeo --version
 skopeo version 1.6.1
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.8
 {: #version_3_8}
@@ -9777,15 +9777,15 @@ ibmcloud version 2.7.0+04dfeac-2022-04-28T17:14:20+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status             Private endpoints supported   
-cloud-functions[wsk/functions/fn]          1.0.59                       false   
-cloud-internet-services[cis]               1.14.4                       true   
-code-engine[ce]                            1.35.0                       true   
-container-registry                         0.1.571                      true   
-container-service[kubernetes-service/ks]   1.0.420                      false   
-cra                                        0.1.20                       false   
-doi                                        0.3.8                        false   
-schematics                                 1.10.0                       true   
+Plugin Name                                Version   Status             Private endpoints supported
+cloud-functions[wsk/functions/fn]          1.0.59                       false
+cloud-internet-services[cis]               1.14.4                       true
+code-engine[ce]                            1.35.0                       true
+container-registry                         0.1.571                      true
+container-service[kubernetes-service/ks]   1.0.420                      false
+cra                                        0.1.20                       false
+doi                                        0.3.8                        false
+schematics                                 1.10.0                       true
 
 
 # ibmcloud dev --version
@@ -9876,7 +9876,7 @@ dc (GNU bc 1.07.1) 1.4.1
 # ed --version
 GNU ed 1.14.2
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.7
 {: #version_3_7}
@@ -9907,15 +9907,15 @@ version.BuildInfo{Version:"v3.8.2", GitCommit:"6e3701edea09e5d55a8ca2aae03a68917
 ibmcloud version 2.6.0+df1953d-2022-03-24T15:00:50+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
-Plugin Name                             Version   Status             Private endpoints supported   
-container-registry                      0.1.566                      true   
-container-service[kubernetes-service]   1.0.394                      false   
-cra                                     0.1.15                       false   
-doi                                     0.3.5                        false   
-schematics                              1.8.1                        true   
-cloud-functions[wsk/functions/fn]       1.0.58                       false   
-cloud-internet-services[cis]            1.14.2                       true   
-code-engine[ce]                         1.29.3                       true   
+Plugin Name                             Version   Status             Private endpoints supported
+container-registry                      0.1.566                      true
+container-service[kubernetes-service]   1.0.394                      false
+cra                                     0.1.15                       false
+doi                                     0.3.5                        false
+schematics                              1.8.1                        true
+cloud-functions[wsk/functions/fn]       1.0.58                       false
+cloud-internet-services[cis]            1.14.2                       true
+code-engine[ce]                         1.29.3                       true
 # ibmcloud dev --version
 ibmcloud dev version 2.11.0
 # java -version
@@ -9981,7 +9981,7 @@ dc (GNU bc 1.07.1) 1.4.1
 # ed --version
 GNU ed 1.14.2
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.6
 {: #version_3_6}
@@ -10021,15 +10021,15 @@ ibmcloud version 2.4.0+4ca2c74-2022-01-20T18:32:41+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                             Version   Status   Private endpoints supported   
-cloud-internet-services                 1.14.1             true   
-code-engine[ce]                         1.26.0             true   
-container-registry                      0.1.560            true   
-container-service[kubernetes-service]   1.0.372            false   
-cra                                     0.1.11             false   
-doi                                     0.3.3              false   
-schematics                              1.7.2              false   
-cloud-functions[wsk/functions/fn]       1.0.58             false   
+Plugin Name                             Version   Status   Private endpoints supported
+cloud-internet-services                 1.14.1             true
+code-engine[ce]                         1.26.0             true
+container-registry                      0.1.560            true
+container-service[kubernetes-service]   1.0.372            false
+cra                                     0.1.11             false
+doi                                     0.3.3              false
+schematics                              1.7.2              false
+cloud-functions[wsk/functions/fn]       1.0.58             false
 
 
 # ibmcloud dev --version
@@ -10120,7 +10120,7 @@ dc (GNU bc 1.07.1) 1.4.1
 # ed --version
 GNU ed 1.14.2
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.5
 {: #version_3_5}
@@ -10160,15 +10160,15 @@ ibmcloud version 2.3.0+26fbf88-2021-12-09T17:14:46+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                             Version   Status   Private endpoints supported   
-cloud-internet-services                 1.14.0             true   
-code-engine[ce]                         1.24.0             true   
-container-registry                      0.1.556            true   
-container-service[kubernetes-service]   1.0.353            false   
-cra                                     0.1.11             false   
-doi                                     0.3.3              false   
-schematics                              1.7.0              false   
-cloud-functions[wsk/functions/fn]       1.0.58             false   
+Plugin Name                             Version   Status   Private endpoints supported
+cloud-internet-services                 1.14.0             true
+code-engine[ce]                         1.24.0             true
+container-registry                      0.1.556            true
+container-service[kubernetes-service]   1.0.353            false
+cra                                     0.1.11             false
+doi                                     0.3.3              false
+schematics                              1.7.0              false
+cloud-functions[wsk/functions/fn]       1.0.58             false
 
 
 # ibmcloud dev --version
@@ -10259,7 +10259,7 @@ dc (GNU bc 1.07.1) 1.4.1
 # ed --version
 GNU ed 1.14.2
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.4
 {: #version_3_4}
@@ -10299,15 +10299,15 @@ ibmcloud version 2.2.0+99934b5-2021-11-10T16:34:14+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                             Version   Status             Private endpoints supported   
-code-engine[ce]                         1.23.1                       true   
-container-registry                      0.1.553                      true   
-container-service[kubernetes-service]   1.0.344                      false   
-cra                                     0.1.9                        false   
-doi                                     0.3.3                        false   
-schematics                              1.6.1                        false   
-cloud-functions[wsk/functions/fn]       1.0.56                       false   
-cloud-internet-services                 1.13.6                       true   
+Plugin Name                             Version   Status             Private endpoints supported
+code-engine[ce]                         1.23.1                       true
+container-registry                      0.1.553                      true
+container-service[kubernetes-service]   1.0.344                      false
+cra                                     0.1.9                        false
+doi                                     0.3.3                        false
+schematics                              1.6.1                        false
+cloud-functions[wsk/functions/fn]       1.0.56                       false
+cloud-internet-services                 1.13.6                       true
 
 
 # ibmcloud dev --version
@@ -10398,7 +10398,7 @@ dc (GNU bc 1.07.1) 1.4.1
 # ed --version
 GNU ed 1.14.2
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.3
 {: #version_3_3}
@@ -10438,14 +10438,14 @@ ibmcloud version 2.1.0+a4d550e-2021-09-22T13:31:04+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                             Version   Status   Private endpoints supported   
-cloud-functions[wsk/functions/fn]       1.0.56             false   
-cloud-internet-services                 1.13.4             true   
-container-registry                      0.1.547            true   
-container-service[kubernetes-service]   1.0.312            false   
-cra                                     0.0.9              false   
-doi                                     0.3.3              false   
-schematics                              1.6.0              false   
+Plugin Name                             Version   Status   Private endpoints supported
+cloud-functions[wsk/functions/fn]       1.0.56             false
+cloud-internet-services                 1.13.4             true
+container-registry                      0.1.547            true
+container-service[kubernetes-service]   1.0.312            false
+cra                                     0.0.9              false
+doi                                     0.3.3              false
+schematics                              1.6.0              false
 
 
 # ibmcloud dev --version
@@ -10536,7 +10536,7 @@ dc (GNU bc 1.07.1) 1.4.1
 # ed --version
 GNU ed 1.14.2
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.2
 {: #version_3_2}
@@ -10573,13 +10573,13 @@ ibmcloud version 2.0.3+c7a1126-2021-08-27T19:17:51+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                             Version   Status   Private endpoints supported   
-cloud-internet-services                 1.13.4             true   
-container-registry                      0.1.543            true   
-container-service[kubernetes-service]   1.0.312            false   
-doi                                     0.3.2              false   
-schematics                              1.5.12             false   
-cloud-functions[wsk/functions/fn]       1.0.56             false   
+Plugin Name                             Version   Status   Private endpoints supported
+cloud-internet-services                 1.13.4             true
+container-registry                      0.1.543            true
+container-service[kubernetes-service]   1.0.312            false
+doi                                     0.3.2              false
+schematics                              1.5.12             false
+cloud-functions[wsk/functions/fn]       1.0.56             false
 
 
 # ibmcloud dev --version
@@ -10670,7 +10670,7 @@ dc (GNU bc 1.07.1) 1.4.1
 # ed --version
 GNU ed 1.14.2
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.1
 {: #version_3_1}
@@ -10707,13 +10707,13 @@ ibmcloud version 1.6.0+59b6322-2021-05-26T20:13:53+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                            Version   Status   Private endpoints supported   
-cloud-functions/wsk/functions/fn       1.0.56             false   
-cloud-internet-services                1.13.3             true   
-container-registry                     0.1.525            true   
-container-service/kubernetes-service   1.0.275            false   
-doi                                    0.3.2              false   
-schematics                             1.5.7              false   
+Plugin Name                            Version   Status   Private endpoints supported
+cloud-functions/wsk/functions/fn       1.0.56             false
+cloud-internet-services                1.13.3             true
+container-registry                     0.1.525            true
+container-service/kubernetes-service   1.0.275            false
+doi                                    0.3.2              false
+schematics                             1.5.7              false
 
 
 # ibmcloud dev --version
@@ -10806,7 +10806,7 @@ dc (GNU bc 1.07.1) 1.4.1
 # ed --version
 GNU ed 1.14.2
 ```
-{: codeblock}
+{: screen}
 
 ### Version 3.0
 {: #version_3_0}
@@ -10843,13 +10843,13 @@ ibmcloud version 1.4.0+4705d79-2021-02-24T21:18:06+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                            Version   Status   Private endpoints supported   
-cloud-functions/wsk/functions/fn       1.0.53             false   
-cloud-internet-services                1.13.1             false   
-container-registry                     0.1.514            false   
-container-service/kubernetes-service   1.0.233            false   
-doi                                    0.3.1              false   
-schematics                             1.5.1              false   
+Plugin Name                            Version   Status   Private endpoints supported
+cloud-functions/wsk/functions/fn       1.0.53             false
+cloud-internet-services                1.13.1             false
+container-registry                     0.1.514            false
+container-service/kubernetes-service   1.0.233            false
+doi                                    0.3.1              false
+schematics                             1.5.1              false
 
 
 # ibmcloud dev --version
@@ -10943,7 +10943,7 @@ dc (GNU bc 1.07.1) 1.4.1
 # ed --version
 GNU ed 1.14.2
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.85
 {: #version_2_85}
@@ -10997,7 +10997,7 @@ Copyright IBM Corp. 2014, 2025
 # ibmcloud plugins
 Listing installed plug-ins...
 
-Plugin Name                                     Version   Status             Private endpoints supported   
+Plugin Name                                     Version   Status             Private endpoints supported
 cloud-internet-services[cis]                    1.18.1                       true
 cloud-logs[logs]                                0.3.0                        true
 code-engine[ce]                                 1.55.2                       true
@@ -11106,7 +11106,7 @@ v3.0.2
 # tkn
 0.42.0
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.84
 {: #version_2_84}
@@ -11170,7 +11170,7 @@ Copyright IBM Corp. 2014, 2025
 # ibmcloud plugins
 Listing installed plug-ins...
 
-Plugin Name                                     Version   Status   Private endpoints supported   
+Plugin Name                                     Version   Status   Private endpoints supported
 cloud-internet-services[cis]                    1.18.1             true
 cloud-logs[logs]                                0.2.0              true
 code-engine[ce]                                 1.55.2             true
@@ -11279,7 +11279,7 @@ v3.0.2
 # tkn
 0.42.0
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.83
 {: #version_2_83}
@@ -11343,7 +11343,7 @@ Copyright IBM Corp. 2014, 2025
 # ibmcloud plugins
 Listing installed plug-ins...
 
-Plugin Name                                     Version   Status   Private endpoints supported   
+Plugin Name                                     Version   Status   Private endpoints supported
 cloud-internet-services[cis]                    1.18.1             true
 cloud-logs[logs]                                0.2.0              true
 code-engine[ce]                                 1.54.5             true
@@ -11450,7 +11450,7 @@ on linux_amd64
 # cosign
 v2.6.0
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.82
 {: #version_2_82}
@@ -11514,7 +11514,7 @@ Copyright IBM Corp. 2014, 2025
 # ibmcloud plugins
 Listing installed plug-ins...
 
-Plugin Name                                     Version   Status   Private endpoints supported   
+Plugin Name                                     Version   Status   Private endpoints supported
 cloud-internet-services[cis]                    1.18.1             true
 cloud-logs[logs]                                0.2.0              true
 code-engine[ce]                                 1.54.3             true
@@ -11621,7 +11621,7 @@ on linux_amd64
 # cosign
 v2.5.3
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.81
 {: #version_2_81}
@@ -11792,7 +11792,7 @@ on linux_amd64
 # cosign
 v2.5.3
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.79
 {: #version_2_79}
@@ -11963,7 +11963,7 @@ on linux_amd64
 # cosign
 v2.5.2
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.78
 {: #version_2_78}
@@ -12134,7 +12134,7 @@ on linux_amd64
 # cosign
 v2.5.2
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.77
 {: #version_2_77}
@@ -12305,7 +12305,7 @@ on linux_amd64
 # cosign
 v2.5.0
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.76
 {: #version_2_76}
@@ -12472,7 +12472,7 @@ on linux_amd64
 # cosign
 v2.5.0
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.75
 {: #version_2_75}
@@ -12639,7 +12639,7 @@ on linux_amd64
 # cosign
 v2.5.0
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.74
 {: #version_2_74}
@@ -12806,7 +12806,7 @@ on linux_amd64
 # cosign
 v2.5.0
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.73
 {: #version_2_73}
@@ -12971,7 +12971,7 @@ on linux_amd64
 # cosign
 v2.5.0
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.72
 {: #version_2_72}
@@ -13137,7 +13137,7 @@ on linux_amd64
 # cosign
 v2.4.3
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.71
 {: #version_2_71}
@@ -13303,7 +13303,7 @@ on linux_amd64
 # cosign
 v2.4.3
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.70
 {: #version_2_70}
@@ -13469,7 +13469,7 @@ on linux_amd64
 # cosign
 v2.4.2
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.69
 {: #version_2_69}
@@ -13635,7 +13635,7 @@ on linux_amd64
 # cosign
 v2.4.2
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.68
 {: #version_2_68}
@@ -13801,7 +13801,7 @@ on linux_amd64
 # cosign
 v2.4.1
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.67
 {: #version_2_67}
@@ -13968,7 +13968,7 @@ on linux_amd64
 # cosign
 v2.4.1
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.66
 {: #version_2_66}
@@ -14134,7 +14134,7 @@ on linux_amd64
 # cosign
 v2.4.1
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.65
 {: #version_2_65}
@@ -14300,7 +14300,7 @@ on linux_amd64
 # cosign
 v2.4.1
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.64
 {: #version_2_64}
@@ -14466,7 +14466,7 @@ on linux_amd64
 # cosign
 v2.4.0
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.63
 {: #version_2_63}
@@ -14631,7 +14631,7 @@ on linux_amd64
 # cosign
 v2.4.0
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.62
 {: #version_2_62}
@@ -14796,7 +14796,7 @@ on linux_amd64
 # cosign
 v2.4.0
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.61
 {: #version_2_61}
@@ -14958,7 +14958,7 @@ on linux_amd64
 # cosign
 v2.3.0
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.60
 {: #version_2_60}
@@ -15119,7 +15119,7 @@ on linux_amd64
 # cosign
 v2.2.4
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.59
 {: #version_2_59}
@@ -15280,7 +15280,7 @@ on linux_amd64
 # cosign
 v2.2.4
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.58
 {: #version_2_58}
@@ -15441,7 +15441,7 @@ on linux_amd64
 # cosign
 v2.2.4
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.57
 {: #version_2_57}
@@ -15602,7 +15602,7 @@ on linux_amd64
 # cosign
 v2.2.4
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.56
 {: #version_2_56}
@@ -15763,7 +15763,7 @@ on linux_amd64
 # cosign
 v2.2.4
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.55
 {: #version_2_55}
@@ -15924,7 +15924,7 @@ on linux_amd64
 # cosign
 v2.2.4
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.54
 {: #version_2_54}
@@ -16085,7 +16085,7 @@ on linux_amd64
 # cosign
 v2.2.3
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.53
 {: #version_2_53}
@@ -16243,7 +16243,7 @@ Client Version: v3.27.2 Git commit: 402c0b381
 Terraform v1.7.4
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.52
 {: #version_2_52}
@@ -16401,7 +16401,7 @@ Client Version: v3.27.2 Git commit: 402c0b381
 Terraform v1.7.4
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.51
 {: #version_2_51}
@@ -16559,7 +16559,7 @@ Client Version: v3.27.0 Git commit: 711528eeb
 Terraform v1.7.2
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.50
 {: #version_2_50}
@@ -16717,7 +16717,7 @@ Client Version: v3.26.3 Git commit: bdb7878af
 Terraform v1.7.0
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 
 ### Version 2.49
@@ -16838,7 +16838,7 @@ Client Version: v3.26.3 Git commit: bdb7878af
 Terraform v1.6.5
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.48
 {: #version_2_48}
@@ -16996,7 +16996,7 @@ Client Version: v3.26.3 Git commit: bdb7878af
 Terraform v1.6.5
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.47
 {: #version_2_47}
@@ -17154,7 +17154,7 @@ Client Version: v3.26.3 Git commit: bdb7878af
 Terraform v1.6.5
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.46
 {: #version_2_46}
@@ -17311,7 +17311,7 @@ Client Version: v3.26.3 Git commit: bdb7878af
 Terraform v1.6.4
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.45
 {: #version_2_45}
@@ -17465,7 +17465,7 @@ GNU ed 1.16
 Terraform v1.6.3
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.44
 {: #version_2_44}
@@ -17619,7 +17619,7 @@ GNU ed 1.16
 Terraform v1.6.2
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.43
 {: #version_2_43}
@@ -17773,7 +17773,7 @@ GNU ed 1.16
 Terraform v1.6.1
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.42
 {: #version_2_42}
@@ -17927,7 +17927,7 @@ GNU ed 1.16
 Terraform v1.5.7
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.41
 {: #version_2_41}
@@ -18080,7 +18080,7 @@ GNU ed 1.16
 Terraform v1.5.6
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.40
 {: #version_2_40}
@@ -18233,7 +18233,7 @@ GNU ed 1.16
 Terraform v1.5.5
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.39
 {: #version_2_39}
@@ -18387,7 +18387,7 @@ GNU ed 1.16
 Terraform v1.5.4
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.38
 {: #version_2_38}
@@ -18537,7 +18537,7 @@ GNU ed 1.16
 Terraform v1.5.2
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.37
 {: #version_2_37}
@@ -18684,7 +18684,7 @@ GNU ed 1.16
 Terraform v1.5.0
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.36
 {: #version_2_36}
@@ -18831,7 +18831,7 @@ Terraform v1.4.6
 on linux_amd64
 
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.35
 {: #version_2_35}
@@ -18977,7 +18977,7 @@ GNU ed 1.16
 Terraform v1.4.6
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.33
 {: #version_2_33}
@@ -19171,7 +19171,7 @@ GNU ed 1.16
 Terraform v1.4.5
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.32
 {: #version_2_32}
@@ -19339,7 +19339,7 @@ GNU ed 1.16
 Terraform v1.4.4
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.31
 {: #version_2_31}
@@ -19507,7 +19507,7 @@ GNU Ed 1.10
 Terraform v1.4.0
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.30
 {: #version_2_30}
@@ -19675,7 +19675,7 @@ GNU Ed 1.10
 Terraform v1.3.9
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.29
 {: #version_2_29}
@@ -19844,7 +19844,7 @@ GNU Ed 1.10
 Terraform v1.3.7
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.28
 {: #version_2_28}
@@ -20004,7 +20004,7 @@ GNU Ed 1.10
 Terraform v1.3.7
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.27
 {: #version_2_27}
@@ -20163,7 +20163,7 @@ GNU Ed 1.10
 Terraform v1.3.7
 on linux_amd64
 ```
-{: codeblock}
+{: screen}
 
 
 ### Version 2.26
@@ -20319,7 +20319,7 @@ dc (GNU bc 1.07.1) 1.4.1
 # ed --version
 GNU Ed 1.10
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.25
 {: #version_2_25}
@@ -20474,7 +20474,7 @@ dc (GNU bc 1.07.1) 1.4.1
 # ed --version
 GNU ed 1.16
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.24
 {: #version_2_24}
@@ -20629,7 +20629,7 @@ dc (GNU bc 1.07.1) 1.4.1
 # ed --version
 GNU Ed 1.10
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.23
 {: #version_2_23}
@@ -20683,15 +20683,15 @@ ibmcloud version 2.11.1+c18277d-2022-09-23T21:49:24+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                                Version   Status   Private endpoints supported   
-cloud-functions[wsk/functions/fn]          1.0.61             false   
-cloud-internet-services[cis]               1.14.8             true   
-code-engine[ce]                            1.39.3             true   
-container-registry                         1.0.1              true   
-container-service[kubernetes-service/ks]   1.0.454            false   
-cra                                        1.0.2              false   
-doi                                        0.3.9              false   
-schematics                                 1.12.2             true   
+Plug-in Name                                Version   Status   Private endpoints supported
+cloud-functions[wsk/functions/fn]          1.0.61             false
+cloud-internet-services[cis]               1.14.8             true
+code-engine[ce]                            1.39.3             true
+container-registry                         1.0.1              true
+container-service[kubernetes-service/ks]   1.0.454            false
+cra                                        1.0.2              false
+doi                                        0.3.9              false
+schematics                                 1.12.2             true
 
 
 # ibmcloud dev --version
@@ -20784,7 +20784,7 @@ dc (GNU bc 1.07.1) 1.4.1
 # ed --version
 GNU Ed 1.10
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.22
 {: #version_2_22}
@@ -20838,15 +20838,15 @@ ibmcloud version 2.10.0+e37e09e-2022-08-24T17:31:27+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                                Version   Status   Private endpoints supported   
-cloud-functions[wsk/functions/fn]          1.0.59             false   
-cloud-internet-services[cis]               1.14.5             true   
-code-engine[ce]                            1.39.1             true   
-container-registry                         0.1.579            true   
-container-service[kubernetes-service/ks]   1.0.439            false   
-cra                                        1.0.0              false   
-doi                                        0.3.9              false   
-schematics                                 1.12.2             true   
+Plug-in Name                                Version   Status   Private endpoints supported
+cloud-functions[wsk/functions/fn]          1.0.59             false
+cloud-internet-services[cis]               1.14.5             true
+code-engine[ce]                            1.39.1             true
+container-registry                         0.1.579            true
+container-service[kubernetes-service/ks]   1.0.439            false
+cra                                        1.0.0              false
+doi                                        0.3.9              false
+schematics                                 1.12.2             true
 
 
 # ibmcloud dev --version
@@ -20939,7 +20939,7 @@ dc (GNU bc 1.07.1) 1.4.1
 # ed --version
 GNU Ed 1.10
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.21
 {: #version_2_21}
@@ -20991,15 +20991,15 @@ ibmcloud version 2.9.0+6abd6f8-2022-07-05T14:46:06+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                                Version   Status             Private endpoints supported   
-cloud-functions[wsk/functions/fn]          1.0.59                       false   
-cloud-internet-services[cis]               1.14.4                       true   
-code-engine[ce]                            1.38.1                       true 
+Plug-in Name                                Version   Status             Private endpoints supported
+cloud-functions[wsk/functions/fn]          1.0.59                       false
+cloud-internet-services[cis]               1.14.4                       true
+code-engine[ce]                            1.38.1                       true
 container-registry                         0.1.571                      true
-container-service[kubernetes-service/ks]   1.0.431                      false   
-cra                                        0.1.22                       false   
-doi                                        0.3.8                        false   
-schematics                                 1.12.1                       true   
+container-service[kubernetes-service/ks]   1.0.431                      false
+cra                                        0.1.22                       false
+doi                                        0.3.8                        false
+schematics                                 1.12.1                       true
 
 
 # ibmcloud dev --version
@@ -21091,7 +21091,7 @@ dc (GNU bc 1.07.1) 1.4.1
 # ed --version
 GNU Ed 1.10
 ```
-{: codeblock}
+{: screen}
 
 
 ### Version 2.20
@@ -21144,15 +21144,15 @@ ibmcloud version 2.7.0+04dfeac-2022-04-28T17:14:20+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                                Version   Status             Private endpoints supported   
-cloud-functions[wsk/functions/fn]          1.0.59                       false   
-cloud-internet-services[cis]               1.14.4                       true   
-code-engine[ce]                            1.35.0                       true   
-container-registry                         0.1.571                      true   
-container-service[kubernetes-service/ks]   1.0.420                      false   
-cra                                        0.1.20                       false   
-doi                                        0.3.8                        false   
-schematics                                 1.10.0                       true   
+Plug-in Name                                Version   Status             Private endpoints supported
+cloud-functions[wsk/functions/fn]          1.0.59                       false
+cloud-internet-services[cis]               1.14.4                       true
+code-engine[ce]                            1.35.0                       true
+container-registry                         0.1.571                      true
+container-service[kubernetes-service/ks]   1.0.420                      false
+cra                                        0.1.20                       false
+doi                                        0.3.8                        false
+schematics                                 1.10.0                       true
 
 
 # ibmcloud dev --version
@@ -21243,7 +21243,7 @@ dc (GNU bc 1.07.1) 1.4.1
 # ed --version
 GNU Ed 1.10
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.19
 {: #version_2_19}
@@ -21283,15 +21283,15 @@ version.BuildInfo{Version:"v3.8.2", GitCommit:"6e3701edea09e5d55a8ca2aae03a68917
 ibmcloud version 2.6.0+df1953d-2022-03-24T15:00:50+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
-Plug-in Name                             Version   Status             Private endpoints supported   
-cra                                     0.1.15                       false   
-doi                                     0.3.5                        false   
-schematics                              1.8.1                        true   
-cloud-functions[wsk/functions/fn]       1.0.58                       false   
-cloud-internet-services[cis]            1.14.2                       true   
-code-engine[ce]                         1.29.3    Update Available   true   
-container-registry                      0.1.566                      true   
-container-service[kubernetes-service]   1.0.394                      false   
+Plug-in Name                             Version   Status             Private endpoints supported
+cra                                     0.1.15                       false
+doi                                     0.3.5                        false
+schematics                              1.8.1                        true
+cloud-functions[wsk/functions/fn]       1.0.58                       false
+cloud-internet-services[cis]            1.14.2                       true
+code-engine[ce]                         1.29.3    Update Available   true
+container-registry                      0.1.566                      true
+container-service[kubernetes-service]   1.0.394                      false
 # ibmcloud dev --version
 ibmcloud dev version 2.11.0
 # java -version
@@ -21357,7 +21357,7 @@ dc (GNU bc 1.07.1) 1.4.1
 # ed --version
 GNU Ed 1.10
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.18
 {: #version_2_18}
@@ -21409,15 +21409,15 @@ ibmcloud version 2.4.0+4ca2c74-2022-01-20T18:32:41+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                             Version   Status   Private endpoints supported   
-doi                                     0.3.3              false   
-schematics                              1.7.2              false   
-cloud-functions[wsk/functions/fn]       1.0.58             false   
-cloud-internet-services                 1.14.1             true   
-code-engine[ce]                         1.26.0             true   
-container-registry                      0.1.560            true   
-container-service[kubernetes-service]   1.0.372            false   
-cra                                     0.1.11             false   
+Plug-in Name                             Version   Status   Private endpoints supported
+doi                                     0.3.3              false
+schematics                              1.7.2              false
+cloud-functions[wsk/functions/fn]       1.0.58             false
+cloud-internet-services                 1.14.1             true
+code-engine[ce]                         1.26.0             true
+container-registry                      0.1.560            true
+container-service[kubernetes-service]   1.0.372            false
+cra                                     0.1.11             false
 
 
 # ibmcloud dev --version
@@ -21508,7 +21508,7 @@ dc (GNU bc 1.07.1) 1.4.1
 # ed --version
 GNU Ed 1.10
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.17
 {: #version_2_17}
@@ -21560,15 +21560,15 @@ ibmcloud version 2.3.0+26fbf88-2021-12-09T17:14:46+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                             Version   Status   Private endpoints supported   
-container-registry                      0.1.556            true   
-container-service[kubernetes-service]   1.0.353            false   
-cra                                     0.1.11             false   
-doi                                     0.3.3              false   
-schematics                              1.7.0              false   
-cloud-functions[wsk/functions/fn]       1.0.58             false   
-cloud-internet-services                 1.14.0             true   
-code-engine[ce]                         1.24.0             true   
+Plug-in Name                             Version   Status   Private endpoints supported
+container-registry                      0.1.556            true
+container-service[kubernetes-service]   1.0.353            false
+cra                                     0.1.11             false
+doi                                     0.3.3              false
+schematics                              1.7.0              false
+cloud-functions[wsk/functions/fn]       1.0.58             false
+cloud-internet-services                 1.14.0             true
+code-engine[ce]                         1.24.0             true
 
 
 # ibmcloud dev --version
@@ -21659,7 +21659,7 @@ dc (GNU bc 1.07.1) 1.4.1
 # ed --version
 GNU Ed 1.10
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.16
 {: #version_2_16}
@@ -21711,15 +21711,15 @@ ibmcloud version 2.2.0+99934b5-2021-11-10T16:34:14+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                             Version   Status             Private endpoints supported   
-cloud-internet-services                 1.13.6                       true   
-code-engine[ce]                         1.23.1                       true   
-container-registry                      0.1.553                      true   
-container-service[kubernetes-service]   1.0.344                      false   
-cra                                     0.1.9                        false   
-doi                                     0.3.3                        false   
-schematics                              1.6.1                        false   
-cloud-functions[wsk/functions/fn]       1.0.56                       false   
+Plug-in Name                             Version   Status             Private endpoints supported
+cloud-internet-services                 1.13.6                       true
+code-engine[ce]                         1.23.1                       true
+container-registry                      0.1.553                      true
+container-service[kubernetes-service]   1.0.344                      false
+cra                                     0.1.9                        false
+doi                                     0.3.3                        false
+schematics                              1.6.1                        false
+cloud-functions[wsk/functions/fn]       1.0.56                       false
 
 
 # ibmcloud dev --version
@@ -21810,7 +21810,7 @@ dc (GNU bc 1.07.1) 1.4.1
 # ed --version
 GNU Ed 1.10
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.15
 {: #version_2_15}
@@ -21859,14 +21859,14 @@ ibmcloud version 2.1.0+a4d550e-2021-09-22T13:31:04+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                             Version   Status   Private endpoints supported   
-cloud-internet-services                 1.13.4             true   
-container-registry                      0.1.547            true   
-container-service[kubernetes-service]   1.0.312            false   
-cra                                     0.0.9              false   
-doi                                     0.3.3              false   
-schematics                              1.6.0              false   
-cloud-functions[wsk/functions/fn]       1.0.56             false   
+Plug-in Name                             Version   Status   Private endpoints supported
+cloud-internet-services                 1.13.4             true
+container-registry                      0.1.547            true
+container-service[kubernetes-service]   1.0.312            false
+cra                                     0.0.9              false
+doi                                     0.3.3              false
+schematics                              1.6.0              false
+cloud-functions[wsk/functions/fn]       1.0.56             false
 
 
 # ibmcloud dev --version
@@ -21957,7 +21957,7 @@ dc (GNU bc 1.07.1) 1.4.1
 # ed --version
 GNU Ed 1.10
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.14
 {: #version_2_14}
@@ -22001,13 +22001,13 @@ ibmcloud version 2.0.3+c7a1126-2021-08-27T19:17:51+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                             Version   Status   Private endpoints supported   
-container-service[kubernetes-service]   1.0.312            false   
-doi                                     0.3.2              false   
-schematics                              1.5.12             false   
-cloud-functions[wsk/functions/fn]       1.0.56             false   
-cloud-internet-services                 1.13.4             true   
-container-registry                      0.1.543            true   
+Plug-in Name                             Version   Status   Private endpoints supported
+container-service[kubernetes-service]   1.0.312            false
+doi                                     0.3.2              false
+schematics                              1.5.12             false
+cloud-functions[wsk/functions/fn]       1.0.56             false
+cloud-internet-services                 1.13.4             true
+container-registry                      0.1.543            true
 
 
 # ibmcloud dev --version
@@ -22098,7 +22098,7 @@ dc (GNU bc 1.07.1) 1.4.1
 # ed --version
 GNU Ed 1.10
 ```
- {: codeblock}
+ {: screen}
 
 ### Version 2.13
 {: #version_2_13}
@@ -22142,13 +22142,13 @@ ibmcloud version 1.6.0+59b6322-2021-05-26T20:13:53+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                            Version   Status   Private endpoints supported   
-cloud-internet-services                1.13.3             true   
-container-registry                     0.1.525            true   
-container-service/kubernetes-service   1.0.275            false   
-doi                                    0.3.2              false   
-schematics                             1.5.7              false   
-cloud-functions/wsk/functions/fn       1.0.56             false   
+Plug-in Name                            Version   Status   Private endpoints supported
+cloud-internet-services                1.13.3             true
+container-registry                     0.1.525            true
+container-service/kubernetes-service   1.0.275            false
+doi                                    0.3.2              false
+schematics                             1.5.7              false
+cloud-functions/wsk/functions/fn       1.0.56             false
 
 
 # ibmcloud dev --version
@@ -22243,7 +22243,7 @@ dc (GNU bc 1.07.1) 1.4.1
 # ed --version
 GNU Ed 1.10
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.12
 {: #version_2_12}
@@ -22287,13 +22287,13 @@ ibmcloud version 1.4.0+4705d79-2021-02-24T21:18:06+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                            Version   Status   Private endpoints supported   
-cloud-internet-services                1.13.1             false   
-container-registry                     0.1.514            false   
-container-service/kubernetes-service   1.0.233            false   
-doi                                    0.3.1              false   
-schematics                             1.5.1              false   
-cloud-functions/wsk/functions/fn       1.0.53             false   
+Plug-in Name                            Version   Status   Private endpoints supported
+cloud-internet-services                1.13.1             false
+container-registry                     0.1.514            false
+container-service/kubernetes-service   1.0.233            false
+doi                                    0.3.1              false
+schematics                             1.5.1              false
+cloud-functions/wsk/functions/fn       1.0.53             false
 
 
 # ibmcloud dev --version
@@ -22387,7 +22387,7 @@ dc (GNU bc 1.07.1) 1.4.1
 # ed --version
 GNU Ed 1.10
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.11
 {: #version_2_11}
@@ -22428,13 +22428,13 @@ ibmcloud version 1.3.0+4308925-2020-12-16T07:53:49+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                            Version   Status   Private endpoints supported   
-container-service/kubernetes-service   1.0.208            false   
-doi                                    0.2.9              false   
-schematics                             1.4.25             false   
-cloud-functions/wsk/functions/fn       1.0.49             false   
-cloud-internet-services                1.11.0             false   
-container-registry                     0.1.497            false   
+Plug-in Name                            Version   Status   Private endpoints supported
+container-service/kubernetes-service   1.0.208            false
+doi                                    0.2.9              false
+schematics                             1.4.25             false
+cloud-functions/wsk/functions/fn       1.0.49             false
+cloud-internet-services                1.11.0             false
+container-registry                     0.1.497            false
 
 
 # ibmcloud dev --version
@@ -22521,11 +22521,11 @@ Client: Docker Engine - Community
  OS/Arch:           linux/amd64
  Experimental:      false
 ```
-{: codeblock}
- 
+{: screen}
+
 ### Version 2.10
 {: #version_2_10}
- 
+
 Starting with version 2.10, the versioned base image includes a Docker client.
 {: tip}
 
@@ -22565,13 +22565,13 @@ ibmcloud version 1.2.3+3577aee6-2020-09-25T14:34:09+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                            Version   Status   
-cloud-functions/wsk/functions/fn       1.0.49       
-cloud-internet-services                1.11.0       
-container-registry                     0.1.497      
-container-service/kubernetes-service   1.0.206      
-doi                                    0.2.9        
-schematics                             1.4.25       
+Plug-in Name                            Version   Status
+cloud-functions/wsk/functions/fn       1.0.49
+cloud-internet-services                1.11.0
+container-registry                     0.1.497
+container-service/kubernetes-service   1.0.206
+doi                                    0.2.9
+schematics                             1.4.25
 
 
 # ibmcloud dev --version
@@ -22658,8 +22658,8 @@ Client: Docker Engine - Community
  OS/Arch:           linux/amd64
  Experimental:      false
 ```
-{: codeblock}
- 
+{: screen}
+
 ### Version 2.9
 {: #version_2_9}
 
@@ -22696,13 +22696,13 @@ ibmcloud version 1.2.1+29ade2b-2020-09-04T12:46:49+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                            Version   Status   
-schematics                             1.4.18       
-cloud-functions/wsk/functions/fn       1.0.46       
-cloud-internet-services                1.10.0       
-container-registry                     0.1.494      
-container-service/kubernetes-service   1.0.157      
-doi                                    0.2.6        
+Plug-in Name                            Version   Status
+schematics                             1.4.18
+cloud-functions/wsk/functions/fn       1.0.46
+cloud-internet-services                1.10.0
+container-registry                     0.1.494
+container-service/kubernetes-service   1.0.157
+doi                                    0.2.6
 
 
 # ibmcloud dev --version
@@ -22758,8 +22758,8 @@ kubernetes v1.11.0+d4cacc0
 features: Basic-Auth GSSAPI Kerberos SPNEGO
 
 ```
-{: codeblock}
- 
+{: screen}
+
 ### Version 2.8
 {: #version_2_8}
 
@@ -22793,13 +22793,13 @@ ibmcloud version 1.1.0+cc908fe-2020-04-29T04:06:12+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                            Version   Status   
-cloud-functions/wsk/functions/fn       1.0.44       
-cloud-internet-services                1.9.9        
-container-registry                     0.1.482      
-container-service/kubernetes-service   1.0.118      
-doi                                    0.2.5        
-schematics                             1.4.17       
+Plug-in Name                            Version   Status
+cloud-functions/wsk/functions/fn       1.0.44
+cloud-internet-services                1.9.9
+container-registry                     0.1.482
+container-service/kubernetes-service   1.0.118
+doi                                    0.2.5
+schematics                             1.4.17
 
 
 # ibmcloud dev --version
@@ -22854,8 +22854,8 @@ oc v3.11.0+0cbc58b
 kubernetes v1.11.0+d4cacc0
 features: Basic-Auth GSSAPI Kerberos SPNEGO
 ```
-{: codeblock}
- 
+{: screen}
+
 ### Version 2.7
 {: #version_2_7}
 
@@ -22891,13 +22891,13 @@ ibmcloud version 1.1.0+cc908fe-2020-04-29T04:06:12+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                            Version   Status   
-schematics                             1.4.10       
-cloud-functions/wsk/functions/fn       1.0.39       
-cloud-internet-services                1.9.7        
-container-registry                     0.1.471      
-container-service/kubernetes-service   1.0.57       
-doi                                    0.2.1        
+Plug-in Name                            Version   Status
+schematics                             1.4.10
+cloud-functions/wsk/functions/fn       1.0.39
+cloud-internet-services                1.9.7
+container-registry                     0.1.471
+container-service/kubernetes-service   1.0.57
+doi                                    0.2.1
 
 
 # ibmcloud dev --version
@@ -22952,11 +22952,11 @@ oc v3.11.0+0cbc58b
 kubernetes v1.11.0+d4cacc0
 features: Basic-Auth GSSAPI Kerberos SPNEGO
 ```
-{: codeblock}
- 
+{: screen}
+
 ### Version 2.6
 {: #version_2_6}
- 
+
 To view the contents of version 2.6, from the running image, type `default_versions.sh`. This image includes the following tools:
 
 ```text
@@ -22984,12 +22984,12 @@ ibmcloud version 0.20.0+5d69177-2019-10-31T07:15:05+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                            Version   Status   
-container-registry                     0.1.437      
-container-service/kubernetes-service   0.4.61       
-doi                                    0.1.5        
-schematics                             1.4.2        
-cloud-functions/wsk/functions/fn       1.0.36       
+Plug-in Name                            Version   Status
+container-registry                     0.1.437
+container-service/kubernetes-service   0.4.61
+doi                                    0.1.5
+schematics                             1.4.2
+cloud-functions/wsk/functions/fn       1.0.36
 
 
 # java -version
@@ -23045,11 +23045,11 @@ oc v3.11.0+0cbc58b
 kubernetes v1.11.0+d4cacc0
 features: Basic-Auth GSSAPI Kerberos SPNEGO
 ```
-{: codeblock}
- 
+{: screen}
+
 ### Version 2.5
 {: #version_2_5}
- 
+
 To view the contents of version 2.5, from the running image, type `default_versions.sh`. This image includes the following tools:
 
 ```text
@@ -23077,11 +23077,11 @@ ibmcloud version 0.20.0+5d69177-2019-10-31T07:15:05+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                            Version   Status   
-cloud-functions/wsk/functions/fn       1.0.36       
-container-registry                     0.1.437      
-container-service/kubernetes-service   0.4.61       
-doi                                    0.1.5        
+Plug-in Name                            Version   Status
+cloud-functions/wsk/functions/fn       1.0.36
+container-registry                     0.1.437
+container-service/kubernetes-service   0.4.61
+doi                                    0.1.5
 
 
 # java -version
@@ -23137,11 +23137,11 @@ oc v3.11.0+0cbc58b
 kubernetes v1.11.0+d4cacc0
 features: Basic-Auth GSSAPI Kerberos SPNEGO
 ```
-{: codeblock}
- 
+{: screen}
+
 ### Version 2.4
 {: #version_2_4}
-   
+
 To view the contents of version 2.4, from the running image, type `default_versions.sh`. This image includes the following tools:
 
 ```text
@@ -23169,11 +23169,11 @@ ibmcloud version 0.18.1+09d36ed-2019-08-19T08:23:11+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                            Version   Status   
-doi                                    0.1.5        
-cloud-functions/wsk/functions/fn       1.0.32       
-container-registry                     0.1.404	
-container-service/kubernetes-service   0.4.3        
+Plug-in Name                            Version   Status
+doi                                    0.1.5
+cloud-functions/wsk/functions/fn       1.0.32
+container-registry                     0.1.404
+container-service/kubernetes-service   0.4.3
 
 
 # java -version
@@ -23222,11 +23222,11 @@ oc v3.11.0+0cbc58b
 kubernetes v1.11.0+d4cacc0
 features: Basic-Auth GSSAPI Kerberos SPNEGO
 ```
-{: codeblock}
- 
+{: screen}
+
 ### Version 2.3
 {: #version_2_3}
- 
+
 To view the contents of version 2.3, from the running image, type `default_versions.sh`. This image includes the following tools:
 
 ```text
@@ -23254,11 +23254,11 @@ ibmcloud version 0.16.3+68cb57c-2019-06-20T08:59:16+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                            Version   Status   
-cloud-functions/wsk/functions/fn       1.0.32       
-container-registry                     0.1.395  
-container-service/kubernetes-service   0.3.58  
-doi                                    0.1.3   
+Plug-in Name                            Version   Status
+cloud-functions/wsk/functions/fn       1.0.32
+container-registry                     0.1.395
+container-service/kubernetes-service   0.3.58
+doi                                    0.1.3
 
 
 # java -version
@@ -23301,7 +23301,7 @@ Ant:          Apache Ant(TM) version 1.9.13 compiled on July 10 2018
 JVM:          1.8.0_212 (Oracle Corporation 25.212-b03)
 OS:           Linux 4.9.184-linuxkit amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.2
 {: #version_2_2}
@@ -23333,11 +23333,11 @@ ibmcloud version 0.16.3+68cb57c-2019-06-20T08:59:16+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                            Version   Status   
-cloud-functions/wsk/functions/fn       1.0.32       
-container-registry                     0.1.395  
-container-service/kubernetes-service   0.3.58 
-doi                                    0.1.3  
+Plug-in Name                            Version   Status
+cloud-functions/wsk/functions/fn       1.0.32
+container-registry                     0.1.395
+container-service/kubernetes-service   0.3.58
+doi                                    0.1.3
 
 
 # java -version
@@ -23380,8 +23380,8 @@ Ant:          Apache Ant(TM) version 1.9.13 compiled on July 10 2018
 JVM:          1.8.0_212 (Oracle Corporation 25.212-b03)
 OS:           Linux 4.9.184-linuxkit amd64
 ```
-{: codeblock} 
- 
+{: screen}
+
 ### Version 2.1
 {: #version_2_1}
 
@@ -23412,11 +23412,11 @@ ibmcloud version 0.16.2+d1a5f92-2019-06-06T18:32:54+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                            Version   Status   
-cloud-functions/wsk/functions/fn       1.0.32       
-container-registry                     0.1.391      
-container-service/kubernetes-service   0.3.47  
-doi                                    0.1.2        
+Plug-in Name                            Version   Status
+cloud-functions/wsk/functions/fn       1.0.32
+container-registry                     0.1.391
+container-service/kubernetes-service   0.3.47
+doi                                    0.1.2
 
 
 # java -version
@@ -23459,11 +23459,11 @@ Ant:          Apache Ant(TM) version 1.9.13 compiled on July 10 2018
 JVM:          1.8.0_212 (Oracle Corporation 25.212-b03)
 OS:           Linux 4.4.0-141-generic amd64
 ```
-{: codeblock}
+{: screen}
 
 ### Version 2.0
 {: #version_2_0}
- 
+
 To view the contents of version 2.0, from the running image, type `default_versions.sh`. This image includes the following tools:
 
 ```text
@@ -23492,11 +23492,11 @@ ibmcloud version 0.14.0+3303164-2019-02-06T06:09:00+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                            Version   Status   
-cloud-functions/wsk/functions/fn       1.0.30       
-container-registry                     0.1.380      
-container-service/kubernetes-service   0.2.99    Update Available   
-doi                                    0.1.0        
+Plug-in Name                            Version   Status
+cloud-functions/wsk/functions/fn       1.0.30
+container-registry                     0.1.380
+container-service/kubernetes-service   0.2.99    Update Available
+doi                                    0.1.0
 
 
 # java -version
@@ -23541,17 +23541,17 @@ Ant:          Apache Ant(TM) version 1.9.13 compiled on July 10 2018
 JVM:          1.8.0_191 (Oracle Corporation 25.191-b12)
 OS:           Linux 4.4.0-141-generic amd64
 ```
-{: codeblock}
+{: screen}
 
 ## Configuring the image for a specific pipeline job
 {: #configure_image_for_job}
- 
+
  In general, it is not recommended to configure the image to use for individual pipeline jobs. This method increases the effort to upgrade to a new image version since you must update each pipeline job. However, there might be circumstances in which you are required to configure the image for a specific pipeline job.
  {: important}
- 
+
 1. On the stage, click the **Stage Configuration** icon, and then click **Configure Stage**.
 2. In the **JOBS** tab, click the job that you want to modify.
-3. The **Pipeline image version** option shows the current image version that is available, and the version that you are using for the selected pipeline job. To change the image version to use the current version to run the pipeline job, select **Latest**. 
+3. The **Pipeline image version** option shows the current image version that is available, and the version that you are using for the selected pipeline job. To change the image version to use the current version to run the pipeline job, select **Latest**.
 
 To run pipeline jobs with the image that you selected on the pipeline configuration page, select **Pipeline default**.
 {: tip}
