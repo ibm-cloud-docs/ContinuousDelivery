@@ -8,7 +8,7 @@ keywords: pipeline versioned base image, image version, pipeline job
 
 subcollection: ContinuousDelivery
 
----
+---x
 
 {{site.data.keyword.attribute-definition-list}}
 
@@ -64,7 +64,7 @@ Images are available on the IBM Cloud Container Registry. To list these hosted i
 
 | Base image version | IBM Cloud Container Registry version |Creation date|sha256 value|
 | -------------------- | -------------------------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 3.73| `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.73`|2025-11-26|sha256:f27a9e98d632788a9cc953686ba95d975eb0c4b8977fb57d363f0c9f3d21649c|
+| 3.73| `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.73`|2025-12-01|sha256:a50dc580680f88f0e8d3f28811507fe9170761f8fbf225d1d81d4ef4d5e6491b|
 | 3.72| `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.72`|2025-11-03|sha256:b16754572c235e917f90669a30b7b0f6b40dcdda6277938f33cf1e924e360263|
 | 3.71 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.71`|2025-10-14|sha256:82f63315eaf0e68bbd5cae76d28057570e2f798b97c66d75df566d7bd5f34ce8|
 | 3.70 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.70`|2025-09-15|sha256:1427e09988fccb724c5b81c67164b4c99a302e94aca3b0cf83d83617a74a0604|
@@ -136,7 +136,7 @@ Images are available on the IBM Cloud Container Registry. To list these hosted i
 | 3.2 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.2`|2021-09-02|sha256:d59863621d3ba1b9bd47f76950c751e842405f9c303d0d4d4298d964b664ee85|
 | 3.1 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.1`|2021-06-10|sha256:c2468d28f15fa6970f13510c01477326f91a043881c2b4cd8f2b1ff8ed8c22a1|
 | 3.0 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.0`|2021-04-07|sha256:42318979f165cc1ffd4d707022ceb5461360a9b6cd1216bc0c63391bdd042726|
-| 2.86 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.86`|2025-11-26|sha256:a6b23a2168535ed343cd15bfd6dcc2b0e31e5bad06be72dcedd132a459e27a0d|
+| 2.86 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.86`|2025-12-01|sha256:e154e5d7f2f32cbb33b411c4e65411309d97f4fe668d0b4b9f10f146cd9bd518|
 | 2.85 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.85`|2025-11-03|sha256:25392b37ab534ed3c76e96e516a406113ae93cf088bb78ac2852d38f4c370441|
 | 2.84 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.84`|2025-10-14|sha256:c01ac99562c6be6248bb3e3d7e091e22eda6030e0e762574ac2b0dc39097902a|
 | 2.83 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.83`|2025-09-15|sha256:6df3db3251200bc61aa4b85ffec03132c351f4dc4549d21a5446fff8ccadaca5 |
@@ -233,7 +233,7 @@ The version of `yq` that is preinstalled in the images corresponds to the yq too
 
 | IBM Cloud Container Registry version |sha256 value|
 | -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.73`| sha256:f27a9e98d632788a9cc953686ba95d975eb0c4b8977fb57d363f0c9f3d21649c|
+| `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.73`| sha256:a50dc580680f88f0e8d3f28811507fe9170761f8fbf225d1d81d4ef4d5e6491b|
 
 This is based on `ubi9`.
 {: important}
@@ -11123,7 +11123,7 @@ GNU ed 1.14.2
 
 | IBM Cloud Container Registry version |sha256 value|
 | -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.86`| sha256:a6b23a2168535ed343cd15bfd6dcc2b0e31e5bad06be72dcedd132a459e27a0d|
+| `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.86`| sha256:e154e5d7f2f32cbb33b411c4e65411309d97f4fe668d0b4b9f10f146cd9bd518|
 
 To view the contents of version 2.86 from the running image, type `default_versions.sh`.
 
