@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2025
-lastupdated: "2025-03-24"
+lastupdated: "2025-11-13"
 
 subcollection: ContinuousDelivery
 
@@ -206,7 +206,7 @@ node_modules
 # Exclude the dockerfile from scanning
 Dockerfile
 ```
-{: codeblock}
+{: screen}
 
 ### Setting Multiple Docker Build Contexts
 {: #docker-build-context}
@@ -1151,7 +1151,7 @@ rule-ded212fe-7def-44ce-9480-0487067b64c4 - Check whether Kubernetes Service clu
 rule-2325054a-c338-474a-9740-0b7034487e40 - Check whether OpenShift clusters are accessible only by using private endpoints
 rule-de84afba-b83a-41d6-8c80-d0b6acafe039 - Check whether OpenShift version is up-to-date
 ```
-{: codeblock}
+{: screen}
 
 ## NetworkPolicy analysis
 {: #netpol-analyze-command}
@@ -1312,7 +1312,7 @@ Make sure that the `run-cra` task does not contain any errors. If the task conta
 FAILED
 Error executing docker pull cmd: [docker pull us.icr.io/opentoolchain/ibmnode:14ubisecure]
 ```
-{: codeblock}
+{: screen}
 
 You can verify that you have access to the private registry. If you do not have access, you can use the `cra-custom-script-path` parameter and specify the path to a custom script that runs before Code Risk Analyzer to authenticate to the private registry.
 
@@ -1332,7 +1332,7 @@ COPY file-to-copy.js file-to-copy.js:
 ------
 failed to compute cache key: "/file-to-copy.js" not found: not found
 ```
-{: codeblock}
+{: screen}
 
 By default, the Code Risk Analyzer `bom-generate` command builds the Dockerfiles from the context of the location of the Dockerfile itself. If you want to build the Dockerfiles from the context of the root project directory, use the `cra-docker-build-context` parameter to allow the Code Risk Analyzer to build the Dockerfiles from this context.
 

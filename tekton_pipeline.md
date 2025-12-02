@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-10-14"
+lastupdated: "2025-11-18"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -247,7 +247,7 @@ You can configure triggers for Tekton pipelines based on various events in your 
 
 Use the **Branch** and **Pattern** options to specify events such as `commit push`, `pull request opened`, `updated`, or `closed`. Also, you can specify pull request events by switching the **Include draft pull request events** option to allow or skip pipeline triggers for draft pull requests. Similarly, you can specify if you want to allow pipeline triggers for pull requests from forked repositories by using the **Include pull request events from forks** toggle. Additionally you can select the **Label filters** option to enable filtering based on pull request labels according to user-defined criteria in the filters table.
 
-The **CEL filter** option supports more advanced use cases, such as matching against other fields in the event payload. This option supports push events, all pull request events, issues events, issue comments events, and release events. This option is also available as an optional feature on the Generic Webhook trigger to provide event filtering based on the webhook payload. 
+The **CEL filter** option supports more advanced use cases, such as matching against other fields in the event payload. This option supports push events, all pull request events, issues events, issue comments events, release events, and GitHub merge queue events. This option is also available as an optional feature on the Generic Webhook trigger to provide event filtering based on the webhook payload. 
 
 #### CEL overview
 {: #cel_overview}
