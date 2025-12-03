@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-10-30"
+lastupdated: "2025-12-03"
 
 keywords: troubleshoot, private workers
 
@@ -120,4 +120,24 @@ The API key that was used to install the worker agent might not be included in t
 {: tsCauses}
 
 Remove the misconfigured worker agent from the cluster and install the worker agent again. Make sure that the API key that is included in the installation command also exists in the `ServiceId` that is used in the same installation command. Use the link for the `ServiceId` that is available on both the private worker integration page and the Identity and Access Management (IAM) page to generate a valid API key.
+{: tsResolve}
+
+## Why am I encountering network errors when using a Docker or Podman sidecar?
+{: #troubleshoot-podman-mtu}
+{: troubleshoot}
+{: support}
+
+When running a tekton pipeline with a Docker or Podman sidecar I see one or more of the following symptoms:
+- Intermittent connection timeouts
+- Large requests/responses failing while small ones succeed
+- Services working fine locally but failing in the cluster
+- TLS handshake failures
+{: tsSymptoms}
+   
+There is an MTU mismatch between the docker daemon and the host network. The inner Docker/Podman daemon creates its own bridge network with a default MTU of 1500, but the pod's network interface may only support 1450 bytes due to overlay encapsulation. It is this mismatch which causes the network failures.
+{: tsCauses}
+
+Update the pipeline definiton to explicitly set the `mtu` value for docker as follows:
+- Docker: `com.docker.network.driver.mtu: 1400`
+- Podman: `podman network create --opt mtu=1400` or in some cases set `--network=host`
 {: tsResolve}
