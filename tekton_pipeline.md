@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-11-18"
+lastupdated: "2025-12-04"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -482,7 +482,7 @@ To view the event payload, go to the Pipeline Run details page and click **Show 
    curl -X POST \
      https://api.{region}.devops.cloud.ibm.com/toolchain/v2/toolchains/{toolchain_id}/tools \
      -H 'Authorization: Bearer {iam_token}' \
-     -H 'Accept: application/json` \
+     -H 'Accept: application/json' \
      -H 'Content-Type: application/json' \
      -d '{
        "tool_type_id": "pipeline",
@@ -574,7 +574,7 @@ To view the event payload, go to the Pipeline Run details page and click **Show 
    curl -X POST \
       https://api.{region}.devops.cloud.ibm.com/pipeline/v2/tekton_pipelines \
       -H 'Authorization: Bearer {iam_token}' \
-      -H 'Accept: application/json` \
+      -H 'Accept: application/json' \
       -H 'Content-Type: application/json' \
       -d '{
          "id": "{pipeline_id}",
@@ -772,7 +772,7 @@ The retention period for PipelineRuns and their logs depends on the plan that is
    curl -X GET \
      https://api.{region}.devops.cloud.ibm.com/pipeline/v2/tekton_pipelines/{pipeline_id} \
      -H 'Authorization: Bearer {iam_token}' \
-     -H 'Accept: application/json`
+     -H 'Accept: application/json'
    ```
    {: pre}
    {: curl}
@@ -960,7 +960,7 @@ Once you have completed the above configuration the logs for any new PipelineRun
    curl -X GET \
      https://api.{region}.devops.cloud.ibm.com/pipeline/v2/tekton_pipelines/{pipeline_id}/pipeline_runs/{run_id}/logs \
      -H 'Authorization: Bearer {iam_token}' \
-     -H 'Accept: application/json`
+     -H 'Accept: application/json'
    ```
    {: pre}
    {: curl}
@@ -986,7 +986,7 @@ Once you have completed the above configuration the logs for any new PipelineRun
    curl -X GET \
      https://api.{region}.devops.cloud.ibm.com/pipeline/v2/tekton_pipelines/{pipeline_id}/pipeline_runs/{run_id}/logs/{sample_log_id} \
      -H 'Authorization: Bearer {iam_token}' \
-     -H 'Accept: application/json`
+     -H 'Accept: application/json'
    ```
    {: pre}
    {: curl}

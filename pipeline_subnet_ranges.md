@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2025
-lastupdated: "2025-11-18"
+lastupdated: "2025-12-04"
 
 keywords: IBM Cloud Public, firewall configuration, network zones
 
@@ -90,12 +90,6 @@ us-south
 52.118.79.48
 67.228.108.96/27
 67.228.197.224/28
-10.22.213.127/32
-10.249.206.185/32
-10.119.58.174/32
-52.116.135.63/32
-52.118.209.238/32
-67.18.90.39/32
 ====
 us-east
 10.12.102.198/32
