@@ -24,7 +24,7 @@
     {
       "title": "DevOps for hybrid cloud: an IBM point of view",
       "description": "Learn how DevOps for hybrid cloud can improve quality and agility in software development.",
-      "href": "https://www.ibm.com/downloads/cas/YZDAADR2",
+      "href": "https://www.ibm.com/downloads/documents/us-en/107a02e94cc8f87b",
       "type": "white-paper",
       "recommended": true
     },
@@ -37,12 +37,11 @@
     }
   ],
   "section_devtools": {
-      "api": "/apidocs/toolchain",
-      "cli": "/docs/ContinuousDelivery?topic=ContinuousDelivery-idt-cli",
-      "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest"
-    },
+    "api": "/apidocs/toolchain",
+    "cli": "/docs/ContinuousDelivery?topic=ContinuousDelivery-idt-cli",
+    "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest"
+  },
   "section_updates": {
-      "view_more": "/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-relnotes"
-    }
+    "view_more": "/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-relnotes"
+  }
 }
-    

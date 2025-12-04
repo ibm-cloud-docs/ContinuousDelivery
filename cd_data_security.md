@@ -13,14 +13,14 @@ subcollection: ContinuousDelivery
 {{site.data.keyword.attribute-definition-list}}
 
 # Securing your data in {{site.data.keyword.contdelivery_short}}
-{: #cd_data_security}  
+{: #cd_data_security}
 
 {{site.data.keyword.contdelivery_full}} hosts your databases in a highly available and secure environment:
 
 * Data is encrypted at rest (GPFS, LUKS, and built-in disk) and in transit (HTTPS and SSH) by using encryption keys that are internal to the {{site.data.keyword.contdelivery_short}} service, or the services and infrastructure that it depends on.
 * [Personal data can be encrypted only in the Professional plan](#cd_professional_plan) by using a root key within an instance of the {{site.data.keyword.keymanagementservicefull}} service or the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} service.
-* Client and system credentials are stored on encrypted disks. 
-* Configuration data for tool integrations and {{site.data.keyword.deliverypipeline}} property values might include sensitive information. This data is encrypted by using encryption keys that are internal to the {{site.data.keyword.contdelivery_short}} service because it is stored in databases that are internal to the service. 
+* Client and system credentials are stored on encrypted disks.
+* Configuration data for tool integrations and {{site.data.keyword.deliverypipeline}} property values might include sensitive information. This data is encrypted by using encryption keys that are internal to the {{site.data.keyword.contdelivery_short}} service because it is stored in databases that are internal to the service.
 * The application and data are configured for high availability.
 * Access to data is limited to only those users who require the data to support and maintain the service.
 
@@ -36,19 +36,19 @@ To keep your credentials secure, make sure that you follow this guidance:
 * Do not store credentials in Git repos. Depending on the repo settings, files within a repo might be visible to other members of your organization, other {{site.data.keyword.cloud_notm}} users, or the public internet.
 * Do not include user credentials in {{site.data.keyword.deliverypipeline}} definitions because they might be visible to other users. Specifically, do not place user credentials within {{site.data.keyword.deliverypipeline}} Classic job definition scripts, {{site.data.keyword.deliverypipeline}} Tekton yaml files, or scripts that are started by delivery pipelines.
 * Do not publish user credentials in log files that are created when a pipeline runs because these files might be shared.
-* Do not specify credentials in plain text in calls to {{site.data.keyword.contdelivery_short}} APIs, such as when you configure [tool integrations](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [Tekton pipeline environment properties](https://cloud.ibm.com/apidocs/tekton-pipeline#create-tekton-pipeline-properties){: external}, or [Tekton pipeline trigger properties](https://cloud.ibm.com/apidocs/tekton-pipeline#create-tekton-pipeline-trigger-properties){: external}. 
+* Do not specify credentials in plain text in calls to {{site.data.keyword.contdelivery_short}} APIs, such as when you configure [tool integrations](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [Tekton pipeline environment properties](https://cloud.ibm.com/apidocs/tekton-pipeline#create-tekton-pipeline-properties){: external}, or [Tekton pipeline trigger properties](https://cloud.ibm.com/apidocs/tekton-pipeline#create-tekton-pipeline-trigger-properties){: external}.
 * Do not include credentials, personal identifying information, or other sensitive information in calls to the [POST /toolchains/{toolchain_id}/events](https://cloud.ibm.com/apidocs/toolchain#create-toolchain-event){: external} API. The API sends events containing the data you specify to instances of {{site.data.keyword.en_short}} that are integrated into the toolchain. {{site.data.keyword.en_short}} will subsequently forward the events to configured destinations such as email, SMS, and Slack.
 * Do not specify credentials in plain text in Terraform configuration files, such as when you define tool integration resources, Tekton pipeline environment property resources, or Tekton pipeline trigger property resources. Instead, manage credentials in a secrets storage service and specify them by reference in API calls and Terraform configurations. For more information about managing secrets by reference, see [Protecting your credentials by using secrets references](#cd_secrets_references).
-   
+
 {{site.data.keyword.cloud_notm}} provides several options that you can use for secure key storage and secrets.
 
 * [Classic pipeline secure environment properties](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about)
 * [Tekton pipeline secure environment properties](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton-pipelines)
 * [{{site.data.keyword.keymanagementservicefull}}](/docs/key-protect?topic=key-protect-getting-started-tutorial)
 * [{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-get-started)
-* [HashiCorp Vault](https://www.vaultproject.io/){: external}
-   
-For more information about secure DevOps best practices, see [DevOps Security](https://www.ibm.com/topics/devops?mhsrc=ibmsearch_a&mhq=Secure%20DevOps#toc-security-j2-0639C){: external}.
+* [HashiCorp Vault](https://developer.hashicorp.com/vault){: external}
+
+For more information about secure DevOps best practices, see [DevOps Security](https://www.ibm.com/think/topics/devops?mhsrc=ibmsearch_a&mhq=Secure%20DevOps#toc-security-j2-0639C){: external}.
 
 ## Protecting your credentials by using secrets references
 {: #cd_secrets_references}
@@ -59,7 +59,7 @@ When you set a secure property with a *plain text* secret value, {{site.data.key
 
 When you set a secure property with a *secrets reference* value, the value is a specially formatted string that refers to the location or address of a secret that is managed within a secrets storage service such as [{{site.data.keyword.keymanagementservicefull}}](/docs/key-protect), [{{site.data.keyword.secrets-manager_full}}](/docs/secrets-manager), or HashiCorp Vault. Although {{site.data.keyword.contdelivery_short}} actively encrypts and stores the secrets reference value internally, the secret value is not exposed on the client side. When {{site.data.keyword.contdelivery_short}} must retrieve the secret to perform processing on your behalf, it internally retrieves the value from the referenced secrets store. Secrets references are also resilient to rotation. Typically, when a secret is rotated within a secrets store, the location or address of the secret remains the same. Only the secret value itself is changed.
 
-Two types of secrets references are supported: by name or by [Cloud Resource Name (CRN)](/docs/account?topic=account-crn). Currently, only [{{site.data.keyword.secrets-manager_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-secretsmanager) tool integrations support referencing secrets by CRN. This format allows for greater flexibility because you can reference secrets from a {{site.data.keyword.secrets-manager_short}} instance in a different account if the correct [authorization](https://cloud.ibm.com/iam/authorizations){: external} is in place. 
+Two types of secrets references are supported: by name or by [Cloud Resource Name (CRN)](/docs/account?topic=account-crn). Currently, only [{{site.data.keyword.secrets-manager_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-secretsmanager) tool integrations support referencing secrets by CRN. This format allows for greater flexibility because you can reference secrets from a {{site.data.keyword.secrets-manager_short}} instance in a different account if the correct [authorization](https://cloud.ibm.com/iam/authorizations){: external} is in place.
 
 Make sure that you consider the following prerequisites for specifying a secrets reference within the scope of a toolchain:
 
@@ -72,12 +72,12 @@ When you work outside of the console, such as with the API or Terraform, use the
 * `{vault::SECRET_STORE_INTEGRATION_NAME.SECRET_GROUP_NAME.SECRET_NAME}` when you reference secrets that are contained within {{site.data.keyword.secrets-manager_short}}.
 * `{vault::SECRET_STORE_INTEGRATION_NAME.SECRET_NAME.FIELD_NAME}` when you reference secrets that are contained within HashiCorp Vault.
 
-Secret value: 
+Secret value:
 * `ref://secrets-manager.REGION.RESOURCE-GROUP.SECRETS-MANAGER-INSTANCE-NAME1/SECRETS-GROUP-NAME/SECRET-NAME` when you reference secrets that are contained within {{site.data.keyword.keymanagementserviceshort}}.
 * `ref://secrets-manager.eu-de.EU-RG.SM-1/default/api-key` when you reference secrets that are contained within {{site.data.keyword.secrets-manager_short}}.
 
 For example, if the secret is of a key value, then you can select the key:
-* `ref://secrets-manager.eu-gb.Default.Secrets%20Manager-zc/Default/mk-kv-pair?key=ibmcloud-api-key` 
+* `ref://secrets-manager.eu-gb.Default.Secrets%20Manager-zc/Default/mk-kv-pair?key=ibmcloud-api-key`
 
 where:
 
@@ -99,7 +99,7 @@ When you use the console, the fields for tool integration configuration properti
 {: api}
 
 You can work with secure properties with secrets reference values in calls to the API, which requires an [IAM bearer token](https://{DomainName}/apidocs/toolchain#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
-   
+
 ```bash
 export CD_TOOLCHAIN_AUTH_TYPE=iam && \
 export CD_TOOLCHAIN_APIKEY={iam_api_key} && \
@@ -125,7 +125,7 @@ https://api.us-south.devops.cloud.ibm.com/toolchain/v2/toolchains/01234567-89ab-
     "channel_name": "my_slack_channel_name",
     "team_url": "my_slack_team_name"
     }
-}' 
+}'
 ```
 {: pre}
 {: curl}
@@ -236,7 +236,7 @@ https://api.us-south.devops.cloud.ibm.com/toolchain/v2/toolchains/01234567-89ab-
     "channel_name": "my_slack_channel_name",
     "team_url": "my_slack_team_name"
     }
-}' 
+}'
 ```
 {: pre}
 {: curl}
@@ -477,12 +477,12 @@ resource "ibm_cd_toolchain_tool_slack" "integration" {
 ```
 {: codeblock}
 
-## Protecting your data with customer-managed keys 
+## Protecting your data with customer-managed keys
 {: #cd_professional_plan}
 
 By default, {{site.data.keyword.contdelivery_short}} encrypts your data by using keys that are internal to the {{site.data.keyword.contdelivery_short}} service. For greater security and control, you can configure {{site.data.keyword.contdelivery_short}} to encrypt your data by using keys that you manage. This option is available only under the Professional plan, and only at the time that you are provisioning an instance of the {{site.data.keyword.contdelivery_short}} service. If you select your own Key Management Service, such as {{site.data.keyword.keymanagementserviceshort}} or {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, the following values are encrypted by using your own key instead of the encryption keys that are internal to the {{site.data.keyword.contdelivery_short}} service.
 
-| Component | Value | 
+| Component | Value |
 |:-----------------|:-----------------|
 |Toolchain		|Properties and parameters     |
 |Pipeline		| * Property keys and values \n * Job logs \n * Job artifacts  |
@@ -492,7 +492,7 @@ By default, {{site.data.keyword.contdelivery_short}} encrypts your data by using
 
 The following components encrypt personal data by using only the provider-managed encryption key.
 
-| Component | Value | 
+| Component | Value |
 |:-----------------|:-----------------|
 |{{site.data.keyword.gitrepos}}		| * Issues, pull requests, and source code \n * Personal information, such as name, email, profile picture, address, and other information from the profile page     |
 {: caption="Values that are encrypted by using the provider-managed key" caption-side="top"}
@@ -542,7 +542,7 @@ To limit project access to only project members, complete the following steps:
 
 {{site.data.keyword.gitrepos}} is a cloud hosted social coding environment that is available to all {{site.data.keyword.contdelivery_short}} users. If you are a {{site.data.keyword.gitrepos}} project Maintainer or Owner, you can invite any user and group members to the project. {{site.data.keyword.cloud_notm}} places no restrictions on who you can invite to a project. Because you can invite anyone into a GitLab project, be careful to invite only those users or groups who are part of your company or organization, unless you explicitly intend otherwise.
 
-For more information about managing GitLab project members, see [Members of a project](https://docs.gitlab.com/ee/user/project/members/){: external}.
+For more information about managing GitLab project members, see [Members of a project](https://docs.gitlab.com/user/project/members/){: external}.
 
 ### Project email settings
 {: #cd_secure_grit_email}
@@ -613,9 +613,9 @@ Use {{site.data.keyword.bplong_notm}} instead of the Terraform command-line tool
 
 For more information about {{site.data.keyword.bplong_notm}}, see the [{{site.data.keyword.bplong_notm}} documentation](/docs/schematics).
 
-For more information about sensitive data in Terraform state, see [Sensitive Data in State](https://developer.hashicorp.com/terraform/language/state/sensitive-data){: external}.
+For more information about sensitive data in Terraform state, see [Sensitive Data in State](https://developer.hashicorp.com/terraform/language/manage-sensitive-data){: external}.
 
-For more information about how to set input variables in Terraform, see [Assigning Values to Root Module Variables](https://developer.hashicorp.com/terraform/language/values/variables#assigning-values-to-root-module-variables){: external}.
+For more information about how to set input variables in Terraform, see [Assigning Values to Root Module Variables](https://developer.hashicorp.com/terraform/language/block/variable#assigning-values-to-root-module-variables){: external}.
 
 
 ## Deleting your data from {{site.data.keyword.contdelivery_short}}

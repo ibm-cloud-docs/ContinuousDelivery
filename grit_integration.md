@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-06-30"
+lastupdated: "2025-12-04"
 
 keywords: tool integrations, IBM Cloud Public, Git Repos and Issue Tracking
 
@@ -28,7 +28,7 @@ If you have a toolchain and want to migrate a Git repo in your toolchain to {{si
 These instructions apply to toolchains that already contain the Git repo that you want to migrate to {{site.data.keyword.gitrepos}}. For information about adding different types of Git repos to your toolchain, see [Configuring GitHub](/docs/ContinuousDelivery?topic=ContinuousDelivery-github) and [Configuring GitLab](/docs/ContinuousDelivery?topic=ContinuousDelivery-gitlab).
 {: tip}
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click the toolchain to open its Overview page. 
 1. Click **Add**.
 1. In the Tool Integrations section, click **{{site.data.keyword.gitrepos}}**.
 1. Select the server that you want to deploy code changes to. After you create the integration, you can edit it to manage the list of servers that you are authorized to work with. Click **Manage Authorization** to view a list of all of the servers and to delete the token that you provided to authorize with the server.
@@ -44,7 +44,7 @@ After you clone the Git repo, you can remove it from your toolchain.
 
 If you have a toolchain and are adding {{site.data.keyword.gitrepos}} to it, follow these steps:
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click the toolchain to open its Overview page. 
 1. Click **Add tool**.
 1. In the Tool Integrations section, click **{{site.data.keyword.gitrepos}}**.
 1. Select the server that you want to deploy code changes to. After you create the integration, you can edit it to manage the list of servers that you are authorized to work with. Click **Manage Authorization** to view a list of all of the servers and to delete the token that you provided to authorize with the server.

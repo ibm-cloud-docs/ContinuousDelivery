@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2025
-lastupdated: "2025-11-18"
+lastupdated: "2025-12-04"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -42,7 +42,7 @@ The Tekton Pipelines project is a beta release. You must update your pipeline wi
 
 {{site.data.keyword.contdelivery_full}} provides two types of delivery pipelines that you can use to build, test, and deploy your applications.
 
-* **Classic**: Classic delivery pipelines are created graphically, with the status embedded in the pipeline diagram. These pipelines can run on shared workers in the cloud or on private workers that run on your own Kubernetes cluster. 
+* **Classic**: Classic delivery pipelines are created graphically, with the status embedded in the pipeline diagram. These pipelines can run on shared workers in the cloud or on private workers that run on your own Kubernetes cluster.
 * **Tekton**: Tekton delivery pipelines are created within yaml files that define pipelines as a set of Kubernetes resources. You can edit those yaml files to change the behavior of a pipeline. Tekton pipelines can run on private workers that run on your own cluster. They can also run on IBM-managed workers on the public cloud. The Tekton integration provides a dashboard that you can use to view the status of Tekton pipeline runs and trigger new runs. It also provides mechanisms for specifying the pipeline triggers, the pipeline definitions, the worker on which the pipeline is run, and the pipeline properties.
 
 Both types of pipelines isolate jobs or steps from one another by running in separate containers, and by using an image that you choose. Classic and Tekton pipelines both exist in a [toolchain](https://cloud.ibm.com/devops/toolchains){: external} and depend on that toolchain to add more tool integrations that are used in the build, test, and deployment process.
@@ -63,7 +63,7 @@ Before you add and run a Tekton pipeline, make sure that you have the following 
 
 * [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli) installed locally.
 * [kubectl](https://kubernetes.io/docs/tasks/tools/){: external} installed locally.
-* A Kubernetes cluster (version 1.22 or higher) such as an [{{site.data.keyword.containerlong}} cluster](https://cloud.ibm.com/kubernetes/catalog/about){: external}.
+* A Kubernetes cluster (version 1.22 or higher) such as an [{{site.data.keyword.containerlong}} cluster](https://cloud.ibm.com/containers/cluster-management/catalog/about){: external}.
 
 The toolchain and the {{site.data.keyword.deliverypipeline}} Private Worker tool integration must be in the same region.
 {: important}
@@ -75,7 +75,7 @@ The toolchain and the {{site.data.keyword.deliverypipeline}} Private Worker tool
 When you configure a {{site.data.keyword.deliverypipeline}} tool integration, you can select the type of pipeline that you want to create.
 
 1. If you don't have a toolchain, select a template to [create a toolchain](https://cloud.ibm.com/devops/create){: external}. Depending on the template that you use, different fields might be available. Review the default field values and if needed, change those settings.
-1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the [Toolchains page](https://cloud.ibm.com/devops/toolchains){: external}, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
+1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the [Toolchains page](https://cloud.ibm.com/devops/toolchains){: external}, click the toolchain to open its Overview page. 
 1. Add the Delivery Pipeline integration to your toolchain:
 
    a. Click **Add tool**.
@@ -91,14 +91,14 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
 {: #configure_tekton_pipeline}
 {: ui}
 
-1. From your toolchain's Overview page, on the **Delivery pipelines** card, click the **{{site.data.keyword.deliverypipeline}}** to open the Tekton {{site.data.keyword.deliverypipeline}} Overview page. 
+1. From your toolchain's Overview page, on the **Delivery pipelines** card, click the **{{site.data.keyword.deliverypipeline}}** to open the Tekton {{site.data.keyword.deliverypipeline}} Overview page.
 1. Click **Settings**. In the **Definitions** section, complete the following tasks:
 
    a. Specify the Git repo and URL that contains the Tekton pipeline definition and related artifacts. If your repo is not available, return to the toolchain Overview page and add your repo.
 
    b. Select the branch within your Git repo that you want to use, or type a tag.
 
-   c. Specify the path to your pipeline definition within the Git repo. You can reference a specific definition within the same repo. You can also add multiple definition repos, if they are integrated with the toolchain. 
+   c. Specify the path to your pipeline definition within the Git repo. You can reference a specific definition within the same repo. You can also add multiple definition repos, if they are integrated with the toolchain.
 
    d. Save your changes.
 
@@ -139,7 +139,7 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
    **Manual triggers** run when you click the **Run** pipeline button and select the trigger.
 
    **Git repository triggers** run when the specified Git event type occurs for the specified Git repo and branch.
-  
+
    You can access the webhook payload that is delivered to a Git trigger from your Tekton pipeline resources. Although the exact fields are repo-specific, the general syntax for the webhook payload is `$(event.payloadFieldName)`. Before you can create a webhook, you must authorize Git Admin access for the corresponding Git integration. To authorize Git Admin access, [configure and save the Git integration](/docs/ContinuousDelivery?topic=ContinuousDelivery-grit) again.
    {: tip}
 
@@ -150,7 +150,7 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
     * `0 9 * 1 MON-FRI` - The trigger runs at 9:00 AM every weekday in January.
     * `0 * * NOV,DEC 1` - The trigger runs every hour on Mondays during November and December.
 
-   **Generic webhook triggers** run when a POST request that is configured with the secret setting goes to the generic webhook URL. Generic webhook triggers provide a unique webhook URL for POST requests. 
+   **Generic webhook triggers** run when a POST request that is configured with the secret setting goes to the generic webhook URL. Generic webhook triggers provide a unique webhook URL for POST requests.
 
    Because the PipelineRun UI does not hide the generic webhook payload values in the event payload section, do not include sensitive data in the payload. Instead, secure any data that is required by a generic webhook by using trigger properties, such as passwords or API key secrets.
    {: important}
@@ -162,12 +162,12 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
    * Tekton task validation requires users to validate the webhook request within their Tekton tasks.
 
    Specify the following values to use generic webhook triggers with GitHub webhooks:
- 
+
    * Securing: `Payload Digest Matches`
    * Signature Source: `Header`
    * Header Key Name: `X-Hub-Signature`
-   * Digest Algorithm: `sha1`.  
- 
+   * Digest Algorithm: `sha1`.
+
    Specify the following values to use generic webhook triggers with GitLab webhooks:
 
    * Securing: `Token Matches`
@@ -196,7 +196,7 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
    {: codeblock}
 
    To obtain payload values in the pipeline definition, specify a Triggerbinding parameter with a value that is derived from the event:
- 
+
    ```text
    apiVersion: tekton.dev/v1beta1
    kind: TriggerBinding
@@ -212,12 +212,12 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
    Save your changes.
 
    In addition, generic webhook triggers support passing properties in the body of the webhook request. This allows properties to be overrided for the PipelineRun that is triggered by the webhook, or to pass in additional properties that supplement the pipeline/trigger properties used in the PipelineRun.
-   
+
    If you require to pass in sensitive data in the payload properties, such as passwords or API key secrets, then you should use property type `SECURE` for such properties so that they are not displayed in plain text in the UI.
    {: important}
 
    Furthermore, an optional description can be passed in the request body that describes the PipelineRun that is triggered, and which is displayed in the UI when viewing the PipelineRun details in a browser.
-   
+
    The following example shows how to use the curl command with a generic webhook while passing in a text property, a secure property and a description:
 
    ```text
@@ -249,12 +249,13 @@ Use the **Branch** and **Pattern** options to specify events such as `commit pus
 
 The **CEL filter** option supports more advanced use cases, such as matching against other fields in the event payload. This option supports push events, all pull request events, issues events, issue comments events, release events, and GitHub merge queue events. This option is also available as an optional feature on the Generic Webhook trigger to provide event filtering based on the webhook payload. 
 
+
 #### CEL overview
 {: #cel_overview}
 
 CEL is a powerful and flexible expression language designed to evaluate conditions and perform validations in a concise and readable manner. CEL is ideally suited for use cases that require complex conditional logic, such as filtering events.
 
-In Tekton pipeline, the CEL option is introduced to provide more powerful and flexible event filtering. The webhook payload is evaluated against the CEL expression that is provided by the user. If the CEL expression evaluates to `true`, the pipeline run is triggered. 
+In Tekton pipeline, the CEL option is introduced to provide more powerful and flexible event filtering. The webhook payload is evaluated against the CEL expression that is provided by the user. If the CEL expression evaluates to `true`, the pipeline run is triggered.
 
 The following features are supported in CEL:
 
@@ -282,9 +283,9 @@ Complete the following steps to convert your existing event filtering selection 
 1. In the **Trigger on** section, select the **CEL filter** option.
 
    ![CEL filter option](images/cel_filter_option.png){: caption="CEL filter option" caption-side="bottom"}
-   
+
    The following elements are automatically converted into an equivalent CEL expression:
-     
+
    * Branch or Pattern
    * Events, such as `commit push`, `pull request opened`, `updated`, and `closed`
    * Include draft pull request events
@@ -292,12 +293,12 @@ Complete the following steps to convert your existing event filtering selection 
    * Label filters
 
    ![CEL filter conversion](images/cel_filter_conversion.png){: caption="CEL filter conversion" caption-side="bottom"}
-   
+
    The generated CEL expression is written into a text area field, which you can edit as needed.
 
    Because no filters exist on Generic Webhook triggers for conversion, the conversion to a CEL filter applies only to Git triggers.
    {: tip}
-   
+
    If you save the trigger with the CEL option selected, it replaces the previously selected events with the CEL expression. If you switch to the Branch or Pattern option after you saves the CEL filter option, your previous event selections are not saved. Conversion from the CEL option to the Branch or Pattern option is not supported.
 
 #### CEL expression examples
@@ -306,18 +307,18 @@ Complete the following steps to convert your existing event filtering selection 
 The following examples are common CEL expressions for each of the supported Git types: `GitHub`, `GitLab` and `BitBucket`. You can copy and modify these examples to meet your requirements.
 
 **GitHub examples**:
-      
+
 Run when a pull request is opened or updated against the specified branch:
-         
+
 ```text
-   header['x-github-event'] == 'pull_request' && 
-      (body.action == 'opened' || body.action == 'synchronize') && 
+   header['x-github-event'] == 'pull_request' &&
+      (body.action == 'opened' || body.action == 'synchronize') &&
       body.pull_request.base.ref == 'main'
 ```
 {: codeblock}
 
 Run when a commit is pushed to the specified branch:
-         
+
 ```text
    header['x-github-event'] == 'push' && body.ref == 'refs/heads/main'
 ```
@@ -326,8 +327,8 @@ Run when a commit is pushed to the specified branch:
 Run when a commit is pushed to the specified branch but skip it when the commit message contains a specific string:
 
 ```text
-   header['x-github-event'] == 'push' && 
-      body.ref == 'refs/heads/main' && 
+   header['x-github-event'] == 'push' &&
+      body.ref == 'refs/heads/main' &&
       !body.head_commit.message.contains("skip run")
 ```
 {: codeblock}
@@ -335,7 +336,7 @@ Run when a commit is pushed to the specified branch but skip it when the commit 
 Run when a comment containing the specified string is added to a pull request:
 
 ```text
-   header['x-github-event'] == 'issue_comment' && 
+   header['x-github-event'] == 'issue_comment' &&
       body.action == 'created' && has(body.issue.pull_request) &&
       body.comment.body.contains('/lgtm')
 ```
@@ -344,8 +345,8 @@ Run when a comment containing the specified string is added to a pull request:
 Run when an issue is created with the specified label:
 
 ```text
-   header['x-github-event'] == 'issues' && 
-      body.action == 'opened' && 
+   header['x-github-event'] == 'issues' &&
+      body.action == 'opened' &&
       body.issue.labels.exists(label, label.name == 'urgent')
 ```
 {: codeblock}
@@ -355,8 +356,8 @@ Run when an issue is created with the specified label:
 Run when a merge request is opened or updated against the specified branch:
 
 ```text
-   header['x-gitlab-event'] == 'Merge Request Hook' && 
-      (body.object_attributes.action == 'open' || body.object_attributes.action == 'update') && 
+   header['x-gitlab-event'] == 'Merge Request Hook' &&
+      (body.object_attributes.action == 'open' || body.object_attributes.action == 'update') &&
       body.object_attributes.target_branch == 'main'
 ```
 {: codeblock}
@@ -371,7 +372,7 @@ Run when a commit is pushed to the specified branch:
 Run when a commit is pushed to the specified branch but skip it when the commit message contains a specific string:
 
 ```text
-   header['x-gitlab-event'] == 'Push Hook' && 
+   header['x-gitlab-event'] == 'Push Hook' &&
       body.ref == 'refs/heads/main' &&
       !body.object_attributes.last_commit.message("skip run")
 ```
@@ -380,8 +381,8 @@ Run when a commit is pushed to the specified branch but skip it when the commit 
 Run when a comment containing the specified string is added to a merge request:
 
 ```text
-   header['x-gitlab-event'] == 'Note Hook' && 
-      body.object_attributes.noteable_type == 'MergeRequest' && 
+   header['x-gitlab-event'] == 'Note Hook' &&
+      body.object_attributes.noteable_type == 'MergeRequest' &&
       body.object_attributes.action == 'create' &&
       body.object_attributes.note.contains('/lgtm')
 ```
@@ -390,8 +391,8 @@ Run when a comment containing the specified string is added to a merge request:
 Run when an issue is created with the specified label:
 
 ```text
-   header['x-gitlab-event'] == 'Issue Hook' && 
-      (body.object_attributes.action == 'open') && 
+   header['x-gitlab-event'] == 'Issue Hook' &&
+      (body.object_attributes.action == 'open') &&
       body.object_attributes.labels.exists(label, label.name == 'urgent')
 ```
 {: codeblock}
@@ -401,7 +402,7 @@ Run when an issue is created with the specified label:
 Run when a pull request is opened or updated against the specified branch:
 
 ```text
-   (header['x-event-key'] == 'pullrequest:created' || header['x-event-key'] == 'pullrequest:updated') && 
+   (header['x-event-key'] == 'pullrequest:created' || header['x-event-key'] == 'pullrequest:updated') &&
        body.pullrequest.destination.branch.name == 'main'
 ```
 {: codeblock}
@@ -416,7 +417,7 @@ Run when a commit is pushed to the specified branch:
 Run when a commit is pushed to the specified branch but skip it when the commit message contains a specific string:
 
 ```text
-   header['x-event-key'] == 'repo:push' && 
+   header['x-event-key'] == 'repo:push' &&
       body.push.changes[0].new.name == 'main' &&
       !body.push.changes[0].commits[0].message("skip run")
 ```
@@ -425,7 +426,7 @@ Run when a commit is pushed to the specified branch but skip it when the commit 
 Run when a comment containing the specified string is added to a pull request:
 
 ```text
-   header['x-event-key'] == 'pullrequest:comment_created' && 
+   header['x-event-key'] == 'pullrequest:comment_created' &&
       body.comment.content.raw.contains('/lgtm')
 ```
 {: codeblock}
@@ -433,7 +434,7 @@ Run when a comment containing the specified string is added to a pull request:
 Run when an issue is created with the specified label:
 
 ```text
-   header['x-event-key'] == 'issue:created' && 
+   header['x-event-key'] == 'issue:created' &&
       body.issue.kind == 'bug'
 ```
 {: codeblock}
@@ -463,7 +464,7 @@ The screenshot below shows an example where the trigger is configured for the la
 When you write CEL expressions for event filtering, you must understand the structure and content of the webhook payload against which the expression will be evaluated. You can inspect the payload for an existing run from the Pipeline Run details page.
 
 To view the event payload, go to the Pipeline Run details page and click **Show context**. You can view the raw webhook payload that triggered the pipeline run and confirm the relevant fields for your CEL expressions to match the conditions that you want.
-   
+
 ## Creating a {{site.data.keyword.deliverypipeline}} for Tekton with the API
 {: #create_tekton_pipeline_api}
 {: api}
@@ -482,7 +483,7 @@ To view the event payload, go to the Pipeline Run details page and click **Show 
    curl -X POST \
      https://api.{region}.devops.cloud.ibm.com/toolchain/v2/toolchains/{toolchain_id}/tools \
      -H 'Authorization: Bearer {iam_token}' \
-     -H 'Accept: application/json` \
+     -H 'Accept: application/json' \
      -H 'Content-Type: application/json' \
      -d '{
        "tool_type_id": "pipeline",
@@ -498,7 +499,7 @@ To view the event payload, go to the Pipeline Run details page and click **Show 
    ```javascript
    const CdToolchainV2 = require('@ibm-cloud/continuous-delivery/cd-toolchain/v2');
    ...
-   (async () => { 
+   (async () => {
       const toolchainService = CdToolchainV2.newInstance();
       const pipelinePrototypeModel = {
          toolchainId: {toolchain_id},
@@ -559,7 +560,7 @@ To view the event payload, go to the Pipeline Run details page and click **Show 
    {: java}
 
    The following table lists and describes each of the variables that are used in the previous step.
-   
+
    | Variable | Description |
    |:---------|:------------|
    | `{region}` | The region in which the toolchain resides, for example, `us-south`. |
@@ -574,7 +575,7 @@ To view the event payload, go to the Pipeline Run details page and click **Show 
    curl -X POST \
       https://api.{region}.devops.cloud.ibm.com/pipeline/v2/tekton_pipelines \
       -H 'Authorization: Bearer {iam_token}' \
-      -H 'Accept: application/json` \
+      -H 'Accept: application/json' \
       -H 'Content-Type: application/json' \
       -d '{
          "id": "{pipeline_id}",
@@ -587,7 +588,7 @@ To view the event payload, go to the Pipeline Run details page and click **Show 
    ```javascript
    const CdTektonPipelineV2 = require('@ibm-cloud/continuous-delivery/cd-tekton-pipeline/v2');
    ...
-   (async () => { 
+   (async () => {
       const tektonService = CdTektonPipelineV2.newInstance();
       const workerIdentityModel = {
          id: 'public',
@@ -663,7 +664,7 @@ To view the event payload, go to the Pipeline Run details page and click **Show 
    | `{pipeline_id}` | The ID of the pipeline that is returned from the previous step where the pipeline tool integration was created. |
    | `{iam_token}` | A valid IAM bearer token. |
    {: caption="Variables for configuring the {{site.data.keyword.deliverypipeline}} with the API" caption-side="top"}
-   
+
 For more information about the {{site.data.keyword.deliverypipeline}} API, see the [API Docs](https://cloud.ibm.com/apidocs/tekton-pipeline){: external}.
 
 ## Creating a {{site.data.keyword.deliverypipeline}} for Tekton with Terraform
@@ -676,9 +677,9 @@ For more information about the {{site.data.keyword.deliverypipeline}} API, see t
 
    A pipeline must belong to a toolchain. You can also create toolchains by [using Terraform](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started&interface=terraform).
    {: tip}
-   
+
    The following example creates a toolchain and a pipeline by using the specified Terraform resources.
-  
+
    ```terraform
    data "ibm_resource_group" "group" {
      name = "default"
@@ -706,14 +707,14 @@ For more information about the {{site.data.keyword.deliverypipeline}} API, see t
    {: codeblock}
 
    For more information about the [`ibm_cd_toolchain_tool_pipeline`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cd_toolchain_tool_pipeline){: external} and [`ibm_cd_tekton_pipeline`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cd_tekton_pipeline){: external} resources, see the argument reference details in the Terraform Registry Documentation.
-  
+
 1. Initialize the Terraform CLI, if required.
 
    ```terraform
    terraform init
    ```
    {: pre}
-   
+
 1. Create a Terraform execution plan. This plan summarizes all of the actions that must run to create a toolchain.
 
    ```terraform
@@ -772,7 +773,7 @@ The retention period for PipelineRuns and their logs depends on the plan that is
    curl -X GET \
      https://api.{region}.devops.cloud.ibm.com/pipeline/v2/tekton_pipelines/{pipeline_id} \
      -H 'Authorization: Bearer {iam_token}' \
-     -H 'Accept: application/json`
+     -H 'Accept: application/json'
    ```
    {: pre}
    {: curl}
@@ -780,7 +781,7 @@ The retention period for PipelineRuns and their logs depends on the plan that is
    ```javascript
    const CdTektonPipelineV2 = require('@ibm-cloud/continuous-delivery/cd-tekton-pipeline/v2');
    ...
-   (async () => { 
+   (async () => {
       const pipelineSvc = CdTektonPipelineV2.newInstance();
       const params = {
          id: {pipeline_id},
@@ -849,7 +850,7 @@ The following table lists and describes each of the variables that are used in t
 1. Add an `output` block to the Terraform file, if it does not already contain a block.
 
    The `resource` in the following example describes an existing pipeline. The `output` block instructs Terraform to output the attributes of the specified resource.
-  
+
    ```terraform
    data "ibm_resource_group" "group" {
      name = "default"
@@ -883,7 +884,7 @@ The following table lists and describes each of the variables that are used in t
    For more information about the [`ibm_cd_toolchain_tool_pipeline`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cd_toolchain_tool_pipeline){: external} and [`ibm_cd_tekton_pipeline`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cd_tekton_pipeline){: external} resources, see the argument reference details in the Terraform Registry Documentation.
 
 1. Initialize the Terraform CLI, if required.
- 
+
    ```terraform
    terraform init
    ```
@@ -897,7 +898,7 @@ The following table lists and describes each of the variables that are used in t
    {: pre}
 
 
-## Viewing logs for a {{site.data.keyword.deliverypipeline}} for Tekton 
+## Viewing logs for a {{site.data.keyword.deliverypipeline}} for Tekton
 {: #view_tekton_logs}
 
 You can view the logs of `PipelineRuns` by using the console UI, the API, or you can download the logs. Additionally you can configure your "Continuous Delivery" service instance to route Tekton `PipelineRun` logs to an {{site.data.keyword.logs_full_notm}} instance in the same account.
@@ -960,7 +961,7 @@ Once you have completed the above configuration the logs for any new PipelineRun
    curl -X GET \
      https://api.{region}.devops.cloud.ibm.com/pipeline/v2/tekton_pipelines/{pipeline_id}/pipeline_runs/{run_id}/logs \
      -H 'Authorization: Bearer {iam_token}' \
-     -H 'Accept: application/json`
+     -H 'Accept: application/json'
    ```
    {: pre}
    {: curl}
@@ -986,7 +987,7 @@ Once you have completed the above configuration the logs for any new PipelineRun
    curl -X GET \
      https://api.{region}.devops.cloud.ibm.com/pipeline/v2/tekton_pipelines/{pipeline_id}/pipeline_runs/{run_id}/logs/{sample_log_id} \
      -H 'Authorization: Bearer {iam_token}' \
-     -H 'Accept: application/json`
+     -H 'Accept: application/json'
    ```
    {: pre}
    {: curl}
@@ -1044,7 +1045,7 @@ You can delete a pipeline by using the console UI, the API, or with Terraform. T
    ```javascript
    const CdTektonPipelineV2 = require('@ibm-cloud/continuous-delivery/cd-tekton-pipeline/v2');
    ...
-   (async () => { 
+   (async () => {
       const pipelineSvc = CdTektonPipelineV2.newInstance();
       const params = {
          id: {pipeline_id},
@@ -1177,7 +1178,7 @@ You can trigger a pipeline from the command line using either the IBM Cloud CLI 
 {: #trigger-pipeline-CLI}
 {: api}
 
-You can trigger the pipeline using the IBM Cloud CLI. For more information about CLI commands, refer to the [IBM Cloud CLI docs](https://cloud.ibm.com/docs/cli).
+You can trigger the pipeline using the IBM Cloud CLI. For more information about CLI commands, refer to the [IBM Cloud CLI docs](/docs/cli).
 
 1. Log in to IBM Cloud
    ```bash
@@ -1256,7 +1257,7 @@ CD Tekton Pipeline](https://cloud.ibm.com/apidocs/tekton-pipeline#trigger-a-pipe
       - A full URL to view the run in the UI.
 
    - This confirms that the pipeline was successfully triggered. You can now navigate to your toolchain's pipeline section in the IBM Cloud UI to view its status and logs.
-   
+
 - When the command runs successfully, the pipeline is triggered. Once triggered, the response includes details of the pipeline run.
 
 
@@ -1271,6 +1272,6 @@ You can view the details for the pod and any related events that are reported by
 ## Learn more about Tekton pipelines and resources
 {: #learn_more_tekton_pipelines}
 
-To learn more about Tekton pipelines, see the [Tekton: A Modern Approach to Continuous Delivery](https://www.ibm.com/blog/tekton-a-modern-approach-to-continuous-delivery/){: external} and [IBM Cloud Continuous Delivery Tekton Pipelines Tools and Resources](https://www.ibm.com/blog/ibm-cloud-continuous-delivery-tekton-pipelines-tools-and-resources/){: external} articles.
+To learn more about Tekton pipelines, see the [Tekton: A Modern Approach to Continuous Delivery](https://www.ibm.com/think/topics/tekton){: external} and [IBM Cloud Continuous Delivery Tekton Pipelines Tools and Resources](https://www.ibm.com/blog/ibm-cloud-continuous-delivery-tekton-pipelines-tools-and-resources/){: external} articles.
 
-To learn more about the Tekton tasks that you can reference within your pipelines, see the [Open Toolchain Tekton Catalog](https://github.com/open-toolchain/tekton-catalog/tree/master/container-registry){: external}. This GitHub repo contains a set of tasks that you can reuse in your Tekton pipelines. 
+To learn more about the Tekton tasks that you can reference within your pipelines, see the [Open Toolchain Tekton Catalog](https://github.com/open-toolchain/tekton-catalog/tree/master/container-registry){: external}. This GitHub repo contains a set of tasks that you can reuse in your Tekton pipelines.

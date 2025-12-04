@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-06-18"
+lastupdated: "2025-12-04"
 
 keywords: troubleshoot, Delivery Pipeline, toolchains, tool integrations
 
@@ -328,4 +328,26 @@ This commonly occurs if a task is trying use a volume already mounted on a node 
 {: tsCauses}
 
 These messages are likely normal operational messages from your Kubernetes cluster. No user intervention is usually required for these types of messages. These occur either when an autoscaling event occurs, freeing up resources for use or when resources become available subsequently. The pipeline thus proceeds once the pod is scheduled. Essentially, the pipeline waits for the necessary resources to become available through autoscaling or other means, allowing the pod to be deployed and the pipeline to continue.
+{: tsResolve}
+
+
+
+## Why am I encountering network errors when using a Docker or Podman sidecar?
+{: #troubleshoot-podman-mtu}
+{: troubleshoot}
+{: support}
+
+When running a tekton pipeline with a Docker or Podman sidecar I see one or more of the following symptoms:
+- Intermittent connection timeouts
+- Large requests/responses failing while small ones succeed
+- Services working fine locally but failing in the cluster
+- TLS handshake failures
+{: tsSymptoms}
+   
+There is an MTU mismatch between the docker daemon and the host network. The inner Docker/Podman daemon creates its own bridge network with a default MTU of 1500, but the pod's network interface may only support 1450 bytes due to overlay encapsulation. It is this mismatch which causes the network failures.
+{: tsCauses}
+
+Update the pipeline definiton to explicitly set the `mtu` value for docker as follows:
+- Docker: `com.docker.network.driver.mtu: 1400`
+- Podman: `podman network create --opt mtu=1400` or in some cases set `--network=host`
 {: tsResolve}
