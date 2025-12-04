@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2024
-lastupdated: "2024-10-18"
+  years: 2015, 2025
+lastupdated: "2025-12-04"
 
 keywords: troubleshoot, GitHub integration, Git Repos and Issue Tracking integration, GitLab project, tool integrations
 
@@ -41,7 +41,7 @@ If you are configuring the GitHub tool integration by using the console while yo
      
 If you are using the console and you already have a toolchain, update the GitHub tool integration's configuration:
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View toolchain** > **Overview**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click the toolchain to open its Overview page.
 1. On the Toolchain's Overview page, on the **Repositories** card, locate the GitHub tool integration.
 1. Click the menu to access the configuration options and update the configuration settings to authorize {{site.data.keyword.cloud_notm}} to access GitHub.
 
@@ -77,7 +77,7 @@ Because {{site.data.keyword.gitrepos}} is tightly integrated with the {{site.dat
 Instead of creating a {{site.data.keyword.gitrepos}} tool integration, create a generic GitLab integration and use this integration to point to the {{site.data.keyword.gitrepos}} repository (repo) in a different region.
 {: tsResolve}
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click the toolchain that you want to add this integration to. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View toolchain** and click **Overview**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click the toolchain that you want to add this integration to.
 1. Click **Add tool**.
 1. In the Tool Integrations section, click **GitLab**.
 1. Click the GitLab server that you want to use. If the GitLab server where the repo you want to access resides does not appear in this list, add a custom server:

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2024
-lastupdated: "2024-10-18"
+  years: 2015, 2025
+lastupdated: "2025-12-04"
 
 keywords: tool integrations, IBM Cloud Public, Slack
 
@@ -32,7 +32,7 @@ Notifications that are posted to public Slack channels are visible to everyone o
 Configure Slack to receive notifications about your toolchain from the tool integrations, such as test and deployment activities:
 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **Slack**.
-1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**. 
+1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click the toolchain to open its Overview page.  
 
    a. Click **Add tool**.
 

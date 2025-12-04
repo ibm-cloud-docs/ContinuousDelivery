@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2025
-lastupdated: "2025-04-29"
+lastupdated: "2025-12-04"
 
 keywords: tool integrations, cos bucket tool integration
 
@@ -36,7 +36,7 @@ To store and access evidence or other artifacts securely for your toolchain, con
 
 1. If you are configuring this tool integration as you are creating the toolchain, and a Cloud {{site.data.keyword.cos_short}} Bucket exists, within the template that you are configuring, click the Cloud {{site.data.keyword.cos_short}} Bucket tab. Alternatively, in the **More tools** section, click Cloud {{site.data.keyword.cos_short}} Bucket.
 
-1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, clicks the ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
+1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, clicks the ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click the toolchain to open its Overview page. 
 
    a. Click **Add**.
 
