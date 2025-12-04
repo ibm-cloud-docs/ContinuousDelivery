@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2025
-lastupdated: "2025-11-18"
+lastupdated: "2025-12-04"
 
 keywords: environment properties, environment resources, IBM Java, Tekton environments
 
@@ -142,7 +142,7 @@ To indicate which VM profile to apply to a specific task within a Tekton pipelin
 
 * `small`: 2Gi
 * `medium`: 4Gi (default)
-* `large`: 8Gi 
+* `large`: 8Gi
 
 For example:
 
@@ -263,4 +263,4 @@ echo '::endgroup::'
 ## Learn more about Tekton delivery pipelines
 {: #tekton_learn_more}
 
-To learn more about Tekton and {{site.data.keyword.contdelivery_short}}, see [Tekton: A Modern Approach to Continuous Delivery](https://www.ibm.com/blog/tekton-a-modern-approach-to-continuous-delivery/){: external}.
+To learn more about Tekton and {{site.data.keyword.contdelivery_short}}, see [Tekton: A Modern Approach to Continuous Delivery](https://www.ibm.com/think/topics/tekton){: external}.

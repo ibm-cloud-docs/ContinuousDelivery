@@ -36,7 +36,7 @@ You might be able to use Terraform to work directly with some GitHub and GitLab 
 
 You can use HTTP APIs or selected programming language SDKs to add GitHub, GitLab, and {{site.data.keyword.gitrepos}} tool integrations to a toolchain, to update those tool integrations, or to remove those tool integrations from a toolchain. For more information about working with the GitHub, GitLab, and {{site.data.keyword.gitrepos}} tool integrations, see [Working with tool integrations](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations) and [Creating toolchains with Git](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_git).
 
-You might be able to use APIs to work directly with some repos. For more information about the GitHub API, see [REST API](https://docs.github.com/en/rest){: external}. For more information about the GitLab API, see [REST API](https://docs.gitlab.com/ee/api){: external}.
+You might be able to use APIs to work directly with some repos. For more information about the GitHub API, see [REST API](https://docs.github.com/en/rest){: external}. For more information about the GitLab API, see [REST API](https://docs.gitlab.com/api/){: external}.
 {: tip}
 
 ## What is the difference between the `initialization` block and the `parameters` block in Git tool integration Terraform resources?
@@ -73,7 +73,7 @@ Before you can use a repo integration, you must authorize it so that {{site.data
 {: faq}
 {: support}
 
-Git Repos and Issue Tracking is an {{site.data.keyword.cloud_notm}} service. All users must have an {{site.data.keyword.cloud_notm}} account or be invited to join an account. 
+Git Repos and Issue Tracking is an {{site.data.keyword.cloud_notm}} service. All users must have an {{site.data.keyword.cloud_notm}} account or be invited to join an account.
 
 We recommend using the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com) to invite users to join your account. For more information, see [Inviting users to an account](/docs/account?topic=account-iamuserinv).
 {: tip}

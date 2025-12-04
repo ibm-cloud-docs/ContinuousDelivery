@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-12-04"
 
 keywords: Satellite, satellite, tekton, pipeline, toolchain, CD, automate, automation, continuous delivery, DevOps, shift-left, shift left, secure DevOps, IBM Cloud
 
@@ -32,7 +32,7 @@ In this tutorial, you learn how to create an open toolchain by using {{site.data
 
 The toolchain that is used in this tutorial implements standard DevOps practices around continuous delivery capabilities. After you make sure that you meet all of the continuous integration requirements, this toolchain helps you to manage your deployments in {{site.data.keyword.cloud_notm}} {{site.data.keyword.satelliteshort}} locations. After you create clusters and associate them with a {{site.data.keyword.satelliteshort}} cluster group, you can create a toolchain to change your deployment source code and push the change to the GitHub repo. When you push changes to your repo, the Tekton-based delivery pipeline automatically deploys the code.
 
-[Tekton](https://www.ibm.com/blog/tekton-a-modern-approach-to-continuous-delivery/){: external} is an open source, vendor-neutral, Kubernetes-native framework that you can use to build, test, and deploy apps. Tekton provides a set of shared components for implementing continuous delivery systems. As an open source project, Tekton is managed by the [Continuous Delivery Foundation](https://cd.foundation/){: external}. The goal is to modernize continuous delivery by providing industry specifications for pipelines, workflows, and other building blocks. With Tekton, you can build, test, and deploy across cloud providers or on-premises systems by abstracting the underlying implementation details. Tekton pipelines are built into [{{site.data.keyword.contdelivery_short}}](https://www.ibm.com/blog/announcement/build-and-deliver-using-tekton-enabled-pipelines/){: external}.
+[Tekton](https://www.ibm.com/blog/tekton-a-modern-approach-to-continuous-delivery/){: external} is an open source, vendor-neutral, Kubernetes-native framework that you can use to build, test, and deploy apps. Tekton provides a set of shared components for implementing continuous delivery systems. As an open source project, Tekton is managed by the [Continuous Delivery Foundation](https://cd.foundation/){: external}. The goal is to modernize continuous delivery by providing industry specifications for pipelines, workflows, and other building blocks. With Tekton, you can build, test, and deploy across cloud providers or on-premises systems by abstracting the underlying implementation details. Tekton pipelines are built into [{{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton-pipelines&interface=ui).
 
 The template that is used in this tutorial works with the Standard plan for {{site.data.keyword.redhat_openshift_notm}}.
 {: tip}

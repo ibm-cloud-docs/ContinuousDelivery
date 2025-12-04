@@ -35,10 +35,10 @@ If you are configuring the GitHub tool integration by using the console while yo
 
 1. In the Configurable Integrations section, click **GitHub**.
 1. If you are creating the toolchain on {{site.data.keyword.cloud_notm}} Public and {{site.data.keyword.cloud_notm}} is not authorized to access GitHub, select the method of authentication that will be used to access Github.
- 
+
    * If you choose `OAuth`, click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize IBM-Cloud** to allow {{site.data.keyword.cloud_notm}} to access your GitHub account.
    * If you choose `Personal Access Token`, specify a valid personal access token for GitHub.
-     
+
 If you are using the console and you already have a toolchain, update the GitHub tool integration's configuration:
 
 1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click the toolchain to open its Overview page.
@@ -47,7 +47,7 @@ If you are using the console and you already have a toolchain, update the GitHub
 
    * If you choose `OAuth`, click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize IBM-Cloud** to allow {{site.data.keyword.cloud_notm}} to access your GitHub account.
    * If you choose `Personal Access Token`, provide a valid personal access token for GitHub.
-   
+
 1. When you are finished updating the settings, click **Save Integration**.
 
 If you are using Terraform or the API with the `OAuth` authentication method, switch to using a Personal Access Token (PAT) to provide granular access to a specific user or repo. Authorizing with a PAT is recommended when you use Terraform or the API. Otherwise, you can use the console to authorize {{site.data.keyword.cloud_notm}} to access your GitHub account:
@@ -181,7 +181,7 @@ You have a large repo that is greater than 1 GB. The repo might also contain bin
 You can use any of the following methods to resolve this problem:
 {: tsResolve}
 
-* Reduce the size of your {{site.data.keyword.gitrepos}} repo. For more information about reducing the size of your repo, see [Reducing the repository size using Git](https://docs.gitlab.com/ee/user/project/repository/reducing_the_repo_size_using_git.html){: external}.
+* Reduce the size of your {{site.data.keyword.gitrepos}} repo. For more information about reducing the size of your repo, see [Reducing the repository size using Git](https://docs.gitlab.com/user/project/repository/repository_size/#methods-to-reduce-repository-size){: external}.
 
 * Use SSH to bypass the default clone timeout of 180 seconds.
 

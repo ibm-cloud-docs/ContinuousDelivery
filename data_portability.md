@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-19"
+lastupdated: "2025-12-04"
 
 keywords: Continuous Delivery, toolchain, client owned data
 
@@ -51,7 +51,7 @@ Some data retrieval procedures use the {{site.data.keyword.cloud}} command line 
 1. Before invoking APIs to retrieve data, run `export TOKEN=$(ibmcloud iam oauth-tokens | sed 's!^IAM *token: *Bearer *!!')` to obtain and assign a bearer token to the `TOKEN` environment variable.
 1. Before invoking APIs to retrieve data, set the `REGION` environment variable to the region that contains the instance of {{site.data.keyword.contdelivery_short}} from which you want to retrieve data. Example: `export REGION=us-south`.
 
-Some of the following procedures use the open source tool [`curl`](https://curl.se){: external} to retrieve data from HTTP APIs. Some procedures use [`jq`](https://jqlang.github.io/jq){: external} to process JSON data that is returned from HTTP APIs. Use of these tools is not mandatory. At your discretion, you can substitute different tools or techniques to retrieve and process the data.
+Some of the following procedures use the open source tool [`curl`](https://curl.se){: external} to retrieve data from HTTP APIs. Some procedures use [`jq`](https://jqlang.org/){: external} to process JSON data that is returned from HTTP APIs. Use of these tools is not mandatory. At your discretion, you can substitute different tools or techniques to retrieve and process the data.
 {: tip}
 
 ### {{site.data.keyword.contdelivery_short}} service instances
@@ -194,7 +194,7 @@ You can retrieve Classic pipeline logs by using the `ibmcloud dev pipeline-log` 
 ### Git Repos and Issue Tracking
 {: #data-portability-procedures-git}
 
-Git Repos and Issue Tracking are powered by GitLab Community Edition. Procedures for exporting or retrieving data from Git Repos and Issue Tracking are the same as those for GitLab. Data retrieval procedures are scoped to individual projects. Procedures that involve the GitLab API require an authentication token, such as a personal access token. For more information, see [Authentication](https://docs.gitlab.com/ee/api/rest/index.html#authentication){: external} in the GitLab Docs.
+Git Repos and Issue Tracking are powered by GitLab Community Edition. Procedures for exporting or retrieving data from Git Repos and Issue Tracking are the same as those for GitLab. Data retrieval procedures are scoped to individual projects. Procedures that involve the GitLab API require an authentication token, such as a personal access token. For more information, see [Authentication](https://docs.gitlab.com/api/rest/#authentication){: external} in the GitLab Docs.
 
 #### GitLab projects
 {: #data-portability-procedures-git-projects}
@@ -205,7 +205,7 @@ If you want to migrate a Git Repos and Issue Tracking project to another instanc
 1. Select **Settings** > **General** > **Advanced** > **Export Project**.
 1. The export process runs in the background. After the process completes, a **Download Export** button appears on the Export Project section of the page. You are also sent an email with a link to download the archive.
 
-For more information about the "Export Project" feature, see [Migrate projects and groups by using file exports](https://docs.gitlab.com/ee/user/project/settings/import_export.html){: external} in the GitLab Docs.
+For more information about the "Export Project" feature, see [Migrate projects and groups by using file exports](https://docs.gitlab.com/user/project/settings/import_export/){: external} in the GitLab Docs.
 
 If you want to harvest data from Git Repos and Issue Tracking for use in another system, the "Export Project" feature might not be appropriate. Review the following sections for alternative methods for exporting GitLab data.
 {: tip}
@@ -225,7 +225,7 @@ You can obtain an archive that contains the current files in any branch of a pro
 1. Click the **Code**.
 1. Choose an export format, such as `zip`, `tar`, `tar.gz`, or `tar.bz2`.
 
-For more information, see [Download repository source code](https://docs.gitlab.com/ee/user/project/repository/#download-repository-source-code){: external} in the GitLab Docs.
+For more information, see [Download repository source code](https://docs.gitlab.com/user/project/repository/#download-repository-source-code){: external} in the GitLab Docs.
 
 #### GitLab merge requests
 {: #data-portability-procedures-git-mergerequests}
@@ -236,7 +236,7 @@ To export the data of a project's merge requests, complete the following steps:
 1. Query for all merge requests of interest.
 1. Select **Actions** ![List of actions icon](../icons/action-menu-icon.svg) > **Export as CSV**.
 
-For more information, see [Export merge requests to CSV](https://docs.gitlab.com/ee/user/project/merge_requests/csv_export.html){: external} in the GitLab Docs.
+For more information, see [Export merge requests to CSV](https://docs.gitlab.com/user/project/merge_requests/csv_export/){: external} in the GitLab Docs.
 
 #### GitLab issues
 {: #data-portability-procedures-git-issues}
@@ -247,20 +247,20 @@ To export the data of a project's issues, complete the following steps:
 1. Query for all applicable issues.
 1. Select **Actions** ![List of actions icon](../icons/action-menu-icon.svg) > **Export as CSV**.
 
-For more information, see [Export issues to CSV](https://docs.gitlab.com/ee/user/project/issues/csv_export.html){: external}.
+For more information, see [Export issues to CSV](https://docs.gitlab.com/user/project/issues/csv_export/){: external}.
 
 #### GitLab snippets
 {: #data-portability-procedures-git-snippets}
 
 You can retrieve snippets from a Git Repos and Issue Tracking project. To retrieve snippets, complete the following steps:
 
-1. Use the GitLab `GET /snippets/all` API to list all snippets to which you have access. This includes personal and project snippets. For more information, see [List all snippets](https://docs.gitlab.com/ee/api/snippets.html#list-all-snippets){: external} in the GitLab API Docs.
-1. Use the GitLab `GET /snippets/:id/raw` API to retrieve the raw content of each snippet of interest. For more information, see [Single snippet contents](https://docs.gitlab.com/ee/api/snippets.html#single-snippet-contents){: external} in the GitLab API Docs.
+1. Use the GitLab `GET /snippets/all` API to list all snippets to which you have access. This includes personal and project snippets. For more information, see [List all snippets](https://docs.gitlab.com/api/snippets/#list-all-snippets){: external} in the GitLab API Docs.
+1. Use the GitLab `GET /snippets/:id/raw` API to retrieve the raw content of each snippet of interest. For more information, see [Single snippet contents](https://docs.gitlab.com/api/snippets/#single-snippet-contents){: external} in the GitLab API Docs.
 
 You cannot retrieve private snippets that belong to another user. If you need to obtain private snippets of another user, contact the user and request access to their snippets, or that they export their snippets.
 {: exception}
 
-For more information, see [Snippets](https://docs.gitlab.com/ee/user/snippets.html){: external} in the GitLab Docs.
+For more information, see [Snippets](https://docs.gitlab.com/user/snippets/){: external} in the GitLab Docs.
 
 #### GitLab project members
 {: #data-portability-procedures-git-users}
@@ -272,7 +272,7 @@ You can obtain a list of member users of a Git Repos and Issue Tracking project.
 You can't retrieve detailed information about users other than yourself. If you need to obtain detailed user metadata for members of your project, contact the users on the members list and request that they export their details.
 {: exception}
 
-For more information, see [List all members of a group or project](https://docs.gitlab.com/ee/api/members.html#list-all-members-of-a-group-or-project){: external} in the GitLab API Docs.
+For more information, see [List all members of a group or project](https://docs.gitlab.com/api/group_members/#list-all-members-of-a-group){: external} in the GitLab API Docs.
 
 #### GitLab Wikis
 {: #data-portability-procedures-git-wikis}
@@ -282,7 +282,7 @@ You can obtain a copy of a project wiki by cloning the wiki repository to a loca
 1. From the Git Repos and Issue Tracking home page for the project, select **Plan** > **Wiki**.
 1. Select **Actions** ![List of actions icon](../icons/action-menu-icon.svg) > **Clone repository**.
 
-For more information, see [Create or edit wiki pages locally](https://docs.gitlab.com/ee/user/project/wiki/#create-or-edit-wiki-pages-locally){: external}.
+For more information, see [Create or edit wiki pages locally](https://docs.gitlab.com/user/project/wiki/#create-or-edit-wiki-pages-locally){: external}.
 
 ### DevOps Insights
 {: #data-portability-procedures-insights}
@@ -335,4 +335,4 @@ No client-owned data is in Code Risk Analyzer that is needed to implement simila
 ## Data ownership
 {: #data-portability-ownership}
 
-All exported data is classified as customer content. Apply the full customer ownership and licensing rights, as stated in the [IBM Cloud Service Agreement](https://www.ibm.com/terms/?id=Z126-6304_WS).
+All exported data is classified as customer content. Apply the full customer ownership and licensing rights, as stated in the [IBM Cloud Service Agreement](https://www.ibm.com/support/customer/csol/terms/?id=Z126-6304_WS&cc=in&lc=en).

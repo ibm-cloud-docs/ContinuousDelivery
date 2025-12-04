@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2025
-lastupdated: "2025-08-07"
+lastupdated: "2025-12-04"
 
 keywords: high availability, disaster recovery, SLA
 
@@ -47,5 +47,5 @@ Where:
 - A region is a defined geographic territory.
 - A region might be a specific postal code area, a town, a city, a state, a group of states, or even a group of countries.
 - A region contains multiple availability zones to meet local access, low latency, and security requirements for the region.
-- MZR means multi-zone region. [Learn more](https://cloud.ibm.com/docs/overview?topic=overview-locations#table-mzr).
-- SC-MZR means single-campus multi-zone region. [Learn mode](https://cloud.ibm.com/docs/overview?topic=overview-locations#single-campus-mzr).
+- MZR means multi-zone region. [Learn more](/docs/overview?topic=overview-locations#table-mzr).
+- SC-MZR means single-campus multi-zone region. [Learn mode](/docs/overview?topic=overview-locations#single-campus-mzr).

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2024
-lastupdated: "2024-04-18"
+  years: 2016, 2025
+lastupdated: "2025-12-04"
 
 keywords: run jobs, sequences of stages, job types, Delivery Pipeline, Classic
 
@@ -43,9 +43,9 @@ Similar to how you can define pipeline properties, you can also define stage pro
 
 By default in a stage, builds and deployments are run automatically every time that changes are delivered to a project's SCM repository. Stages and jobs run serially; they enable flow control for your work. For example, you might place a test stage before a deployment stage. If the tests in the test stage fail, the deployment stage does not run.
 
-The {{site.data.keyword.deliverypipeline}} uses public and private workers to run the jobs in a stage. By default, pipeline jobs are run by using public workers on IBM-managed public shared infrastructure. 
+The {{site.data.keyword.deliverypipeline}} uses public and private workers to run the jobs in a stage. By default, pipeline jobs are run by using public workers on IBM-managed public shared infrastructure.
 
-In certain scenarios, your {{site.data.keyword.deliverypipeline}} might require access to internal or on-premises resources. In these situations, you can connect to and integrate a {{site.data.keyword.deliverypipeline}} Private Worker to run on your own Kubernetes infrastructure. 
+In certain scenarios, your {{site.data.keyword.deliverypipeline}} might require access to internal or on-premises resources. In these situations, you can connect to and integrate a {{site.data.keyword.deliverypipeline}} Private Worker to run on your own Kubernetes infrastructure.
 
 You might want tighter control of a specific stage. If you do not want a stage to run every time that a change occurs at its input, you can disable the capability. On the **INPUT** tab, in the Stage Trigger section, click **Run jobs only when this stage is run manually**.
 
@@ -64,14 +64,14 @@ If you select the **When a pull/merge request is opened or updated** checkbox, t
 This status feedback is also supported by the IBM hosted GitLab Community Edition tool for merge requests.
 {: tip}
 
-You can also restrict merging based on the results of the status checks by using Git branch protection rules. After a branch protection rule is created, all merging is blocked until all of the required status checks are successful. 
+You can also restrict merging based on the results of the status checks by using Git branch protection rules. After a branch protection rule is created, all merging is blocked until all of the required status checks are successful.
 
 ### Bitbucket Cloud pull requests
 {: #bitbucket_pull_request_limitations}
 
-Bitbucket Cloud currently does not support repository references for pull requests, which is required by the {{site.data.keyword.contdelivery_short}} service. This feature allows pull requests to be sent to the repo that you want to access by using references in the following format: `refs/pull/123/…` 
+Bitbucket Cloud currently does not support repository references for pull requests, which is required by the {{site.data.keyword.contdelivery_short}} service. This feature allows pull requests to be sent to the repo that you want to access by using references in the following format: `refs/pull/123/…`
 
-You can [locally fetch and check out a pull request](https://confluence.atlassian.com/bbkb/how-to-locally-fetch-and-checkout-a-pull-request-724402529.html){: external} by using the source repo URL. However, if the source repo is a private forked repo, the {{site.data.keyword.contdelivery_short}} service does not have the access that is required to manage pull requests. To work around this limitation, you must explicitly provide the required access to the forked repo in the pipeline script. 
+You can [locally fetch and check out a pull request](https://support.atlassian.com/bitbucket-cloud/kb/how-to-locally-fetch-and-checkout-a-pull-request/){: external} by using the source repo URL. However, if the source repo is a private forked repo, the {{site.data.keyword.contdelivery_short}} service does not have the access that is required to manage pull requests. To work around this limitation, you must explicitly provide the required access to the forked repo in the pipeline script.
 
 In the following sample bash pipeline script, two users are using Bitbucket Cloud and they each have a private fork of their main repo (bitbucket.org/userA/repo-forked-A and bitbucket.org/userB/repo-forked-B). The script is set up to check out the pull request when a build job is triggered by a pull request open event or update event from one of the two forked repos.
 
@@ -91,7 +91,7 @@ git checkout FETCH_HEAD
 ### Build stage
 {: #build_stage}
 
-The build stage specifies a **Builder type** to indicate how to build the artifacts.  
+The build stage specifies a **Builder type** to indicate how to build the artifacts.
 
 Many of the fields that are available in Build jobs are common across multiple Builder types.
 {: tip}
@@ -159,7 +159,7 @@ If you need to use the configuration from a deprecated job type, use one of the 
    --header 'Authorization: Bearer <IAM Bearer token>
    ```
 
-* From the **Network** tab of the {{site.data.keyword.deliverypipeline}} UI, filter by the pipeline ID to locate the pipeline that contains the deprecated job type data. 
+* From the **Network** tab of the {{site.data.keyword.deliverypipeline}} UI, filter by the pipeline ID to locate the pipeline that contains the deprecated job type data.
 
 ### API keys
 {: #api_keys}
@@ -286,7 +286,7 @@ All jobs start by running the `build.properties` file, if it exists.
 
 Build jobs automatically fetch the content in the current folder where the user script is run.  If you do not need the entire git repo content for later deployment, it is preferable that you configure an explicit output directory and then copy or create the relevant artifacts there.  Job scripts are run in the build result (output directory).
 
-Deploy jobs that deploy to the {{site.data.keyword.containerlong_notm}} need to specify the Platform API key of a user under whose authority jobs run, a Dockerfile, and optionally a Helm chart.  
+Deploy jobs that deploy to the {{site.data.keyword.containerlong_notm}} need to specify the Platform API key of a user under whose authority jobs run, a Dockerfile, and optionally a Helm chart.
 
 The job script runs after the job has logged in to the target environment by using the Platform API key that is assigned to it (so that you can run `cf push`  or `kubectl` commands in the script).
 
