@@ -151,6 +151,7 @@ toc:
           topics:
           - cd_at_events.md
       - cd_monitoring_metrics.md
+      - cd_migrate_region.md
   - navgroup:
       id: reference
       topics:
