@@ -485,8 +485,8 @@ By default, {{site.data.keyword.contdelivery_short}} encrypts your data by using
 | Component | Value |
 |:-----------------|:-----------------|
 |Toolchain		|Properties and parameters     |
-|Pipeline		| * Property keys and values \n * Job logs \n * Job artifacts  |
-|Integrations		| * Slack (Slack webhook) \n * Pagerduty (API access key, Integration key) \n * Sauce Labs (Access key) \n * Artifactory (API key) \n * HashiCorp Vault (Token, Role ID, Secret ID, Password) \n *  Jenkins (Jenkins API token) \n * JIRA (JIRA API token) \n * Nexus (Authentication token) \n * Rational Team Concert (Password) \n * Security and Compliance Center ({{site.data.keyword.cloud_notm}} API key) \n * Sonarqube (SonarQube password or authentication token) |
+|Pipeline		| * Property keys and values <br> * Job logs <br> * Job artifacts  | 
+|Integrations		| * Slack (Slack webhook) <br> * Pagerduty (API access key, Integration key) <br> * Sauce Labs (Access key) <br> * Artifactory (API key) <br> * HashiCorp Vault (Token, Role ID, Secret ID, Password) <br> *  Jenkins (Jenkins API token) <br> * JIRA (JIRA API token) <br> * Nexus (Authentication token) <br> * Rational Team Concert (Password) <br> * Sonarqube (SonarQube password or authentication token) |
 |{{site.data.keyword.DRA_full}}		|Attachment in test records |
 {: caption="Values that are encrypted by using your own key" caption-side="top"}
 
