@@ -74,7 +74,6 @@ toc:
               - rtc_integration.md
               - sauce_labs_integration.md
               - secrets_manager_integration.md
-              - scc_integration.md
               - slack_integration.md
               - sonarqube_integration.md
       - deploy_button.md

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2025-12-04"
+lastupdated: "2026-01-14"
 
 keywords: tool integrations, IBM Cloud Public, Event Notifications
 
@@ -15,7 +15,7 @@ subcollection: ContinuousDelivery
 # Configuring {{site.data.keyword.en_short}}
 {: #event-notifications-integration}
 
-You can use the {{site.data.keyword.en_full}} service to receive information about critical events that occur in your {{site.data.keyword.cloud}} account. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like Toolchains, Monitoring, Security and Compliance Center, and Secrets Manager to communication channels like PagerDuty, Slack, email, SMS, push notifications, webhook, Microsoft&reg; Teams, ServiceNow, and {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}.
+You can use the {{site.data.keyword.en_full}} service to receive information about critical events that occur in your {{site.data.keyword.cloud}} account. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like Toolchains, Monitoring,  and Secrets Manager to communication channels like PagerDuty, Slack, email, SMS, push notifications, webhook, Microsoft&reg; Teams, ServiceNow, and {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}.
 {: shortdesc}
 
 Before you configure an {{site.data.keyword.en_short}} tool integration, make sure that you provision an instance of the [{{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-getting-started) service.
@@ -28,7 +28,7 @@ Make sure that the selected {{site.data.keyword.en_short}} service instance has 
 
 Configure {{site.data.keyword.en_short}} to send critical events from toolchains and tool integration instances:
 
-1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click the toolchain to open its Overview page. 
+1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**. On the Toolchains page, click the toolchain to open its Overview page.
 
    a. Click **Add tool**.
 

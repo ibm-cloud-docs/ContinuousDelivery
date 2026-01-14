@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2025
-lastupdated: "2025-04-29"
+  years: 2015, 2026
+lastupdated: "2026-01-14"
 
 keywords: tool integrations, IBM Cloud Public, App Configuration, Artifactory, Bitbucket, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Event Notifications, Git Repos and Issue Tracking, GitHub, GitLab, HashiCorp Vault, Jenkins, JIRA, IBM Key Protect, IBM Secrets Manager, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Security and Compliance Center, Slack, SonarQube
 
@@ -539,7 +539,6 @@ If you are using the [{{site.data.keyword.contdelivery_short}} Toolchain API to 
 |[Rational Team Concert](/docs/ContinuousDelivery?topic=ContinuousDelivery-rationalteamconcert)		|rationalteamconcert |		|
 |[Sauce Labs](/docs/ContinuousDelivery?topic=ContinuousDelivery-saucelabs)		|saucelabs |		|
 |[Secrets Manager](/docs/ContinuousDelivery?topic=ContinuousDelivery-secretsmanager)		|secretsmanager | ![Checkmark icon](../icons/checkmark-icon.svg)		|
-|[Security and Compliance Center](/docs/ContinuousDelivery?topic=ContinuousDelivery-scc)		|security_compliance | ![Checkmark icon](../icons/checkmark-icon.svg)		|
 |[Slack](/docs/ContinuousDelivery?topic=ContinuousDelivery-slack)		|slack |		|
 |[SonarQube](/docs/ContinuousDelivery?topic=ContinuousDelivery-sonarqube)			|sonarqube |		|
 {: caption="Tool integrations available for toolchains on {{site.data.keyword.cloud_notm}} Public" caption-side="top"}
