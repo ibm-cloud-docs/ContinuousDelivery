@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2025
-lastupdated: "2025-12-04"
+  years: 2020, 2026
+lastupdated: "2026-01-22"
 
 keywords: environment properties, environment resources, IBM Java, Tekton environments
 
@@ -174,6 +174,8 @@ spec:
         runtimeClassName: medium
 ```
 {: codeblock}
+
+
 
 
 

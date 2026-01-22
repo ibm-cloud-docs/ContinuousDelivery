@@ -30,7 +30,7 @@ You can migrate {{site.data.keyword.contdelivery_short}} resources, including to
 ## Supported resources
 {: #cd-migrate-region-supported-resources}
 
-The following resources are supported for migration to another region -
+The following resources are supported for migration to another region:
 
 | Resource | Has support for migration|
 | :- | :- |
@@ -60,7 +60,7 @@ Migration of resources from one region to another is subject to the following li
 
 The following limitations apply only if you are migrating [{{site.data.keyword.gitrepos}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-git_working) projects.
 
-1. Personal projects are not supported. If you created a project under a [personal namespace](https://docs.gitlab.com/user/namespace/){: external}, you can either [move your personal project to a group](https://docs.gitlab.com/tutorials/move_personal_project_to_group/){: external}, or [convert your personal namespace into a group](https://docs.gitlab.com/tutorials/convert_personal_namespace_to_group/){: external}. It is recommended that you store projects in groups, as they allow multiple administrators and allow better continuity of a project over time.
+1. Personal projects are not supported. If you created a project under a [personal namespace](https://docs.gitlab.com/user/namespace/){: external}, you can either [move your personal project to a group](https://docs.gitlab.com/tutorials/move_personal_project_to_group/){: external} or [convert your personal namespace into a group](https://docs.gitlab.com/tutorials/convert_personal_namespace_to_group/){: external}, then update references in the toolchain with the new URL. It is recommended that you store projects in groups, as they allow multiple administrators and allow better continuity of a project over time.
 1. This command requests a GitLab direct transfer and is subject to the [limitations of using direct transfer](https://docs.gitlab.com/user/group/import/#known-issues){: external}.
 1. Copying large projects, or projects with large files or many resources, can take time.
 1. As each region of {{site.data.keyword.gitrepos}} is independent, your projects' users may not yet exist in the destination region. The `copy-project-group` command will ensure that the users exist in the new region, however there may be user name conflicts with other users in the destination region. In the event of a user name conflict, the user name in the destination region may be changed slightly by adding a suffix.
@@ -93,13 +93,13 @@ The following sections describe each step of the migration in more detail.
 ## Prerequisites
 {: #cd-migrate-region-prereqs}
 
-To perform the migration, you will need the following -
+To perform the migration, you will need the following:
 
 * An [{{site.data.keyword.cloud_notm}} API key](/docs/account?topic=account-manapikey) with the IAM access listed below. The API key must be user API key. Service ID API keys are not supported.
 * **Viewer** access for the source Toolchain(s) being copied
 * **Editor** access for creating new Toolchains in the target region
 * **Administrator** access for other {{site.data.keyword.cloud_notm}} service instances that have a tool integration with IAM service-to-service authorizations, such as [{{site.data.keyword.secrets-manager_short}}](/docs/secrets-manager?topic=secrets-manager-getting-started), [Event Notifications](/docs/event-notifications?topic=event-notifications-getting-started), etc.
-* Access to any GitHub or {{site.data.keyword.gitrepos}} **repositories** referenced by tool integrations in the toolchain, with permission to **read the repository** and **create webhooks**. This is required in order to create pipeline Git type triggers, which require a webhook to be added on the repository to trigger the pipeline, and for the pipeline to be able to clone the repositories during execution.
+* Access to any GitHub or {{site.data.keyword.gitrepos}} **repositories** referenced by tool integrations in the toolchain, with permission to **read the repository** and **create webhooks**. This is required in order to create pipeline Git type triggers, which require a webhook to be added on the repository to trigger the pipeline, and for the pipeline to be able to clone the repositories during execution. Note that a service ID API key will not be able to authorize on behalf of a user.
 * A [{{site.data.keyword.contdelivery_short}}](/catalog/services/continuous-delivery) service instance is required in the target region and resource group in order to properly create the toolchain copy. Note that {{site.data.keyword.contdelivery_short}} capabilities ({{site.data.keyword.deliverypipeline}}, {{site.data.keyword.gitrepos}}, etc) are subject to the plan of the {{site.data.keyword.contdelivery_short}} instance in the same region and resource group as the toolchain. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage)
 * Personal Access Tokens (PAT) for the {{site.data.keyword.gitrepos}} service in the **source** and **destination** regions, with the `api` scope. These are only required if migrating {{site.data.keyword.gitrepos}} projects.
 
@@ -108,11 +108,11 @@ To perform the migration, you will need the following -
 
 You must review the following important notes before you begin migration.
 
-Billing considerations
-:   During the migration, you will need to create a new [{{site.data.keyword.contdelivery_short}}](/catalog/services/continuous-delivery) instance in the destination region and resource group to enable your toolchains, pipelines, and projects in the destination region. You may also wish to keep the original resources in the source region available for use until you have transitioned to the new region. If you use the {{site.data.keyword.contdelivery_short}} service with the **Professional** plan, please be aware that you will be charged for both regions according to the number of authorized users configured in each instance. If costs are a concern, you can change the plan in the source region's {{site.data.keyword.contdelivery_short}} instance to Lite once you have transitioned to the new region. The resources will be read-only if you have exceeded the Lite plan limits. However you can change back to the Professional plan at any time if you wish to use it again.
+Billing considerations:
+   During the migration, you will need to create a new [{{site.data.keyword.contdelivery_short}}](/catalog/services/continuous-delivery) instance in the destination region and resource group to enable your toolchains, pipelines, and projects in the destination region. You may also wish to keep the original resources in the source region available for use until you have transitioned to the new region. If you use the {{site.data.keyword.contdelivery_short}} service with the **Professional** plan, please be aware that you will be charged for both regions according to the number of authorized users configured in each instance. If costs are a concern, you can change the plan in the source region's {{site.data.keyword.contdelivery_short}} instance to Lite once you have transitioned to the new region. The resources will be read-only if you have exceeded the Lite plan limits. However you can change back to the Professional plan at any time if you wish to use it again.
 
-Duplicate Pipeline runs
-:   During the migration, you may create new pipelines in the destination region. If those pipelines have timed triggers set to run automatically on a schedule, or Git triggers configured to run automatically on Git events like PRs or commits, those events could trigger duplicate pipeline runs (one in the original pipeline and one in the new pipeline). To avoid potential disruption, copied pipelines will have these types of triggers disabled by default. It is recommended to manage these triggers such that there is only one set enabled at a time. Once you are comfortable with the transition to the new pipeline, you can enable the triggers on it and disable the triggers on the original pipeline.
+Duplicate Pipeline runs:
+   During the migration, you may create new pipelines in the destination region. If those pipelines have timed triggers set to run automatically on a schedule, or Git triggers configured to run automatically on Git events like PRs or commits, those events could trigger duplicate pipeline runs (one in the original pipeline and one in the new pipeline). To avoid potential disruption, copied pipelines will have these types of triggers disabled by default. It is recommended to manage these triggers such that there is only one set enabled at a time. Once you are comfortable with the transition to the new pipeline, you can enable the triggers on it and disable the triggers on the original pipeline.
 
 ## Install dependencies
 {: #cd-migrate-region-install}
@@ -163,7 +163,7 @@ If you use [{{site.data.keyword.gitrepos}}](/docs/ContinuousDelivery?topic=Conti
 
 1. Determine the list of groups to copy.
   
-   A [group](https://docs.gitlab.com/user/group/){: external} is a collection of related projects. The group name is part of the URL path of a project. For example, for the project url `https://us-south.git.cloud.ibm.com/my-group/my-project`, the group is `my-group`. If you created a project under a [personal namespace](https://docs.gitlab.com/user/namespace/){: external}, you can either [move your personal project to a group](https://docs.gitlab.com/tutorials/move_personal_project_to_group/){: external}, or [convert your personal namespace into a group](https://docs.gitlab.com/tutorials/convert_personal_namespace_to_group/){: external}. It is recommended that you store projects in groups, as they allow multiple administrators and allow better continuity of a project over time.
+   A [group](https://docs.gitlab.com/user/group/){: external} is a collection of related projects. The group name is part of the URL path of a project. For example, for the project url `https://us-south.git.cloud.ibm.com/my-group/my-project`, the group is `my-group`. If you created a project under a [personal namespace](https://docs.gitlab.com/user/namespace/){: external}, you can either [move your personal project to a group](https://docs.gitlab.com/tutorials/move_personal_project_to_group/){: external} or [convert your personal namespace into a group](https://docs.gitlab.com/tutorials/convert_personal_namespace_to_group/){: external}, then update references in the toolchain with the new URL. It is recommended that you store projects in groups, as they allow multiple administrators and allow better continuity of a project over time.
 
    To move your projects from your personal namespace to a group:
 
@@ -210,6 +210,7 @@ Next, copy your toolchains to the new region. Tool integrations, including Tekto
    ibmcloud resource service-instances --service-name toolchain --long
    ```
    {: pre}
+
 1. Using the [CD Toolchain API](/apidocs/toolchain).
 
 ### Check for stored toolchain/pipeline secrets
