@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2026-01-05"
+lastupdated: "2026-01-22"
 
 keywords: migrate, migration, migrating, region, resource group, Terraform, Tekton, pipeline, toolchain, git, continuous delivery, IBM Cloud, tools, resource, resources, data
 
@@ -30,7 +30,7 @@ You can migrate {{site.data.keyword.contdelivery_short}} resources, including to
 ## Supported resources
 {: #cd-migrate-region-supported-resources}
 
-The following resources are supported for migration to another region -
+The following resources are supported for migration to another region:
 
 | Resource | Has support for migration|
 | :- | :- |
@@ -60,7 +60,7 @@ Migration of resources from one region to another is subject to the following li
 
 The following limitations apply only if you are migrating [{{site.data.keyword.gitrepos}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-git_working) projects.
 
-1. Personal projects are not supported. If you created a project under a [personal namespace](https://docs.gitlab.com/user/namespace/){: external}, you can either [move your personal project to a group](https://docs.gitlab.com/tutorials/move_personal_project_to_group/){: external}, or [convert your personal namespace into a group](https://docs.gitlab.com/tutorials/convert_personal_namespace_to_group/){: external}. It is recommended that you store projects in groups, as they allow multiple administrators and allow better continuity of a project over time.
+1. Personal projects are not supported. If you created a project under a [personal namespace](https://docs.gitlab.com/user/namespace/){: external}, you can either [move your personal project to a group](https://docs.gitlab.com/tutorials/move_personal_project_to_group/){: external} or [convert your personal namespace into a group](https://docs.gitlab.com/tutorials/convert_personal_namespace_to_group/){: external}, then update references in the toolchain with the new URL. It is recommended that you store projects in groups, as they allow multiple administrators and allow better continuity of a project over time.
 1. This command requests a GitLab direct transfer and is subject to the [limitations of using direct transfer](https://docs.gitlab.com/user/group/import/#known-issues){: external}.
 1. Copying large projects, or projects with large files or many resources, can take time.
 1. As each region of {{site.data.keyword.gitrepos}} is independent, your projects' users may not yet exist in the destination region. The `copy-project-group` command will ensure that the users exist in the new region, however there may be user name conflicts with other users in the destination region. In the event of a user name conflict, the user name in the destination region may be changed slightly by adding a suffix.
@@ -93,13 +93,13 @@ The following sections describe each step of the migration in more detail.
 ## Prerequisites
 {: #cd-migrate-region-prereqs}
 
-To perform the migration, you will need the following -
+To perform the migration, you will need the following:
 
-* An [{{site.data.keyword.cloud_notm}} API key](/docs/account?topic=account-manapikey) with the IAM access listed below.
+* An [{{site.data.keyword.cloud_notm}} API key](/docs/account?topic=account-manapikey) with the IAM access listed below. The API key must be user API key. Service ID API keys are not supported.
 * **Viewer** access for the source Toolchain(s) being copied
 * **Editor** access for creating new Toolchains in the target region
 * **Administrator** access for other {{site.data.keyword.cloud_notm}} service instances that have a tool integration with IAM service-to-service authorizations, such as [{{site.data.keyword.secrets-manager_short}}](/docs/secrets-manager?topic=secrets-manager-getting-started), [Event Notifications](/docs/event-notifications?topic=event-notifications-getting-started), etc.
-* Access to any GitHub or {{site.data.keyword.gitrepos}} **repositories** referenced by tool integrations in the toolchain, with permission to **read the repository** and **create webhooks**. This is required in order to create pipeline Git type triggers, which require a webhook to be added on the repository to trigger the pipeline, and for the pipeline to be able to clone the repositories during execution.
+* Access to any GitHub or {{site.data.keyword.gitrepos}} **repositories** referenced by tool integrations in the toolchain, with permission to **read the repository** and **create webhooks**. This is required in order to create pipeline Git type triggers, which require a webhook to be added on the repository to trigger the pipeline, and for the pipeline to be able to clone the repositories during execution. Note that a service ID API key will not be able to authorize on behalf of a user.
 * A [{{site.data.keyword.contdelivery_short}}](/catalog/services/continuous-delivery) service instance is required in the target region and resource group in order to properly create the toolchain copy. Note that {{site.data.keyword.contdelivery_short}} capabilities ({{site.data.keyword.deliverypipeline}}, {{site.data.keyword.gitrepos}}, etc) are subject to the plan of the {{site.data.keyword.contdelivery_short}} instance in the same region and resource group as the toolchain. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage)
 * Personal Access Tokens (PAT) for the {{site.data.keyword.gitrepos}} service in the **source** and **destination** regions, with the `api` scope. These are only required if migrating {{site.data.keyword.gitrepos}} projects.
 
@@ -108,11 +108,11 @@ To perform the migration, you will need the following -
 
 You must review the following important notes before you begin migration.
 
-Billing considerations
-:   During the migration, you will need to create a new [{{site.data.keyword.contdelivery_short}}](/catalog/services/continuous-delivery) instance in the destination region and resource group to enable your toolchains, pipelines, and projects in the destination region. You may also wish to keep the original resources in the source region available for use until you have transitioned to the new region. If you use the {{site.data.keyword.contdelivery_short}} service with the **Professional** plan, please be aware that you will be charged for both regions according to the number of authorized users configured in each instance. If costs are a concern, you can change the plan in the source region's {{site.data.keyword.contdelivery_short}} instance to Lite once you have transitioned to the new region. The resources will be read-only if you have exceeded the Lite plan limits. However you can change back to the Professional plan at any time if you wish to use it again.
+Billing considerations:
+   During the migration, you will need to create a new [{{site.data.keyword.contdelivery_short}}](/catalog/services/continuous-delivery) instance in the destination region and resource group to enable your toolchains, pipelines, and projects in the destination region. You may also wish to keep the original resources in the source region available for use until you have transitioned to the new region. If you use the {{site.data.keyword.contdelivery_short}} service with the **Professional** plan, please be aware that you will be charged for both regions according to the number of authorized users configured in each instance. If costs are a concern, you can change the plan in the source region's {{site.data.keyword.contdelivery_short}} instance to Lite once you have transitioned to the new region. The resources will be read-only if you have exceeded the Lite plan limits. However you can change back to the Professional plan at any time if you wish to use it again.
 
-Duplicate Pipeline runs
-:   During the migration, you may create new pipelines in the destination region. If those pipelines have timed triggers set to run automatically on a schedule, or Git triggers configured to run automatically on Git events like PRs or commits, those events could trigger duplicate pipeline runs (one in the original pipeline and one in the new pipeline). To avoid potential disruption, copied pipelines will have these types of triggers disabled by default. It is recommended to manage these triggers such that there is only one set enabled at a time. Once you are comfortable with the transition to the new pipeline, you can enable the triggers on it and disable the triggers on the original pipeline.
+Duplicate Pipeline runs:
+   During the migration, you may create new pipelines in the destination region. If those pipelines have timed triggers set to run automatically on a schedule, or Git triggers configured to run automatically on Git events like PRs or commits, those events could trigger duplicate pipeline runs (one in the original pipeline and one in the new pipeline). To avoid potential disruption, copied pipelines will have these types of triggers disabled by default. It is recommended to manage these triggers such that there is only one set enabled at a time. Once you are comfortable with the transition to the new pipeline, you can enable the triggers on it and disable the triggers on the original pipeline.
 
 ## Install dependencies
 {: #cd-migrate-region-install}
@@ -163,7 +163,15 @@ If you use [{{site.data.keyword.gitrepos}}](/docs/ContinuousDelivery?topic=Conti
 
 1. Determine the list of groups to copy.
   
-   A [group](https://docs.gitlab.com/user/group/){: external} is a collection of related projects. The group name is part of the URL path of a project. For example, for the project url `https://us-south.git.cloud.ibm.com/my-group/my-project`, the group is `my-group`. If you created a project under a [personal namespace](https://docs.gitlab.com/user/namespace/){: external}, you can either [move your personal project to a group](https://docs.gitlab.com/tutorials/move_personal_project_to_group/){: external}, or [convert your personal namespace into a group](https://docs.gitlab.com/tutorials/convert_personal_namespace_to_group/){: external}. It is recommended that you store projects in groups, as they allow multiple administrators and allow better continuity of a project over time.
+   A [group](https://docs.gitlab.com/user/group/){: external} is a collection of related projects. The group name is part of the URL path of a project. For example, for the project url `https://us-south.git.cloud.ibm.com/my-group/my-project`, the group is `my-group`. If you created a project under a [personal namespace](https://docs.gitlab.com/user/namespace/){: external}, you can either [move your personal project to a group](https://docs.gitlab.com/tutorials/move_personal_project_to_group/){: external} or [convert your personal namespace into a group](https://docs.gitlab.com/tutorials/convert_personal_namespace_to_group/){: external}, then update references in the toolchain with the new URL. It is recommended that you store projects in groups, as they allow multiple administrators and allow better continuity of a project over time.
+
+   To move your projects from your personal namespace to a group:
+
+   1. Follow the steps in the GitLab documentation to [create a new group and transfer projects to it](https://docs.gitlab.com/tutorials/move_personal_project_to_group/){: external}.
+   1. For each tool integration in your toolchain(s) referencing the project's repo url, update the tool integration by selecting **Configure** in the tool integration menu, and update the **Repository URL** field to the new URL with your new group name. Save the integration.
+   1. If your Tekton pipelines refer to pipeline definitions in any of these repos, update the definitions to use the new repo URLs.
+   1. If you have **Git** type triggers in your pipelines for moved repos, update and re-save the triggers to recreate the webhooks that trigger the pipelines.
+   1. Similarly, update any other references to the repo urls in your deployment scripts, configuration, pipeline environment properties, etc.
 
 1. For each group, run the `copy-project-group` command from [@ibm-cloud/cd-tools](https://www.npmjs.com/package/@ibm-cloud/cd-tools){: external} to copy the group to the new region.
 
@@ -173,7 +181,12 @@ If you use [{{site.data.keyword.gitrepos}}](/docs/ContinuousDelivery?topic=Conti
    ```
    {: pre}
 
-   Note that for large groups or projects this step may take time.
+   Note that for large groups or projects this step may take time. To see the full set of options for the `copy-project-group` command, run:
+
+   ```bash
+   npx @ibm-cloud/cd-tools copy-project-group -h
+   ```
+   {: pre}
 
 1. Verify that the projects in the group were copied successfully.
 
@@ -197,7 +210,47 @@ Next, copy your toolchains to the new region. Tool integrations, including Tekto
    ibmcloud resource service-instances --service-name toolchain --long
    ```
    {: pre}
+
 1. Using the [CD Toolchain API](/apidocs/toolchain).
+
+### Check for stored toolchain/pipeline secrets
+{: #cd-migrate-region-checkSecrets}
+
+Toolchains and Tekton pipelines can contain secrets, which are sensitive values such as API keys or passwords, in the following places:
+* Tool integration properties, e.g. the Service ID API Key property of the [Delivery Pipeline Private Worker](/docs/ContinuousDelivery?topic=ContinuousDelivery-private-workers) tool integration
+* Tekton pipeline environment properties
+* Tekton pipeline trigger properties
+
+There are two ways to configure secrets:
+1. Stored directly in the toolchain or pipeline
+1. [Referencing secrets](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secrets_references) stored in a secret storage service such as [{{site.data.keyword.cloud_notm}} Secrets Manager](/docs/secrets-manager) or [{{site.data.keyword.cloud_notm}} Key Protect](/docs/key-protect).
+
+Copying a toolchain will automatically include [secret references](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secrets_references) and those references will remain intact in the new toolchain. However, to minimize the risk of leaking sensitive data, secrets stored directly in toolchains or pipeline will not be included in the toolchain copy. You can use the `export-secrets` command described in the next section or manually input the secrets again in the copied toolchain or pipeline after copying. Note, however, that if you do not export the secrets, some tool integrations may not provision successfully when copying the toolchain if they are missing required secret values, and may need to be recreated manually after running the command.
+
+First, check whether your toolchain or its Tekton pipelines contain any stored secrets that are not references by running:
+
+```bash
+npx @ibm-cloud/cd-tools export-secrets -c ${CRN} --check
+```
+{: pre}
+
+### Export stored toolchain/pipeline secrets to Secrets Manager
+{: #cd-migrate-region-exportSecrets}
+
+If your toolchain or pipelines do not contain any stored secrets, you can skip this step and continue to copying the toolchain. Exporting secrets to Secrets Manager will create secrets in the Secrets Manager instance and also modify your original toolchain to convert the existing secrets to reference the newly created secrets in Secrets Manager. This will allow the toolchain to be copied with secret references intact, and is a recommended practice for added security. To export secrets stored in your toolchain or pipeline to Secrets Manager, follow these steps:
+
+1. If you do not yet have a [Secrets Manager](/docs/secrets-manager) instance, [create one](/docs/secrets-manager?topic=secrets-manager-create-instance). Note that the instance must be created in the account associated with the API key you'll be using.
+1. Ensure that the owner of the API key you'll be using has IAM permission to create secrets in the Secrets Manager instance.
+1. Open the toolchain and Secrets Manager tool integration, create and authorization policy when prompted, and then create the tool integration.
+1. Run the `export-secrets` command to export the secrets:
+   ```bash
+   npx @ibm-cloud/cd-tools export-secrets -c ${CRN}
+   ```
+   {: pre}
+1. When prompted, select the Secrets Manager instance from your toolchain to store the secrets. If you do not see your instance listed, it may be in a different account. Ensure that you use an API key that is in the same account as the instance.
+1. When prompted, for each secret found, specify whether or not to copy the secret, and the name and group to store the secret in, or press enter to accept the defaults.
+
+You can run the command as many times as needed to export all your secrets.
 
 ### Copy toolchains
 {: #cd-migrate-region-copyToolchains}
@@ -218,14 +271,14 @@ Examples:
       Copy a toolchain to the Frankfurt region with the specified name and target resource group, using the given API key
 
 Environment Variables:
-  IBMCLOUD_API_KEY                       API key used to authenticate. Must have IAM permission to read and create toolchains and service-to-service authorizations in source and target
+  IBMCLOUD_API_KEY                       API key used to authenticate. Must be a user API key, with IAM permission to read and create toolchains and service-to-service authorizations in source and target
 region / resource group
 
 Basic options:
   -c, --toolchain-crn <crn>              The CRN of the source toolchain to copy
   -r, --region <region>                  The destination region of the copied toolchain (choices: "au-syd", "br-sao", "ca-mon", "ca-tor", "eu-de", "eu-es", "eu-gb", "jp-osa", "jp-tok",
                                          "us-east", "us-south")
-  -a, --apikey <api_key>                 API key used to authenticate. Must have IAM permission to read and create toolchains and service-to-service authorizations in source and target
+  -a, --apikey <api_key>                 API key used to authenticate. Must be a user API key, with IAM permission to read and create toolchains and service-to-service authorizations in source and target
                                          region / resource group
   -n, --name <name>                      (Optional) The name of the copied toolchain (default: same name as original)
   -g, --resource-group <resource_group>  (Optional) The name or ID of destination resource group of the copied toolchain (default: same resource group as original)
@@ -244,7 +297,10 @@ Advanced options:
 ```
 {: pre}
 
+The `copy-toolchain` works by first translating the toolchain into [Terraform](https://developer.hashicorp.com/terraform){: external} (.tf) files, and then applying the Terraform to create a new toolchain in the destination region. The command will display the Terraform output and prompt for confirmation before creating the toolchain. You can review the Terraform output before creating the new toolchain copy.
+
 #### Examples
+{: #cd-migrate-region-copyToolchains-examples}
 
 Copy the toolchain with the CRN `crn:v1:bluemix:public:toolchain:au-syd:a/9d5d528aa786af01ce99593a827a05f0:69e8d78b-0d1a-49ed-9a46-3b4c1bb4f24a::` from the Sydney region to the Tokyo region, in the same resource group and with the same name:
 
@@ -269,11 +325,44 @@ npx @ibm-cloud/cd-tools copy-toolchain -c "${CRN}" -r us-south -n 'toolchain-dal
 ```
 {: pre}
 
+#### Bulk copying toolchains
+{: #cd-migrate-region-copyToolchains-bulk}
+
+If you wish to copy a large number of toolchains in bulk rather than copying each one individually, you can use a [Bash](https://www.gnu.org/software/bash/){: external} or similar script to query for toolchains using the [ibmcloud cli](/docs/cli), and a utility such as [jq](https://github.com/jqlang/jq){: external}, to invoke the `copy-toolchain` command many times. Here are a few examples:
+
+Perform a dry-run copy of all toolchains in the current account located in the Toronto (ca-tor) region to the Dallas (us-south) region. This will not create any toolchains, but rather perform checks on the toolchains and notify if any issues are detected that would cause the `copy-toolchain` command to fail to copy the toolchain.
+
+```bash
+for i in $(ibmcloud resource service-instances --service-name toolchain --location ca-tor --all-resource-groups -o json | jq -r '.[].crn'); do
+    npx @ibm-cloud/cd-tools copy-toolchain -c ${i} -r us-south --dry-run -f
+done
+```
+{: pre}
+
+Copy all toolchains in the `my-resource-group` resource group to the Frankfurt (eu-de) region, with minimal output (`-q, --quiet`).
+
+```bash
+for i in $(ibmcloud resource service-instances --service-name toolchain -g my-resource-group -o json | jq -r '.[].crn'); do
+    npx @ibm-cloud/cd-tools copy-toolchain -c ${i} -r eu-de -q
+done
+```
+{: pre}
+
+Copy all toolchains with names starting with 'test-' to the Tokyo (jp-tok) region.
+
+```bash
+for i in $(ibmcloud resource service-instances --service-name toolchain --all-resource-groups -o json | jq -r '.[] | select(.name | startswith("test-")) | .crn'); do
+    npx @ibm-cloud/cd-tools copy-toolchain -c ${i} -r jp-tok
+done
+```
+{: pre}
+
+
 #### Retrying after errors
 
 If an error occurs while copying the toolchain, the copied toolchain may be incomplete. You may need to try the command again. To try again, you can either:
-1. Delete the partially created toolchain and run the `copy-toolchain` command again.
-1. Re-run the `terraform apply` command.<br/><br/>The `copy-toolchain` first serializes the source toolchain into Terraform (.tf) files. If you don't specify the `-d, --terraform-dir <path>`, the Terraform files will be placed in a folder in the current working directory named `output-{id}`, e.g. `output-1764100766410`. You can locate the most recent output folder and re-run `terraform apply`. This will continue where the previous command left off. When prompted for an API key, specify the same API key you used to run the `copy-toolchain` command.
+* Delete the partially created toolchain and run the `copy-toolchain` command again, or
+* Re-run the `terraform apply` command.<br/><br/>The `copy-toolchain` first serializes the source toolchain into Terraform (.tf) files. If you don't specify the `-d, --terraform-dir <path>`, the Terraform files will be placed in a folder in the current working directory named `output-{id}`, e.g. `output-1764100766410`. You can locate the most recent output folder and re-run `terraform apply`. This will continue where the previous command left off. When prompted for an API key, specify the same API key you used to run the `copy-toolchain` command.
 ```shell-session
 $ cd output-1764102115772
 $ terraform apply
