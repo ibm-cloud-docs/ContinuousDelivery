@@ -2,11 +2,12 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-01-05"
+lastupdated: "2026-02-02"
 
 keywords:
 
 subcollection: ContinuousDelivery
+
 
 ---
 
@@ -192,6 +193,8 @@ The following dependencies apply to the following deployment locations: Dallas (
 
 ## Understanding service dependency data
 {: #understand-dependency-data}
+
+
 
 If you have any questions about the service dependency data as you review the service dependency information in the tables, you can refer to the following FAQ:
 
