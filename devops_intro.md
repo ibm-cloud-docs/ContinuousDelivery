@@ -15,7 +15,7 @@ subcollection: ContinuousDelivery
 # {{site.data.keyword.cloud_notm}} DevOps
 {: #devops_intro}
 
-Delivering software and services at the speed the market demands requires teams to iterate and experiment rapidly. They must deploy new versions frequently, driven by feedback and data. The most successful cloud development teams adopt modern DevSecOps culture and practices, embrace cloud-native architectures, and assemble toolchains from best-in-class tools to unleash their productivity. Doing these things quickly is a key competitive advantage.
+Delivering software and services at the speed the market demands requires teams to iterate and experiment rapidly. They must deploy new versions frequently, driven by feedback and data. The most successful cloud development teams adopt modern DevSecOps culture and practices, embrace cloud-native architectures, and assemble toolchains from best-in-class tools to unleash their productivity. Doing these things efficiently is a key competitive advantage.
 
 The [IBM Cloud Garage Method](https://www.ibm.com/garage){: external} describes architectures, practices, and DevOps toolchains to allow enterprises to innovate at scale. Use the {{site.data.keyword.cloud_notm}} Garage Method to help you to transform your culture and use the tools effectively and fast.
 

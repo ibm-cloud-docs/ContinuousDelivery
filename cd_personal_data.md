@@ -50,7 +50,7 @@ Typically, each user has their own account that is their personal account. You c
 
 You have full rights over all objects that are created in your personal account. You can invite other users to join your account, assign them rights over objects that you create, and assign them rights to create objects in your account. Because of these rights, the personal data of other users might be in your account, and your personal data might be in other user's accounts. 
 
-If you have permission to create an object in an account, you also have the right to modify and delete it, regardless of which account the object is stored in. When two users collaborate, they often share a personal account.
+If you have permission to create an object in an account, you also have the authority to modify and delete it, regardless of which account the object is stored in. When two users collaborate, they often share a personal account.
 
 ### Corporate accounts
 {: #corp_accounts}
@@ -267,7 +267,7 @@ For more information about deleting tool integrations, see the following documen
 
 When you delete a toolchain, the deletion cannot be undone. Deleting a toolchain removes all of its tool integrations, including pipelines, which might delete resources that are managed by those tool integrations.
 
-For more information about deleting toolchains, see the following documentation:
+For more information about deleting toolchains, see "Modifying and deleting toolchains and tool integrations" in the following documentation:
 
 * [Deleting a toolchain by using the console](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using&interface=ui#deleting_a_toolchain_ui)
 * [Deleting a toolchain from the CLI (Beta)](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using&interface=cli#deleting_a_toolchain_cli)

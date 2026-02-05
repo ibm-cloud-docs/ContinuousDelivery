@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2025
-lastupdated: "2025-06-27"
+  years: 2016, 2026
+lastupdated: "2026-02-05"
 
 keywords: users of a service instance, authorized users, pipeline usage, Git Repos and Issue Tracking limitations, consolidated billing
 
@@ -346,9 +346,11 @@ You can link {{site.data.keyword.contdelivery_short}} and toolchain instances wh
 
 * Use an optional header `IBM-CLOUD-API-KEY` to add {{site.data.keyword.contdelivery_short}} and toolchains as you create a project. Generate the key value for your API key from the [console login page](https://cloud.ibm.com/login?redirect=%2Fiam%2Fapikeys).
 
-* Add request parameters `toolchain_ID` and `cd_instance` to link your Git project to a specific {{site.data.keyword.contdelivery_short}} and toolchain instance.
+* Add one of the required parameters `toolchain_ID` or `cd_instance` to link your Git project to a specific Continuous Delivery and toolchain instance.
 
-   *  The `toolchain_id` parameter supersedes the `cd_instance` parameter. If both are provided, the toolchain ID is used. However, if only the `cd_instance` parameter is given, a default toolchain is automatically created for the specified CD instance.
+   *  If the `cd_instance` parameter is given, a default toolchain is automatically created for the specified CD instance with a git repo tool integration to the repository.
+     
+   *  If the `toolchain_id` parameter is given, the git repo tool integration is created in the given toolchain. The `toolchain_id` parameter supersedes the `cd_instance` parameter. If both are provided, the toolchain ID is used.
 
       To successfully use these request parameters, you must use the `IBM-CLOUD-API-KEY` header.
       {: note}

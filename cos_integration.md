@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2025
-lastupdated: "2025-12-04"
+  years: 2015, 2026
+lastupdated: "2026-02-05"
 
 keywords: tool integrations, cos bucket tool integration
 
@@ -15,7 +15,7 @@ subcollection: ContinuousDelivery
 # Configuring Cloud {{site.data.keyword.cos_short}}
 {: #cos_integration}
 
-{{site.data.keyword.cos_full}} is used to securely store large volumes of data, ensuring compliance and optimizing cost.
+{{site.data.keyword.cos_full}} is used to securely store substantial volumes of data, ensuring compliance and optimizing cost.
 You can integrate {{site.data.keyword.cos_full_notm}} Bucket to store evidence.
 You can also use this tool integration for specific storage requirements of your toolchains.
 

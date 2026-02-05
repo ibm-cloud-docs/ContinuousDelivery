@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026
-lastupdated: "2026-01-05"
+lastupdated: "2026-02-05"
 
 keywords: pipeline versioned base image, image version, pipeline job
 
@@ -1561,7 +1561,7 @@ v2.5.3
 This is based on `ubi9`.
 {: important}
 
-To view the contents of version 3.66, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built.
+To view the contents of version 3.66, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 21. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built.
 
 This image also contains the Terraform command-line interface (CLI).
 

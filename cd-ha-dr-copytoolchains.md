@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023, 2024
-lastupdated: "2024-12-09"
+  years: 2023, 2026
+lastupdated: "2026-02-05"
 
 keywords: high availability, disaster recovery, toolchains
 
@@ -39,7 +39,7 @@ To save and restore a toolchain, complete the following steps:
 
    c. git remote add origin *target repository url*
 
-   d. git commit -m "add template yaml files"
+   d. git commit -m `add template yaml files`
 
    e. git push -u origin --all
 

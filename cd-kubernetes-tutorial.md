@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-01-08"
+lastupdated: "2026-02-05"
 
 keywords: deployment strategies, tekton, pipeline, toolchain, CD, CI, automate, automation, continuous delivery, continuous integration, DevOps, shift-left, shift left, secure DevOps, IBM Cloud
 
@@ -73,7 +73,7 @@ Before you start this tutorial, make sure that you have the following resources 
 
 * **Optional**. Secrets that are stored in a secrets management vault and managed centrally from a single location. For more information about choosing from the various secrets management and data protection offerings, see [Managing {{site.data.keyword.cloud_notm}} secrets](/docs/secrets-manager?topic=secrets-manager-use-case-kubernetes-secrets). If you don't already have an instance of the secrets management vault provider of your choice, create one.
 
-* **Optional**. A namespace that is created by using the container registry command line. To create a namespace, type the following command from the command line:
+* **Optional**. A namespace that is created by using the container registry command line. To create a namespace, type the following command:
 
    ```text
    ibmcloud cr namespace-add <my namespace>
@@ -267,12 +267,12 @@ To start the continuous integration pipeline, merge the continuous integration m
 
 ![Continuous integration pipeline success](images/ds_kub_explore_ci_pipeline_success.png){: caption="Continuous integration pipeline success" caption-side="bottom"}
 
-#### Shift left practice
+#### Shift-left practice
 {: #cd-shift-left}
 
-In the secure app development world, shift left is a practice that prevents and finds issues such as defects and security vulnerabilities and runs compliance checks early in the software delivery process. Shift left includes the following practices:
+In the secure app development world, shift-left is a practice that prevents and finds issues such as defects and security vulnerabilities and runs compliance checks early in the software delivery process. Shift-left includes the following practices:
 
-* Run checks that can be run on the code or the repo itself and do not need the built image, as early as possible. These checks prevent noncompliant code from being merged into the master branch of the repo. Because evidence is not collected from the pull request pipeline, its goal is to shift compliance checks as far left as possible.
+* Run checks that can be run on the code or the repo itself and do not need the built image, as early as possible. These checks prevent noncompliant code from being merged into the master branch of the repo. Because evidence is not collected from the pull request pipeline, its goal is to shift compliance checks earlier in the development process.
 * All checks are run in every pipeline run. If a previous check fails, the pipeline progresses to the next check. To evaluate if you have any failures in your run, check the final step of your pipeline that has a pipeline evaluator.
 
 Results from unit tests and vulnerability scans are published to the {{site.data.keyword.DRA_short}} instance within the toolchain. To review these results, click the {{site.data.keyword.DRA_short}} tile within the toolchain and go to the Quality Dashboard page.

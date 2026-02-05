@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2025
-lastupdated: "2025-05-29"
+  years: 2021, 2026
+lastupdated: "2026-02-05"
 
 keywords: IBM Cloud, monitoring, supertenant
 
@@ -114,7 +114,7 @@ The pipeline queue time tracks the elapsed time in seconds between the {{site.da
 #### User action
 {: #cd-task1-action}
 
-The {{site.data.keyword.contdelivery_short}} dashboard in Monitoring can help to identify trends in pipeline queue time. If the queue times for pipelines serviced by a private worker pool last several seconds or are trending upwards, check the configuration of the private worker pool, including the number and processing capacity of the nodes in the pool. You might lower queue times by scaling up the private worker pool, or by reducing the frequency, variety, or complexity of pipeline jobs and tasks that are dispatched to the private worker pool.
+The {{site.data.keyword.contdelivery_short}} dashboard in Monitoring can help to identify trends in pipeline queue time. If the queue times for pipelines serviced by a private worker pool last several seconds or are trending upward, check the configuration of the private worker pool, including the number and processing capacity of the nodes in the pool. You might reduce queue times by scaling up the private worker pool, or by reducing the frequency, variety, or complexity of pipeline jobs and tasks that are dispatched to the private worker pool.
 
 
 ## {{site.data.keyword.contdelivery_short}} predefined dashboards
