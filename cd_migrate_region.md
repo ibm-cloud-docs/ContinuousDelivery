@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2026-02-02"
+lastupdated: "2026-02-06"
 
 keywords: migrate, migration, migrating, region, resource group, Terraform, Tekton, pipeline, toolchain, git, continuous delivery, IBM Cloud, tools, resource, resources, data
 
@@ -77,7 +77,7 @@ Migration of resources from one region to another is subject to the following li
 
 1. [Classic pipelines](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about) are not supported.
 1. [{{site.data.keyword.DRA_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-di_working) is not supported.
-1. Secrets stored directly in Toolchains or {{site.data.keyword.deliverypipeline}} (environment properties or trigger properties) will not be copied. An `export-secrets` command is provided to export secrets into a [{{site.data.keyword.secrets-manager_short}}](/docs/secrets-manager?topic=secrets-manager-getting-started) instance, replacing the stored secrets with secret references. Secret references are supported.
+1. Secrets stored directly in Toolchains or {{site.data.keyword.deliverypipeline}} (environment properties or trigger properties) will not be copied. An `export-secrets` command is provided to export secrets into a [{{site.data.keyword.secrets-manager_short}}](/docs/secrets-manager?topic=secrets-manager-getting-started) instance, replacing the stored secrets with [secret references](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secrets_references). Secret references are supported.
 1. Tekton pipeline webhook trigger secrets will not be copied, as references are not supported for webhook trigger secrets. You will need to add the secret after copying the toolchain.
 1. Tekton pipeline run history, logs, and assets will not be copied. You can keep the original pipelines for some time to retain history.
 1. GitHub and {{site.data.keyword.gitrepos}} tool integrations configured with OAuth type authentication will automatically be converted to use the OAuth identity of the user performing the copy (the owner of the API key) rather than the original user. This is to simplify the copy operation. You can re-configure the tool integrations after copying to use a different user.
@@ -116,6 +116,9 @@ Billing considerations
 
 Duplicate Pipeline runs
 : During the migration, you may create new pipelines in the destination region. If those pipelines have **timed triggers** set to run automatically on a schedule, or **Git triggers** configured to run automatically on Git events like PRs or commits, those events could trigger duplicate pipeline runs (one in the original pipeline and one in the new pipeline). To avoid potential disruption, copied pipelines will have these types of triggers disabled by default. It is recommended to manage these triggers such that there is only one set enabled at a time. Once you are comfortable with the transition to the new pipeline, you can enable the triggers on it and disable the triggers on the original pipeline.
+
+Hardcoded assumptions
+: After the migration, your Git Repos and Issue Tracking repos (if applicable) will have a **different URL**, and your toolchains and pipelines will have different IDs and URLs. There may be some assumptions about the URL/ID or location of your resources in your Tekton definitions, scripts, environment properties, or other automation. It is your responsibility to update these after migration.
 
 ## Install dependencies
 {: #cd-migrate-region-install}
@@ -191,7 +194,7 @@ If you use [{{site.data.keyword.gitrepos}}](/docs/ContinuousDelivery?topic=Conti
 
 1. Verify that the projects in the group were copied successfully.
 
-   Before continuing, it's important to make sure that no data is missing. Ensure that the correct users are included as members to the projects, and spot check the data in the projects (repos, issues, etc) to ensure the data is intact. Note that personal access tokens are not included in the copy.
+   Before continuing, it's important to make sure that no data is missing. Ensure that the correct users are included as members to the projects, and spot check the data in the projects (repos, issues, etc) to ensure the data is intact. Note that personal access tokens are not included in the copy. If you need to re-run the copy command, you will need to first delete or rename the copied group, or choose a different name when copying again.
 
 ## Copy Toolchains and Tekton pipelines
 {: #cd-migrate-region-copy-toolchains}
@@ -238,7 +241,12 @@ npx @ibm-cloud/cd-tools export-secrets -c ${CRN} --check
 ### Export stored toolchain/pipeline secrets to Secrets Manager
 {: #cd-migrate-region-exportSecrets}
 
-If your toolchain or pipelines do not contain any stored secrets, you can skip this step and continue to copying the toolchain. Exporting secrets to Secrets Manager will create secrets in the Secrets Manager instance and also modify your original toolchain to convert the existing secrets to reference the newly created secrets in Secrets Manager. This will allow the toolchain to be copied with secret references intact, and is a recommended practice for added security. To export secrets stored in your toolchain or pipeline to Secrets Manager, follow these steps:
+If your toolchain or pipelines do not contain any stored secrets, you can skip this step and continue to copying the toolchain. Exporting secrets to Secrets Manager will create secrets in the Secrets Manager instance and also modify your original toolchain to convert the existing secrets to reference the newly created secrets in Secrets Manager. This will allow the toolchain to be copied with secret references intact, and is a recommended practice for added security.
+
+To prevent accidental exposure of secrets, you should review the [IAM permissions](/docs/secrets-manager?topic=secrets-manager-iam) of your [Secrets Manager](/docs/secrets-manager) instance to ensure that only intended access to read secrets is granted.
+{: note}
+
+To export secrets stored in your toolchain or pipeline to Secrets Manager, follow these steps:
 
 1. If you do not yet have a [Secrets Manager](/docs/secrets-manager) instance, [create one](/docs/secrets-manager?topic=secrets-manager-create-instance). Note that the instance must be created in the account associated with the API key you'll be using.
 1. Ensure that the owner of the API key you'll be using has IAM permission to create secrets in the Secrets Manager instance.
@@ -360,6 +368,7 @@ done
 
 
 #### Retrying after errors
+{: #cd-migrate-region-retry}
 
 If an error occurs while copying the toolchain, the copied toolchain may be incomplete. You may need to try the command again. To try again, you can either:
 * Delete the partially created toolchain and run the `copy-toolchain` command again, or
@@ -371,3 +380,29 @@ var.ibmcloud_api_key
   Enter a value: {api_key}
 ...
 ```
+
+## Complete migration
+{: #cd-migrate-region-complete}
+{: step}
+
+### Verify resources
+{: #cd-migrate-region-verify}
+
+After copying your toolchains, Tekton pipelines, and Git Repos and Issue Tracking projects (if applicable) to a new region, you should **verify** that they were correctly copied and are functioning correctly before disabling or deleting the original resources. Please note:
+
+* Tekton pipeline **timed and Git triggers** were not enabled by default in copied pipelines to prevent duplicate pipeline runs between the new and original pipeline. Once you are comfortable, you can enable the triggers in the new pipeline, and disable the triggers in the original pipeline.
+* If you have any **webhook** type Tekton pipeline triggers, you will need to reconfigure the trigger and re-enter the secret. This secret does not support [secret references](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secrets_references) and is not copied with the pipeline.
+* Users with **Personal Access Tokens** in the copied Git Repos and Issue Tracking projects will need to recreate new tokens, as they were not copied.
+* Tool integrations for Git Repos and Issue Tracking repos will have been converted to use the **OAuth identity** of the user who performed the copy. If you wish to use a different identity, log in with that user and re-save the tool integrations, or switch to use Personal Access Tokens.
+* There may be assumptions in your Tekton definitions, scripts, environment properties, or other automations about the ID, URL, or location of your resources. It is recommended that you review these to ensure that the new IDs, URLs, and locations are used.
+
+### Disable original resources
+{: #cd-migrate-region-disable}
+
+After you have verified that the copied resources are functioning correctly, you can disable your original resources to avoid conflicts or confusion.
+
+* For **Tekton pipelines**, you can disable your triggers to avoid unwanted pipeline runs and to signal to other users that these triggers should no longer be used.
+* For **Continuous Delivery** service instances, if you were using the Professional plan, you can switch to the **Lite** plan to avoid further charges for the original resources. This may cause your resources to become read-only if you have exceeded the limits of the Lite plan, but you can switch back to Professional at any time if you need to use them again.
+* For **Git Repos and Issue tracking projects** (if applicable), you can archive your original projects to make them read-only and prevent users from making further changes, and optionally update the project description or readme to indicate where the new project is.
+
+Even if you do not intend to keep the original resources, you may want to keep the original resources for some time as a backup in case you discover issues later. Once you are comfortable, you can then delete the original resources.

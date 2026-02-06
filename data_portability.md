@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2025-12-04"
+lastupdated: "2026-02-05"
 
 keywords: Continuous Delivery, toolchain, client owned data
 
@@ -36,7 +36,7 @@ For more information about your responsibilities for {{site.data.keyword.contdel
 ## Data export procedures
 {: #data-portability-procedures}
 
-{{site.data.keyword.contdelivery_short}} provides the mechanisms to export your content that is uploaded, stored, and processed when you use the service. In addition, {{site.data.keyword.contdelivery_short}} provides mechanisms to export settings and configurations that are used to process your content. Data retrieval procedures are organized below by the major components of the {{site.data.keyword.contdelivery_short}} service.
+{{site.data.keyword.contdelivery_short}} provides the mechanisms to export your content that is uploaded, stored, and processed when you use the service. In addition, {{site.data.keyword.contdelivery_short}} provides mechanisms to export settings and configurations that are used to process your content. Data retrieval procedures are organized in the following sections by the major components of the {{site.data.keyword.contdelivery_short}} service.
 
 ### Prerequisites
 {: #pre-req-cd}

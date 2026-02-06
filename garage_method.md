@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-04-18"
+  years: 2017, 2026
+lastupdated: "2026-02-05"
 
 keywords: continuous delivery practices, DevOps practices, IBM Cloud Garage Method, learning resources, DevOps Insights
 
@@ -15,7 +15,7 @@ subcollection: ContinuousDelivery
 # Continuous delivery practices
 {: #gm_cd_best}
 
-With {{site.data.keyword.contdelivery_full}}, you can build, test, and deliver applications by using DevOps or DevSecOps practices and industry-leading tools. {{site.data.keyword.contdelivery_short}} supports a wide variety of practices; but which practices should you use? There is no one-size-fits-all answer. The practices you employ can vary from one software delivery project to the next. The [{{site.data.keyword.cloud_notm}} Garage Method](https://www.ibm.com/garage){: external} is the IBM approach to rapidly deliver engaging applications. It combines continuous delivery with IBM Design Thinking, lean, DevOps, and agile practices. Those practices are focused on the cloud, but can benefit any software development effort.
+With {{site.data.keyword.contdelivery_full}}, you can build, test, and deliver applications by using DevOps or DevSecOps practices and industry-leading tools. {{site.data.keyword.contdelivery_short}} supports a wide variety of practices; but which practices should you use? There is no universal answer. The practices you employ can vary from one software delivery project to the next. The [{{site.data.keyword.cloud_notm}} Garage Method](https://www.ibm.com/garage){: external} is the IBM approach to rapidly deliver engaging applications. It combines continuous delivery with IBM Design Thinking, lean, DevOps, and agile practices. Those practices are focused on the cloud, but can benefit any software development effort.
 
 
 ## Adopting continuous delivery practices
@@ -41,4 +41,3 @@ See the [Learning Lab](https://www.ibm.com/training/cloud){: external}.
 {: #gm_cd_courses}
 
 To see all of the {{site.data.keyword.cloud_notm}} Garage Method learning materials, see the [{{site.data.keyword.cloud_notm}} Garage Method Learning Lab](https://www.ibm.com/training/cloud){: external}.
-

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2025
-lastupdated: "2025-12-04"
+  years: 2019, 2026
+lastupdated: "2026-02-05"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -1206,7 +1206,9 @@ You can then verify that your pipeline has been triggered by opening your respec
 You can trigger the pipeline directly via API using `curl`. For more information on how to trigger Tekton pipelines via API, see the [IBM Cloud API Docs/
 CD Tekton Pipeline](https://cloud.ibm.com/apidocs/tekton-pipeline#trigger-a-pipeline-run).
 
-**Authentication Process**
+##### Authentication Process
+{: #authentication-process}
+
 - If you don't already have an API Key, go to [IBM Cloud API Keys](https://cloud.ibm.com/iam/apikeys) to generate one.
 
 - Once you have your API key, generate an IAM token using the following `curl` command:
