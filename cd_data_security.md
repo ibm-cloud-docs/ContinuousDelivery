@@ -575,6 +575,66 @@ To learn more about working with {{site.data.keyword.gitrepos}}, see [{{site.dat
 
 When you develop and configure your pipeline job and step scripts, make sure that your scripts do not run actions that might compromise the confidentiality, integrity, or availability of your resources, or otherwise violate regulatory controls.
 
+
+### Delivery Pipelines add-mask command
+{: #cd_add_mask_command}
+
+The Tekton worker agent (version 0.22.3+) supports an add-mask feature allows you to dynamically mask sensitive values in log output line-by-line. When a log line contains the `::add-mask::{value}` pattern, the marker is removed from the output and the value is masked as `***` for the rest of the log stream.
+
+#### Usage
+{: #cd_add_mask_usage}
+
+You can check the following example to understand the usage of add-mask command.
+
+**Input Log:**
+```
+Setting up authentication
+API Key: ::add-mask::sk_live_abc123xyz
+Using API key for requests
+API response: {"key": "sk_live_abc123xyz", "status": "ok"}
+```
+
+**Output Log:**
+```
+Setting up authentication
+API Key: ***
+Using API key for requests
+API response: {"key": "***", "status": "ok"}
+```
+
+#### How it works
+{: #cd_add_mask_working}
+
+The system executes the following steps when you use `add-mask` command:
+
+1. When a line contains `::add-mask::{value}`, the system:
+   - Removes the `::add-mask::` marker from the output
+   - Extracts everything after `::add-mask::` (until end of line) as the value to mask
+   - Replaces the value with `***` in the current line
+   - Adds the value to a mask list
+
+2. For all subsequent lines:
+   - Any occurrence of previously masked values is automatically replaced with `***`
+
+#### Multiple Masks
+{: #cd_multiple_masks_at_work}
+
+You can mask multiple values throughout your logs:
+
+**Input:**
+```
+Setting password ::add-mask::myP@ssw0rd
+Setting token ::add-mask::ghp_abc123
+Credentials: myP@ssw0rd, token: ghp_abc123
+```
+
+**Output:**
+```
+Setting password ***
+Setting token ***
+Credentials: ***, token: ***
+```
+
 To learn more about Delivery Pipelines, see and [Working with pipelines](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about) and [Working with Tekton pipelines](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton-pipelines).
 
 
