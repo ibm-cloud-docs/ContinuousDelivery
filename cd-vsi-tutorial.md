@@ -1,8 +1,8 @@
 ---
 
 copyright:
-   years: 2021, 2025
-lastupdated: "2025-03-24"
+   years: 2021, 2026
+lastupdated: "2026-02-12"
 
 keywords: Virtual Server Instance, code repositories, DevOps Insights, non-containerized, java application, vsi, gitops, toolchain, pipeline, Virtual Machine, vm
 
@@ -20,6 +20,9 @@ completion-time: 40m
 {: #tutorial-cd-vsi}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="40m"}
+
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 Feb 2027: au-syd, ca-mon, ca-tor, eu-es, jp-osa, us-east. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on 12 Feb 2027. Follow the [migration guide](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-migrate-region) to avoid disruption. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{: important}
 
 This tutorial demonstrates how to set up a {{site.data.keyword.contdelivery_short}} toolchain and deliver a simple application (app) to a Virtual Machine. You can set up source control, and then build, test, and deploy the code to different deployment stages.
 {: shortdesc}

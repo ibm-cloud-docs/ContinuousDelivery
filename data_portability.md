@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2026-02-05"
+lastupdated: "2026-02-12"
 
 keywords: Continuous Delivery, toolchain, client owned data
 
@@ -17,6 +17,9 @@ subcollection: ContinuousDelivery
 
 Data portability involves a set of tools and procedures that enable you to export the digital artifacts that would be needed to implement similar workloads and data processing with different service providers or on-premises software. It includes procedures for copying and storing customer-owned data that is held by the {{site.data.keyword.contdelivery_short}} service, and for related configurations used by the service to store and process customer owned data.
 {: shortdesc}
+
+{{site.data.keyword.contdelivery_short}} will be discontinued in these regions on 12 Feb 2027: au-syd, ca-mon, ca-tor, eu-es, jp-osa, us-east. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions. Follow the [migration guide](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-migrate-region) to avoid disruption. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{: important}
 
 ## Responsibilities
 {: #data-portability-responsibilities}

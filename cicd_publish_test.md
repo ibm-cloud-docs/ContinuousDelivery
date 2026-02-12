@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2024
-lastupdated: "2024-11-20"
+  years: 2019, 2026
+lastupdated: "2026-02-12"
 
 keywords: devops insights, publish, test, results, other ci/cd tools, code coverage, tests, verification, app, sonarqube, dashboard
 
@@ -14,6 +14,9 @@ subcollection: ContinuousDelivery
 
 # Publishing test results
 {: #publish-test-cicd}
+
+{{site.data.keyword.contdelivery_short}} will be discontinued in these regions on 12 Feb 2027: au-syd, ca-mon, ca-tor, eu-es, jp-osa, us-east. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions. Follow the [migration guide](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-migrate-region) to avoid disruption. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{: important}
 
 You can publish test results by using other continuous integration and continuous delivery (CI/CD) tools with the {{site.data.keyword.Bluemix}} command line interface (CLI) to integrate with {{site.data.keyword.DRA_full}}. Test results inform {{site.data.keyword.DRA_short}} about the tests that are run during the build process. These tests must generate some kind of JSON or XML-based file.
 {: shortdesc}
