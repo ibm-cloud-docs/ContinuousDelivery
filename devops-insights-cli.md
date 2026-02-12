@@ -18,7 +18,7 @@ subcollection: ContinuousDelivery
 The {{site.data.keyword.DRA_full}} CLI provides a set of commands that you can use to integrate your build with {{site.data.keyword.DRA_short}}. Use two different types of commands: CLI usage commands and CLI commands to integrate with {{site.data.keyword.DRA_short}}.
 {: shortdesc}
 
-{{site.data.keyword.DRA_short}} will be discontinued in all regions on 12 Feb 2027. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{{site.data.keyword.DRA_short}} will be discontinued in all regions on 12 February 2027. However, if a region has no active {{site.data.keyword.DRA_short}} usage, the service in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
 ## Before you begin

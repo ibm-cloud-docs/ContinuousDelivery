@@ -15,7 +15,7 @@ subcollection: ContinuousDelivery
 # Publishing test results
 {: #publish-test-cli}
 
-{{site.data.keyword.contdelivery_short}} will be discontinued in these regions on 12 Feb 2027: au-syd, ca-mon, ca-tor, eu-es, jp-osa, us-east. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions. Follow the [migration guide](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-migrate-region) to avoid disruption. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **eu-es**, **jp-osa**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
 Test results inform {{site.data.keyword.DRA_short}} about the tests that are run during the build process. These tests must generate a JSON or XML-based file. The generated test file is published as a test record. Along with the test file, this record contains the application name, build number, types of test, and other fields.

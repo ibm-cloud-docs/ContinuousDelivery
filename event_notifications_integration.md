@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2026-01-14"
+lastupdated: "2026-02-12"
 
 keywords: tool integrations, IBM Cloud Public, Event Notifications
 
@@ -14,6 +14,9 @@ subcollection: ContinuousDelivery
 
 # Configuring {{site.data.keyword.en_short}}
 {: #event-notifications-integration}
+
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **eu-es**, **jp-osa**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{: important}
 
 You can use the {{site.data.keyword.en_full}} service to receive information about critical events that occur in your {{site.data.keyword.cloud}} account. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like Toolchains, Monitoring,  and Secrets Manager to communication channels like PagerDuty, Slack, email, SMS, push notifications, webhook, Microsoft&reg; Teams, ServiceNow, and {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}.
 {: shortdesc}

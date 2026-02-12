@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2025
-lastupdated: "2025-12-04"
+  years: 2022, 2026
+lastupdated: "2026-02-12"
 
 keywords: Satellite, satellite, tekton, pipeline, toolchain, CD, automate, automation, continuous delivery, DevOps, shift-left, shift left, secure DevOps, IBM Cloud
 
@@ -24,6 +24,9 @@ completion-time: 30m
 {: toc-services="satellite, openshift, containers, ContinuousDelivery"}
 {: toc-account-plan="paid"}
 {: toc-completion-time="30m"}
+
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **eu-es**, **jp-osa**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{: important}
 
 In this tutorial, you learn how to create an open toolchain by using {{site.data.keyword.contdelivery_full}} and deploy your application (app) by using [{{site.data.keyword.cloud_notm}} {{site.data.keyword.satelliteshort}}](/docs/satellite?topic=satellite-getting-started). You also learn how toolchains are implemented in the {{site.data.keyword.contdelivery_short}} service and how to deploy a simple web app by using a {{site.data.keyword.contdelivery_short}}-only toolchain template.
 {: shortdesc}

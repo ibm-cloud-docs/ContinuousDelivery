@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-06-05"
+  years: 2015, 2026
+lastupdated: "2026-02-12"
 
 keywords: IBM Cloud, build types, build jobs, deployment job, build script, create pipeline, 
 
@@ -14,6 +14,9 @@ subcollection: ContinuousDelivery
 
 # Working with pipelines 
 {: #pipeline-working}
+
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **eu-es**, **jp-osa**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{: important}
 
 To automate your builds and deployments to {{site.data.keyword.cloud}}, use {{site.data.keyword.contdelivery_full}} pipelines.
 {: shortdesc}

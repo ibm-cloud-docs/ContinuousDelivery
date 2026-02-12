@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-01-08"
+lastupdated: "2026-02-12"
 
 keywords: deployment strategies, toolchain, CD, automate, automation, continuous delivery, continuous integration, DevOps, IBM Cloud
 
@@ -24,6 +24,9 @@ completion-time: 30m
 {: toc-services="ContinuousDelivery"}
 {: toc-account-plan="paid"}
 {: toc-completion-time="30m"}
+
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **eu-es**, **jp-osa**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{: important}
 
 In this tutorial, you learn how to create an open toolchain by using {{site.data.keyword.contdelivery_full}} and deploy your app on [{{site.data.keyword.codeengineshort}}](/docs/codeengine?topic=codeengine-getting-started). You also learn how toolchains are implemented in the {{site.data.keyword.contdelivery_short}} service and how to develop and deploy a simple web application (app) by using toolchains.
 {: shortdesc}

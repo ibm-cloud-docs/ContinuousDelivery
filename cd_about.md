@@ -23,7 +23,7 @@ Toolchains are available on {{site.data.keyword.cloud_notm}} Public. You can use
 ## Toolchain templates
 {: #templates}
 
-{{site.data.keyword.contdelivery_short}} will be discontinued in these regions on 12 Feb 2027: au-syd, ca-mon, ca-tor, eu-es, jp-osa, us-east. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions. Follow the [migration guide](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-migrate-region) to avoid disruption. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **eu-es**, **jp-osa**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
 You can use a template as a starting point to [create a toolchain](https://cloud.ibm.com/devops/create){: external}. Toolchain templates include specific sets of tool integrations that support development, deployment, and operations tasks.

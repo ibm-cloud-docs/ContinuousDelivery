@@ -15,7 +15,7 @@ subcollection: ContinuousDelivery
 # Setting up Terraform for {{site.data.keyword.contdelivery_short}}
 {: #terraform-setup}
 
-{{site.data.keyword.contdelivery_short}} will be discontinued in these regions on 12 Feb 2027: au-syd, ca-mon, ca-tor, eu-es, jp-osa, us-east. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions. Follow the [migration guide](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-migrate-region) to avoid disruption. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **eu-es**, **jp-osa**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
 Terraform on {{site.data.keyword.cloud}} enables predictable and consistent creation of {{site.data.keyword.cloud_notm}} services so that you can rapidly build complex, multitier cloud environments by following Infrastructure as Code (IaC) principles. Similar to using the {{site.data.keyword.cloud_notm}} CLI or API and SDKs, you can automate the creation, update, and deletion of your {{site.data.keyword.contdelivery_full}} instances by using the HashiCorp Configuration Language (HCL).

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2023
-lastupdated: "2023-06-05"
+  years: 2016, 2026
+lastupdated: "2026-02-12"
 
 keywords: ADD STAGE, Run Stage icon, JOBS tab, Delivery Pipeline
 
@@ -14,6 +14,9 @@ subcollection: ContinuousDelivery
 
 # Building and deploying
 {: #deliverypipeline_build_deploy}
+
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **eu-es**, **jp-osa**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{: important}
 
 {{site.data.keyword.contdelivery_full}} includes Delivery Pipeline, which you can use to implement a repeatable continuous integration and continuous delivery process.
 {: shortdesc}

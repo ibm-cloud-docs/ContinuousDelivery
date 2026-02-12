@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023, 2025
-lastupdated: "2025-08-07"
+  years: 2023, 2026
+lastupdated: "2026-02-12"
 
 keywords: Continuous Delivery endpoints, available regions, locations
 
@@ -14,6 +14,9 @@ subcollection: ContinuousDelivery
 
 # {{site.data.keyword.contdelivery_short}} regions and endpoints
 {: #regions}
+
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **eu-es**, **jp-osa**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{: important}
 
 Review region and connectivity options for interacting with {{site.data.keyword.contdelivery_full}}.
 {: shortdesc}
@@ -46,15 +49,15 @@ Review the following table to determine the public API endpoints to use when you
 | Region           | Public endpoints                |
 | ---------------- | ------------------------------- |
 | Dallas           | `us-south.devops.cloud.ibm.com` |
-| Washington DC    | `us-east.devops.cloud.ibm.com`  |
+| Washington DC (deprecated)    | `us-east.devops.cloud.ibm.com`  |
 | London           | `eu-gb.devops.cloud.ibm.com`    |
 | Frankfurt        | `eu-de.devops.cloud.ibm.com`    |
 | Madrid           | `eu-es.devops.cloud.ibm.com`    |
-| Sydney           | `au-syd.devops.cloud.ibm.com`   |
+| Sydney (deprecated)          | `au-syd.devops.cloud.ibm.com`   |
 | Tokyo            | `jp-tok.devops.cloud.ibm.com`   |
-| Osaka            | `jp-osa.devops.cloud.ibm.com`   |
-| Montreal         | `ca-mon.devops.cloud.ibm.com`   |
-| Toronto          | `ca-tor.devops.cloud.ibm.com`   |
+| Osaka (deprecated)           | `jp-osa.devops.cloud.ibm.com`   |
+| Montreal (deprecated)        | `ca-mon.devops.cloud.ibm.com`   |
+| Toronto (deprecated)         | `ca-tor.devops.cloud.ibm.com`   |
 | S&atilde;o-Paulo | `br-sao.devops.cloud.ibm.com`   |
 {: caption="Public endpoints for interacting with {{site.data.keyword.contdelivery_short}} APIs over IBM Cloud's public network" caption-side="top"}
 
@@ -63,7 +66,7 @@ The following table lists the public endpoints for the Delivery Pipeline [privat
 | Region           | Private endpoints                                      |
 | ---------------- | ------------------------------------------------------ |
 | Dallas           | `private-worker-service.us-south.devops.cloud.ibm.com` |
-| Washington DC    | `private-worker-service.us-east.devops.cloud.ibm.com`  |
+| Washington DC (deprecated)   | `private-worker-service.us-east.devops.cloud.ibm.com`  |
 | London           | `private-worker-service.eu-gb.devops.cloud.ibm.com`    |
 | Frankfurt        | `private-worker-service.eu-de.devops.cloud.ibm.com`    |
 {: caption="Private endpoints for interacting with the private worker service" caption-side="top"}
@@ -83,7 +86,7 @@ The following table lists the private endpoints for the Delivery Pipeline privat
 | Region           | Private endpoints                                              |
 | ---------------- | -------------------------------------------------------------- |
 | Dallas           | `private-worker-service.private.us-south.devops.cloud.ibm.com` |
-| Washington DC    | `private-worker-service.private.us-east.devops.cloud.ibm.com`  |
+| Washington DC (deprecated)   | `private-worker-service.private.us-east.devops.cloud.ibm.com`  |
 | London           | `private-worker-service.private.eu-gb.devops.cloud.ibm.com`    |
 | Frankfurt        | `private-worker-service.private.eu-de.devops.cloud.ibm.com`    |
 {: caption="Private endpoints for interacting with the private worker service" caption-side="top"}
@@ -93,7 +96,7 @@ Review the following table to determine the private API endpoints to use when yo
 | Region           | Private endpoints                       |
 | ---------------- | --------------------------------------- |
 | Dallas           | `private.us-south.devops.cloud.ibm.com` |
-| Washington DC    | `private.us-east.devops.cloud.ibm.com`  |
+| Washington DC (deprecated)   | `private.us-east.devops.cloud.ibm.com`  |
 | London           | `private.eu-gb.devops.cloud.ibm.com`    |
 | Frankfurt        | `private.eu-de.devops.cloud.ibm.com`    |
 {: caption="Private endpoints for interacting with {{site.data.keyword.contdelivery_short}} APIs over IBM Cloud's private network" caption-side="top"}

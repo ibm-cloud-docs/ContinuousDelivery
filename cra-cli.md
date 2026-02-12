@@ -15,7 +15,7 @@ keywords: code risk analyzer, cli, code risk analyzer command line, code risk an
 # Code Risk Analyzer plug-in for {{site.data.keyword.cloud_notm}}
 {: #cra-cli-plugin}
 
-Code Risk Analyzer  will be discontinued in all regions on 12 Feb 2027. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+Code Risk Analyzer will be discontinued in all regions on 12 February 2027. However, if a region has no active Code Risk Analyzer usage, the service in that region may be discontinued earlier. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
 The {{site.data.keyword.cloud}} command-line interface (CLI) provides commands for code risk analysis. You can use the {{site.data.keyword.cloud_notm}} CLI to analyze your code for vulnerabilities and compliance with certain rules. Code Risk Analyzer is available in all {{site.data.keyword.cloud_notm}} regions in which toolchains are supported.

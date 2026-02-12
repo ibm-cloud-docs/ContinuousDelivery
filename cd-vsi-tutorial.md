@@ -21,7 +21,7 @@ completion-time: 40m
 {: toc-content-type="tutorial"}
 {: toc-completion-time="40m"}
 
-{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 Feb 2027: au-syd, ca-mon, ca-tor, eu-es, jp-osa, us-east. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on 12 Feb 2027. Follow the [migration guide](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-migrate-region) to avoid disruption. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **eu-es**, **jp-osa**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
 This tutorial demonstrates how to set up a {{site.data.keyword.contdelivery_short}} toolchain and deliver a simple application (app) to a Virtual Machine. You can set up source control, and then build, test, and deploy the code to different deployment stages.
