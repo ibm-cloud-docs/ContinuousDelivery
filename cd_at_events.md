@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2025
-lastupdated: "2025-08-07"
+  years: 2018, 2026
+lastupdated: "2026-02-12"
 
 keywords: event, security, IBM, Continuous Delivery, toolchain
 
@@ -14,6 +14,9 @@ subcollection: ContinuousDelivery
 
 # Activity tracking events for {{site.data.keyword.contdelivery_short}}
 {: #at_events}
+
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **eu-es**, **jp-osa**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{: important}
 
 {{site.data.keyword.cloud}} services, such as {{site.data.keyword.contdelivery_short}}, generate activity tracking events.
 {: shortdesc}

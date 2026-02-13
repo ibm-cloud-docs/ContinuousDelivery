@@ -15,6 +15,9 @@ subcollection: ContinuousDelivery
 # Endpoints that do not require authentication in {{site.data.keyword.contdelivery_short}}
 {: #non-auth-endpoints-cd}
 
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **eu-es**, **jp-osa**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{: important}
+
 {{site.data.keyword.contdelivery_full}} provides many internet-accessible endpoints. Although most endpoints authenticate the caller before processing requests, some endpoints intentionally do not authenticate the caller.
 {: shortdesc}
 
@@ -25,6 +28,9 @@ The following inventory of endpoints that do not require authentication is organ
 
 ## Code Risk Analyzer
 {: #code_risk_analyzer}
+
+Code Risk Analyzer  will be discontinued in all regions on 12 Feb 2027. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{: important}
 
 The following table lists the Code Risk Analyzer endpoints that do not require authentication:
 

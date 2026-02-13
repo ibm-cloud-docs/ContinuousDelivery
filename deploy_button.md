@@ -41,6 +41,9 @@ When someone clicks your button, these actions occur:
 ## Examples of the button
 {: #button-examples}
 
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **eu-es**, **jp-osa**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{: important}
+
 See an app button example for a public {{site.data.keyword.gitrepos}} repo:
 
 [![Deploy to IBM Cloud button](https://cloud.ibm.com/media/docs/images/icons/Deploy_to_cloud.svg)](https://cloud.ibm.com/devops/setup/deploy?repository=https://us-south.git.cloud.ibm.com/open-toolchain/devops-insights-demo-toolchain){: target="_blank"}

@@ -21,6 +21,9 @@ subcollection: ContinuousDelivery
 # Evaluating gates
 {: #evaluate-gates-cli}
 
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **eu-es**, **jp-osa**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{: important}
+
 {{site.data.keyword.DRA_full}} gates check whether your test results comply with a defined policy. If the policy is not met, the gate fails by default. You can also configure gates to act in an advisory role to allow pipeline progression even after failure.
 {: shortdesc}
 

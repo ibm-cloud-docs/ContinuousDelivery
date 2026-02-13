@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-02-05"
+lastupdated: "2026-02-12"
 
 keywords: tool integrations, cos bucket tool integration
 
@@ -14,6 +14,9 @@ subcollection: ContinuousDelivery
 
 # Configuring Cloud {{site.data.keyword.cos_short}}
 {: #cos_integration}
+
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **eu-es**, **jp-osa**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{: important}
 
 {{site.data.keyword.cos_full}} is used to securely store substantial volumes of data, ensuring compliance and optimizing cost.
 You can integrate {{site.data.keyword.cos_full_notm}} Bucket to store evidence.

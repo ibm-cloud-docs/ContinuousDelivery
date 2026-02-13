@@ -16,11 +16,13 @@ subcollection: ContinuousDelivery
 # Setting consistent parameter values
 {: #setting-values-cli}
 
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **eu-es**, **jp-osa**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{: important}
+
 As part of integrating {{site.data.keyword.deliverypipelinelong}} with {{site.data.keyword.DRA_full}}, you set consistent parameter values to publish data to {{site.data.keyword.DRA_short}}.
 {: shortdesc}
 
 {{site.data.keyword.DRA_short}} tracks deployment risk based on published test data. When you integrate {{site.data.keyword.DRA_short}} with your {{site.data.keyword.deliverypipeline}}, you are instrumenting {{site.data.keyword.DRA_short}} to gather information from the pipeline. Information that is gathered from the pipeline is presented in {{site.data.keyword.DRA_short}} dashboard to provide visibility into your DevOps process.
-
 
 ## Before you begin
 {: #prereq-values-cli}

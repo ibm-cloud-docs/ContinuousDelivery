@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2025
-lastupdated: "2025-12-04"
+  years: 2016, 2026
+lastupdated: "2026-02-12"
 
 keywords: run jobs, sequences of stages, job types, Delivery Pipeline, Classic
 
@@ -15,6 +15,9 @@ subcollection: ContinuousDelivery
 
 # Classic Delivery Pipeline overview
 {: #deliverypipeline_about}
+
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **eu-es**, **jp-osa**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{: important}
 
 {{site.data.keyword.contdelivery_full}} includes the Classic Delivery Pipeline to build, test, and deploy in a repeatable way with minimal human intervention. In a pipeline, sequences of stages retrieve input and run jobs, such as builds, tests, and deployments.
 {: shortdesc}

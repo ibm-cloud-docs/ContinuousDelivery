@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023, 2025
-lastupdated: "2025-12-04"
+  years: 2023, 2026
+lastupdated: "2026-02-12"
 
 keywords: IBM Cloud Public, firewall configuration, network zones
 
@@ -16,6 +16,9 @@ subcollection: ContinuousDelivery
 # Subnet ranges for {{site.data.keyword.deliverypipeline}} 
 {: #pipeline-subnet-ranges}
 {: support}
+
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **eu-es**, **jp-osa**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{: important}
 
 If your firewall configuration prevents the {{site.data.keyword.deliverypipeline}} from communicating with environments that are behind a firewall, you must update the configuration, including subnet ranges, to access resources that are behind the firewall.
 {: shortdesc}

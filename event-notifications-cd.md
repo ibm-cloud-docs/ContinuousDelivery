@@ -15,6 +15,9 @@ subcollection: ContinuousDelivery
 # Enabling event notifications for toolchains
 {: #event-notifications-cd}
 
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **eu-es**, **jp-osa**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{: important}
+
 As an administrator of {{site.data.keyword.contdelivery_full}} toolchains, you might want to send notifications of events in a toolchain or a tool integration to other users, or human destinations, by using email, SMS, Slack, PagerDuty, or other supported delivery channels. Also, you might want to send these notifications of events to other applications to build logic by using event-driven programming using webhooks, for example. This approach is made possible by the integration between toolchains and {{site.data.keyword.en_full}}.
 {: shortdesc}
 

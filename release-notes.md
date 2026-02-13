@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2025
+  years: 2019, 2026
 
-lastupdated: "2025-12-04"
+lastupdated: "2026-02-12"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -20,6 +20,31 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years.
 {: shortdesc}
+
+## 12 February 2026
+{: #ContinuousDelivery-feb1226}
+{: release-note}
+
+IBM Cloud {{site.data.keyword.contdelivery_short}} deprecation in select regions.
+: The service will no longer be available in the following regions: **au-syd**, **ca-mon**, **ca-tor**, **eu-es**, **jp-osa** and **us-east**. We recognize that changes like these may impact your current setup, and our goal is to make this transition as smooth and predictable as possible, with clear guidance and tools to help you migrate confidently and without disruption.
+
+Code Risk Analyzer and {{site.data.keyword.DRA_short}} service deprecation.
+: The service will no longer be available in all regions. We recognize that changes like these may impact your current setup, and our goal is to make this transition as smooth and predictable as possible, with clear guidance and tools to help you migrate confidently and without disruption.
+
+End of Marketing: 12 June 2026 - After this date, customers will no longer be able to create new resources in the affected regions. However, if a region has no active usage before this date, the {{site.data.keyword.contdelivery_short}}, Code Risk Analyzer or {{site.data.keyword.DRA_short}} service in that region may be discontinued earlier and stop accepting new resource creation.
+{: important}
+
+End of Service: 12 February 2027 - The date when {{site.data.keyword.contdelivery_short}}, Code Risk Analyzer and {{site.data.keyword.DRA_short}} services will no longer be available in the affected regions. However, if a region has no active usage before this date, or if all customers in the region complete their migrations early, the services in that region may be discontinued earlier.
+{: important}
+
+If you have the {{site.data.keyword.contdelivery_short}} service in an affected region, we provide a [migration guide](https://cloud.ibm.com/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-migrate-region) to help you with:
+* Migrate Git Repos and Issue Tracking projects across regions via direct transfer (GitLab feature).
+* Copy toolchains (including Tekton pipelines) to another region using the migration guide
+* Securely export and move secrets to Secrets Manager
+
+Customers using affected regions or features must plan and complete migration by 12 February 2027 to ensure uninterrupted service. Please note: In regions where there is no active usage of the service, or where customers have already completed their migrations before the scheduled end‑of‑service date, the service may be closed earlier than previously communicated. If any regional changes are planned, customers will receive advance notification to ensure they have sufficient time to prepare and take any necessary actions.
+{: important}
+
 
 ## 1 August 2025
 {: #ContinuousDelivery-aug0125}

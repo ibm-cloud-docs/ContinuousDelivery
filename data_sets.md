@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2024
-lastupdated: "2024-11-20"
+  years: 2019, 2026
+lastupdated: "2026-02-12"
 
 keywords: devops insights, quality, dashboard, trends, data sets, configure data, quality data, managing data sets, code coverage, test, tests, verification, app, sonarqube
 
@@ -14,6 +14,9 @@ subcollection: ContinuousDelivery
 
 # Managing data sets
 {: #adding-data-sets}
+
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **eu-es**, **jp-osa**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{: important}
 
 Data sets are defined to identify the types of tests that you run in your development process to define the passing criteria for an application. When you define rules in a policy, {{site.data.keyword.DRA_full}} provides seven pre-defined data sets that you can use to run in your development process. Or, use custom data sets to represent the various types of tests. You can have policy rules for each data set and define rules for custom data sets. Separate policies can be created for each application. Data sets appear on the Quality Dashboard page after you start populating data for the data set. 
 {: shortdesc}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2025
-lastupdated: "2025-12-04"
+  years: 2022, 2026
+lastupdated: "2026-02-12"
 
 keywords: tool integrations, IBM Cloud Public, App Configuraton, AppConfig
 
@@ -14,6 +14,9 @@ subcollection: ContinuousDelivery
 
 # Configuring {{site.data.keyword.appconfig_short}}
 {: #app-configuration}
+
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **eu-es**, **jp-osa**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{: important}
 
 [{{site.data.keyword.appconfig_full}}](/docs/app-configuration?topic=app-configuration-getting-started) is a centralized feature management and configuration service that provides a convenient, consistent, and secure approach to accessing, referencing, and reusing collections of feature flags and properties within toolchains.
 {: shortdesc}
