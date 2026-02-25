@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2026
-lastupdated: "2026-02-12"
+lastupdated: "2026-02-25"
 
 keywords: users of a service instance, authorized users, pipeline usage, Git Repos and Issue Tracking limitations, consolidated billing
 
@@ -177,7 +177,7 @@ For more information about using IAM to manage access to toolchains in a resourc
 The method that you use to organize toolchains in resource groups directly impacts user access and billing. By default, when a user uses toolchains in multiple regions or resource groups, they are accounted and billed for each {{site.data.keyword.contdelivery_short}} instance within each unique pairing of region and resource group. If you're using the Professional plan in an enterprise account, you might be able to reduce the total count of authorized users billed within the enterprise by enabling consolidated billing as previously described.
 {: tip}
 
-Complete the following steps to manage the list of authorized users of {{site.data.keyword.contdelivery_short}} instances:  on the **Manage** tab from the {{site.data.keyword.contdelivery_short}} instance.
+Complete the following steps to manage the list of authorized users of {{site.data.keyword.contdelivery_short}} instances from the **Manage** tab of the {{site.data.keyword.contdelivery_short}} instance.
 
 1. From your resource list, enter `Continuous Delivery` to filter the list to your instances.
 1. Click the name of an instance to navigate to the instance details.

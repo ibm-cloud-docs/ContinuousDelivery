@@ -33,7 +33,7 @@ ibmcloud plugin install doi
 ```
 {: codeblock}
 
-* Ensure that you can access a toolchain with the {{site.data.keyword.DRA_short}} tool that is configured for that toolchain. For more information about toolchains, see [Creating a toolchain from an app](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started&interface=ui#creating_a_toolchain_from_an_app).
+* Make sure that you can access a toolchain with the {{site.data.keyword.DRA_short}} tool that is configured for that toolchain. For more information about toolchains, see [Creating a toolchain from an app](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started&interface=ui#creating_a_toolchain_from_an_app).
 
 * Specify the toolchain ID by using one of the following methods:
    - Specify the toolchain ID as a CLI parameter to the command.

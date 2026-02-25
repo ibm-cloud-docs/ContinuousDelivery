@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-01-22"
+lastupdated: "2026-02-25"
 
 keywords: environment properties, environment resources, IBM Java, Tekton environments
 
@@ -133,7 +133,7 @@ spec:
 ## Managed worker virtual machine sizing
 {: #tekton_tshirt_sizing}
 
-When you run a pipeline by using the IBM Managed Worker pool, a VM with a specific default memory is allocated. Although most jobs can run successfully with the provided memory, certain pipelines require extra memory for intensive tasks.
+When you run a pipeline by using the IBM Managed Worker pool, a VM with a specific default memory is allocated. Although most jobs can run successfully with the provided memory, certain pipelines require additional memory for intensive tasks.
 
 Users can specify a label on their tasks to indicate whether a task requires more (or less) memory for a specific task. This ability to identify the specific amount of resources that are required benefits resource usage and eventual cost savings.
 
@@ -205,14 +205,14 @@ The toolbar displayed in the log viewer includes a number of additional features
 ### Timestamps
 {: #tekton_log_timestamps}
 
-IBM-managed workers, and private workers with agent version 0.20.5 or later, produce log lines prefixed with timestamps by default. The user may show or hide these timestamps in the log viewer by toggling the option in the settings menu in the toolbar at the top of the log viewer.
+IBM-managed workers, and private workers with agent version 0.20.5 or later, produce log lines prefixed with timestamps by default. The user may show or hide these timestamps in the log viewer by toggling the option in the settings menu in the log viewer toolbar.
 
 The displayed timestamps are localised based on the user's browser settings, with the raw timestamp value received from the worker provided as a tooltip on hover.
 
 ### Log levels
 {: #tekton_log_levels}
 
-The log viewer parses log lines to detect the associated log level and decorate them accordingly to help with log consumability. The format supported is described below.
+The log viewer parses log lines to detect the associated log level and decorate them accordingly to help with log consumability. The supported format is as follows.
 
 ```
 <timestamp> ::<level>::<message>
@@ -231,12 +231,12 @@ echo '::warning::Something that may require attention but is non-blocking…'
 ```
 {: codeblock}
 
-The displayed log levels can be changed via the settings menu in the toolbar at the top of the log viewer.
+The displayed log levels can be changed via the settings menu in the log viewer toolbar.
 
 ###  Log groups
 {: #tekton_log_groups}
 
-In addition to log levels, the log viewer also supports collapsible groups within the logs. The supported format is described below.
+In addition to log levels, the log viewer also supports collapsible groups within the logs. The supported format is as follows.
 
 ```
 <timestamp> ::group::<message>

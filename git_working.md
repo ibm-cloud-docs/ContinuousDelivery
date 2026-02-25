@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-02-12"
+lastupdated: "2026-02-25"
 
 keywords: Git Repos, Issue Tracking, Collaborate, Git repository, authentication, personal access token, SSH key
 
@@ -292,7 +292,7 @@ You can update the display name that appears for you throughout {{site.data.keyw
 1. On the {{site.data.keyword.gitrepos}} User Settings dashboard, from the menu, click your avatar and select **Edit profile**. Click **Profile**. On the Profile page, in the **Main settings** section, update your full name.
 1. Click **Update profile settings** to change the name that is displayed for you throughout {{site.data.keyword.gitrepos}}.
 
-## Physical file and repo size limits
+## Physical file and repo limits
 {: #git_limits}
 
-Files are strictly limited to 100 MB. The suggested repo size limit is 1 GB. If your repo exceeds 1 GB, you might receive an email with a request to reduce the size of the repo.
+Files are strictly limited to 100 MB. The suggested repo limit is 1 GB. If your repo exceeds 1 GB, you might receive an email with a request to reduce the repo.

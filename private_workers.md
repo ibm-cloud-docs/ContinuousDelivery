@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026
-lastupdated: "2026-02-12"
+lastupdated: "2026-02-25"
 
 keywords: private workers integration, delivery pipeline, Kubernetes cluster, API key, Service ID, pool of workers
 
@@ -40,7 +40,7 @@ Before you set up a private worker, make sure that you have the following resour
 ## Setting up a {{site.data.keyword.deliverypipeline}} Private Worker
 {: #set_up_private_worker}
 
-Toolchains provide an integrated set of tools to build, deploy, and manage your apps. Tool integrations are the building blocks of a toolchain. A pipeline that is contained within a toolchain that has one or more private worker integrations has extra options available. For Classic pipelines, these options are available on the **Workers** tab of the Stage Configuration page. For Tekton pipelines, these options are available within the settings that are specified on the **Worker** page.
+Toolchains provide an integrated set of tools to build, deploy, and manage your apps. Tool integrations are the building blocks of a toolchain. A pipeline that is contained within a toolchain that has one or more private worker integrations has additional options available. For Classic pipelines, these options are available on the **Workers** tab of the Stage Configuration page. For Tekton pipelines, these options are available within the settings that are specified on the **Worker** page.
 
 For Tekton pipelines, you can also specify one worker per trigger, which overrides the worker that is configured at the pipeline level on the **Worker** page.
 {: tip}

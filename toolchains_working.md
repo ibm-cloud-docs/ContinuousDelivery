@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2015, 2026
-lastupdated: "2026-02-12"
+lastupdated: "2026-02-25"
 
 keywords: set of tool integrations, toolchains, templates, collective power of a toolchain, IBM Cloud, IAM
 
@@ -35,7 +35,7 @@ To see which toolchains and tool integrations are available, see [Toolchain avai
 {: #creating_a_toolchain_from_a_template}
 {: ui}
 
-You can use a template as a starting point to [create a toolchain](https://cloud.ibm.com/devops/create){: external} that includes a specific set of tool integrations. Depending on the template that you use, you can create a toolchain that has a specific set of tool integrations or an empty toolchain that you can add tool integrations to. Learn more about how to use the templates from the [{{site.data.keyword.cloud_notm}} Garage Method](https://www.ibm.com/architectures/hybrid){: external}.
+You can use a template as a starting point to [create a toolchain](https://cloud.ibm.com/devops/create){: external} that includes a specific set of tool integrations. Depending on the template that you use, you can create a toolchain that has a specific set of tool integrations or an empty toolchain that you can add tool integrations to. Learn more about how to use the templates from the [{{site.data.keyword.cloud_notm}} Garage Method](https://www.ibm.com/think/architectures/patterns){: external}.
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){: external}.
 1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**.
