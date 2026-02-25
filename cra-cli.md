@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-02-12"
+lastupdated: "2026-02-25"
 
 subcollection: ContinuousDelivery
 
@@ -67,7 +67,7 @@ Code Risk Analyzer cannot discover vulnerabilities on application packages that 
 ## Prerequisites
 {: #prerequisites}
 
-* Install the {{site.data.keyword.cloud_notm}} CLI. See [Download {{site.data.keyword.cloud_notm}} CLI](https://cloud.ibm.com/docs/cli?topic=cli-getting-started) for instructions.
+* Install the {{site.data.keyword.cloud_notm}} CLI. See [Download {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started) for instructions.
 
 * Install the Code Risk Analyzer CLI plug-in by running the following command:
 

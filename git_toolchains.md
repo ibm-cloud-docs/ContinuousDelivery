@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-02-12"
+lastupdated: "2026-02-25"
 
 keywords: Git Repos, Issue Tracking, Collaborate, Git repository, Git source control, authentication, GitHub 
 
@@ -29,7 +29,7 @@ To see which toolchain templates contain the {{site.data.keyword.gitrepos}} or G
 {: #creating_a_toolchain_git}
 {: ui}
 
-You can use a template as a starting point to [create a toolchain](https://cloud.ibm.com/devops/create){: external} that includes either a {{site.data.keyword.gitrepos}} or GitHub tool integration. Learn more about how to use the templates from the [IBM Cloud Garage Method](https://www.ibm.com/architectures/hybrid){: external}.
+You can use a template as a starting point to [create a toolchain](https://cloud.ibm.com/devops/create){: external} that includes either a {{site.data.keyword.gitrepos}} or GitHub tool integration. Learn more about how to use the templates from the [IBM Cloud Garage Method](https://www.ibm.com/think/architectures/patterns){: external}.
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){: external}.
 1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**.

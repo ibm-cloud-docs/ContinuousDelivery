@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2026-02-12"
+lastupdated: "2026-02-25"
 
 keywords: Continuous Delivery, toolchain, client owned data
 
@@ -54,7 +54,7 @@ Some data retrieval procedures use the {{site.data.keyword.cloud}} command line 
 1. Before invoking APIs to retrieve data, run `export TOKEN=$(ibmcloud iam oauth-tokens | sed 's!^IAM *token: *Bearer *!!')` to obtain and assign a bearer token to the `TOKEN` environment variable.
 1. Before invoking APIs to retrieve data, set the `REGION` environment variable to the region that contains the instance of {{site.data.keyword.contdelivery_short}} from which you want to retrieve data. Example: `export REGION=us-south`.
 
-Some of the following procedures use the open source tool [`curl`](https://curl.se){: external} to retrieve data from HTTP APIs. Some procedures use [`jq`](https://jqlang.org/){: external} to process JSON data that is returned from HTTP APIs. Use of these tools is not mandatory. At your discretion, you can substitute different tools or techniques to retrieve and process the data.
+Some of the following procedures use the open source tool [`curl`](https://curl.se){: external} to retrieve data from HTTP APIs. Some procedures use [`jq`](https://jqlang.org){: external} to process JSON data that is returned from HTTP APIs. Use of these tools is not mandatory. At your discretion, you can substitute different tools or techniques to retrieve and process the data.
 {: tip}
 
 ### {{site.data.keyword.contdelivery_short}} service instances
@@ -120,7 +120,7 @@ Client-owned data in {{site.data.keyword.contdelivery_short}} pipelines fall int
 You can retrieve a list of Tekton pipelines that are integrated into a toolchain by using the [Toolchain API](https://cloud.ibm.com/apidocs/toolchain){: external}. To retrieve the list of Tekton pipelines, complete the following steps:
 
 1. For a specific toolchain, use `GET https://api.$REGION.devops.cloud.ibm.com/toolchain/v2/toolchains/$TOOLCHAIN_ID/tools` to obtain a list of all tool integrations in the toolchain.
-1. Use a tool such as [jq](https://jqlang.github.io/jq){: external} to filter the list to only pipeline tool integrations, and to derive the corresponding pipeline IDs.
+1. Use a tool such as [jq](https://jqlang.org){: external} to filter the list to only pipeline tool integrations, and to derive the corresponding pipeline IDs.
    - Use the following command to produce a list of IDs for all Tekton and Classic pipelines in a toolchain: `curl -s -X GET -H "Authorization: Bearer $TOKEN" -H "Accept: application/json" https://api.$REGION.devops.cloud.ibm.com/toolchain/v2/toolchains/$TOOLCHAIN_ID/tools | jq -r '.tools[] | select(.tool_type_id == "pipeline").id'`
    - Use the following command to produce a list of IDs for all Tekton pipelines in a toolchain: `curl -s -X GET -H "Authorization: Bearer $TOKEN" -H "Accept: application/json" https://api.$REGION.devops.cloud.ibm.com/toolchain/v2/toolchains/$TOOLCHAIN_ID/tools | jq -r '.tools[] | select(.tool_type_id == "pipeline" and .parameters.type == "tekton").id'`
    - Use the following command to produce a list of IDs of all Classic pipelines in a toolchain: `curl -s -X GET -H "Authorization: Bearer $TOKEN" -H "Accept: application/json" https://api.$REGION.devops.cloud.ibm.com/toolchain/v2/toolchains/$TOOLCHAIN_ID/tools | jq -r '.tools[] | select(.tool_type_id == "pipeline" and .parameters.type == "classic").id'`

@@ -83,7 +83,7 @@ Before you delete data from an account, determine whether it is a personal accou
 
 If you own a personal account, you can make changes and delete your data. If you share your account with another user, you own the data, but you might want to contact them about the shared work. 
 
-If you can't log in to your {{site.data.keyword.cloud_notm}} account, [contact IBM Support](https://www.ibm.com/cloud/support){: external}.
+If you can't log in to your {{site.data.keyword.cloud_notm}} account, [contact IBM Support](https://www.ibm.com/products/cloud/support){: external}.
  
 ### Corporate individual account
 {: #corp_individual_account}
@@ -131,10 +131,10 @@ After the project is archived, you can import it into another GitLab instance.
 
 You can delete your {{site.data.keyword.gitrepos}} account and most of the things that are owned by that account.
 
-1. On the {{site.data.keyword.gitrepos}} User Settings dashboard, on the [Account page](https://us-south.git.cloud.ibm.com/profile/account){: external}, in the Delete account section, click **Delete account**.
+1. On the {{site.data.keyword.gitrepos}} User Settings dashboard, on the [Account page](https://us-south.git.cloud.ibm.com/users/sign_in){: external}, in the Delete account section, click **Delete account**.
 1. All Git projects, including repositories and issues are deleted. You are also removed from any {{site.data.keyword.gitrepos}} groups that you belong to.
 
-After your account is deleted, some content will remain. This content is assigned to a system-wide Ghost User. For example, comments that you added to an issue remain, but they are attributed to the Ghost User. To delete all of the content that you authored, contact [IBM Support](https://www.ibm.com/cloud/support){: external}
+After your account is deleted, some content will remain. This content is assigned to a system-wide Ghost User. For example, comments that you added to an issue remain, but they are attributed to the Ghost User. To delete all of the content that you authored, contact [IBM Support](https://www.ibm.com/products/cloud/support){: external}
 
 {{site.data.keyword.gitrepos}} uses a single sign-on mechanism that automatically creates a corresponding Git account for your {{site.data.keyword.cloud_notm}} account the first time that you access the tool integration. After you delete your account, do not access {{site.data.keyword.gitrepos}}. If you access {{site.data.keyword.gitrepos}} again, a new account is automatically created that you must delete.
 {: important}
@@ -270,7 +270,7 @@ For more information about deleting tool integrations, see the following documen
 
 When you delete a toolchain, the deletion cannot be undone. Deleting a toolchain removes all of its tool integrations, including pipelines, which might delete resources that are managed by those tool integrations.
 
-For more information about deleting toolchains, see "Modifying and deleting toolchains and tool integrations" in the following documentation:
+For more information about deleting toolchains, see the following documentation:
 
 * [Deleting a toolchain by using the console](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using&interface=ui#deleting_a_toolchain_ui)
 * [Deleting a toolchain from the CLI (Beta)](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using&interface=cli#deleting_a_toolchain_cli)

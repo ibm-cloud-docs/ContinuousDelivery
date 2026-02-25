@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-02-12"
+lastupdated: "2026-02-25"
 
 keywords: tool integrations, IBM Cloud Public, Bitbucket
 
@@ -60,7 +60,7 @@ Configure Bitbucket to collaborate on code with your team:
 
 1. To create a private repo on the server, select the **Make this repository private** checkbox.
 1. To use Bitbucket Issues for issue tracking, select the **Enable Bitbucket Issues** checkbox.
-1. To track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** checkbox. For more information, see [Track where your code is deployed with toolchains](https://www.ibm.com/blog/announcement/track-code-deployed-toolchains/){: external}.
+1. To track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** checkbox.
 1. Click **Create Integration**.
 1. From your toolchain, on the **Third-Party tools** card, click the Bitbucket tool integration for the Bitbucket repo that you want to work with. The Bitbucket website opens where you can view the contents of the repo.
 1. If you enabled Bitbucket Issues, click **Bitbucket Issues** to open it. You can use this instance of Bitbucket Issues for your entire toolchain, even if the toolchain contains multiple Bitbucket repos.    

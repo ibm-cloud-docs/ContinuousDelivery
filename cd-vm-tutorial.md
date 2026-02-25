@@ -2,7 +2,7 @@
 
 copyright:
    years: 2021, 2026
-lastupdated: "2026-02-12"
+lastupdated: "2026-02-25"
 
 keywords: deployment strategies, tekton, pipeline, toolchain, CD, CI, automate, automation, continuous delivery, continuous integration, DevOps, shift-left, shift left, secure DevOps, IBM Cloud
 
@@ -34,6 +34,7 @@ This tutorial uses deployment strategies that use {{site.data.keyword.vpc_full}}
 
 [Tekton](https://www.ibm.com/think/topics/tekton){: external} is an open source, vendor-neutral, Kubernetes-native framework that you can use to build, test, and deploy apps. Tekton provides a set of shared components for building continuous integration and continuous delivery systems. As an open source project, Tekton is managed by the [Continuous Delivery Foundation](https://cd.foundation/){: external}. The goal is to modernize continuous delivery by providing industry specifications for pipelines, workflows, and other building blocks. With Tekton, you can build, test, and deploy across cloud providers or on-premises systems by abstracting the underlying implementation details. Tekton pipelines are built into [{{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery). For more information about the {{site.data.keyword.containerlong}}, see [{{site.data.keyword.containerlong}}](/docs/containers?topic=containers-getting-started).
 
+
 The template that is used in this tutorial works with the Standard plan for a set of virtual machines.
 {: tip}
 
@@ -47,7 +48,7 @@ You can use a deployment strategy to update an application in a production envir
 Many possible deployment strategies are available. In general, they depend on running multiple instances of the application and managing how the various instances are updated. You can pre-configure the following common deployment strategies in {{site.data.keyword.contdelivery_short}}:
 
 Basic
-:   Deploys the new release by stopping and updating all of the running instances simultaneously, causing downtime. For rollback, you must deploy the previous version again, which causes extra downtime. Although this strategy is simple, fast, and has low runtime resource requirements, it is the riskiest and causes downtime. The Basic deployment strategy is not recommended for critical apps that must be highly available.
+:   Deploys the new release by stopping and updating all of the running instances simultaneously, causing downtime. For rollback, you must deploy the previous version again, which causes additional downtime. Although this strategy is simple, fast, and has low runtime resource requirements, it is the riskiest and causes downtime. The Basic deployment strategy is not recommended for critical apps that must be highly available.
 
 Rolling update
 :   Similar to the Basic strategy, this deployment strategy is simple, fast, and has low runtime resource requirements. However, because each running instance is taken down and updated individually, avoiding downtime, rollback requires you to deploy the previous release again. This time consuming approach might cause issues if the current version of the app in production is broken.
@@ -56,7 +57,7 @@ Blue-Green deployment
 :   Creates two separate, permanent production environments (blue and green), and only one of those environments receives traffic at a time. The current release is always deployed to the idle environment and traffic is switched to it after deployment completes, with no downtime. Because you need to switch only the traffic to the unchanged environment, rollback does not cause downtime. Because this strategy requires two full production environments, the resource requirements are higher. However, this strategy enables powerful Developer flows, such as the ability to test new app versions in the production environment before it allows customer traffic. Blue-Green deployment also supports fast rollback.
 
 Canary release
-:   Deploys a new release in parallel with the original production environment (similar to Blue-Green), with no downtime. The amount of traffic that is sent to both the updated and original instances is managed so that the new version is available to a controlled subset of users while the deployment proceeds. Over time, the traffic that is sent to the new version is increased until all of the traffic is sent there, at which point you can stop the old production environment. For rapid rollback while deployment is in progress, you can route all of the traffic to the original production environment. Since this strategy requires two full production environments only during deployment, the overall resource usage is lower than for the Blue-Green deployment. The Canary release deployment strategy is the slowest to move from a previous release to a current release of the software that is being deployed. Canary deployments allow organizations to test two different software versions side by side in production.
+:   Deploys a new release in parallel with the original production environment (similar to Blue-Green), with no downtime. The amount of traffic that is sent to both the updated and original instances is managed so that the new version is available to a controlled subset of users while the deployment proceeds. Over time, the traffic that is sent to the new version is increased until all of the traffic is sent there, at which point you can stop the old production environment. For rapid rollback while deployment is in progress, you can route all of the traffic to the original production environment. Since this strategy requires two full production environments only during deployment, the overall resource usage is less than for the Blue-Green deployment. The Canary release deployment strategy is the slowest to move from a previous release to a current release of the software that is being deployed. Canary deployments allow organizations to test two different software versions side by side in production.
 
 ## Before you begin
 {: #cd-tutorial-prereqs}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-02-24"
+  years: 2018, 2026
+lastupdated: "2026-02-25"
 
 keywords: pipeline base image, custom Docker image, private image registry 
 
@@ -28,7 +28,7 @@ On 20 November 2020, Dockerhub introduced rate-limiting on anonymous image pulls
 {: important}
 
 The pipeline base image might not support all of your build's requirements. For example, you might need more fine-grained control over the versions of node, java, or other tools. You can address this issue by including a first step in your pipeline jobs that installs a series of new packages and carefully configures environment variables, such as `PATH`, to set up your
-environment. However, a better approach is to use the pipeline's support for running a "Custom Docker Image" as the basis for your job.
+environment. However, a better approach is to use the pipeline's support for running a Custom Docker Image as the basis for your job.
 
 Custom Docker image support in the pipeline is used only to provide an image that a specific pipeline job uses while it is running. For example, you can provide an image that contains custom tools that are required by the script that the job runs. After the job completes, the container that it was running in is torn down.
 {: important}
@@ -55,7 +55,7 @@ You can find a large community of repositories at Docker Hub. IBM hosts a number
 ## Using a private image registry
 {: #private_image_registry}
 
-If you are using a private registry that requires authentication, you must set two extra stage environment properties: `DOCKER_USERNAME` and `DOCKER_PASSWORD`. You can use a secure property to mask your `DOCKER_PASSWORD`. Before your image is pulled, the custom Docker image job uses your user name and password credentials to complete a `docker login`.
+If you are using a private registry that requires authentication, you must set two additional stage environment properties: `DOCKER_USERNAME` and `DOCKER_PASSWORD`. You can use a secure property to mask your `DOCKER_PASSWORD`. Before your image is pulled, the custom Docker image job uses your user name and password credentials to complete a `docker login`.
 
 For most registries, you can use the user name and password that were provided to you. If you use {{site.data.keyword.registrylong_notm}} to store your private images, you must use a platform API Key for authentication. 
 
