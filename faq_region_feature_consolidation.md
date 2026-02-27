@@ -87,7 +87,7 @@ Yes. Use the [migration guide](/docs/ContinuousDelivery?topic=ContinuousDelivery
 {: faq}
 {: support}
 
-IBM Cloud Continuous Delivery does not provide a managed alternative in regions where the service is being discontinued. Customers who cannot migrate to another region may choose to deploy their own CI/CD or orchestration environments using IBM Cloud infrastructure, such as [IBM Cloud VPC](/docs/vpc), or use capabilities available through [Red Hat OpenShift on IBM Cloud](https://cloud.ibm.com/docs/openshift?topic=openshift-getting-started), including [OpenShift Pipelines](https://docs.redhat.com/en/documentation/red_hat_openshift_pipelines){: external}. These environments are fully customer‑managed, and IBM does not provide guidance on designing, deploying, or operating custom CI/CD solutions. Customers should refer to the relevant vendor documentation and best practices for setup and configuration.
+IBM Cloud Continuous Delivery does not provide a managed alternative in regions where the service is being discontinued. Customers who cannot migrate to another region may choose to deploy their own CI/CD or orchestration environments using IBM Cloud infrastructure, such as [IBM Cloud VPC](/docs/vpc), or use capabilities available through [Red Hat OpenShift on IBM Cloud](/docs/openshift?topic=openshift-getting-started), including [OpenShift Pipelines](https://docs.redhat.com/en/documentation/red_hat_openshift_pipelines/1.21){: external}. These environments are fully customer‑managed, and IBM does not provide guidance on designing, deploying, or operating custom CI/CD solutions. Customers should refer to the relevant vendor documentation and best practices for setup and configuration.
 
 
 ## Will IBM provide automated migration tools or assistance?
