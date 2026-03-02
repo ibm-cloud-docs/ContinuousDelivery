@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2026
-lastupdated: "2026-02-12"
+lastupdated: "2026-03-02"
 
 keywords: toolchains, user access, resource groups, IAM, access policy, Administrator Create, Editor Update, Update
 
@@ -96,7 +96,7 @@ Depending on their role, the new user can now work with all of the toolchains wi
 You can assign an existing user access to a toolchain in your resource group.
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users**.
-2. From the row for the user that you want to assign access, select the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu.
+2. From the row for the user that you want to assign access, select the **Actions** ![List of actions icon](/images/action-menu-icon.svg) menu.
 3. Click **Assign access**.
 4. In the **How do you want to assign access?** section, click **Access Policy**.
 5. Choose to assign access to the **Toolchain** service.

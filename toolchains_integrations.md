@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-02-12"
+lastupdated: "2026-03-02"
 
 keywords: tool integrations, IBM Cloud Public, App Configuration, Artifactory, Bitbucket, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Event Notifications, Git Repos and Issue Tracking, GitHub, GitLab, HashiCorp Vault, Jenkins, JIRA, IBM Key Protect, IBM Secrets Manager, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Security and Compliance Center, Slack, SonarQube
 
@@ -216,7 +216,7 @@ If you deferred the configuration of a tool integration when you created a toolc
 1. On the Toolchains page, click the toolchain that contains the tool integration that you want to update to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
 1. If you need to configure a tool integration for the first time, on its card, click **Configure**.
 1. When you are finished configuring the tool integration, click **Save Integration**.
-1. If you need to update a tool integration's configuration, click the **Actions** icon ![Actions icon](../../icons/action-menu-icon.svg "Actions") **> Configure**.
+1. If you need to update a tool integration's configuration, click the **Actions** icon ![Actions icon](/images/action-menu-icon.svg "Actions") **> Configure**.
 1. When you are finished updating the settings, click **Save Integration**.
 
 ## Updating a tool integration with the API
@@ -386,7 +386,7 @@ You can delete tool integrations from your toolchain by using the console. If yo
 
 1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **Platform Automation** > **Toolchains**.
 1. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
-1. On the tool integration that you want to delete, click the **Actions** icon ![Actions icon](../../icons/action-menu-icon.svg) **> Delete**.
+1. On the tool integration that you want to delete, click the **Actions** icon ![Actions icon](/images/action-menu-icon.svg) **> Delete**.
 1. Confirm by clicking **Delete**.
 
 ## Deleting a tool integration with the API

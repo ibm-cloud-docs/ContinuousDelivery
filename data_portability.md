@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2026-02-25"
+lastupdated: "2026-03-02"
 
 keywords: Continuous Delivery, toolchain, client owned data
 
@@ -237,7 +237,7 @@ To export the data of a project's merge requests, complete the following steps:
 
 1. From the Git Repos and Issue Tracking home page for the project, select **Code** > **Merge requests**.
 1. Query for all merge requests of interest.
-1. Select **Actions** ![List of actions icon](../icons/action-menu-icon.svg) > **Export as CSV**.
+1. Select **Actions** ![List of actions icon](/images/action-menu-icon.svg) > **Export as CSV**.
 
 For more information, see [Export merge requests to CSV](https://docs.gitlab.com/user/project/merge_requests/csv_export/){: external} in the GitLab Docs.
 
@@ -248,7 +248,7 @@ To export the data of a project's issues, complete the following steps:
 
 1. From the Git Repos and Issue Tracking home page for the project, select **Plan** > **Issues**.
 1. Query for all applicable issues.
-1. Select **Actions** ![List of actions icon](../icons/action-menu-icon.svg) > **Export as CSV**.
+1. Select **Actions** ![List of actions icon](/images/action-menu-icon.svg) > **Export as CSV**.
 
 For more information, see [Export issues to CSV](https://docs.gitlab.com/user/project/issues/csv_export/){: external}.
 
@@ -283,7 +283,7 @@ For more information, see [List all members of a group or project](https://docs.
 You can obtain a copy of a project wiki by cloning the wiki repository to a local file system. To clone a Git Repos and Issue Tracking wiki, complete the following steps:
 
 1. From the Git Repos and Issue Tracking home page for the project, select **Plan** > **Wiki**.
-1. Select **Actions** ![List of actions icon](../icons/action-menu-icon.svg) > **Clone repository**.
+1. Select **Actions** ![List of actions icon](/images/action-menu-icon.svg) > **Clone repository**.
 
 For more information, see [Create or edit wiki pages locally](https://docs.gitlab.com/user/project/wiki/#create-or-edit-wiki-pages-locally){: external}.
 
@@ -307,8 +307,8 @@ A DevOps Insights policy is defined by the rules within it. These are managed by
 1. Type "DevOps Insights" into the search field.
 1. If there is a **DevOps Insights** tool integration in the toolchain, select it.
 1. Select **Policies** in the DevOps Insights dashboard.
-1. For each policy of interest, select **Manage policies** > **Actions** ![List of actions icon](../icons/action-menu-icon.svg) > **Edit Rules**.
-1. For each rule of interest, select **Manage rules** > **Actions** ![List of actions icon](../icons/action-menu-icon.svg) > **Edit**.
+1. For each policy of interest, select **Manage policies** > **Actions** ![List of actions icon](/images/action-menu-icon.svg) > **Edit Rules**.
+1. For each rule of interest, select **Manage rules** > **Actions** ![List of actions icon](/images/action-menu-icon.svg) > **Edit**.
 1. Copy the data in the resulting dialog to the clipboard, and paste to a plain text file.
 
 ### Code Risk Analyzer
