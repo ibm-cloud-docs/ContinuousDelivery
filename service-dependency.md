@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-02-12"
+lastupdated: "2026-03-02"
 
 keywords:
 
@@ -148,7 +148,7 @@ The following dependencies apply to the following deployment locations: Dallas (
 | SOS Inventory Management| Security compliance | No | Both |  Same region  |
 | None| Security compliance | No | Both |  Same region  |
 | OSS Platform| Operations | No | Both |  Same region  |
-| {{site.data.keyword.compliance_full}}| Security compliance | No | Both |  Same region  |
+| IBM Cloud Security and Compliance Center| Security compliance | No | Both |  Same region  |
 | SOS Health-Check, Vulnerability Scanning and Patching| Security compliance | No | Both |  Same region  |
 | Amplitude| Operations | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
 | SOS Inventory Management| Security compliance | No | Both |  Same region  |
