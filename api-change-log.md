@@ -34,6 +34,11 @@ API requests require a `version` path parameter that takes the date in the forma
 
 When the API is changed in a way that is not compatible with previous versions, a new major version is released. To take advantage of the changes in a new version, change the value of the version parameter to the new version.
 
+## 12 February 2026
+{: #12-feb-2026}
+
+The {{site.data.keyword.contdelivery_short}} service is deprecated in the following regions: **au-syd**, **ca-mon**, **ca-tor**, **eu-es**, **jp-osa** and **us-east**. The regional endpoints for the Toolchain and Tekton Pipeline APIs in those regions will be discontinued on 12 February 2027. On 12 June 2026, customers will no longer be able to create new resources in the affected regions. However, if a region has no active usage, the region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation).
+
 ## 24 September 2024
 {: #24-sep-2024}
 
