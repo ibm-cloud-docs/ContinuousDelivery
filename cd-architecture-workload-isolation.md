@@ -102,7 +102,7 @@ See [What is the {{site.data.keyword.cloud_notm}} Platform?](/docs/overview?topi
 
 The following diagram shows the {{site.data.keyword.contdelivery_short}} dependencies.
 
-![Continuous Delivery dependencies](images/CD_Dependencies_Arch.png){: caption="Continuous Delivery dependencies" caption-side="bottom"}
+![Continuous Delivery dependencies](images/CD_Dependencies_Arch.svg){: caption="Continuous Delivery dependencies" caption-side="bottom"}
 
 Excluding data backups, customer-owned data that is provided to the {{site.data.keyword.contdelivery_short}} service in a specific region is exchanged only with data and logging services in the same region. Data backups are stored in Cloud Object Storage cross-region buckets.
 
