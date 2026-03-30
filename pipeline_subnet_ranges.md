@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2026
-lastupdated: "2026-02-25"
+lastupdated: "2026-03-30"
 
 keywords: IBM Cloud Public, firewall configuration, network zones
 
@@ -17,7 +17,12 @@ subcollection: ContinuousDelivery
 {: #pipeline-subnet-ranges}
 {: support}
 
-{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **eu-es**, **jp-osa**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 10 April 2026: **eu-es** and **jp-osa**.
+This discontinuation also applies to any features provided within the service, including Code Risk Analyzer and {{site.data.keyword.DRA_short}}.
+[Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{: important}
+
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
 If your firewall configuration prevents the {{site.data.keyword.deliverypipeline}} from communicating with environments that are behind a firewall, you must update the configuration, including subnet ranges, to access resources that are behind the firewall.
@@ -36,23 +41,6 @@ jp-tok
 128.168.130.29
 162.133.142.43
 165.192.130.197
-====
-jp-osa
-10.10.15.128/26
-10.12.18.41/32
-10.12.35.119/32
-10.12.41.23/32
-10.8.29.128/26
-10.9.10.128/26
-163.68.73.192/27
-163.68.73.80/28
-163.68.85.144
-163.69.65.16/28
-163.69.67.224/27
-163.69.88.234
-163.73.67.240/28
-163.73.68.0/27
-163.73.84.30
 ====
 au-syd
 10.12.7.197/32
@@ -73,26 +61,17 @@ au-syd
 ====
 us-south
 10.16.253.160/32
-10.177.11.128/26
-10.185.130.0/26
 10.22.213.99/32
 10.22.26.156/32
-10.37.91.0/26
 150.240.160.67
 150.240.163.132
 150.240.70.54
-169.47.72.160/27
 169.47.92.174
-169.48.221.240/28
-169.61.249.80/28
 52.118.100.155
 52.118.103.76
-52.118.135.32/27
 52.118.208.80
 52.118.249.97
 52.118.79.48
-67.228.108.96/27
-67.228.197.224/28
 ====
 us-east
 10.12.102.198/32
@@ -133,23 +112,6 @@ eu-de
 158.176.6.60
 158.177.14.29
 ====
-eu-es
-10.118.139.0/26
-10.118.4.0/26
-10.118.67.128/26
-10.22.177.66/32
-10.22.193.134/32
-10.22.210.159/32
-13.120.68.112/28
-13.120.69.96/27
-13.120.91.162
-13.121.64.64/27
-13.121.68.176/28
-13.121.91.15
-13.122.67.208/28
-13.122.70.96/27
-13.122.88.31
-====
 ca-tor
 10.11.30.0/26
 10.114.28.192/26
@@ -171,17 +133,9 @@ br-sao
 10.12.183.32/32
 10.12.69.195/32
 10.12.90.104/32
-10.14.14.0/26
-10.15.17.0/26
-10.150.99.64/26
 13.116.90.7
-163.107.70.96/27
 163.107.90.148
-163.109.70.160/28
-163.109.70.192/27
 163.109.81.154
-169.57.162.64/27
-169.57.175.144/28
 ====
 ca-mon
 10.46.75.50/32

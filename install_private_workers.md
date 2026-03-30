@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026
-lastupdated: "2026-02-12"
+lastupdated: "2026-03-30"
 
 keywords: Delivery Pipeline Private Workers, Installation, Kubernetes cluster, private worker
 
@@ -16,7 +16,12 @@ subcollection: ContinuousDelivery
 # Installing {{site.data.keyword.deliverypipeline}} Private Workers
 {: #install-private-workers}
 
-{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **eu-es**, **jp-osa**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 10 April 2026: **eu-es** and **jp-osa**.
+This discontinuation also applies to any features provided within the service, including Code Risk Analyzer and {{site.data.keyword.DRA_short}}.
+[Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{: important}
+
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
 Install and register a {{site.data.keyword.deliverypipeline}} Private Worker so that {{site.data.keyword.contdelivery_full}} Development teams can use the private worker in their toolchain configuration. Developers can run workloads within the network scope of the private worker installation without any inbound network connectivity.
@@ -45,7 +50,7 @@ Montreal (ca-mon) is a limited-availability region and not generally available.
 
    * Inbound: Not required.
 
-   * Outbound network access uses `(TCP:443)` where the region matches the delivery pipeline location and is either `au-syd` (Sydney, Australia), `eu-de` (Frankfurt, Germany), `eu-es` (Madrid, Spain), `eu-gb` (London, United Kingdom), `jp-tok` (Tokyo, Japan), `jp-osa` (Osaka, Japan), `us-south` (Dallas, US), `us-east` (Washington DC, US), `br-sao` (Sao Paulo), `ca-tor` (Toronto, CA), or `ca-mon` (Montreal, CA). For example, for the Frankfurt region specify `https://private-worker-service.eu-de.devops.cloud.ibm.com (TCP:443)`. For network access to the global endpoint for API key validation, use `https://iam.cloud.ibm.com (TCP:443)`. 
+   * Outbound network access uses `(TCP:443)` where the region matches the delivery pipeline location and is either `au-syd` (Sydney, Australia), `eu-de` (Frankfurt, Germany), `eu-gb` (London, United Kingdom), `jp-tok` (Tokyo, Japan), `us-south` (Dallas, US), `us-east` (Washington DC, US), `br-sao` (Sao Paulo), `ca-tor` (Toronto, CA), or `ca-mon` (Montreal, CA). For example, for the Frankfurt region specify `https://private-worker-service.eu-de.devops.cloud.ibm.com (TCP:443)`. For network access to the global endpoint for API key validation, use `https://iam.cloud.ibm.com (TCP:443)`. 
   
 * Permissions to pull images from icr.io. Private workers require the tekton-pipelines infrastructure and must be able to pull tekton-releases images from icr.io to complete the private worker installation.
 
@@ -82,10 +87,8 @@ To install the framework directly on a cluster, you must have admin access to th
    
    - `au-syd` (Sydney, Australia)
    - `eu-de` (Frankfurt, Germany)
-   - `eu-es` (Madrid, Spain)
    - `eu-gb` (London, United Kingdom)
    - `jp-tok` (Tokyo, Japan)
-   - `jp-osa` (Osaka, Japan)
    - `us-south` (Dallas, US)
    - `us-east` (Washington DC, US)
    - `ca-tor` (Toronto, CA)
@@ -108,10 +111,8 @@ To install the framework directly on a cluster, you must have admin access to th
    
    - `au-syd` (Sydney, Australia)
    - `eu-de` (Frankfurt, Germany)
-   - `eu-es` (Madrid, Spain)
    - `eu-gb` (London, United Kingdom)
    - `jp-tok` (Tokyo, Japan)
-   - `jp-osa` (Osaka, Japan)
    - `us-south` (Dallas, US)
    - `us-east` (Washington DC, US)
    - `ca-tor` (Toronto, CA)
@@ -231,10 +232,8 @@ You must register a private worker with the specific {{site.data.keyword.cloud_n
 
       * `au-syd` (Sydney, Australia)
       * `eu-de` (Frankfurt, Germany)
-      * `eu-es` (Madrid, Spain)
       * `eu-gb`  (London, United Kingdom)
       * `jp-tok` (Tokyo, Japan)
-      * `jp-osa` (Osaka, Japan)
       * `us-south` (Dallas, US)
       * `us-east` (Washington DC, US)
       * `ca-tor` (Toronto, CA)

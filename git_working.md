@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-02-25"
+lastupdated: "2026-03-30"
 
 keywords: Git Repos, Issue Tracking, Collaborate, Git repository, authentication, personal access token, SSH key
 
@@ -16,7 +16,12 @@ subcollection: ContinuousDelivery
 # {{site.data.keyword.gitrepos}}
 {: #git_working}
 
-{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **eu-es**, **jp-osa**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 10 April 2026: **eu-es** and **jp-osa**.
+This discontinuation also applies to any features provided within the service, including Code Risk Analyzer and {{site.data.keyword.DRA_short}}.
+[Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{: important}
+
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
 Collaborate with your team and manage your source code with a Git repository (repo) and issue tracker that is hosted by IBM and built on [GitLab Community Edition](https://about.gitlab.com/){: external}. For more information about GitLab, see the [GitLab documentation](https://us-south.git.cloud.ibm.com/help){: external}.
@@ -188,20 +193,6 @@ eu-gb.git.cloud.ibm.com:
 {: screen}
 
 ```text
-jp-osa.git.cloud.ibm.com:
-  ECDSA:
-    SHA256:k+FNBh6Yvth9bWyvKnfreYhS+3s/+2MX7q2ci/tFAY0
-    MD5:a8:71:f1:dc:7a:28:9c:b6:fc:c6:54:1f:1c:c5:9c:08
-  ED25519:
-    SHA256:I62KQpR+VBmaJnInUj5AkStPA/Hpu555/tHBQjRjU7Q
-    MD5:dc:29:99:b3:4c:2a:e3:e7:b3:9b:b2:00:74:d2:b3:89
-  RSA:
-    SHA256:FPyK4sO5dzIVI/aL9Ril8GIK+uv2jiNVnTqYKDgkF24
-    MD5:18:4f:38:05:c8:68:61:e5:08:dc:a3:61:2d:13:45:c1
-```
-{: screen}
-
-```text
 jp-tok.git.cloud.ibm.com:
   DSA:
     SHA256:jX4dD9ojut+OCzEtmsR6hDpK+gJ8g0B5V5k+beFzj7E
@@ -249,20 +240,6 @@ us-south.git.cloud.ibm.com:
   RSA:
     SHA256:PEAncMcnz8jNEOmBabCtJ13cg0oGI0YxLOMWVOkDgjc
     MD5:74:31:4e:57:e7:c7:12:c4:c5:96:78:f4:18:8d:63:60
-```
-{: screen}
-
-```text
-eu-es.git.cloud.ibm.com:
-  ECDSA:
-    SHA256:jbsXwbEhA7FTdqrJ9aXpdA8l5qgexfE/wlTZFKD5qnw
-    MD5:7f:9e:87:04:01:99:c9:e3:6a:41:e6:48:57:8a:86:45
-  ED25519:
-    SHA256:IMCPA+d8NHAgkkV725xTgfLcVahg3NtS8U9ZuSBeDFY
-    MD5:1d:ce:2c:52:8c:81:22:27:48:47:c3:ce:b9:ba:76:ae
-  RSA:
-    SHA256:HIsuc+yc2pFzIpalxtHkXgduPSvHm4F352Zc9WszeZU
-    MD5:b7:09:56:fb:68:76:fb:47:a1:78:01:64:fc:22:98:3a
 ```
 {: screen}
 

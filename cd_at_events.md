@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2026
-lastupdated: "2026-02-12"
+lastupdated: "2026-03-30"
 
 keywords: event, security, IBM, Continuous Delivery, toolchain
 
@@ -15,7 +15,12 @@ subcollection: ContinuousDelivery
 # Activity tracking events for {{site.data.keyword.contdelivery_short}}
 {: #at_events}
 
-{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **eu-es**, **jp-osa**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 10 April 2026: **eu-es** and **jp-osa**.
+This discontinuation also applies to any features provided within the service, including Code Risk Analyzer and {{site.data.keyword.DRA_short}}.
+[Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{: important}
+
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
 {{site.data.keyword.cloud}} services, such as {{site.data.keyword.contdelivery_short}}, generate activity tracking events.
@@ -47,7 +52,7 @@ Montreal (ca-mon) is a limited-availability region and not generally available.
 
 | Tokyo (`jp-tok`)   | Sydney (`au-syd`)  |  Osaka (`jp-osa`)  | Chennai (`in-che`) |
 |--------------------|--------------------|--------------------|--------------------|
-| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [No]{: tag-red}    |
+| [Yes]{: tag-green} | [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red}    |
 {: caption="Regions from which activity tracking events are sent in Asia Pacific locations" caption-side="top"}
 {: #at-origins-table-2}
 {: tab-title="Asia Pacific"}
@@ -57,7 +62,7 @@ Montreal (ca-mon) is a limited-availability region and not generally available.
 
 | Frankfurt (`eu-de`) | London (`eu-gb`)   | Madrid (`eu-es`)   |
 |---------------------|--------------------|--------------------|
-| [Yes]{: tag-green}  | [Yes]{: tag-green} | [Yes]{: tag-green} |
+| [Yes]{: tag-green}  | [Yes]{: tag-green} | [No]{: tag-red} |
 {: caption="Regions from which activity tracking events are sent in Europe locations" caption-side="top"}
 {: #at-origins-table-3}
 {: tab-title="Europe"}
@@ -83,7 +88,7 @@ Montreal (ca-mon) is a limited-availability region and not generally available.
 
 | Tokyo (`jp-tok`)   | Sydney (`au-syd`)  |  Osaka (`jp-osa`)  | Chennai (`in-che`) |
 |--------------------|--------------------|--------------------|--------------------|
-| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [No]{: tag-red}    |
+| [Yes]{: tag-green} | [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red}    |
 {: caption="Regions where activity tracking events are sent in Asia Pacific locations" caption-side="top"}
 {: #at-table-2}
 {: tab-title="Asia Pacific"}
@@ -93,7 +98,7 @@ Montreal (ca-mon) is a limited-availability region and not generally available.
 
 | Frankfurt (`eu-de`) | London (`eu-gb`)   | Madrid (`eu-es`)   |
 |---------------------|--------------------|--------------------|
-| [Yes]{: tag-green}  | [Yes]{: tag-green} | [Yes]{: tag-green} |
+| [Yes]{: tag-green}  | [Yes]{: tag-green} | [No]{: tag-red} |
 {: caption="Regions where activity tracking events are sent in Europe locations" caption-side="top"}
 {: #at-table-3}
 {: tab-title="Europe"}
@@ -118,7 +123,7 @@ Montreal (ca-mon) is a limited-availability region and not generally available.
 
 | Tokyo (`jp-tok`)   | Sydney (`au-syd`)  |  Osaka (`jp-osa`)  | Chennai (`in-che`) |
 |--------------------|--------------------|--------------------|--------------------|
-| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [No]{: tag-red}    |
+| [Yes]{: tag-green} | [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red}    |
 {: caption="Regions where activity tracking events are sent in Asia Pacific locations" caption-side="top"}
 {: #atracker-table-2}
 {: tab-title="Asia Pacific"}
@@ -128,7 +133,7 @@ Montreal (ca-mon) is a limited-availability region and not generally available.
 
 | Frankfurt (`eu-de`) | London (`eu-gb`)   | Madrid (`eu-es`)   |
 |---------------------|--------------------|--------------------|
-| [Yes]{: tag-green}  | [Yes]{: tag-green} | [Yes]{: tag-green} |
+| [Yes]{: tag-green}  | [Yes]{: tag-green} | [No]{: tag-red} |
 {: caption="Regions where activity tracking events are sent in Europe locations" caption-side="top"}
 {: #atracker-table-3}
 {: tab-title="Europe"}

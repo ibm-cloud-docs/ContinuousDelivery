@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-02-25"
+lastupdated: "2026-03-30"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -20,6 +20,17 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years.
 {: shortdesc}
+
+## 30 March 2026
+{: #ContinuousDelivery-mar3026}
+{: release-note}
+IBM Cloud {{site.data.keyword.contdelivery_short}}, Code Risk Analyzer and {{site.data.keyword.DRA_short}} end of service in select regions.
+: The services will no longer be available in the Madrid (eu-es) and Osaka (jp-osa) regions on 10 April 2026
+
+If you have the {{site.data.keyword.contdelivery_short}} service in Madrid (eu-es) or Osaka (jp-osa), we provide a [migration guide](https://cloud.ibm.com/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-migrate-region) to help you with:
+* Migrate Git Repos and Issue Tracking projects across regions via direct transfer (GitLab feature).
+* Copy toolchains (including Tekton pipelines) to another region using the migration guide
+* Securely export and move secrets to Secrets Manager
 
 ## 12 February 2026
 {: #ContinuousDelivery-feb1226}
@@ -61,6 +72,7 @@ Montreal (ca-mon) is a limited-availability region and not generally available.
 {: release-note}
 
 Private worker installation no longer supports the Operator Lifecycle Manager (OLM) framework.
+:   The Operator Lifecycle Manager (OLM) framework is no longer supported for private worker installation.
 
 ## 25 September 2024
 {: #ContinuousDelivery-sep2524}
@@ -119,7 +131,7 @@ The {{site.data.keyword.contdelivery_short}} service Professional plan now suppo
 {: release-note}
 
 {{site.data.keyword.deliverypipeline}}
-The toolchain service can now be selected as a service reference when creating network zones under [Context-based restrictions](/docs/account?topic=account-context-restrictions-whatis).
+:   The toolchain service can now be selected as a service reference when creating network zones under [Context-based restrictions](/docs/account?topic=account-context-restrictions-whatis).
 
 ## 2 January 2024
 {: #ContinuousDelivery-jan0224}
