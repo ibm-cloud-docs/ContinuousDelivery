@@ -47,6 +47,10 @@ The Code Risk Analyzer (CRA) and DevOps Insights (DOI) features of {{site.data.k
 {: faq}
 {: support}
 
+Following a strategic review of our regional operations, the service will be discontinued early on 10 April 2026, 5 PM EST in the following regions: **eu-es** and **jp-osa**.
+This discontinuation also applies to any features provided within the service, including Code Risk Analyzer and DevOps Insights. On this date the service will no longer be available in the affected regions and **existing instances will cease to operate**.
+{: important}
+
 * End of Marketing: 12 June 2026. After this date, customers will no longer be able to create new resources in the affected regions. However, if a region has no active usage before this date, the Continuous Delivery service in that region may be discontinued earlier and stop accepting new resource creation.
 * End of Service: 12 February 2027. This is the planned date when the Continuous Delivery service will no longer be available in the affected regions. However, if a region has no active usage before this date, or if all customers in the region complete their migrations early, the service in that region may be discontinued earlier.
 

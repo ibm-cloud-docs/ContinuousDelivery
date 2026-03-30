@@ -21,6 +21,17 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years.
 {: shortdesc}
 
+## 30 March 2026
+{: #ContinuousDelivery-mar3026}
+{: release-note}
+IBM Cloud {{site.data.keyword.contdelivery_short}}, Code Risk Analyzer and {{site.data.keyword.DRA_short}} end of service in select regions.
+: The services will no longer be available in the Madrid (eu-es) and Osaka (jp-osa) regions on 10 April 2026
+
+If you have the {{site.data.keyword.contdelivery_short}} service in Madrid (eu-es) or Osaka (jp-osa), we provide a [migration guide](https://cloud.ibm.com/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-migrate-region) to help you with:
+* Migrate Git Repos and Issue Tracking projects across regions via direct transfer (GitLab feature).
+* Copy toolchains (including Tekton pipelines) to another region using the migration guide
+* Securely export and move secrets to Secrets Manager
+
 ## 12 February 2026
 {: #ContinuousDelivery-feb1226}
 {: release-note}

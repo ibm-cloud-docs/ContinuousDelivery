@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2026-03-02"
+lastupdated: "2026-03-30"
 
 keywords: Continuous Delivery, toolchain, client owned data
 
@@ -15,7 +15,12 @@ subcollection: ContinuousDelivery
 # Understanding data portability for {{site.data.keyword.contdelivery_short}}
 {: #data-portability}
 
-{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **eu-es**, **jp-osa**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 10 April 2026: **eu-es** and **jp-osa**.
+This discontinuation also applies to any features provided within the service, including Code Risk Analyzer and {{site.data.keyword.DRA_short}}.
+[Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{: important}
+
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
 Data portability involves a set of tools and procedures that enable you to export the digital artifacts that would be needed to implement similar workloads and data processing with different service providers or on-premises software. It includes procedures for copying and storing customer-owned data that is held by the {{site.data.keyword.contdelivery_short}} service, and for related configurations used by the service to store and process customer owned data.

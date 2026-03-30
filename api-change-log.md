@@ -34,6 +34,17 @@ API requests require a `version` path parameter that takes the date in the forma
 
 When the API is changed in a way that is not compatible with previous versions, a new major version is released. To take advantage of the changes in a new version, change the value of the version parameter to the new version.
 
+## 30 March 2026
+{: #30-mar-2026}
+{: release-note}
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 10 April 2026: **eu-es** and **jp-osa**.
+This discontinuation also applies to any features provided within the service, including Code Risk Analyzer and {{site.data.keyword.DRA_short}}.
+
+If you have the {{site.data.keyword.contdelivery_short}} service in Madrid (eu-es) or Osaka (jp-osa), we provide a [migration guide](https://cloud.ibm.com/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-migrate-region) to help you with:
+* Migrate Git Repos and Issue Tracking projects across regions via direct transfer (GitLab feature).
+* Copy toolchains (including Tekton pipelines) to another region using the migration guide
+* Securely export and move secrets to Secrets Manager
+
 ## 12 February 2026
 {: #12-feb-2026}
 

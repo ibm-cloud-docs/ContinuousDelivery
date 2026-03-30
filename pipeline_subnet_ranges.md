@@ -17,7 +17,12 @@ subcollection: ContinuousDelivery
 {: #pipeline-subnet-ranges}
 {: support}
 
-{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **eu-es**, **jp-osa**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 10 April 2026: **eu-es** and **jp-osa**.
+This discontinuation also applies to any features provided within the service, including Code Risk Analyzer and {{site.data.keyword.DRA_short}}.
+[Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{: important}
+
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
 If your firewall configuration prevents the {{site.data.keyword.deliverypipeline}} from communicating with environments that are behind a firewall, you must update the configuration, including subnet ranges, to access resources that are behind the firewall.
@@ -36,23 +41,6 @@ jp-tok
 128.168.130.29
 162.133.142.43
 165.192.130.197
-====
-jp-osa
-10.10.15.128/26
-10.12.18.41/32
-10.12.35.119/32
-10.12.41.23/32
-10.8.29.128/26
-10.9.10.128/26
-163.68.73.192/27
-163.68.73.80/28
-163.68.85.144
-163.69.65.16/28
-163.69.67.224/27
-163.69.88.234
-163.73.67.240/28
-163.73.68.0/27
-163.73.84.30
 ====
 au-syd
 10.12.7.197/32
@@ -123,23 +111,6 @@ eu-de
 158.176.15.220
 158.176.6.60
 158.177.14.29
-====
-eu-es
-10.118.139.0/26
-10.118.4.0/26
-10.118.67.128/26
-10.22.177.66/32
-10.22.193.134/32
-10.22.210.159/32
-13.120.68.112/28
-13.120.69.96/27
-13.120.91.162
-13.121.64.64/27
-13.121.68.176/28
-13.121.91.15
-13.122.67.208/28
-13.122.70.96/27
-13.122.88.31
 ====
 ca-tor
 10.11.30.0/26

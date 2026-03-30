@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2026
-lastupdated: "2026-02-12"
+lastupdated: "2026-03-30"
 
 keywords: Continuous Delivery endpoints, available regions, locations
 
@@ -15,7 +15,12 @@ subcollection: ContinuousDelivery
 # {{site.data.keyword.contdelivery_short}} regions and endpoints
 {: #regions}
 
-{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **eu-es**, **jp-osa**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 10 April 2026: **eu-es** and **jp-osa**.
+This discontinuation also applies to any features provided within the service, including Code Risk Analyzer and {{site.data.keyword.DRA_short}}.
+[Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{: important}
+
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
 Review region and connectivity options for interacting with {{site.data.keyword.contdelivery_full}}.
@@ -52,10 +57,8 @@ Review the following table to determine the public API endpoints to use when you
 | Washington DC (deprecated)    | `us-east.devops.cloud.ibm.com`  |
 | London           | `eu-gb.devops.cloud.ibm.com`    |
 | Frankfurt        | `eu-de.devops.cloud.ibm.com`    |
-| Madrid           | `eu-es.devops.cloud.ibm.com`    |
 | Sydney (deprecated)          | `au-syd.devops.cloud.ibm.com`   |
 | Tokyo            | `jp-tok.devops.cloud.ibm.com`   |
-| Osaka (deprecated)           | `jp-osa.devops.cloud.ibm.com`   |
 | Montreal (deprecated)        | `ca-mon.devops.cloud.ibm.com`   |
 | Toronto (deprecated)         | `ca-tor.devops.cloud.ibm.com`   |
 | S&atilde;o-Paulo | `br-sao.devops.cloud.ibm.com`   |
