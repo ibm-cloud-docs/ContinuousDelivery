@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2026-02-06"
+lastupdated: "2026-04-09"
 
 keywords: migrate, migration, migrating, region, resource group, Terraform, Tekton, pipeline, toolchain, git, continuous delivery, IBM Cloud, tools, resource, resources, data
 
@@ -98,7 +98,7 @@ The following limitations apply only if you are migrating [{{site.data.keyword.g
 
 To perform the migration, you will need the following:
 
-* An [{{site.data.keyword.cloud_notm}} API key](/docs/account?topic=account-manapikey) with the IAM access listed below. The API key must be user API key. Service ID API keys are not supported.
+* An [{{site.data.keyword.cloud_notm}} API key](/docs/iam?topic=iam-manapikey) with the IAM access listed below. The API key must be user API key. Service ID API keys are not supported.
 * **Viewer** access for the source Toolchain(s) being copied
 * **Editor** access for creating new Toolchains in the target region
 * **Administrator** access for other {{site.data.keyword.cloud_notm}} service instances that have a tool integration with IAM service-to-service authorizations, such as [{{site.data.keyword.secrets-manager_short}}](/docs/secrets-manager?topic=secrets-manager-getting-started), [Event Notifications](/docs/event-notifications?topic=event-notifications-getting-started), etc.

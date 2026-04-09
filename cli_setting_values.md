@@ -34,7 +34,7 @@ As part of integrating {{site.data.keyword.deliverypipelinelong}} with {{site.da
 
 Configure {{site.data.keyword.deliverypipeline}} in your toolchain to build, test, and deploy. You must complete this step before you continue with the integration. For more information, see [Configuring {{site.data.keyword.deliverypipeline}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline).
 
-You need an API key to integrate with {{site.data.keyword.DRA_short}}. This API key has access to the toolchain, and is used to log in with the {{site.data.keyword.cloud}} command line interface (CLI). For more information, see [Managing user API keys](/docs/account?topic=account-userapikey).
+You need an API key to integrate with {{site.data.keyword.DRA_short}}. This API key has access to the toolchain, and is used to log in with the {{site.data.keyword.cloud}} command line interface (CLI). For more information, see [Managing user API keys](/docs/iam?topic=iam-userapikey&interface=ui).
 
 Install the {{site.data.keyword.cloud_notm}} CLI. For more information, see [Getting started with the {{site.data.keyword.cloud_notm}} CLI}}](/docs/cli?topic=cli-getting-started).
 

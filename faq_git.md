@@ -75,7 +75,7 @@ Before you can use a repo integration, you must authorize it so that {{site.data
 
 Git Repos and Issue Tracking is an {{site.data.keyword.cloud_notm}} service. All users must have an {{site.data.keyword.cloud_notm}} account or be invited to join an account.
 
-We recommend using the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com) to invite users to join your account. For more information, see [Inviting users to an account](/docs/account?topic=account-iamuserinv).
+We recommend using the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com) to invite users to join your account. For more information, see [Inviting users to an account](/docs/iam?topic=iam-iamuserinv&interface=ui).
 {: tip}
 
 After you create a new account or accept an invitation to join an account, allow up to 15 minutes for the reactivation process to be completed if your account was recently blocked.

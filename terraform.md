@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-03-30"
+lastupdated: "2026-04-09"
 
 keywords: Terraform, toolchains, Continuous Delivery
 
@@ -103,7 +103,7 @@ Before you begin, make sure that you have the [required access](/docs/Continuous
    
 6. From the [{{site.data.keyword.cloud_notm}} resource list](/resources){: external}, expand the Developer tools section, then select the {{site.data.keyword.contdelivery_short}} service instance that you created and note the instance ID.
 
-7. Verify that the access policy is successfully assigned. For more information about assigning access policies, see [Reviewing assigned access in the console](/docs/account?topic=account-assign-access-resources&interface=ui#review-your-access-console).
+7. Verify that the access policy is successfully assigned. For more information about assigning access policies, see [Reviewing assigned access in the console](/docs/iam?topic=iam-assign-access-resources&interface=ui#review-your-access-console).
 
 8. From the [{{site.data.keyword.cloud_notm}} resource list](/resources){: external}, expand the Developer tools section, then select the toolchain resource that you created and note the instance ID.
 

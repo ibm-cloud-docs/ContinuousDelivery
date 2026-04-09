@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026
-lastupdated: "2026-03-30"
+lastupdated: "2026-04-09"
 
 keywords: Delivery Pipeline Private Workers, Installation, Kubernetes cluster, private worker
 
@@ -132,7 +132,7 @@ It is possible to set up a pool of private workers by repeating this process on 
 ### Creating a service ID
 {: #pw_create_service_id}
 
-A service ID represents a pool of one or more private workers that act together. You can initially register one private worker installation, and then incrementally register more private workers into the same group by reusing the same service ID. Registering multiple private workers in the same group supports higher availability and horizontal scaling of your private worker capacity. For more information about service IDs, see [Creating and working with service IDs](/docs/account?topic=account-serviceids).
+A service ID represents a pool of one or more private workers that act together. You can initially register one private worker installation, and then incrementally register more private workers into the same group by reusing the same service ID. Registering multiple private workers in the same group supports higher availability and horizontal scaling of your private worker capacity. For more information about service IDs, see [Creating and working with service IDs](/docs/iam?topic=iam-serviceids&interface=ui).
 
 #### Creating a service ID in the console
 {: #console_create_service_id}
@@ -170,7 +170,7 @@ UUID         ServiceId-38ffff31-3ea3-4ecc-9732-190f7a993097
 ### Creating an API key
 {: #pw_create_api_key}
 
-An API key is a unique code that is passed to an API to identify the application or user that is calling it. To prevent malicious use of an API, you can use API keys to track and control how that API is used. For more information about API keys, see [Understanding API keys](/docs/account?topic=account-manapikey).
+An API key is a unique code that is passed to an API to identify the application or user that is calling it. To prevent malicious use of an API, you can use API keys to track and control how that API is used. For more information about API keys, see [Understanding API keys](/docs/iam?topic=iam-manapikey).
 
 #### Creating an API key in the console
 {: #console_create_key}

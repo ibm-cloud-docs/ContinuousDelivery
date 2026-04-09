@@ -72,7 +72,7 @@ Two types of secrets references are supported: by name or by [Cloud Resource Nam
 Make sure that you consider the following prerequisites for specifying a secrets reference within the scope of a toolchain:
 
 * The secrets store must be added to the toolchain as a tool integration. For more information about secrets store tool integrations, see [Configuring {{site.data.keyword.keymanagementserviceshort}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-keyprotect), [Configuring {{site.data.keyword.secrets-manager_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-secretsmanager), and [Configuring HashiCorp Vault](/docs/ContinuousDelivery?topic=ContinuousDelivery-hashicorpvault).
-* An IAM service-to-service authorization policy must be configured to allow the source toolchain to retrieve secrets from the target secrets store. For more information about service-to-service authorizations, see [Using authorizations to grant access between services](/docs/account?topic=account-serviceauth).
+* An IAM service-to-service authorization policy must be configured to allow the source toolchain to retrieve secrets from the target secrets store. For more information about service-to-service authorizations, see [Using authorizations to grant access between services](/docs/iam?topic=iam-serviceauth&interface=ui).
 
 When you work outside of the console, such as with the API or Terraform, use the following format for secrets references by name:
 

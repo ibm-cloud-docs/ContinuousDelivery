@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-03-30"
+lastupdated: "2026-04-09"
 
 keywords: Satellite, satellite, tekton, pipeline, toolchain, CD, automate, automation, continuous delivery, DevOps, shift-left, shift left, secure DevOps, IBM Cloud
 
@@ -55,7 +55,7 @@ Before you start this tutorial, make sure that you have the following resources 
 
 * A [{{site.data.keyword.satelliteshort}} cluster group](/docs/satellite?topic=satellite-setup-clusters-satconfig) that contains the cluster that is required by the toolchain. The toolchain in this tutorial supports a {{site.data.keyword.satelliteshort}} cluster group that contains only {{site.data.keyword.redhat_openshift_notm}} clusters.
 
-* Image Pull Secrets. Make sure that you configure the [image pull secrets](https://docs.openshift.com/container-platform/4.6/openshift_images/managing_images/using-image-pull-secrets.html){: external} that are required to deploy application images in your cluster namespace.
+* Image Pull Secrets. Make sure that you configure the [image pull secrets](https://docs.redhat.com/en/documentation/openshift_container_platform/4.6/html/images/managing-images#using-image-pull-secrets){: external} that are required to deploy application images in your cluster namespace.
 
 * An instance of the [{{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started) service.
 
