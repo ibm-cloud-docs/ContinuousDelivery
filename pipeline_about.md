@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2026
-lastupdated: "2026-03-30"
+lastupdated: "2026-04-09"
 
 keywords: run jobs, sequences of stages, job types, Delivery Pipeline, Classic
 
@@ -172,7 +172,7 @@ If you need to use the configuration from a deprecated job type, use one of the 
 ### API keys
 {: #api_keys}
 
-Some of the standard pipeline jobs use {{site.data.keyword.cloud_notm}} API keys to access services, such as deploying to Kubernetes. The [{{site.data.keyword.cloud_notm}} Identity and Access Management (IAM)](/docs/account?topic=account-iamoverview) service provides two types of API keys:
+Some of the standard pipeline jobs use {{site.data.keyword.cloud_notm}} API keys to access services, such as deploying to Kubernetes. The [{{site.data.keyword.cloud_notm}} Identity and Access Management (IAM)](/docs/iam?topic=iam-iamoverview) service provides two types of API keys:
 
 * **user API keys**: These API keys provide full access to all of the services and resources that the user has access to.
 * **service API keys**: You can configure service API keys to provide specific access to various services and resources.
@@ -180,7 +180,7 @@ Some of the standard pipeline jobs use {{site.data.keyword.cloud_notm}} API keys
 Some services cannot use service ID API keys. In such cases, the pipeline user interface prompts you to specify a user API key.
 {: tip}
 
-Because pipeline jobs run user-created scripts that might use service API keys in arbitrary ways, the pipeline cannot determine the set of restrictions to apply to a particular key. In such cases, if you request that the pipeline creates an API key, it creates a user API key. To maintain strong security, instead use a service API key with access that is restricted to only the services and resources that you need in the script. In this instance, you must create the API key yourself. For more information about creating an API key, see [{{site.data.keyword.cloud_notm}} API keys](/docs/account?topic=account-userapikey&interface=ui).
+Because pipeline jobs run user-created scripts that might use service API keys in arbitrary ways, the pipeline cannot determine the set of restrictions to apply to a particular key. In such cases, if you request that the pipeline creates an API key, it creates a user API key. To maintain strong security, instead use a service API key with access that is restricted to only the services and resources that you need in the script. In this instance, you must create the API key yourself. For more information about creating an API key, see [{{site.data.keyword.cloud_notm}} API keys](/docs/iam?topic=iam-userapikey&interface=ui).
 
 ## Jobs
 {: #deliverypipeline_jobs}

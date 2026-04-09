@@ -54,7 +54,7 @@ The following table details actions that are mapped to platform management roles
 | Writer, Manager | Manage authorized users and usage reporting on the Manage tab of a {{site.data.keyword.contdelivery_short}} service instance. | Add a user to the Authorized Users list. <br><br> Remove a user from the Authorized Users list. <br><br> Enable and disable [Consolidated billing](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage#consolidated_billing). |
 {: caption="IAM service access roles and actions" caption-side="top"}
 
-For information about assigning user roles in the UI, see [Managing IAM access](/docs/account?topic=account-assign-access-resources).
+For information about assigning user roles in the UI, see [Managing IAM access](/docs/iam?topic=iam-assign-access-resources&interface=ui).
  
 For {{site.data.keyword.contdelivery_short}}, the following actions exist:
 

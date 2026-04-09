@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-03-30"
+lastupdated: "2026-04-09"
 
 keywords: tool integrations, IBM Cloud Public, Key Protect
 
@@ -26,7 +26,7 @@ This discontinuation also applies to any features provided within the service, i
 {{site.data.keyword.keymanagementservicefull}} helps you to securely store and apply secrets for apps across {{site.data.keyword.cloud_notm}} services.
 {: shortdesc}
 
-A *secret* is anything that provides access to sensitive information, such as an [API key](/docs/account?topic=account-manapikey). If you store secrets as standard keys in {{site.data.keyword.keymanagementserviceshort}}, you can use this tool integration to access secrets wherever they are needed in the toolchain workflow. To learn more about standard keys in {{site.data.keyword.keymanagementserviceshort}}, see [Key types](/docs/key-protect?topic=key-protect-envelope-encryption#key-types).
+A *secret* is anything that provides access to sensitive information, such as an [API key](/docs/iam?topic=iam-manapikey). If you store secrets as standard keys in {{site.data.keyword.keymanagementserviceshort}}, you can use this tool integration to access secrets wherever they are needed in the toolchain workflow. To learn more about standard keys in {{site.data.keyword.keymanagementserviceshort}}, see [Key types](/docs/key-protect?topic=key-protect-envelope-encryption#key-types).
 
 Before you configure a {{site.data.keyword.keymanagementserviceshort}} tool integration, make sure that you have an instance of the {{site.data.keyword.keymanagementserviceshort}} service provisioned in the region and resource group that you want to create the tool integration in. In certain scenarios, a {{site.data.keyword.keymanagementserviceshort}} service instance can be automatically generated. For example, if you are minting a new API key and choose to store it as a secret for later use, you automatically generate the {{site.data.keyword.keymanagementserviceshort}} service instance. For instructions to provision an instance of the {{site.data.keyword.keymanagementserviceshort}} service, see [Provisioning the service](/docs/key-protect?topic=key-protect-provision).
 {: important}

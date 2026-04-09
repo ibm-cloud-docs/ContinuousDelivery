@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-03-30"
+lastupdated: "2026-04-09"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -131,7 +131,7 @@ The {{site.data.keyword.contdelivery_short}} service Professional plan now suppo
 {: release-note}
 
 {{site.data.keyword.deliverypipeline}}
-:   The toolchain service can now be selected as a service reference when creating network zones under [Context-based restrictions](/docs/account?topic=account-context-restrictions-whatis).
+:   The toolchain service can now be selected as a service reference when creating network zones under [Context-based restrictions](/docs/iam?topic=iam-context-restrictions-whatis).
 
 ## 2 January 2024
 {: #ContinuousDelivery-jan0224}

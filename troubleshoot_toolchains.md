@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2025
-lastupdated: "2025-12-04"
+  years: 2015, 2026
+lastupdated: "2026-04-09"
 
 keywords: troubleshoot, toolchains, tool integrations
 
@@ -197,7 +197,7 @@ Complete the following tasks for secrets references by CRN:
 * Examine the secret store tool integration configuration to make sure that it is correctly configured to identify by the service instance CRN. Also, make sure that the CRN for the {{site.data.keyword.secrets-manager_short}} service instance is correct.
 * Use IAM to add a service-to-service authorization policy from the toolchain to the {{site.data.keyword.secrets-manager_short}} service instance. In the authorization policy, the toolchain is the *source* service, and the {{site.data.keyword.secrets-manager_short}} instance is the *target* service. Make sure that the policy grants the `Viewer` and `SecretsReader` roles.
 
-For more information about service-to-service authorization policies, see [Using authorizations to grant access between services](/docs/account?topic=account-serviceauth). 
+For more information about service-to-service authorization policies, see [Using authorizations to grant access between services](/docs/iam?topic=iam-serviceauth&interface=ui).
 
 For an example of how to configure a service-to-service authorization policy from a toolchain to a secret store service instance with Terraform, see [Specifying secret references with Terraform](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security&interface=terraform#cd_secrets_references_terraform).
 

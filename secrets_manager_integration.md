@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-03-30"
+lastupdated: "2026-04-09"
 
 keywords: tool integrations, IBM Cloud Public, IBM Secrets Manager
 
@@ -26,7 +26,7 @@ This discontinuation also applies to any features provided within the service, i
 {{site.data.keyword.secrets-manager_full}} helps you to securely store and apply secrets for apps across {{site.data.keyword.cloud_notm}} services.
 {: shortdesc}
 
-A *secret* is anything that provides access to sensitive information, such as an [API key](/docs/account?topic=account-manapikey). You can use the {{site.data.keyword.secrets-manager_short}} tool integration to access secrets, wherever they are required in the toolchain workflow.
+A *secret* is anything that provides access to sensitive information, such as an [API key](/docs/iam?topic=iam-manapikey). You can use the {{site.data.keyword.secrets-manager_short}} tool integration to access secrets, wherever they are required in the toolchain workflow.
 
 Before you configure a {{site.data.keyword.secrets-manager_short}} tool integration, make sure that you [provision an instance of the {{site.data.keyword.secrets-manager_short}} service](/docs/secrets-manager?topic=secrets-manager-create-instance&interface=ui).
 {: important}
