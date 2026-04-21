@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-04-09"
+lastupdated: "2026-04-21"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -87,7 +87,7 @@ The {{site.data.keyword.contdelivery_short}} toolchain API method for generating
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 17.1.4](https://about.gitlab.com/releases/2024/08/07/patch-release-gitlab-17-2-2-released/){: external}.
+:   Upgraded to [GitLab 17.1.4](https://docs.gitlab.com/releases/17/patch-release-gitlab-17-2-2-released/){: external}.
 
 ## 06 September 2024
 {: #ContinuousDelivery-sep0624}
@@ -106,14 +106,14 @@ Enabling Direct Integration with an Existing Git Repository
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 17.0.3](https://about.gitlab.com/releases/2024/06/26/patch-release-gitlab-17-1-1-released/){: external}.
+:   Upgraded to [GitLab 17.0.3](https://docs.gitlab.com/releases/17/patch-release-gitlab-17-1-1-released/){: external}.
 
 ## 01 July 2024
 {: #ContinuousDelivery-01july2424}
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 16.11.5](https://about.gitlab.com/releases/2024/06/26/patch-release-gitlab-17-1-1-released/){: external}.
+:   Upgraded to [GitLab 16.11.5](https://docs.gitlab.com/releases/17/patch-release-gitlab-17-1-1-released/){: external}.
 
 ## 24 June 2024
 {: #ContinuousDelivery-june2424}
@@ -145,7 +145,7 @@ The {{site.data.keyword.contdelivery_short}} toolchain API provides a new, beta 
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 16.5.3](https://about.gitlab.com/releases/2023/11/30/security-release-gitlab-16-6-1-released/){: external}.
+:   Upgraded to [GitLab 16.5.3](https://docs.gitlab.com/releases/16/patch-release-gitlab-16-6-1-released/){: external}.
 
 ## 24 November 2023
 {: #ContinuousDelivery-nov2423}
@@ -159,28 +159,28 @@ The {{site.data.keyword.contdelivery_short}} toolchain API provides a new, beta 
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 16.4.2](https://about.gitlab.com/releases/2023/10/31/security-release-gitlab-16-5-1-16-4-2-16-3-6-released/){: external}.
+:   Upgraded to [GitLab 16.4.2](https://docs.gitlab.com/releases/16/patch-release-gitlab-16-5-1-released/){: external}.
 
 ## 3 November 2023
 {: #ContinuousDelivery-nov0323}
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 16.3.5](https://about.gitlab.com/releases/2023/09/28/security-release-gitlab-16-4-1-released/){: external}.
+:   Upgraded to [GitLab 16.3.5](https://docs.gitlab.com/releases/16/patch-release-gitlab-16-4-1-released/){: external}.
 
 ## 19 October 2023
 {: #ContinuousDelivery-otc1923}
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 16.2.8](https://about.gitlab.com/releases/2023/09/28/security-release-gitlab-16-4-1-released/){: external}.
+:   Upgraded to [GitLab 16.2.8](https://docs.gitlab.com/releases/16/patch-release-gitlab-16-4-1-released/){: external}.
 
 ## 4 October 2023
 {: #ContinuousDelivery-otc0423}
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 16.1.5](https://about.gitlab.com/releases/2023/08/31/security-release-gitlab-16-3-1-released/){: external}.
+:   Upgraded to [GitLab 16.1.5](https://docs.gitlab.com/releases/16/patch-release-gitlab-16-3-1-released/){: external}.
 
 ## 27 September 2023
 {: #ContinuousDelivery-sep2723}
@@ -194,7 +194,7 @@ The {{site.data.keyword.contdelivery_short}} toolchain API provides a new, beta 
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 16.0.8](https://about.gitlab.com/releases/2023/08/01/security-release-gitlab-16-2-2-released/){: external}.
+:   Upgraded to [GitLab 16.0.8](https://docs.gitlab.com/releases/16/patch-release-gitlab-16-2-2-released/){: external}.
 
 :   In GitLab 16.0, any personal, project, or [group access token that does not have an expiration date](https://docs.gitlab.com/update/deprecations/#non-expiring-access-tokens){: external} will automatically have an expiration date set at one year.
 
@@ -203,21 +203,21 @@ The {{site.data.keyword.contdelivery_short}} toolchain API provides a new, beta 
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 15.11.11](https://about.gitlab.com/releases/2023/07/05/security-release-gitlab-16-1-2-released/){: external}.
+:   Upgraded to [GitLab 15.11.11](https://docs.gitlab.com/releases/16/patch-release-gitlab-16-1-2-released/){: external}.
 
 ## 13 June 2023
 {: #ContinuousDelivery-june1323}
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 15.10.8](https://about.gitlab.com/releases/2023/06/05/security-release-gitlab-16-0-2-released/){: external}.
+:   Upgraded to [GitLab 15.10.8](https://docs.gitlab.com/releases/16/patch-release-gitlab-16-0-2-released/){: external}.
 
 ## 19 May 2023
 {: #ContinuousDelivery-may1923}
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 15.9.8](https://about.gitlab.com/releases/2023/05/10/security-release-gitlab-15-11-3-released/){: external}.
+:   Upgraded to [GitLab 15.9.8](https://docs.gitlab.com/releases/){: external}.
 
 ## 20 April 2023
 {: #ContinuousDelivery-apr2023}
@@ -231,7 +231,7 @@ The {{site.data.keyword.contdelivery_short}} toolchain API provides a new, beta 
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 15.8.5](https://about.gitlab.com/releases/2023/03/30/security-release-gitlab-15-10-1-released/){: external}.
+:   Upgraded to [GitLab 15.8.5](https://docs.gitlab.com/releases/){: external}.
 
 ## 21 February 2023
 {: #ContinuousDelivery-feb2123}
@@ -249,21 +249,21 @@ Java, Node, and Python SDKs for toolchains and Tekton pipelines are now generall
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 15.7.6](https://about.gitlab.com/releases/2023/01/31/security-release-gitlab-15-8-1-released/){: external}.
+:   Upgraded to [GitLab 15.7.6](https://docs.gitlab.com/releases/){: external}.
 
 ## 19 January 2023
 {: #ContinuousDelivery-jan1923}
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 15.6.6](https://about.gitlab.com/releases/2023/01/17/critical-security-release-gitlab-15-7-5-released/){: external}.
+:   Upgraded to [GitLab 15.6.6](https://docs.gitlab.com/releases/){: external}.
 
 ## 9 January 2023
 {: #ContinuousDelivery-jan0923}
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 15.6.3](https://about.gitlab.com/releases/2022/12/16/gitlab-15-6-3-released/){: external}.
+:   Upgraded to [GitLab 15.6.3](https://docs.gitlab.com/releases/){: external}.
 
 ## 14 December 2022
 {: #ContinuousDelivery-dec1422}
@@ -279,7 +279,7 @@ The {{site.data.keyword.contdelivery_short}} service is now designated as {{site
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 15.5.5](https://about.gitlab.com/releases/2022/11/30/security-release-gitlab-15-6-1-released/){: external}.
+:   Upgraded to [GitLab 15.5.5](https://docs.gitlab.com/releases/){: external}.
 
 ## 1 December 2022
 {: #ContinuousDelivery-dec0122}
@@ -305,21 +305,21 @@ The Beta Terraform resources and data sources, Go SDKs, and HTTP APIs are update
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 15.4.4](https://about.gitlab.com/releases/2022/11/02/security-release-gitlab-15-5-2-released/){: external}.
+:   Upgraded to [GitLab 15.4.4](https://docs.gitlab.com/releases/){: external}.
 
 ## 2 November 2022
 {: #ContinuousDelivery-nov0222}
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 15.3.4](https://about.gitlab.com/releases/2022/09/29/security-release-gitlab-15-4-1-released/){: external}.
+:   Upgraded to [GitLab 15.3.4](https://docs.gitlab.com/releases/){: external}.
 
 ## 6 October 2022
 {: #ContinuousDelivery-oct0622}
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 15.2.5](https://about.gitlab.com/releases/2022/09/29/security-release-gitlab-15-4-1-released/){: external}.
+:   Upgraded to [GitLab 15.2.5](https://docs.gitlab.com/releases/){: external}.
 
 ## 5 October 2022
 {: #ContinuousDelivery-oct0522}
@@ -341,7 +341,7 @@ The Beta Terraform resources and data sources, Go SDKs, and HTTP APIs are update
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 15.1.6](https://about.gitlab.com/releases/2022/08/30/critical-security-release-gitlab-15-3-2-released/){: external}.
+:   Upgraded to [GitLab 15.1.6](https://docs.gitlab.com/releases/){: external}.
 
 ## 22 July 2022
 {: #ContinuousDelivery-july2222}
@@ -359,14 +359,14 @@ The Beta Terraform resources and data sources, Go SDKs, and HTTP APIs are now av
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 15.0.4](https://about.gitlab.com/releases/2022/06/30/critical-security-release-gitlab-15-1-1-released/){: external}.
+:   Upgraded to [GitLab 15.0.4](https://docs.gitlab.com/releases/){: external}.
 
 ## 12 July 2022
 {: #ContinuousDelivery-july1222}
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 14.10.5](https://about.gitlab.com/releases/2022/06/30/critical-security-release-gitlab-15-1-1-released/){: external}.
+:   Upgraded to [GitLab 14.10.5](https://docs.gitlab.com/releases/){: external}.
 
 ## 08 July 2022
 {: #ContinuousDelivery-july0822}
@@ -401,7 +401,7 @@ New toolchain template demonstrates how to use a pull-based deployment mechanism
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 14.10.4](https://about.gitlab.com/releases/2022/06/01/critical-security-release-gitlab-15-0-1-released/){: external}.
+:   Upgraded to [GitLab 14.10.4](https://docs.gitlab.com/releases/){: external}.
 
 ## 07 June 2022
 {: #ContinuousDelivery-june0722}
@@ -415,7 +415,7 @@ Private information in {{site.data.keyword.contdelivery_short}} and toolchains c
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 14.9.4](https://about.gitlab.com/releases/2022/05/02/security-release-gitlab-14-10-1-released/){: external}.
+:   Upgraded to [GitLab 14.9.4](https://docs.gitlab.com/releases/){: external}.
 
 ## 18 May 2022
 {: #ContinuousDelivery-may1822}
@@ -429,35 +429,35 @@ New toolchain template demonstrates how to deploy a sample NodeJS application wi
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 14.8.5](https://about.gitlab.com/releases/2022/03/31/critical-security-release-gitlab-14-9-2-released/){: external}.
+:   Upgraded to [GitLab 14.8.5](https://docs.gitlab.com/releases/){: external}.
 
 ## 1 March 2022
 {: #ContinuousDelivery-mar0122}
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 14.7.4](https://about.gitlab.com/releases/2022/02/25/critical-security-release-gitlab-14-8-2-released/){: external}.
+:   Upgraded to [GitLab 14.7.4](https://docs.gitlab.com/releases/){: external}.
 
 ## 17 February 2022
 {: #ContinuousDelivery-feb1722}
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 14.6.4](https://about.gitlab.com/releases/2022/02/03/security-release-gitlab-14-7-1-released/){: external}.
+:   Upgraded to [GitLab 14.6.4](https://docs.gitlab.com/releases/){: external}.
 
 ## 24 January 2022
 {: #ContinuousDelivery-jan2422}
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 14.5.3](https://about.gitlab.com/releases/2022/01/11/security-release-gitlab-14-6-2-released/){: external}.
+:   Upgraded to [GitLab 14.5.3](https://docs.gitlab.com/releases/){: external}.
 
 ## 7 January 2022
 {: #ContinuousDelivery-jan0722}
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 14.4.4](https://about.gitlab.com/releases/2021/12/06/security-release-gitlab-14-5-2-released/){: external}.
+:   Upgraded to [GitLab 14.4.4](https://docs.gitlab.com/releases/){: external}.
 
 ## 30 November 2021
 {: #ContinuousDelivery-nov3021}
@@ -471,14 +471,14 @@ New toolchain template demonstrates how to deploy a sample NodeJS application wi
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 14.4.2](https://about.gitlab.com/releases/2021/12/10/security-release-gitlab-runner-14-5-2-released/){: external}.
+:   Upgraded to [GitLab 14.4.2](https://docs.gitlab.com/releases/){: external}.
 
 ## 4 November 2021
 {: #ContinuousDelivery-nov0421}
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 14.3.4](https://about.gitlab.com/releases/2021/10/28/security-release-gitlab-14-4-1-released/){: external}.
+:   Upgraded to [GitLab 14.3.4](https://docs.gitlab.com/releases/){: external}.
 
 ## 31 October 2021
 {: #ContinuousDelivery-oct3121}
@@ -611,7 +611,7 @@ New Code Risk Analyzer scans source code repositories for:
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 12.2.7](https://about.gitlab.com/releases/2019/10/02/security-release-gitlab-12-dot-3-dot-3-released/){: external}.
+:   Upgraded to [GitLab 12.2.7](https://docs.gitlab.com/releases/){: external}.
 
 ## 10 October 2019
 {: #ContinuousDelivery-oct1019}
@@ -640,21 +640,21 @@ DevOps Insights
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 12.1.9](https://about.gitlab.com/releases/2019/09/10/critical-security-release-gitlab-12-dot-2-dot-5-released/){: external}.
+:   Upgraded to [GitLab 12.1.9](https://docs.gitlab.com/releases/){: external}.
 
 ## 16 September 2019
 {: #ContinuousDelivery-sep1619}
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 12.0.8](https://about.gitlab.com/releases/2019/08/29/security-release-gitlab-12-dot-2-dot-3-released/){: external}.
+:   Upgraded to [GitLab 12.0.8](https://docs.gitlab.com/releases/){: external}.
 
 ## 9 September 2019
 {: #ContinuousDelivery-sep0919}
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 11.11.8](https://about.gitlab.com/releases/2019/08/12/critical-security-release-gitlab-12-dot-1-dot-6-released/){: external}.
+:   Upgraded to [GitLab 11.11.8](https://docs.gitlab.com/releases/){: external}.
 
 ## 5 September 2019
 {: #ContinuousDelivery-sept0519}
@@ -668,7 +668,7 @@ Develop and test microservices with Kubernetes and Helm template doesn't support
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 11.10.8](https://about.gitlab.com/releases/2019/07/03/security-release-gitlab-12-dot-0-dot-3-released/){: external}.
+:   Upgraded to [GitLab 11.10.8](https://docs.gitlab.com/releases/){: external}.
 
 ## 3 September 2019
 {: #ContinuousDelivery-sept0319}
@@ -682,7 +682,7 @@ Develop and test microservices with Kubernetes and Helm template doesn't support
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 11.9.12](https://about.gitlab.com/releases/2019/06/03/security-release-gitlab-11-dot-11-dot-1-released/){: external}.
+:   Upgraded to [GitLab 11.9.12](https://docs.gitlab.com/releases/){: external}.
 
 ## 24 June 2019
 {: #ContinuousDelivery-jun2419}
