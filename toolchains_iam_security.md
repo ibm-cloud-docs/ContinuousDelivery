@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2026
-lastupdated: "2026-03-30"
+lastupdated: "2026-04-21"
 
 keywords: toolchains, user access, resource groups, IAM, access policy, Administrator Create, Editor Update, Update
 
@@ -23,7 +23,7 @@ This discontinuation also applies to any features provided within the service, i
 {{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
-Toolchains that you create in your account might not be visible to other users by default. Access to toolchains in resource groups for users in your account is controlled by [{{site.data.keyword.cloud_notm}} Identity and Access Management (IAM)](/docs/account?topic=account-iamoverview). You can assign access to [new users](#toolchains-access-new-users) and [existing users](#toolchains-access-existing-users) in your account.
+Toolchains that you create in your account might not be visible to other users by default. Access to toolchains in resource groups for users in your account is controlled by [{{site.data.keyword.cloud_notm}} Identity and Access Management (IAM)](/docs/iam?topic=iam-iamoverview&interface=ui). You can assign access to [new users](#toolchains-access-new-users) and [existing users](#toolchains-access-existing-users) in your account.
 
 User access for {{site.data.keyword.contdelivery_short}} service instances is managed separately. For more information about managing user access to {{site.data.keyword.contdelivery_short}} service instances in resource groups, see [Managing user access to {{site.data.keyword.contdelivery_short}} with Identity and Access Management](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-iam-security).
 {: tip}
@@ -113,5 +113,5 @@ You can assign an existing user access to a toolchain in your resource group.
 
 Depending on their role, the user can now work with all of the toolchains within the specified resource group. They can add tool integrations and modify and run pipelines.
 
-Although the most common and flexible methods for granting user access are described here, IAM supports other methods, such as by resource or resource type, or by resource group. For more information about how to assign users access to resources, such as toolchains, see [Managing access to resources](/docs/account?topic=account-assign-access-resources).
+Although the most common and flexible methods for granting user access are described here, IAM supports other methods, such as by resource or resource type, or by resource group. For more information about how to assign users access to resources, such as toolchains, see [Managing access to resources](/docs/iam?topic=iam-assign-access-resources&interface=ui#assign-access-resources).
 {: tip}

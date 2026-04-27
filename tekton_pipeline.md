@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026
-lastupdated: "2026-03-30"
+lastupdated: "2026-04-21"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -1174,7 +1174,7 @@ The following table lists and describes each of the variables that are used in t
 {: #using-triggers}
 {: api}
 
-You can trigger pipelines using either the web UI or a command-line/API call. This is commonly used for pipelines such as [CI](/docs/devsecops?topic=devsecops-cd-devsecops-ci-pipeline), [CD](/docs/devsecops?topic=devsecops-cd-devsecops-cd-pipeline-overview), or [CC](/docs/devsecops?topic=devsecops-devsecops-cc-pipeline) pipelines.
+You can trigger pipelines using either the web UI or a command-line/API call. This is commonly used for pipelines such as [CI](/docs/devsecops?topic=devsecops-cd-devsecops-ci-pipeline), [CD](docs/devsecops?topic=devsecops-cd-devsecops-cd-pipeline-overview), or [CC](/docs/devsecops?topic=devsecops-devsecops-cc-pipeline) pipelines.
 
 ### Triggering the Pipeline via Command Line or API
 {: #trigger-pipeline-Command}
