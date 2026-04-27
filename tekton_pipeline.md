@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026
-lastupdated: "2026-04-21"
+lastupdated: "2026-04-27"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -277,10 +277,10 @@ The following features are supported in CEL:
 
 CEL includes the following extensions to provide more functionality to the base CEL language:
 
-* `Sets extension` to support advanced set operations and provide more flexibility in event filtering. For more information about this extension, see [Sets](https://github.com/google/cel-go/tree/v0.20.1/ext#sets){: external}.
+* `Sets extension` to support advanced set operations and provide more flexibility in event filtering. For more information about this extension, see [Sets](https://github.com/google/cel-go/tree/v0.28.0/ext#sets){: external}.
 * `matchesGlob` to provide compatibility when converting the existing pattern field to the new CEL filter option. The native CEL `matches` operator is recommended for more advanced regular expression matching.
 
-For more information about CEL, see the [CEL documentation](https://github.com/google/cel-go/tree/v0.20.1/){: external}.
+For more information about CEL, see the [CEL documentation](https://github.com/google/cel-go/tree/v0.28.0/){: external}.
 
 #### Converting to CEL
 {: #converting_to_cel}
