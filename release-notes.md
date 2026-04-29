@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-04-21"
+lastupdated: "2026-04-29"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -87,7 +87,7 @@ The {{site.data.keyword.contdelivery_short}} toolchain API method for generating
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 17.1.4](https://docs.gitlab.com/releases/17/patch-release-gitlab-17-2-2-released/){: external}.
+:   Upgraded to [GitLab 17.1.4](https://docs.gitlab.com/releases/patches/patch-release-gitlab-17-2-2-released/){: external}.
 
 ## 06 September 2024
 {: #ContinuousDelivery-sep0624}
@@ -106,14 +106,14 @@ Enabling Direct Integration with an Existing Git Repository
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 17.0.3](https://docs.gitlab.com/releases/17/patch-release-gitlab-17-1-1-released/){: external}.
+:   Upgraded to [GitLab 17.0.3](https://docs.gitlab.com/releases/patches/patch-release-gitlab-17-1-1-released/){: external}.
 
 ## 01 July 2024
 {: #ContinuousDelivery-01july2424}
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 16.11.5](https://docs.gitlab.com/releases/17/patch-release-gitlab-17-1-1-released/){: external}.
+:   Upgraded to [GitLab 16.11.5](https://docs.gitlab.com/releases/patches/patch-release-gitlab-17-1-1-released/){: external}.
 
 ## 24 June 2024
 {: #ContinuousDelivery-june2424}
@@ -145,7 +145,7 @@ The {{site.data.keyword.contdelivery_short}} toolchain API provides a new, beta 
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 16.5.3](https://docs.gitlab.com/releases/16/patch-release-gitlab-16-6-1-released/){: external}.
+:   Upgraded to [GitLab 16.5.3](https://docs.gitlab.com/releases/patches/patch-release-gitlab-16-6-1-released/){: external}.
 
 ## 24 November 2023
 {: #ContinuousDelivery-nov2423}
@@ -159,28 +159,28 @@ The {{site.data.keyword.contdelivery_short}} toolchain API provides a new, beta 
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 16.4.2](https://docs.gitlab.com/releases/16/patch-release-gitlab-16-5-1-released/){: external}.
+:   Upgraded to [GitLab 16.4.2](https://docs.gitlab.com/releases/patches/patch-release-gitlab-16-5-1-released/){: external}.
 
 ## 3 November 2023
 {: #ContinuousDelivery-nov0323}
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 16.3.5](https://docs.gitlab.com/releases/16/patch-release-gitlab-16-4-1-released/){: external}.
+:   Upgraded to [GitLab 16.3.5](https://docs.gitlab.com/releases/patches/patch-release-gitlab-16-4-1-released/){: external}.
 
 ## 19 October 2023
 {: #ContinuousDelivery-otc1923}
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 16.2.8](https://docs.gitlab.com/releases/16/patch-release-gitlab-16-4-1-released/){: external}.
+:   Upgraded to [GitLab 16.2.8](https://docs.gitlab.com/releases/patches/patch-release-gitlab-16-4-1-released/){: external}.
 
 ## 4 October 2023
 {: #ContinuousDelivery-otc0423}
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 16.1.5](https://docs.gitlab.com/releases/16/patch-release-gitlab-16-3-1-released/){: external}.
+:   Upgraded to [GitLab 16.1.5](https://docs.gitlab.com/releases/patches/patch-release-gitlab-16-3-1-released/){: external}.
 
 ## 27 September 2023
 {: #ContinuousDelivery-sep2723}
@@ -194,7 +194,7 @@ The {{site.data.keyword.contdelivery_short}} toolchain API provides a new, beta 
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 16.0.8](https://docs.gitlab.com/releases/16/patch-release-gitlab-16-2-2-released/){: external}.
+:   Upgraded to [GitLab 16.0.8](https://docs.gitlab.com/releases/patches/patch-release-gitlab-16-2-2-released/){: external}.
 
 :   In GitLab 16.0, any personal, project, or [group access token that does not have an expiration date](https://docs.gitlab.com/update/deprecations/#non-expiring-access-tokens){: external} will automatically have an expiration date set at one year.
 
@@ -203,14 +203,14 @@ The {{site.data.keyword.contdelivery_short}} toolchain API provides a new, beta 
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 15.11.11](https://docs.gitlab.com/releases/16/patch-release-gitlab-16-1-2-released/){: external}.
+:   Upgraded to [GitLab 15.11.11](https://docs.gitlab.com/releases/patches/patch-release-gitlab-16-1-2-released/){: external}.
 
 ## 13 June 2023
 {: #ContinuousDelivery-june1323}
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 15.10.8](https://docs.gitlab.com/releases/16/patch-release-gitlab-16-0-2-released/){: external}.
+:   Upgraded to [GitLab 15.10.8](https://docs.gitlab.com/releases/patches/patch-release-gitlab-16-0-2-released/){: external}.
 
 ## 19 May 2023
 {: #ContinuousDelivery-may1923}
