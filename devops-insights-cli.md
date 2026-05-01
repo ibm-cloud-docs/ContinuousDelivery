@@ -8,6 +8,8 @@ keywords: doi, devops insights, cli, plug-in
 
 subcollection: ContinuousDelivery
 
+content-type: cli-docs
+
 ---
 
 {{site.data.keyword.attribute-definition-list}}
