@@ -2,11 +2,13 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-02-25"
+lastupdated: "2026-05-01"
 
 subcollection: ContinuousDelivery
 
 keywords: code risk analyzer, cli, code risk analyzer command line, code risk analyzer terminal, code risk analyzer shell, Terraform analysis, bill of materials, cra, code risk analyzer, plug-in
+
+content-type: cli-docs
 
 ---
 
