@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2026
-lastupdated: "2026-05-07"
+lastupdated: "2026-05-08"
 
 keywords: IBM Cloud Public, firewall configuration
 
@@ -16,11 +16,6 @@ subcollection: ContinuousDelivery
 # Subnet ranges for Git 
 {: #git-subnet-ranges}
 {: support}
-
-{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 10 April 2026: **eu-es** and **jp-osa**.
-This discontinuation also applies to any features provided within the service, including Code Risk Analyzer and {{site.data.keyword.DRA_short}}.
-[Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
-{: important}
 
 {{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
@@ -81,17 +76,6 @@ eu-gb
 158.175.190.216/32
 141.125.158.101/32
 158.176.171.70/32
-====
-jp-osa
-10.10.15.128/26
-10.8.29.128/26
-10.9.10.128/26
-163.68.73.192/27
-163.68.73.80/28
-163.69.65.16/28
-163.69.67.224/27
-163.73.67.240/28
-163.73.68.0/27
 ====
 jp-tok
 10.223.198.234/32

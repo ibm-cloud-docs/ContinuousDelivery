@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-02-02"
+lastupdated: "2026-05-06"
 
 keywords: IBM Cloud, cd, Continuous Delivery, insights, cra, regions, deprecation
 
@@ -24,12 +24,14 @@ subcollection: ContinuousDelivery
 {: faq}
 {: support}
 
-{{site.data.keyword.contdelivery_short}} is being discontinued in the following regions:
+{{site.data.keyword.contdelivery_short}} is discontinued in the following regions:
+* Madrid (eu-es)
+* Osaka (jp-osa)
+
+{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions:
 * Sydney (au-syd)
 * Montreal (ca-mon)
 * Toronto (ca-tor)
-* Madrid (eu-es)
-* Osaka (jp-osa)
 * Washington DC (us-east)
 
 {{site.data.keyword.contdelivery_short}} will continue to be available in the remaining regions:
@@ -46,10 +48,6 @@ The Code Risk Analyzer (CRA) and DevOps Insights (DOI) features of {{site.data.k
 {: #timeline}
 {: faq}
 {: support}
-
-Following a strategic review of our regional operations, the service will be discontinued early on 10 April 2026, 5 PM EST in the following regions: **eu-es** and **jp-osa**.
-This discontinuation also applies to any features provided within the service, including Code Risk Analyzer and DevOps Insights. On this date the service will no longer be available in the affected regions and **existing instances will cease to operate**.
-{: important}
 
 * End of Marketing: 12 June 2026. After this date, customers will no longer be able to create new resources in the affected regions. However, if a region has no active usage before this date, the Continuous Delivery service in that region may be discontinued earlier and stop accepting new resource creation.
 * End of Service: 12 February 2027. This is the planned date when the Continuous Delivery service will no longer be available in the affected regions. However, if a region has no active usage before this date, or if all customers in the region complete their migrations early, the service in that region may be discontinued earlier.

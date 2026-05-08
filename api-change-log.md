@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2024
-lastupdated: "2024-09-24"
+  years:  2024, 2026
+lastupdated: "2026-04-10"
 
 keywords: change log for Continuous Delivery API, updates to Continuous Delivery API
 
@@ -33,6 +33,13 @@ For information about the latest changes to the `Continuous Delivery` SDKs, see 
 API requests require a `version` path parameter that takes the date in the format `/toolchain/{version}/{endpoint}`, or `/pipeline/{version}/{endpoint}`, where `endpoint` represents any listed endpoint in the corresponding API documentation. The only version which is currently supported is `v2`.
 
 When the API is changed in a way that is not compatible with previous versions, a new major version is released. To take advantage of the changes in a new version, change the value of the version parameter to the new version.
+
+## 10 April 2026
+{: #10-apr-2026}
+{: release-note}
+IBM Cloud {{site.data.keyword.contdelivery_short}}, is discontinued in the following regions:
+* Osaka (jp-osa)
+* Madrid (eu-es)
 
 ## 30 March 2026
 {: #30-mar-2026}

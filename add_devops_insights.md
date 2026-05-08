@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2026
-lastupdated: "2026-03-30"
+lastupdated: "2026-05-08"
 
 keywords: devops insights, devops, insights, integrate, adding, code coverage, test, tests, verification, install, app, dashboard, risk
 
@@ -14,10 +14,6 @@ subcollection: ContinuousDelivery
 
 # Adding {{site.data.keyword.DRA_short}} to your toolchain
 {: #add-devops-insights}
-
-{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 10 April 2026: **eu-es** and **jp-osa**.
-This discontinuation also applies to any features provided within the service, including Code Risk Analyzer and {{site.data.keyword.DRA_short}}. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
-{: important}
 
 {{site.data.keyword.DRA_short}} will be discontinued in all regions on 12 February 2027. However, if a region has no active {{site.data.keyword.DRA_short}} usage, the service in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}

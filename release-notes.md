@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-04-29"
+lastupdated: "2026-05-08"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -20,6 +20,13 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years.
 {: shortdesc}
+
+## 10 April 2026
+{: #ContinuousDelivery-apr1026}
+{: release-note}
+IBM Cloud {{site.data.keyword.contdelivery_short}}, is discontinued in the following regions:
+* Osaka (jp-osa)
+* Madrid (eu-es)
 
 ## 30 March 2026
 {: #ContinuousDelivery-mar3026}
