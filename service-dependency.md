@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-05-08"
+lastupdated: "2026-05-12"
 
 keywords:
 
@@ -48,25 +48,25 @@ The following dependencies apply to the following deployment locations: Dallas (
 |Dependencies|Dependency impacts|Customer provided|Control or data plane|Location of dependency|
 |:---|:---|:---|:---|:---|
 | IBM Cloud Block Storage | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same data center  |
+| {{site.data.keyword.cis_full}} | Availability, Change management, Disaster recovery, Instance control, Security compliance | No | Both |  Same region  |
+| {{site.data.keyword.BluVirtServers}} | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same data center  |
+| {{site.data.keyword.cos_full}} | Availability, Change management, Disaster recovery, Instance control, Security compliance | No | Both |  Same region  |
+| {{site.data.keyword.cos_full}} | Availability, Change management, Disaster recovery, Instance control, Security compliance | No | Both |  Same region  |
 | {{site.data.keyword.BluVirtServers}} | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same data center  |
 | {{site.data.keyword.cis_full}} | Availability, Change management, Disaster recovery, Instance control, Security compliance | No | Both |  Same region  |
-| {{site.data.keyword.cis_full}} | Availability, Change management, Disaster recovery, Instance control, Security compliance | No | Both |  Same region  |
+| {{site.data.keyword.cos_full}} | Availability, Change management, Disaster recovery, Instance control, Security compliance | No | Both |  Same region  |
+| Akamai | Availability, Change management, Disaster recovery, Instance control | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
+| IBM Cloud Classic DNS Servers | Availability, Change management, Instance control | No | Both |  Same data center  |
+| IBM Cloud Classic DNS Servers | Availability, Change management, Instance control | No | Both |  Same data center  |
+| IBM Cloud Classic DNS Servers | Availability, Change management, Instance control | No | Both |  Same data center  |
+| IBM Cloud Classic DNS Servers | Availability, Change management, Instance control | No | Both |  Same data center  |
 | {{site.data.keyword.BluVirtServers}} | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same data center  |
 | {{site.data.keyword.iamlong}} | Access management, Availability, Change management, Instance control, Security compliance | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
+| {{site.data.keyword.BluVirtServers}} | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same data center  |
 | {{site.data.keyword.iamlong}} | Access management, Availability, Change management, Instance control, Security compliance | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
 | {{site.data.keyword.cloudantfull}} | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same region  |
 | {{site.data.keyword.vpc_full}} | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same region  |
 | {{site.data.keyword.vpc_full}} | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same region  |
-| {{site.data.keyword.BluVirtServers}} | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same data center  |
-| {{site.data.keyword.BluVirtServers}} | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same data center  |
-| {{site.data.keyword.cos_full}} | Availability, Change management, Disaster recovery, Instance control, Security compliance | No | Both |  Same region  |
-| Akamai | Availability, Change management, Disaster recovery, Instance control | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
-| {{site.data.keyword.cos_full}} | Availability, Change management, Disaster recovery, Instance control, Security compliance | No | Both |  Same region  |
-| {{site.data.keyword.cos_full}} | Availability, Change management, Disaster recovery, Instance control, Security compliance | No | Both |  Same region  |
-| IBM Cloud Classic DNS Servers | Availability, Change management, Instance control | No | Both |  Same data center  |
-| IBM Cloud Classic DNS Servers | Availability, Change management, Instance control | No | Both |  Same data center  |
-| IBM Cloud Classic DNS Servers | Availability, Change management, Instance control | No | Both |  Same data center  |
-| IBM Cloud Classic DNS Servers | Availability, Change management, Instance control | No | Both |  Same data center  |
 {: row-headers}
 {: caption="IBM Cloud Continuous Delivery - Data and Control plane deployment service dependency information - Critical dependencies" caption-side="top"}
 {: tab-title="Critical dependencies"}
@@ -78,19 +78,19 @@ The following dependencies apply to the following deployment locations: Dallas (
 |Dependencies|Dependency impacts|Customer provided|Control or data plane|Location of dependency|
 |:---|:---|:---|:---|:---|
 | IBM Cloud Bare Metal | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same data center  |
-| {{site.data.keyword.atracker_full}} | Availability, Operations, Security compliance | No | Both |  Same region  |
+| {{site.data.keyword.registrylong}} | Availability, Change management, Disaster recovery, Instance control, Security compliance | No | Both |  Same region  |
+| IBM Cloud Business System Services User and Account management | Access management, Availability, Change management, Disaster recovery, Instance control, Security compliance | No | Both |  Same region  |
+| {{site.data.keyword.keymanagementservicefull}} | Availability, Change management, Disaster recovery, Instance control, Security compliance | No | Both |  Same region  |
 | IBM Cloud Business Support Services | Availability, Instance control | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
 | IBM Cloud Global Resource Catalog | Availability, Change management, Instance control | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
 | IBM Cloud Classic NTP Servers | Availability, Change management, Instance control | No | Both |  Same data center  |
 | IBM Cloud Classic NTP Servers | Availability, Change management, Instance control | No | Both |  Same data center  |
 | IBM Cloud Classic NTP Servers | Availability, Change management, Instance control | No | Both |  Same data center  |
+| {{site.data.keyword.atracker_full}} | Availability, Operations, Security compliance | No | Both |  Same region  |
+| IBM Cloud Console | Availability, Instance control, Operations | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
 | IBM Cloud Classic NTP Servers | Availability, Change management, Instance control | No | Both |  Same data center  |
 | IBM Cloud Service Endpoints | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same region  |
 | IBM Cloud Service Endpoints | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same region  |
-| {{site.data.keyword.registrylong}} | Availability, Change management, Disaster recovery, Instance control, Security compliance | No | Both |  Same region  |
-| IBM Cloud Business System Services User and Account management | Access management, Availability, Change management, Disaster recovery, Instance control, Security compliance | No | Both |  Same region  |
-| {{site.data.keyword.keymanagementservicefull}} | Availability, Change management, Disaster recovery, Instance control, Security compliance | No | Both |  Same region  |
-| IBM Cloud Console | Availability, Instance control, Operations | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
 {: row-headers}
 {: caption="IBM Cloud Continuous Delivery - Data and Control plane deployment service dependency information - Significant dependencies" caption-side="top"}
 {: tab-title="Significant dependencies"}
@@ -105,9 +105,9 @@ The following dependencies apply to the following deployment locations: Dallas (
 | {{site.data.keyword.pag_full}}| Change management, Operations | No | Both |  Same region  |
 | {{site.data.keyword.pag_full}}| Change management, Operations | No | Both |  Same region  |
 | {{site.data.keyword.pag_full}}| Change management, Operations | No | Both |  Same region  |
+| {{site.data.keyword.pag_full}}| Change management, Operations | No | Both |  Same region  |
+| {{site.data.keyword.pag_full}}| Change management, Operations | No | Both |  Same region  |
 | IBM GitHub Enterprise| Change management | No | Both |  Same region  |
-| {{site.data.keyword.pag_full}}| Change management, Operations | No | Both |  Same region  |
-| {{site.data.keyword.pag_full}}| Change management, Operations | No | Both |  Same region  |
 {: row-headers}
 {: caption="IBM Cloud Continuous Delivery - Data and Control plane deployment service dependency information - Medium dependencies" caption-side="top"}
 {: tab-title="Medium dependencies"}
@@ -118,47 +118,22 @@ The following dependencies apply to the following deployment locations: Dallas (
 
 |Dependencies|Dependency impacts|Customer provided|Control or data plane|Location of dependency|
 |:---|:---|:---|:---|:---|
-| GitHub| none | Yes | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
-| IBM Log Analysis Log Routing| Access management, Operations, Security compliance | No | Both |  Same region  |
-| IBM Cloud CLI | Operations | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
-| None| Security compliance | No | Both |  Same region  |
-| OSS Platform| Operations | No | Both |  Same region  |
-| SOS Inventory Management| Security compliance | No | Both |  Same region  |
-| Slack| Operations | Yes | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
-| external-atalassian-bitbucket| none | Yes | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
-| external-soucelab| none | Yes | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
-| SOS Compliance Reporting| Security compliance | No | Both |  Same region  |
-| {{site.data.keyword.monitoringlong}}| Operations | No | Both |  Same region  |
-| None| Security compliance | No | Both |  Same region  |
-| OSS Platform| Operations | No | Both |  Same region  |
-| SonarQube| none | Yes | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
-| None| Security compliance | No | Both |  Same region  |
-| OSS Platform| Operations | No | Both |  Same region  |
-| Segment| Operations | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
-| SOS Inventory Management| Security compliance | No | Both |  Same region  |
-| SOS Compliance Reporting| Security compliance | No | Both |  Same region  |
-| SOS Inventory Management| Security compliance | No | Both |  Same region  |
 | SOS Health-Check, Vulnerability Scanning and Patching| Security compliance | No | Both |  Same region  |
-| None| Security compliance | No | Both |  Same region  |
-| OSS Platform| Operations | No | Both |  Same region  |
-| IBM Cloud Projects| none | No | Both |  Same region  |
-| SOS SIEM| Security compliance | No | Both |  Same region  |
-| SOS Compliance Reporting| Security compliance | No | Both |  Same region  |
-| SOS SIEM| Security compliance | No | Both |  Same region  |
-| SOS Inventory Management| Security compliance | No | Both |  Same region  |
-| None| Security compliance | No | Both |  Same region  |
-| OSS Platform| Operations | No | Both |  Same region  |
-| IBM Cloud Security and Compliance Center| Security compliance | No | Both |  Same region  |
 | SOS Health-Check, Vulnerability Scanning and Patching| Security compliance | No | Both |  Same region  |
 | Amplitude| Operations | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
 | SOS Inventory Management| Security compliance | No | Both |  Same region  |
 | {{site.data.keyword.metrics_router_full}}| Operations | No | Both |  Same region  |
+| IBM Log Analysis Log Routing| Access management, Operations, Security compliance | No | Both |  Same region  |
 | {{site.data.keyword.logs_full}}| Access management, Operations, Security compliance | No | Both |  Same region  |
 | OSS Platform| Operations | No | Both |  Same region  |
 | SOS SIEM| Security compliance | No | Both |  Same region  |
+| None| Operations, Security compliance | No | Both |  Same region  |
 | SOS SIEM| Security compliance | No | Both |  Same region  |
+| None| Operations, Security compliance | No | Both |  Same region  |
 | SOS SIEM| Security compliance | No | Both |  Same region  |
+| None| Operations, Security compliance | No | Both |  Same region  |
 | SOS SIEM| Security compliance | No | Both |  Same region  |
+| None| Operations, Security compliance | No | Both |  Same region  |
 | SOS Tenable| Security compliance | No | Both |  Same region  |
 | None| Security compliance | No | Both |  Same region  |
 | OSS Platform| Operations | No | Both |  Same region  |
@@ -168,10 +143,6 @@ The following dependencies apply to the following deployment locations: Dallas (
 | SOS Tenable| Security compliance | No | Both |  Same region  |
 | SOS Tenable| Security compliance | No | Both |  Same region  |
 | SOS Tenable| Security compliance | No | Both |  Same region  |
-| {{site.data.keyword.SendGrid}}| none | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
-| SOS Compliance Reporting| Security compliance | No | Both |  Same region  |
-| {{site.data.keyword.appconfig_full}}| Customer responsibility | Yes | Both |  Same region  |
-| SOS Health-Check, Vulnerability Scanning and Patching| Security compliance | No | Both |  Same region  |
 | SOS Privileged Identity Management| Access management, Operations, Security compliance | No | Both |  Same region  |
 | SOS Inventory Management| Security compliance | No | Both |  Same region  |
 | SOS Privileged Identity Management| Access management, Operations, Security compliance | No | Both |  Same region  |
@@ -185,6 +156,40 @@ The following dependencies apply to the following deployment locations: Dallas (
 | SOS Health-Check, Vulnerability Scanning and Patching| Security compliance | No | Both |  Same region  |
 | PagerDuty| none | Yes | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
 | SOS Compliance Reporting| Security compliance | No | Both |  Same region  |
+| IBM Cloud CLI | Operations | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
+| None| Security compliance | No | Both |  Same region  |
+| OSS Platform| Operations | No | Both |  Same region  |
+| SOS Inventory Management| Security compliance | No | Both |  Same region  |
+| Slack| Operations | Yes | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
+| Atalassian Bitbucket| none | Yes | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
+| Sauce Labs| none | Yes | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
+| SOS Compliance Reporting| Security compliance | No | Both |  Same region  |
+| {{site.data.keyword.monitoringlong}}| Operations | No | Both |  Same region  |
+| {{site.data.keyword.SendGrid}}| none | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
+| None| Security compliance | No | Both |  Same region  |
+| OSS Platform| Operations | No | Both |  Same region  |
+| SonarQube| none | Yes | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
+| None| Security compliance | No | Both |  Same region  |
+| OSS Platform| Operations | No | Both |  Same region  |
+| SOS Compliance Reporting| Security compliance | No | Both |  Same region  |
+| Segment| Operations | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
+| SOS Inventory Management| Security compliance | No | Both |  Same region  |
+| SOS Compliance Reporting| Security compliance | No | Both |  Same region  |
+| SOS Inventory Management| Security compliance | No | Both |  Same region  |
+| SOS Health-Check, Vulnerability Scanning and Patching| Security compliance | No | Both |  Same region  |
+| None| Security compliance | No | Both |  Same region  |
+| OSS Platform| Operations | No | Both |  Same region  |
+| IBM Cloud Projects| none | No | Both |  Same region  |
+| SOS SIEM| Security compliance | No | Both |  Same region  |
+| None| Operations, Security compliance | No | Both |  Same region  |
+| SOS Compliance Reporting| Security compliance | No | Both |  Same region  |
+| GitHub| none | Yes | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
+| {{site.data.keyword.appconfig_full}}| Customer responsibility | Yes | Both |  Same region  |
+| SOS SIEM| Security compliance | No | Both |  Same region  |
+| None| Operations, Security compliance | No | Both |  Same region  |
+| SOS Inventory Management| Security compliance | No | Both |  Same region  |
+| None| Security compliance | No | Both |  Same region  |
+| OSS Platform| Operations | No | Both |  Same region  |
 {: row-headers}
 {: caption="IBM Cloud Continuous Delivery - Data and Control plane deployment service dependency information - Minimal dependencies" caption-side="top"}
 {: tab-title="Minimal dependencies"}
