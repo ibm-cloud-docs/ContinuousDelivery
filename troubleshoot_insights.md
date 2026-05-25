@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-05-08"
+lastupdated: "2026-05-25"
 
 keywords: troubleshoot, toolchains, tool integrations, DevOps Insights
 
@@ -27,7 +27,7 @@ subcollection: ContinuousDelivery
 # Troubleshooting for {{site.data.keyword.DRA_short}}
 {: #troubleshoot-insights}
 
-{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{{site.data.keyword.DRA_short}} will be discontinued in all regions on February 12, 2027. New {{site.data.keyword.DRA_short}} tool integrations cannot be created after June 12, 2026. However, if the feature has no active usage, it may be discontinued earlier. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
 General problems with using {{site.data.keyword.DRA_short}} might include toolchains, toolchain templates, or tool integration configuration issues. In many cases, you can recover from these problems by following a few easy steps.
