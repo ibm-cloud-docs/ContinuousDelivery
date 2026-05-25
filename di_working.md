@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2026
-lastupdated: "2026-05-08"
+lastupdated: "2026-05-25"
 
 keywords: code quality, risk management, interactions of your team, devops insights, getting started, devops, insights, tutorial, code coverage, test, tests, gate, gate failing, verification, install, app, dashboard
 
@@ -15,7 +15,7 @@ subcollection: ContinuousDelivery
 # Working with {{site.data.keyword.DRA_short}}
 {: #di_working}
 
-{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{{site.data.keyword.DRA_short}} will be discontinued in all regions on February 12, 2027. New {{site.data.keyword.DRA_short}} tool integrations cannot be created after June 12, 2026. However, if the feature has no active usage, it may be discontinued earlier. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
 {{site.data.keyword.DRA_full}} is a tool that aggregates code, test, build, and deployment data to provide visibility of quality for all of your teams. This tutorial walks you through the quickest steps for setting up {{site.data.keyword.DRA_short}} with {{site.data.keyword.contdelivery_full}} so that you can explore the features in {{site.data.keyword.DRA_short}}.
