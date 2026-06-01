@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026
-lastupdated: "2026-05-08"
+lastupdated: "2026-06-01"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -1189,7 +1189,7 @@ You can trigger the pipeline using the IBM Cloud CLI. For more information about
    ```
 1. Trigger the pipeline manually
    ```bash
-   ibmcloud dev tekton-trigger run <pipeline_id> --trigger-name "<trigger_name>"
+   ibmcloud dev tekton-trigger <pipeline_id> --trigger-name "<trigger_name>"
    ```
 
 After replacing the `pipeline_id` and `trigger_name` in the command, run it to start the pipeline. If successful, the output will indicate that the pipeline has started and display details similar to the following:
