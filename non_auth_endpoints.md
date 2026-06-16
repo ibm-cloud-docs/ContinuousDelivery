@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-06-03"
+lastupdated: "2026-06-16"
 
 keywords: endpoints, authentication, IBM Cloud Public
 
@@ -118,11 +118,9 @@ The following table lists the {{site.data.keyword.gitrepos}} endpoints that do n
 | `https://hosted-git-metrics.[region].devops.cloud.ibm.com/status` | Get the status of the service component |
 | `https://hosted-git-metrics.[region].devops.cloud.ibm.com/status-all` | Get the status of the service component and its dependencies |
 | `https://hosted-git-metrics.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
-| `https://hosted-git-monitor.[region].devops.cloud.ibm.com/health` | Get the health of the service component |
-| `https://hosted-git-monitor.[region].devops.cloud.ibm.com/load_balancer` | Get the status of the load balancer |
-| `https://hosted-git-monitor.[region].devops.cloud.ibm.com/scorecard` | Get the status of the scorecard |
-| `https://hosted-git-monitor.[region].devops.cloud.ibm.com/status` | Get the status of the service component |
-| `https://hosted-git-monitor.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
+| `https://hosted-git-monitor.[region].devops.cloud.ibm.com/` | Get basic service information |
+| `https://hosted-git-monitor.[region].devops.cloud.ibm.com/health` | Get the health of the service |
+| `https://hosted-git-monitor.[region].devops.cloud.ibm.com/status` | Get detailed status of the service |
 {: caption="Table 4. {{site.data.keyword.gitrepos}}" caption-side="top"}
 
 ## Metrics
