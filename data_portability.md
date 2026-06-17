@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2026-05-08"
+lastupdated: "2026-06-17"
 
 keywords: Continuous Delivery, toolchain, client owned data
 
@@ -86,18 +86,18 @@ The configurations of {{site.data.keyword.contdelivery_short}} toolchains and to
 #### Toolchain configurations
 {: #data-portability-procedures-toolchains-configs}
 
-You can retrieve a list of toolchains and their configurations by using the [Toolchain API](/apidocs/toolchain){: external}, specifically the methods to [Get a list of toolchains](/apidocs/toolchain#list-toolchains){: external} or [Get a toolchain](/apidocs/toolchain#get-toolchain-by-id){: external}. To retrieve toolchain configuration data, complete the following steps:
+You can retrieve a list of toolchains and their configurations by using the [Toolchain API](/apis/toolchain){: external}, specifically the methods to [Get a list of toolchains](/apis/toolchain#list-toolchains){: external} or [Get a toolchain](/apis/toolchain#get-toolchain-by-id){: external}. To retrieve toolchain configuration data, complete the following steps:
 
 1. `GET https://resource-controller.cloud.ibm.com/v2/resource_groups` to retrieve a list of resource groups in the account.
 1. For each resource group, `GET https://api.$REGION.devops.cloud.ibm.com/toolchain/v2/toolchains?resource_group_id=$RG_ID` to retrieve the list of toolchains in the resource group.
 
-You can also retrieve a subset of Toolchain resource metadata by using the [Global Search API](https://cloud.ibm.com/apidocs/search){: external} or the [Resource Controller API](https://cloud.ibm.com/apidocs/resource-controller/resource-controller){: external}.
+You can also retrieve a subset of Toolchain resource metadata by using the [Global Search API](https://cloud.ibm.com/apis/search){: external} or the [Resource Controller API](https://cloud.ibm.com/apis/resource-controller/resource-controller){: external}.
 {: tip}
 
 #### Tool integration configurations
 {: #data-portability-procedures-toolchains-integrations}
 
-You can retrieve tool integration configuration data by using the [Toolchain API](https://cloud.ibm.com/apidocs/toolchain){: external}, specifically the methods to [Get a list of tools bound to a toolchain](https://cloud.ibm.com/apidocs/toolchain#list-tools){: external} and to [Get a tool](https://cloud.ibm.com/apidocs/toolchain#get-tool-by-id){: external}. To retrieve tool integration configuration data, complete the following steps:
+You can retrieve tool integration configuration data by using the [Toolchain API](https://cloud.ibm.com/apis/toolchain){: external}, specifically the methods to [Get a list of tools bound to a toolchain](https://cloud.ibm.com/apis/toolchain#list-tools){: external} and to [Get a tool](https://cloud.ibm.com/apis/toolchain#get-tool-by-id){: external}. To retrieve tool integration configuration data, complete the following steps:
 
 1. For a specific toolchain, use `GET https://api.$REGION.devops.cloud.ibm.com/toolchain/v2/toolchains/$TOOLCHAIN_ID/tools` to retrieve configuration details for all tool integrations in the toolchain.
 
@@ -117,7 +117,7 @@ Client-owned data in {{site.data.keyword.contdelivery_short}} pipelines fall int
 #### Tekton pipelines
 {: #data-portability-procedures-pipelines-tekton-list}
 
-You can retrieve a list of Tekton pipelines that are integrated into a toolchain by using the [Toolchain API](https://cloud.ibm.com/apidocs/toolchain){: external}. To retrieve the list of Tekton pipelines, complete the following steps:
+You can retrieve a list of Tekton pipelines that are integrated into a toolchain by using the [Toolchain API](https://cloud.ibm.com/apis/toolchain){: external}. To retrieve the list of Tekton pipelines, complete the following steps:
 
 1. For a specific toolchain, use `GET https://api.$REGION.devops.cloud.ibm.com/toolchain/v2/toolchains/$TOOLCHAIN_ID/tools` to obtain a list of all tool integrations in the toolchain.
 1. Use a tool such as [jq](https://jqlang.org){: external} to filter the list to only pipeline tool integrations, and to derive the corresponding pipeline IDs.
@@ -128,7 +128,7 @@ You can retrieve a list of Tekton pipelines that are integrated into a toolchain
 #### Tekton pipeline configurations
 {: #data-portability-procedures-pipelines-tekton-configs}
 
-You can retrieve the configuration of a Tekton pipeline, including its definitions, properties, triggers, and trigger properties, by using the [Tekton Pipeline API](https://cloud.ibm.com/apidocs/tekton-pipeline){: external}, specifically the method to [Get Tekton pipeline data](https://cloud.ibm.com/apidocs/tekton-pipeline#get-tekton-pipeline){: external}.
+You can retrieve the configuration of a Tekton pipeline, including its definitions, properties, triggers, and trigger properties, by using the [Tekton Pipeline API](https://cloud.ibm.com/apis/tekton-pipeline){: external}, specifically the method to [Get Tekton pipeline data](https://cloud.ibm.com/apis/tekton-pipeline#get-tekton-pipeline){: external}.
 
 To work with Classic pipelines, see [Classic pipeline configurations](#data-portability-procedures-pipelines-classic-configs).
 {: tip}
@@ -146,7 +146,7 @@ Responses from this method do not include pipeline runs. To retrieve data about 
 Pipeline run data is the result of running, not configuring, pipelines. It is not considered essential to implementing pipeline workloads with different service providers or on-premises software. Therefore, this section is included as a convenience, not as a requisite of data portability.
 {: note}
 
-You can retrieve metadata about pipeline runs by using the Tekton pipeline API method to [List pipeline run records](https://cloud.ibm.com/apidocs/tekton-pipeline#list-tekton-pipeline-runs){: external}.
+You can retrieve metadata about pipeline runs by using the Tekton pipeline API method to [List pipeline run records](https://cloud.ibm.com/apis/tekton-pipeline#list-tekton-pipeline-runs){: external}.
 
 1. For a specific Tekton pipeline, use `GET https://api.$REGION.devops.cloud.ibm.com/pipeline/v2/tekton_pipelines/$TEKTON_PIPELINE_ID/pipeline_runs` to retrieve a list of pipeline runs.
 
@@ -158,7 +158,7 @@ The response includes detailed information about pipeline runs, except for pipel
 Pipeline run logs result from running, not configuring, pipelines. They are not considered essential to implementing pipeline workloads with different service providers or on-premises software. Therefore, this section is included as a convenience, not as a requisite of data portability.
 {: note}
 
-You can retrieve pipeline logs by using Tekton pipeline API methods to [Get a list of pipeline run log objects](https://cloud.ibm.com/apidocs/tekton-pipeline#get-tekton-pipeline-run-logs){: external} and to [Get the log content of a pipeline run step](https://cloud.ibm.com/apidocs/tekton-pipeline#get-tekton-pipeline-run-log-content){: external}.
+You can retrieve pipeline logs by using Tekton pipeline API methods to [Get a list of pipeline run log objects](https://cloud.ibm.com/apis/tekton-pipeline#get-tekton-pipeline-run-logs){: external} and to [Get the log content of a pipeline run step](https://cloud.ibm.com/apis/tekton-pipeline#get-tekton-pipeline-run-log-content){: external}.
 
 To retrieve logs, complete the following steps:
 

@@ -81,7 +81,7 @@ The following table lists and describes each of the variables that are used in t
 {: #deleting_rg_api}
 {: api}
 
-1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/resource-controller#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
+1. [Obtain an IAM bearer token](https://{DomainName}/apis/resource-controller#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
 
    ```bash
    export RESOURCE_CONTROLLER_APIKEY={iam_api_key}

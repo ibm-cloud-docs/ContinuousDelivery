@@ -15,11 +15,11 @@ subcollection: ContinuousDelivery
 # Continuous Delivery API change log
 {: #api-change-log}
 
-In this change log, you can learn about the latest changes, improvements, and updates for the Continuous Delivery API, which consists of the [Toolchain API](/apidocs/toolchain) and the [Tekton Pipeline API](/apidocs/tekton-pipeline). The change log lists changes that have been made, ordered by the date they were released. Changes to existing API versions are designed to be compatible with existing client applications.
+In this change log, you can learn about the latest changes, improvements, and updates for the Continuous Delivery API, which consists of the [Toolchain API](/apis/toolchain) and the [Tekton Pipeline API](/apis/tekton-pipeline). The change log lists changes that have been made, ordered by the date they were released. Changes to existing API versions are designed to be compatible with existing client applications.
 
 For details on the latest version for each API, see:
-- [Toolchain API versioning](/apidocs/toolchain#versioning)
-- [Tekton Pipeline API versioning](/apidocs/tekton-pipeline#versioning)
+- [Toolchain API versioning](/apis/toolchain#versioning)
+- [Tekton Pipeline API versioning](/apis/tekton-pipeline#versioning)
 
 For information about the latest changes to the `Continuous Delivery` SDKs, see the change logs in the SDK repositories:
 - [Java SDK change log](https://github.com/IBM/continuous-delivery-java-sdk/blob/main/CHANGELOG.md)

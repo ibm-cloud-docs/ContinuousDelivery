@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026
-lastupdated: "2026-05-25"
+lastupdated: "2026-06-17"
 
 keywords: devops insights, manage, data, quality, delete, test, tests, app, dashboard
 
@@ -106,7 +106,7 @@ To delete the {{site.data.keyword.DRA_short}} tool integration, you must delete 
 {: #insights-delete-integration-api}
 {: api}
 
-1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/toolchain#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
+1. [Obtain an IAM bearer token](https://{DomainName}/apis/toolchain#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
    
    ```bash
    export CD_TOOLCHAIN_AUTH_TYPE=iam && \
@@ -226,7 +226,7 @@ The following table lists and describes each of the variables that are used in t
     
 | Variable | Description |
 |:---------|:------------|
-| `{base_url}` | The Toolchain API endpoint URL, for example `https://api.us-south.devops.cloud.ibm.com/toolchain/v2`. For more information about this endpoint URL, including a list of values, see [Endpoint URL](https://{DomainName}/apidocs/toolchain#endpoint-url){: external}. |
+| `{base_url}` | The Toolchain API endpoint URL, for example `https://api.us-south.devops.cloud.ibm.com/toolchain/v2`. For more information about this endpoint URL, including a list of values, see [Endpoint URL](https://{DomainName}/apis/toolchain#endpoint-url){: external}. |
 | `{iam_api_key}` | Your IAM API key. |
 | `{tool_integration_id}` | The ID of the tool integration. |
 | `{toolchain_id}` | The ID of the toolchain in which to delete the tool integration. |

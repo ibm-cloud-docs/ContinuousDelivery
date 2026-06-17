@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-05-08"
+lastupdated: "2026-06-17"
 
 keywords: tool integrations, IBM Cloud Public, App Configuraton, AppConfig
 
@@ -86,7 +86,7 @@ You can also create the authorization manually, if required. To successfully res
 ## Configuring {{site.data.keyword.appconfig_short}} by using the API
 {: #app-config-parameters}
 
-The {{site.data.keyword.appconfig_short}} tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apidocs/toolchain){: external} when you [create](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apidocs/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apidocs/toolchain#update-tool){: external} tool integrations.
+The {{site.data.keyword.appconfig_short}} tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apis/toolchain){: external} when you [create](https://cloud.ibm.com/apis/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apis/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apis/toolchain#update-tool){: external} tool integrations.
 
 You must specify the `tool_type_id` property in the request body with the `appconfig` value.
 {: important}

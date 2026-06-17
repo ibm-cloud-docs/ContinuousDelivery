@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-05-08"
+lastupdated: "2026-06-17"
 
 keywords: IBM Cloud Continuous Delivery, getting started, tutorial, create a toolchain, tool integration, toolchain template, DevOps toolchains, Terraform
 
@@ -75,4 +75,4 @@ Check out the available [toolchain templates and tutorials](/docs/ContinuousDeli
 
 You can use Terraform to create and manage toolchains, tool integrations, and Tekton delivery pipelines *as code*. For more information about using Terraform with {{site.data.keyword.contdelivery_short}}, see [Setting up Terraform for {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-terraform-setup) and try the Terraform toolchain template to [Develop a Kubernetes app with Helm toolchain](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cd-toolchain-simple-helm){: external}.
 
-You can use HTTP APIs and programming language SDKs to create, read, update, delete, and more against toolchains, tool integrations, and Tekton delivery pipelines. For more information about these APIs and SDKs, see [{{site.data.keyword.contdelivery_short}} Toolchain v2](https://cloud.ibm.com/apidocs/toolchain){: external} and [{{site.data.keyword.contdelivery_short}} Tekton Pipeline v2](https://cloud.ibm.com/apidocs/tekton-pipeline){: external} in the [API & SDK reference library](https://cloud.ibm.com/docs?tab=api-docs){: external}.
+You can use HTTP APIs and programming language SDKs to create, read, update, delete, and more against toolchains, tool integrations, and Tekton delivery pipelines. For more information about these APIs and SDKs, see [{{site.data.keyword.contdelivery_short}} Toolchain v2](https://cloud.ibm.com/apis/toolchain){: external} and [{{site.data.keyword.contdelivery_short}} Tekton Pipeline v2](https://cloud.ibm.com/apis/tekton-pipeline){: external} in the [API & SDK reference library](https://cloud.ibm.com/docs?tab=api-docs){: external}.

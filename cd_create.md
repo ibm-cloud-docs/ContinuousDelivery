@@ -94,14 +94,14 @@ For more information about plan IDs or about how to update your service plan aft
 {: #create_cd_service_api}
 {: api}
 
-1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/resource-controller#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
+1. [Obtain an IAM bearer token](https://{DomainName}/apis/resource-controller#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
 
    ```bash
    export RESOURCE_CONTROLLER_APIKEY={iam_api_key}
    ```
    {: pre}
 
-2. [Look up the ID of the resource group](https://{DomainName}/apidocs/resource-controller/resource-manager#list-resource-groups){: external} in which you want to create your instance.
+2. [Look up the ID of the resource group](https://{DomainName}/apis/resource-controller/resource-manager#list-resource-groups){: external} in which you want to create your instance.
 
 3. Choose the region in which you want to create your instance.
 
