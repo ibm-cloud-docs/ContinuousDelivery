@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-05-08"
+lastupdated: "2026-06-17"
 
 keywords: tool integrations, IBM Cloud Public, Other Tool, Custom Tool
 
@@ -42,7 +42,7 @@ Configure a custom tool so that it works with other tools in your toolchain and 
 ## Configuring a custom tool (Other Tool) by using the API
 {: #custom-tool-config-parameters}
 
-The custom tool (Other Tool) tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apidocs/toolchain){: external} when you [create](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apidocs/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apidocs/toolchain#update-tool){: external} tool integrations.
+The custom tool (Other Tool) tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apis/toolchain){: external} when you [create](https://cloud.ibm.com/apis/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apis/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apis/toolchain#update-tool){: external} tool integrations.
 
 You must specify the `tool_type_id` property in the request body with the `customtool` value.
 {: important}

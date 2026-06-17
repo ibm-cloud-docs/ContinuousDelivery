@@ -96,7 +96,7 @@ You can use Terraform to create, read, update, and delete toolchains and tool in
 {: faq}
 {: support}
 
-You can use HTTP APIs or selected programming language SDKs to create, read, update, and delete toolchains and tool integrations. For more information about using toolchains and tool integrations with the API, see [Creating a toolchain with the API](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started&interface=api#creating_a_toolchain_api), [Deleting a toolchain with the API](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using&interface=api#deleting_a_toolchain_api), [Working with tool integrations](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations&interface=api), and the [CD Toolchain API docs](https://cloud.ibm.com/apidocs/toolchain){: external}.
+You can use HTTP APIs or selected programming language SDKs to create, read, update, and delete toolchains and tool integrations. For more information about using toolchains and tool integrations with the API, see [Creating a toolchain with the API](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started&interface=api#creating_a_toolchain_api), [Deleting a toolchain with the API](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using&interface=api#deleting_a_toolchain_api), [Working with tool integrations](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations&interface=api), and the [CD Toolchain API docs](https://cloud.ibm.com/apis/toolchain){: external}.
 
 
 ## Can I use the console, APIs, or CLI to modify resources that are managed by Terraform?

@@ -1,9 +1,8 @@
 ---
-
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-05-08"
+lastupdated: "2026-06-17"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -24,30 +23,26 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 ## 10 April 2026
 {: #ContinuousDelivery-apr1026}
 {: release-note}
-IBM Cloud {{site.data.keyword.contdelivery_short}}, is discontinued in the following regions:
-* Osaka (jp-osa)
-* Madrid (eu-es)
+
+Discontinued in Madrid and Osaka
+:   IBM Cloud {{site.data.keyword.contdelivery_short}}, is discontinued in Osaka (jp-osa) and Madrid (eu-es).
 
 ## 30 March 2026
 {: #ContinuousDelivery-mar3026}
 {: release-note}
-IBM Cloud {{site.data.keyword.contdelivery_short}}, Code Risk Analyzer and {{site.data.keyword.DRA_short}} end of service in select regions.
-: The services will no longer be available in the Madrid (eu-es) and Osaka (jp-osa) regions on 10 April 2026
 
-If you have the {{site.data.keyword.contdelivery_short}} service in Madrid (eu-es) or Osaka (jp-osa), we provide a [migration guide](https://cloud.ibm.com/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-migrate-region) to help you with:
-* Migrate Git Repos and Issue Tracking projects across regions via direct transfer (GitLab feature).
-* Copy toolchains (including Tekton pipelines) to another region using the migration guide
-* Securely export and move secrets to Secrets Manager
+IBM Cloud {{site.data.keyword.contdelivery_short}}, Code Risk Analyzer and {{site.data.keyword.DRA_short}} end of service in select regions.
+:   The services will no longer be available in the Madrid (eu-es) and Osaka (jp-osa) regions on 10 April 2026. If you have the {{site.data.keyword.contdelivery_short}} service in Madrid (eu-es) or Osaka (jp-osa), we provide a [migration guide](https://cloud.ibm.com/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-migrate-region) to help you with migration of Git Repos and Issue Tracking projects across regions via direct transfer (GitLab feature), copy toolchains (including Tekton pipelines) to another region using the migration guide and securely export and move secrets to Secrets Manager.
 
 ## 12 February 2026
 {: #ContinuousDelivery-feb1226}
 {: release-note}
 
 IBM Cloud {{site.data.keyword.contdelivery_short}} deprecation in select regions.
-: The service will no longer be available in the following regions: **au-syd**, **ca-mon**, **ca-tor**, **eu-es**, **jp-osa** and **us-east**. We recognize that changes like these may impact your current setup, and our goal is to make this transition as smooth and predictable as possible, with clear guidance and tools to help you migrate confidently and without disruption.
+:   The service will no longer be available in the following regions: **au-syd**, **ca-mon**, **ca-tor**, **eu-es**, **jp-osa** and **us-east**. We recognize that changes like these may impact your current setup, and our goal is to make this transition as smooth and predictable as possible, with clear guidance and tools to help you migrate confidently and without disruption.
 
 Code Risk Analyzer and {{site.data.keyword.DRA_short}} service deprecation.
-: The service will no longer be available in all regions. We recognize that changes like these may impact your current setup, and our goal is to make this transition as smooth and predictable as possible, with clear guidance and tools to help you migrate confidently and without disruption.
+:   The service will no longer be available in all regions. We recognize that changes like these may impact your current setup, and our goal is to make this transition as smooth and predictable as possible, with clear guidance and tools to help you migrate confidently and without disruption.
 
 End of Marketing: 12 June 2026 - After this date, customers will no longer be able to create new resources in the affected regions. However, if a region has no active usage before this date, the {{site.data.keyword.contdelivery_short}}, Code Risk Analyzer or {{site.data.keyword.DRA_short}} service in that region may be discontinued earlier and stop accepting new resource creation.
 {: important}
@@ -85,9 +80,9 @@ Private worker installation no longer supports the Operator Lifecycle Manager (O
 {: #ContinuousDelivery-sep2524}
 {: release-note}
 
-The {{site.data.keyword.contdelivery_short}} toolchain API method for generating bespoke toolchain events to {{site.data.keyword.en_short}}, [POST /toolchains/:toolchain_id/events](https://cloud.ibm.com/apidocs/toolchain#create-toolchain-event), is now generally available.
+The {{site.data.keyword.contdelivery_short}} toolchain API method for generating bespoke toolchain events to {{site.data.keyword.en_short}}, [POST /toolchains/:toolchain_id/events](https://cloud.ibm.com/apis/toolchain#create-toolchain-event), is now generally available.
 :  The `text_plain` property of the request payload is changed from a string to a JSON object of the form `{“content”: “string”}`. The API is otherwise unchanged from the Beta.
-:  For more information, see [Enabling event notifications for toolchains](/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd) and the [CD Toolchain API Docs](https://cloud.ibm.com/apidocs/toolchain#create-toolchain-event){: external}.
+:  For more information, see [Enabling event notifications for toolchains](/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd) and the [CD Toolchain API Docs](https://cloud.ibm.com/apis/toolchain#create-toolchain-event){: external}.
 
 ## 19 August 2024
 {: #ContinuousDelivery-august2424}
@@ -145,7 +140,7 @@ The {{site.data.keyword.contdelivery_short}} service Professional plan now suppo
 {: release-note}
 
 The {{site.data.keyword.contdelivery_short}} toolchain API provides a new, beta method that you can use to generate bespoke (custom) toolchain events which the toolchain will forward to integrated instances of {{site.data.keyword.en_short}}.
-:   For more information, see [Enabling event notifications for toolchains](/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd) and the [CD Toolchain API Docs](https://cloud.ibm.com/apidocs/toolchain#create-toolchain-event){: external}.
+:   For more information, see [Enabling event notifications for toolchains](/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd) and the [CD Toolchain API Docs](https://cloud.ibm.com/apis/toolchain#create-toolchain-event){: external}.
 
 ## 7 December 2023
 {: #ContinuousDelivery-dec0723}
@@ -194,7 +189,7 @@ The {{site.data.keyword.contdelivery_short}} toolchain API provides a new, beta 
 {: release-note}
 
 {{site.data.keyword.contdelivery_short}} toolchains APIs, SDKs, and Terraform now support looking up toolchains by name.
-:   For more information, see the [CD Toolchain API Docs](https://cloud.ibm.com/apidocs/toolchain#list-toolchains-request){: external} and the [Terraform IBM Cloud provider docs](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cd_toolchains){: external}.
+:   For more information, see the [CD Toolchain API Docs](https://cloud.ibm.com/apis/toolchain#list-toolchains-request){: external} and the [Terraform IBM Cloud provider docs](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cd_toolchains){: external}.
 
 ## 11 September 2023
 {: #ContinuousDelivery-sep1123}
@@ -357,7 +352,7 @@ The Beta Terraform resources and data sources, Go SDKs, and HTTP APIs are update
 The Beta Terraform resources and data sources, Go SDKs, and HTTP APIs are now available for working with Toolchains and Tekton Pipelines.
 :   Terraform resources and data sources: [IBM-Cloud provider](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest){: external}.
 :   Go SDKs: Open-source repository (repo) [continuous-delivery-go-sdk](https://github.com/IBM/continuous-delivery-go-sdk){: external}.
-:   HTTP APIs: [{{site.data.keyword.contdelivery_short}} Toolchain](https://cloud.ibm.com/apidocs/toolchain){: external} and [{{site.data.keyword.contdelivery_short}} Tekton Pipeline](https://cloud.ibm.com/apidocs/tekton-pipeline){: external}.
+:   HTTP APIs: [{{site.data.keyword.contdelivery_short}} Toolchain](https://cloud.ibm.com/apis/toolchain){: external} and [{{site.data.keyword.contdelivery_short}} Tekton Pipeline](https://cloud.ibm.com/apis/tekton-pipeline){: external}.
 
     Ask questions and provide feedback in the [#ask-your-question](https://ibm-devops-services.slack.com/archives/C5AHRCLHH){: external} Slack channel.
 

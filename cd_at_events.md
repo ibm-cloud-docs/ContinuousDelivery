@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2026
-lastupdated: "2026-05-08"
+lastupdated: "2026-06-17"
 
 keywords: event, security, IBM, Continuous Delivery, toolchain
 
@@ -235,7 +235,7 @@ The following table lists the actions that generate toolchain management and dat
 {: row-headers}
 
 
-Activity tracking events are different from client bespoke toolchain events. When you invoke the [POST /toolchains/{toolchain_id}/events](https://cloud.ibm.com/apidocs/toolchain#create-toolchain-event){: external} API to send a bespoke toolchain event, the toolchain sends a notification event to any instances of {{site.data.keyword.en_short}} that are integrated into the toolchain. In addition, the toolchain sends an activity tracking event that serves as a record of the API having been invoked. {: tip}
+Activity tracking events are different from client bespoke toolchain events. When you invoke the [POST /toolchains/{toolchain_id}/events](https://cloud.ibm.com/apis/toolchain#create-toolchain-event){: external} API to send a bespoke toolchain event, the toolchain sends a notification event to any instances of {{site.data.keyword.en_short}} that are integrated into the toolchain. In addition, the toolchain sends an activity tracking event that serves as a record of the API having been invoked. {: tip}
 
 ## Events for {{site.data.keyword.DRA_short}}
 {: #at_actions_insights}

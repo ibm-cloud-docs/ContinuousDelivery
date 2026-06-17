@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2026-04-09"
+lastupdated: "2026-06-17"
 
 keywords: migrate, migration, migrating, region, resource group, Terraform, Tekton, pipeline, toolchain, git, continuous delivery, IBM Cloud, tools, resource, resources, data
 
@@ -215,7 +215,7 @@ Next, copy your toolchains to the new region. Tool integrations, including Tekto
    ```
    {: pre}
 
-1. Using the [Toolchain API](/apidocs/toolchain).
+1. Using the [Toolchain API](/apis/toolchain).
 
 ### Check for stored toolchain/pipeline secrets
 {: #cd-migrate-region-checkSecrets}

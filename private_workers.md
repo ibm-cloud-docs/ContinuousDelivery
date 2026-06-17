@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026
-lastupdated: "2026-05-08"
+lastupdated: "2026-06-17"
 
 keywords: private workers integration, delivery pipeline, Kubernetes cluster, API key, Service ID, pool of workers
 
@@ -77,7 +77,7 @@ For more information about the {{site.data.keyword.deliverypipeline}} Private Wo
 {: #configure_private_worker_integration_api}
 {: api}
 
-1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/resource-controller#authentication){: external}.
+1. [Obtain an IAM bearer token](https://{DomainName}/apis/resource-controller#authentication){: external}.
 1. [Determine the region and ID of the toolchain](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started&interface=api#viewing-toolchain-api) to which you want to add the {{site.data.keyword.deliverypipeline}} tool integration.
 1. Add the {{site.data.keyword.deliverypipeline}} Private Worker tool integration to the toolchain.
 
@@ -300,7 +300,7 @@ If you delete the {{site.data.keyword.deliverypipeline}} Private Worker tool int
 {: #delete_private_workers_integration_api}
 {: api}
 
-1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/resource-controller#authentication){: external}.
+1. [Obtain an IAM bearer token](https://{DomainName}/apis/resource-controller#authentication){: external}.
 1. [Determine the region and ID of the toolchain](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started&interface=api#viewing-toolchain-api) to which you want to add the {{site.data.keyword.deliverypipeline}} tool integration.
 1. Remove the {{site.data.keyword.deliverypipeline}} Private Worker tool integration from the toolchain.
 

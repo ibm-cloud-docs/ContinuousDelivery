@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2026-05-08"
+lastupdated: "2026-06-17"
 
 keywords: tool integrations, IBM Cloud Public, Event Notifications
 
@@ -47,7 +47,7 @@ For more information about how to configure {{site.data.keyword.en_short}} by us
 ## Configuring {{site.data.keyword.en_short}} by using the API
 {: #event-notifications-config-parameters}
 
-The {{site.data.keyword.en_short}} tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apidocs/toolchain){: external} when you [create](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apidocs/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apidocs/toolchain#update-tool){: external} tool integrations.
+The {{site.data.keyword.en_short}} tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apis/toolchain){: external} when you [create](https://cloud.ibm.com/apis/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apis/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apis/toolchain#update-tool){: external} tool integrations.
 
 You must specify the `tool_type_id` property in the request body with the `eventnotifications` value.
 {: important}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026
-lastupdated: "2026-06-01"
+lastupdated: "2026-06-17"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -136,7 +136,7 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
    Triggered pipeline runs are run concurrently unless you configure the trigger to serialize runs by using the `Limit concurrent runs` option. When this option is enabled, you can limit the number of simultaneous runs that can be started by this trigger. For example, if the maximum limit is set to 1, only one pipeline run for this trigger runs at a time and any others are queued in a "Waiting" state. A maximum of 20 runs (5 if you are using IBM Managed Workers) are queued in a waiting state before subsequent requests are automatically cancelled. By default, all Timed triggers are limited to one concurrent run when using IBM Managed Workers
    {: tip}
 
-   When a trigger exceeds its concurrent runs limit, new pipeline runs are placed in a "Waiting" state until capacity becomes available. If desired, this behaviour can be modified so that only the most recent run can be in "Waiting" state and other such runs are automatically cancelled. This can be useful, for example, for Git triggers if you only wish to build the most recent commit when multiple runs are triggered in a short time frame. To enable this feature a "Limit to one waiting run" toggle is available in the trigger configuration panel, which can also be set via API using the `limit_waiting_runs` property ([see API docs](https://cloud.ibm.com/apidocs/tekton-pipeline#create-tekton-pipeline-trigger)). Note that this setting only applies to runs in the "Waiting" state and does not affect active runs.
+   When a trigger exceeds its concurrent runs limit, new pipeline runs are placed in a "Waiting" state until capacity becomes available. If desired, this behaviour can be modified so that only the most recent run can be in "Waiting" state and other such runs are automatically cancelled. This can be useful, for example, for Git triggers if you only wish to build the most recent commit when multiple runs are triggered in a short time frame. To enable this feature a "Limit to one waiting run" toggle is available in the trigger configuration panel, which can also be set via API using the `limit_waiting_runs` property ([see API docs](https://cloud.ibm.com/apis/tekton-pipeline#create-tekton-pipeline-trigger)). Note that this setting only applies to runs in the "Waiting" state and does not affect active runs.
    {: tip}
 
    **Manual triggers** run when you click the **Run** pipeline button and select the trigger.
@@ -472,7 +472,7 @@ To view the event payload, go to the Pipeline Run details page and click **Show 
 {: #create_tekton_pipeline_api}
 {: api}
 
-1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/tekton-pipeline#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
+1. [Obtain an IAM bearer token](https://{DomainName}/apis/tekton-pipeline#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
 
    ```bash
    export CD_TEKTON_PIPELINE_APIKEY={api_key}
@@ -668,7 +668,7 @@ To view the event payload, go to the Pipeline Run details page and click **Show 
    | `{iam_token}` | A valid IAM bearer token. |
    {: caption="Variables for configuring the {{site.data.keyword.deliverypipeline}} with the API" caption-side="top"}
 
-For more information about the {{site.data.keyword.deliverypipeline}} API, see the [API Docs](https://cloud.ibm.com/apidocs/tekton-pipeline){: external}.
+For more information about the {{site.data.keyword.deliverypipeline}} API, see the [API Docs](https://cloud.ibm.com/apis/tekton-pipeline){: external}.
 
 ## Creating a {{site.data.keyword.deliverypipeline}} for Tekton with Terraform
 {: #create_tekton_pipeline_terraform}
@@ -763,7 +763,7 @@ The retention period for PipelineRuns and their logs depends on the plan that is
 {: #viewing-pipeline-api}
 {: api}
 
-1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/tekton-pipeline#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
+1. [Obtain an IAM bearer token](https://{DomainName}/apis/tekton-pipeline#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
 
    ```bash
    export CD_TEKTON_PIPELINE_APIKEY={api_key}
@@ -956,7 +956,7 @@ Once you have completed the above configuration the logs for any new PipelineRun
 {: #viewing-pipeline-logs-api}
 {: api}
 
-1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/tekton-pipeline#authentication){: external}.
+1. [Obtain an IAM bearer token](https://{DomainName}/apis/tekton-pipeline#authentication){: external}.
 
 1. Get a list of log objects available for a PipelineRun.
 
@@ -1027,7 +1027,7 @@ You can delete a pipeline by using the console UI, the API, or with Terraform. T
 {: #deleting-pipeline-api}
 {: api}
 
-1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/tekton-pipeline#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
+1. [Obtain an IAM bearer token](https://{DomainName}/apis/tekton-pipeline#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
 
    ```bash
    export CD_TEKTON_PIPELINE_APIKEY={api_key}
@@ -1207,7 +1207,7 @@ You can then verify that your pipeline has been triggered by opening your respec
 {: api}
 
 You can trigger the pipeline directly via API using `curl`. For more information on how to trigger Tekton pipelines via API, see the [IBM Cloud API Docs/
-CD Tekton Pipeline](https://cloud.ibm.com/apidocs/tekton-pipeline#trigger-a-pipeline-run).
+CD Tekton Pipeline](https://cloud.ibm.com/apis/tekton-pipeline#trigger-a-pipeline-run).
 
 ##### Authentication Process
 {: #authentication-process}
@@ -1248,7 +1248,7 @@ CD Tekton Pipeline](https://cloud.ibm.com/apidocs/tekton-pipeline#trigger-a-pipe
 
 - The `-i` option ensures that HTTP response headers are included in the output, which helps you see the HTTP status code in case of errors.
 - You can add any environment properties required for the pipeline inside the `--data` payload, To learn more about how to add properties refer to this [IBM Cloud API Docs/
-CD Tekton Pipeline](https://cloud.ibm.com/apidocs/tekton-pipeline#trigger-a-pipeline-run).
+CD Tekton Pipeline](https://cloud.ibm.com/apis/tekton-pipeline#trigger-a-pipeline-run).
 
 - The output looks similar to the following when the pipeline is triggered:
 

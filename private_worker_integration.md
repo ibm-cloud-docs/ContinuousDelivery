@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-05-08"
+lastupdated: "2026-06-17"
 
 keywords: tool integrations, IBM Cloud Public, Delivery Pipeline Private Worker
 
@@ -38,7 +38,7 @@ Configure the {{site.data.keyword.deliverypipeline}} Private Worker tool integra
 ## Configuring {{site.data.keyword.deliverypipeline}} Private Worker by using the API
 {: #private-worker-config-parameters}
 
-The {{site.data.keyword.deliverypipeline}} Private Worker tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apidocs/toolchain){: external} when you [create](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apidocs/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apidocs/toolchain#update-tool){: external} tool integrations. 
+The {{site.data.keyword.deliverypipeline}} Private Worker tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apis/toolchain){: external} when you [create](https://cloud.ibm.com/apis/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apis/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apis/toolchain#update-tool){: external} tool integrations. 
 
 You must specify the `tool_type_id` property in the request body with the `private_worker` value.
 {: important}

@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2015, 2026
-lastupdated: "2026-05-08"
+lastupdated: "2026-06-17"
 
 keywords: set of tool integrations, toolchains, templates, collective power of a toolchain, IBM Cloud, IAM
 
@@ -118,7 +118,7 @@ You can create a toolchain from your app. The toolchain can support continuous d
 {: #creating_a_toolchain_api}
 {: api}
 
-1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/toolchain#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
+1. [Obtain an IAM bearer token](https://{DomainName}/apis/toolchain#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
    
    ```bash
    export CD_TOOLCHAIN_AUTH_TYPE=iam && \
@@ -127,7 +127,7 @@ You can create a toolchain from your app. The toolchain can support continuous d
    ```
    {: pre}
 
-2. [Look up the ID of the resource group](https://{DomainName}/apidocs/resource-controller/resource-manager#list-resource-groups){: external} in which you want to create your toolchain.
+2. [Look up the ID of the resource group](https://{DomainName}/apis/resource-controller/resource-manager#list-resource-groups){: external} in which you want to create your toolchain.
 
 3. Choose the region in which you want to create your toolchain.
 
@@ -209,7 +209,7 @@ The following table lists and describes each of the variables that are used in t
     
 | Variable | Description |
 |:---------|:------------|
-| `{base_url}` | The Toolchain API endpoint URL, for example `https://api.us-south.devops.cloud.ibm.com/toolchain/v2`. For more information about this endpoint URL, including a list of values, see [Endpoint URL](https://{DomainName}/apidocs/toolchain#endpoint-url){: external}. |
+| `{base_url}` | The Toolchain API endpoint URL, for example `https://api.us-south.devops.cloud.ibm.com/toolchain/v2`. For more information about this endpoint URL, including a list of values, see [Endpoint URL](https://{DomainName}/apis/toolchain#endpoint-url){: external}. |
 | `{iam_api_key}` | Your IAM API key. |
 | `{resource_group_id}` | The ID of the resource group in which to provision the toolchain. To find the IDs of the available resource groups, run `ibmcloud resource groups`. |
 | `{token}` | A valid IAM bearer token. |
@@ -217,7 +217,7 @@ The following table lists and describes each of the variables that are used in t
 | `{toolchain_name}` | A name for your toolchain. |
 {: caption="Variables for provisioning a toolchain with the API" caption-side="top"}
 
-For more information about creating toolchains with the API, see [Create a toolchain](https://cloud.ibm.com/apidocs/toolchain#create-toolchain){: external} in the {{site.data.keyword.cloud_notm}} API Docs.
+For more information about creating toolchains with the API, see [Create a toolchain](https://cloud.ibm.com/apis/toolchain#create-toolchain){: external} in the {{site.data.keyword.cloud_notm}} API Docs.
 
 ## Creating a toolchain with Terraform
 {: #creating_a_toolchain_terraform}
@@ -333,7 +333,7 @@ ibmcloud dev toolchain-open [TOOLCHAIN-NAME]
 {: #viewing-toolchain-api}
 {: api}
 
-1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/toolchain#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
+1. [Obtain an IAM bearer token](https://{DomainName}/apis/toolchain#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
    
    ```bash
    export CD_TOOLCHAIN_AUTH_TYPE=iam && \
@@ -342,7 +342,7 @@ ibmcloud dev toolchain-open [TOOLCHAIN-NAME]
    ```
    {: pre}
 
-2. [Look up the ID of the resource group](https://{DomainName}/apidocs/resource-controller/resource-manager#list-resource-groups){: external} in which your toolchain resides.
+2. [Look up the ID of the resource group](https://{DomainName}/apis/resource-controller/resource-manager#list-resource-groups){: external} in which your toolchain resides.
 
 3. Choose the region in which your toolchain resides.
 
@@ -461,13 +461,13 @@ The following table lists and describes each of the variables that are used in t
     
 | Variable | Description |
 |:---------|:------------|
-| `{base_url}` | The Toolchain API endpoint URL, for example `https://api.us-south.devops.cloud.ibm.com/toolchain/v2`. For more information about this endpoint URL, including a list of values, see [Endpoint URL](https://{DomainName}/apidocs/toolchain#endpoint-url){: external}. |
+| `{base_url}` | The Toolchain API endpoint URL, for example `https://api.us-south.devops.cloud.ibm.com/toolchain/v2`. For more information about this endpoint URL, including a list of values, see [Endpoint URL](https://{DomainName}/apis/toolchain#endpoint-url){: external}. |
 | `{resource_group_id}` | The ID of the resource group in which the toolchain resides. To find the IDs of the available resource groups, run `ibmcloud resource groups`. |
 | `{token}` | A valid IAM bearer token. |
 | `{toolchain_id}` | The ID of your toolchain. |
 {: caption="Variables for viewing a toolchain with the API" caption-side="top"}
 
-For more information about listing toolchains with the API and getting a toolchain with the API, see [Get a list of toolchains](https://cloud.ibm.com/apidocs/toolchain#list-toolchains){: external} and [Get a toolchain](https://cloud.ibm.com/apidocs/toolchain#get-toolchain-by-id){: external} in the {{site.data.keyword.cloud_notm}} API Docs.
+For more information about listing toolchains with the API and getting a toolchain with the API, see [Get a list of toolchains](https://cloud.ibm.com/apis/toolchain#list-toolchains){: external} and [Get a toolchain](https://cloud.ibm.com/apis/toolchain#get-toolchain-by-id){: external} in the {{site.data.keyword.cloud_notm}} API Docs.
 
 ### Viewing a toolchain with Terraform
 {: #viewing-toolchain-terraform}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-05-08"
+lastupdated: "2026-06-17"
 
 keywords: Git Repos, Issue Tracking, Collaborate, Git repository, Git source control, authentication, GitHub 
 
@@ -92,7 +92,7 @@ You can add a Git tool integration to any existing toolchain by using the consol
 
 You can add a Git tool integration to any existing toolchain with the API.
 
-1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/resource-controller#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
+1. [Obtain an IAM bearer token](https://{DomainName}/apis/resource-controller#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
    
    ```bash
    export CD_TOOLCHAIN_AUTH_TYPE=iam && \

@@ -93,7 +93,7 @@ You cannot use Terraform to manage Classic pipelines. You can manage Classic pip
 {: faq}
 {: support}
 
-You can use HTTP APIs or selected programming language SDKs to provision, update, and de-provision Tekton pipelines, definitions, properties, triggers, and trigger properties. You can also use the APIs and SDKs to trigger Tekton pipeline runs, and to manage Tekton pipeline runs and logs. For more information about using Tekton pipelines with the API, see [Working with Tekton pipelines](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton-pipelines), and the [CD Tekton Pipeline API docs](https://cloud.ibm.com/apidocs/tekton-pipeline){: external}.
+You can use HTTP APIs or selected programming language SDKs to provision, update, and de-provision Tekton pipelines, definitions, properties, triggers, and trigger properties. You can also use the APIs and SDKs to trigger Tekton pipeline runs, and to manage Tekton pipeline runs and logs. For more information about using Tekton pipelines with the API, see [Working with Tekton pipelines](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton-pipelines), and the [CD Tekton Pipeline API docs](https://cloud.ibm.com/apis/tekton-pipeline){: external}.
 
 You cannot use APIs to manage Classic pipelines. You can manage Classic pipelines only by using the console.
 
