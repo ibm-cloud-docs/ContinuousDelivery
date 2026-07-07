@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-05-12"
+lastupdated: "2026-07-07"
 
 keywords:
 
@@ -127,15 +127,15 @@ The following dependencies apply to the following deployment locations: Dallas (
 | {{site.data.keyword.logs_full}}| Access management, Operations, Security compliance | No | Both |  Same region  |
 | OSS Platform| Operations | No | Both |  Same region  |
 | SOS SIEM| Security compliance | No | Both |  Same region  |
-| None| Operations, Security compliance | No | Both |  Same region  |
+| corporate-palo-alto| Operations, Security compliance | No | Both |  Same region  |
 | SOS SIEM| Security compliance | No | Both |  Same region  |
-| None| Operations, Security compliance | No | Both |  Same region  |
+| corporate-palo-alto| Operations, Security compliance | No | Both |  Same region  |
 | SOS SIEM| Security compliance | No | Both |  Same region  |
-| None| Operations, Security compliance | No | Both |  Same region  |
+| corporate-palo-alto| Operations, Security compliance | No | Both |  Same region  |
 | SOS SIEM| Security compliance | No | Both |  Same region  |
-| None| Operations, Security compliance | No | Both |  Same region  |
+| corporate-palo-alto| Operations, Security compliance | No | Both |  Same region  |
 | SOS Tenable| Security compliance | No | Both |  Same region  |
-| None| Security compliance | No | Both |  Same region  |
+| corporate-uptycs| Security compliance | No | Both |  Same region  |
 | OSS Platform| Operations | No | Both |  Same region  |
 | SOS Health-Check, Vulnerability Scanning and Patching| Security compliance | No | Both |  Same region  |
 | SOS Tenable| Security compliance | No | Both |  Same region  |
@@ -157,7 +157,7 @@ The following dependencies apply to the following deployment locations: Dallas (
 | PagerDuty| none | Yes | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
 | SOS Compliance Reporting| Security compliance | No | Both |  Same region  |
 | IBM Cloud CLI | Operations | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
-| None| Security compliance | No | Both |  Same region  |
+| corporate-uptycs| Security compliance | No | Both |  Same region  |
 | OSS Platform| Operations | No | Both |  Same region  |
 | SOS Inventory Management| Security compliance | No | Both |  Same region  |
 | Slack| Operations | Yes | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
@@ -166,10 +166,10 @@ The following dependencies apply to the following deployment locations: Dallas (
 | SOS Compliance Reporting| Security compliance | No | Both |  Same region  |
 | {{site.data.keyword.monitoringlong}}| Operations | No | Both |  Same region  |
 | {{site.data.keyword.SendGrid}}| none | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
-| None| Security compliance | No | Both |  Same region  |
+| corporate-uptycs| Security compliance | No | Both |  Same region  |
 | OSS Platform| Operations | No | Both |  Same region  |
 | SonarQube| none | Yes | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
-| None| Security compliance | No | Both |  Same region  |
+| corporate-uptycs| Security compliance | No | Both |  Same region  |
 | OSS Platform| Operations | No | Both |  Same region  |
 | SOS Compliance Reporting| Security compliance | No | Both |  Same region  |
 | Segment| Operations | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
@@ -177,18 +177,18 @@ The following dependencies apply to the following deployment locations: Dallas (
 | SOS Compliance Reporting| Security compliance | No | Both |  Same region  |
 | SOS Inventory Management| Security compliance | No | Both |  Same region  |
 | SOS Health-Check, Vulnerability Scanning and Patching| Security compliance | No | Both |  Same region  |
-| None| Security compliance | No | Both |  Same region  |
+| corporate-uptycs| Security compliance | No | Both |  Same region  |
 | OSS Platform| Operations | No | Both |  Same region  |
 | IBM Cloud Projects| none | No | Both |  Same region  |
 | SOS SIEM| Security compliance | No | Both |  Same region  |
-| None| Operations, Security compliance | No | Both |  Same region  |
+| corporate-palo-alto| Operations, Security compliance | No | Both |  Same region  |
 | SOS Compliance Reporting| Security compliance | No | Both |  Same region  |
 | GitHub| none | Yes | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
 | {{site.data.keyword.appconfig_full}}| Customer responsibility | Yes | Both |  Same region  |
 | SOS SIEM| Security compliance | No | Both |  Same region  |
-| None| Operations, Security compliance | No | Both |  Same region  |
+| corporate-palo-alto| Operations, Security compliance | No | Both |  Same region  |
 | SOS Inventory Management| Security compliance | No | Both |  Same region  |
-| None| Security compliance | No | Both |  Same region  |
+| corporate-uptycs| Security compliance | No | Both |  Same region  |
 | OSS Platform| Operations | No | Both |  Same region  |
 {: row-headers}
 {: caption="IBM Cloud Continuous Delivery - Data and Control plane deployment service dependency information - Minimal dependencies" caption-side="top"}
