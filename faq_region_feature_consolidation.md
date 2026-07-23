@@ -49,8 +49,9 @@ The Code Risk Analyzer (CRA) and DevOps Insights (DOI) features of {{site.data.k
 {: faq}
 {: support}
 
-* End of Marketing: 12 June 2026. After this date, customers will no longer be able to create new resources in the affected regions. However, if a region has no active usage before this date, the Continuous Delivery service in that region may be discontinued earlier and stop accepting new resource creation.
-* End of Service: 12 February 2027. This is the planned date when the Continuous Delivery service will no longer be available in the affected regions. However, if a region has no active usage before this date, or if all customers in the region complete their migrations early, the service in that region may be discontinued earlier.
+* **12 June 2026**: End of Marketing. Customers can no longer create new resources in the affected regions. New DevOps Insights tool integrations can no longer be created. However, if a region has no active usage before this date, the Continuous Delivery service in that region may be discontinued earlier and stop accepting new resource creation.
+* **31 August 2026**: End of Service for DevOps Insights. DevOps Insights will be discontinued and will no longer be available.
+* **12 February 2027**: End of Service for deprecated regions and CRA. This is the planned date when the Continuous Delivery service will no longer be available in the affected regions. However, if a region has no active usage before this date, or if all customers in the region complete their migrations early, the service in that region may be discontinued earlier. Code Risk Analyzer will also be discontinued in all regions and will no longer be available after this date.
 
 In regions where there is no active usage of the service, or where customers have already completed their migrations before the scheduled end-of-service date, the service may be discontinued earlier than previously communicated. If any regional changes are planned, customers will receive advance notification to ensure they have sufficient time to prepare and take any necessary actions.
 {: note}
@@ -234,7 +235,7 @@ CRA analyzes application code and dependencies for security vulnerabilities and 
 {: faq}
 {: support}
 
-No. All DOI dashboards and CRA reports will be removed after 12 February 2027. If a region is discontinued earlier due to inactive usage, dashboards and reports in that region will be removed at the time of closure. Please export any required data before the End of Service date or any earlier regional closure.
+No. All DOI dashboards will be removed on August 31, 2026. CRA will continue to function until February 12, 2027. If a region is discontinued earlier due to inactive usage, dashboards and reports in that region will be removed at the time of closure. Please export any required data before the End of Service date or any earlier regional closure.
 
 
 ## What are the recommended alternatives for DevOps Insights (DOI)?

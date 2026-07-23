@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026
-lastupdated: "2026-05-25"
+lastupdated: "2026-07-23"
 
 keywords: devops insights, uploading data types, data types, test data format, test data, unit test, code coverage, test, tests, verification, app, sonarqube, dashboard
 
@@ -15,7 +15,7 @@ subcollection: ContinuousDelivery
 # Publishing test data to {{site.data.keyword.DRA_short}}
 {: #publishing-test-data}
 
-{{site.data.keyword.DRA_short}} will be discontinued in all regions on February 12, 2027. New {{site.data.keyword.DRA_short}} tool integrations cannot be created after June 12, 2026. However, if the feature has no active usage, it may be discontinued earlier. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{{site.data.keyword.DRA_short}} will reach end of service and be discontinued on **August 31, 2026**. After this date, the service will no longer be available. New {{site.data.keyword.DRA_short}} tool integrations can no longer be created. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
 Users can upload test results to {{site.data.keyword.DRA_full}} from any continuous integration and continuous delivery (CI/CD) tools and see all of those test results in the {{site.data.keyword.DRA_short}} Quality Dashboard page. A CI/CD tool refers to tools like Jenkins, Travis CI, and {{site.data.keyword.deliverypipelinelong}} that are used to create builds, run tests, and perform deployments.

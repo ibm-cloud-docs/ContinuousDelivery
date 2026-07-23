@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2026
-lastupdated: "2026-05-08"
+lastupdated: "2026-07-23"
 
 keywords: private workers integration, delivery pipeline, tekton chains
 
@@ -13,7 +13,7 @@ subcollection: ContinuousDelivery
 # Using Tekton chains to manage supply chain security
 {: #slsa-whatis}
 
-{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{{site.data.keyword.DRA_short}} will reach end of service and be discontinued on **August 31, 2026**. {{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **us-east**. Code Risk Analyzer will also be discontinued in all regions on that date. If a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
 Supply chain Levels for Software Artifacts (SLSA) is a security framework. SLSA is a checklist of standards and controls to prevent tampering, improve integrity, and secure packages and infrastructure in your projects, businesses, or enterprises. SLSA gets you from safe enough to being as resilient as possible, at any link in the chain.
