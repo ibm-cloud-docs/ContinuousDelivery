@@ -21,7 +21,7 @@ subcollection: ContinuousDelivery
 # Publishing a build record
 {: #publish-build-cli}
 
-{{site.data.keyword.DRA_short}} will be discontinued in all regions on February 12, 2027. New {{site.data.keyword.DRA_short}} tool integrations cannot be created after June 12, 2026. However, if the feature has no active usage, it may be discontinued earlier. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{{site.data.keyword.DRA_short}} will reach end of service and be discontinued on **August 31, 2026**. After this date, the service will no longer be available. New {{site.data.keyword.DRA_short}} tool integrations can no longer be created. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
 Build records notify {{site.data.keyword.DRA_full}} when a build is complete. This record contains the application name, branch, build ID, reference to Git repo, and other fields. You must publish build records to view any test records, deployment records, or evaluate policies in {{site.data.keyword.DRA_short}}.  

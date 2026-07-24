@@ -15,6 +15,9 @@ subcollection: ContinuousDelivery
 # FAQs for {{site.data.keyword.DRA_short}}
 {: #faq_insights}
 
+{{site.data.keyword.DRA_short}} will reach end of service and be discontinued on **August 31, 2026**. After this date, the service will no longer be available. New {{site.data.keyword.DRA_short}} tool integrations can no longer be created. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{: important}
+
 Get answers to frequently asked questions about using {{site.data.keyword.DRA_short}}.
 {: shortdesc} 
 

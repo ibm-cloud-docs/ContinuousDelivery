@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-05-25"
+lastupdated: "2026-07-23"
 
 keywords: troubleshoot, toolchains, tool integrations, DevOps Insights
 
@@ -27,7 +27,7 @@ subcollection: ContinuousDelivery
 # Troubleshooting for {{site.data.keyword.DRA_short}}
 {: #troubleshoot-insights}
 
-{{site.data.keyword.DRA_short}} will be discontinued in all regions on February 12, 2027. New {{site.data.keyword.DRA_short}} tool integrations cannot be created after June 12, 2026. However, if the feature has no active usage, it may be discontinued earlier. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{{site.data.keyword.DRA_short}} will reach end of service and be discontinued on **August 31, 2026**. After this date, the service will no longer be available. New {{site.data.keyword.DRA_short}} tool integrations can no longer be created. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
 General problems with using {{site.data.keyword.DRA_short}} might include toolchains, toolchain templates, or tool integration configuration issues. In many cases, you can recover from these problems by following a few easy steps.

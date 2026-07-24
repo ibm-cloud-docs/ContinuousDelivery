@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-23"
 
 keywords: IBM Cloud Public, firewall configuration, network zones
 
@@ -17,7 +17,7 @@ subcollection: ContinuousDelivery
 {: #pipeline-subnet-ranges}
 {: support}
 
-{{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **us-east**. Code Risk Analyzer and {{site.data.keyword.DRA_short}} will also be deprecated in all regions on that date. However, if a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{{site.data.keyword.DRA_short}} will reach end of service and be discontinued on **August 31, 2026**. {{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **us-east**. Code Risk Analyzer will also be discontinued in all regions on that date. If a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
 If your firewall configuration prevents the {{site.data.keyword.deliverypipeline}} from communicating with environments that are behind a firewall, you must update the configuration, including subnet ranges, to access resources that are behind the firewall.
@@ -92,18 +92,10 @@ us-south
 us-east
 10.12.102.198/32
 10.12.112.28/32
-10.148.53.128/26
-10.188.56.192/26
-10.190.205.192/26
 10.22.50.70/32
 150.239.84.167
 150.239.85.11
-169.55.102.192/28
-169.55.108.32/27
 169.59.191.231
-169.62.28.32/28
-169.62.37.128/27
-169.63.139.64/27
 169.63.187.212
 52.117.123.180
 52.117.124.168
@@ -210,18 +202,10 @@ ca-mon
 64.5.50.236
 10.12.102.198/32
 10.12.112.28/32
-10.148.53.128/26
-10.188.56.192/26
-10.190.205.192/26
 10.22.50.70/32
 150.239.84.167
 150.239.85.11
-169.55.102.192/28
-169.55.108.32/27
 169.59.191.231
-169.62.28.32/28
-169.62.37.128/27
-169.63.139.64/27
 169.63.187.212
 52.117.123.180
 52.117.124.168
