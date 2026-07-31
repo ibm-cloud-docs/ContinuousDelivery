@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026
-lastupdated: "2026-07-23"
+lastupdated: "2026-07-31"
 
 keywords: Delivery Pipeline Private Workers, Installation, Kubernetes cluster, private worker
 
@@ -33,9 +33,6 @@ The private worker agents that are installed on private clusters request data on
 
 Before you install a private worker, make sure that you have an {{site.data.keyword.cloud}} account to create authentication keys. You need the latest kubectl version that is installed on the Administrator's desktop computer. And you must also have a [Kubernetes cluster](https://cloud.ibm.com/kubernetes/clusters){: external} (version 1.15 or higher) with Administrative access to install a private worker.
 
-Montreal (ca-mon) is a limited-availability region and not generally available.
-{: important}
-
 * Suggested Kubernetes cluster configurations:
 
    * {{site.data.keyword.containerlong_notm}} version 1.21 or higher to run workloads in isolation on {{site.data.keyword.cloud_notm}} Public.
@@ -45,7 +42,7 @@ Montreal (ca-mon) is a limited-availability region and not generally available.
 
    * Inbound: Not required.
 
-   * Outbound network access uses `(TCP:443)` where the region matches the delivery pipeline location and is either `au-syd` (Sydney, Australia), `eu-de` (Frankfurt, Germany), `eu-gb` (London, United Kingdom), `jp-tok` (Tokyo, Japan), `us-south` (Dallas, US), `us-east` (Washington DC, US), `br-sao` (Sao Paulo), `ca-tor` (Toronto, CA), or `ca-mon` (Montreal, CA). For example, for the Frankfurt region specify `https://private-worker-service.eu-de.devops.cloud.ibm.com (TCP:443)`. For network access to the global endpoint for API key validation, use `https://iam.cloud.ibm.com (TCP:443)`. 
+   * Outbound network access uses `(TCP:443)` where the region matches the delivery pipeline location and is either `au-syd` (Sydney, Australia), `eu-de` (Frankfurt, Germany), `eu-gb` (London, United Kingdom), `jp-tok` (Tokyo, Japan), `us-south` (Dallas, US), `us-east` (Washington DC, US), `br-sao` (Sao Paulo), or `ca-tor` (Toronto, CA). For example, for the Frankfurt region specify `https://private-worker-service.eu-de.devops.cloud.ibm.com (TCP:443)`. For network access to the global endpoint for API key validation, use `https://iam.cloud.ibm.com (TCP:443)`. 
   
 * Permissions to pull images from icr.io. Private workers require the tekton-pipelines infrastructure and must be able to pull tekton-releases images from icr.io to complete the private worker installation.
 
@@ -87,7 +84,6 @@ To install the framework directly on a cluster, you must have admin access to th
    - `us-south` (Dallas, US)
    - `us-east` (Washington DC, US)
    - `ca-tor` (Toronto, CA)
-   - `ca-mon` (Montreal, CA)
    - `br-sao` (Sao Paulo, Brazil)
 
 
@@ -111,7 +107,6 @@ To install the framework directly on a cluster, you must have admin access to th
    - `us-south` (Dallas, US)
    - `us-east` (Washington DC, US)
    - `ca-tor` (Toronto, CA)
-   - `ca-mon` (Montreal, CA)
    - `br-sao` (Sao Paulo, Brazil)
 
 
@@ -232,7 +227,6 @@ You must register a private worker with the specific {{site.data.keyword.cloud_n
       * `us-south` (Dallas, US)
       * `us-east` (Washington DC, US)
       * `ca-tor` (Toronto, CA)
-      * `ca-mon` (Montreal, CA)
       * `br-sao` (Sao Paulo, Brazil)
 
    {: tip}

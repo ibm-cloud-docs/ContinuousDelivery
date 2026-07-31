@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2026
-lastupdated: "2026-07-23"
+lastupdated: "2026-07-31"
 
 keywords: event, security, IBM, Continuous Delivery, toolchain
 
@@ -27,9 +27,6 @@ You can use {{site.data.keyword.atracker_full_notm}}, a platform service, to rou
 
 You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on events that are generated in your account and routed by {{site.data.keyword.atracker_full_notm}} to an {{site.data.keyword.logs_full_notm}} instance.
 
-Montreal (ca-mon) is a limited-availability region and not generally available.
-{: important}
-
 ## Locations where activity tracking events are generated
 {: #at-locations}
 
@@ -37,7 +34,7 @@ Montreal (ca-mon) is a limited-availability region and not generally available.
 
 | Dallas (`us-south`) | Washington (`us-east`) | Toronto (`ca-tor`) | Montreal (`ca-mon`)  | Sao Paulo (`br-sao`) |
 |---------------------|------------------------|--------------------|----------------------|----------------------|
-| [Yes]{: tag-green}  | [Yes]{: tag-green}     | [Yes]{: tag-green} | [Yes]{: tag-green}   | [Yes]{: tag-green}   |
+| [Yes]{: tag-green}  | [Yes]{: tag-green}     | [Yes]{: tag-green} | [No]{: tag-red}   | [Yes]{: tag-green}   |
 {: caption="Regions from which activity tracking events are sent in Americas locations" caption-side="top"}
 {: #at-origins-table-1}
 {: tab-title="Americas"}
@@ -72,7 +69,7 @@ Montreal (ca-mon) is a limited-availability region and not generally available.
 
 | Dallas (`us-south`) | Washington (`us-east`) | Toronto (`ca-tor`) | Montreal (`ca-mon`)  | Sao Paulo (`br-sao`) |
 |---------------------|------------------------|--------------------|----------------------|----------------------|
-| [Yes]{: tag-green}  | [Yes]{: tag-green}     | [Yes]{: tag-green} | [Yes]{: tag-green}   | [Yes]{: tag-green}   |
+| [Yes]{: tag-green}  | [Yes]{: tag-green}     | [Yes]{: tag-green} | [No]{: tag-red}   | [Yes]{: tag-green}   |
 
 {: caption="Regions where activity tracking events are sent in Americas locations" caption-side="top"}
 {: #at-table-1}
@@ -108,7 +105,7 @@ Montreal (ca-mon) is a limited-availability region and not generally available.
 
 | Dallas (`us-south`) | Washington (`us-east`) | Toronto (`ca-tor`) | Montreal (`ca-mon`)  | Sao Paulo (`br-sao`) |
 |---------------------|------------------------|--------------------|----------------------|----------------------|
-| [Yes]{: tag-green}  | [Yes]{: tag-green}     | [Yes]{: tag-green} | [Yes]{: tag-green}   | [Yes]{: tag-green}   |
+| [Yes]{: tag-green}  | [Yes]{: tag-green}     | [Yes]{: tag-green} | [No]{: tag-red}   | [Yes]{: tag-green}   |
 {: caption="Regions where activity tracking events are sent in Americas locations" caption-side="top"}
 {: #atracker-table-1}
 {: tab-title="Americas"}

@@ -26,11 +26,11 @@ subcollection: ContinuousDelivery
 
 {{site.data.keyword.contdelivery_short}} is discontinued in the following regions:
 * Madrid (eu-es)
+* Montreal (ca-mon)
 * Osaka (jp-osa)
 
 {{site.data.keyword.contdelivery_short}} will be discontinued in the following regions:
 * Sydney (au-syd)
-* Montreal (ca-mon)
 * Toronto (ca-tor)
 * Washington DC (us-east)
 

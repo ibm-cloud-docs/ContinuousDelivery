@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2026
-lastupdated: "2026-07-23"
+lastupdated: "2026-07-31"
 
 keywords: Continuous Delivery endpoints, available regions, locations
 
@@ -27,9 +27,6 @@ Review region and connectivity options for interacting with {{site.data.keyword.
 {{site.data.keyword.contdelivery_short}} is available in the following regions (borders and geographic features in the illustration are artistic representations):
 
 ![Regions where the {{site.data.keyword.contdelivery_short}} service is available.](images/world-map.svg){: caption="Displays the regions where you can create and manage {{site.data.keyword.contdelivery_short}} resources." caption-side="bottom"}
-
-Montreal (ca-mon) is a limited-availability region and not generally available.
-{: important}
  
 You can create {{site.data.keyword.contdelivery_short}} resources, including toolchains, in one of the supported {{site.data.keyword.cloud_notm}} regions, which represent the
 geographic area where your {{site.data.keyword.contdelivery_short}} requests are handled and processed. To learn more, see [{{site.data.keyword.contdelivery_short}} high availability and disaster recovery](/docs/ContinuousDelivery?topic=ContinuousDelivery-ha-dr).
@@ -54,7 +51,6 @@ Review the following table to determine the public API endpoints to use when you
 | Frankfurt        | `eu-de.devops.cloud.ibm.com`    |
 | Sydney (deprecated)          | `au-syd.devops.cloud.ibm.com`   |
 | Tokyo            | `jp-tok.devops.cloud.ibm.com`   |
-| Montreal (deprecated)        | `ca-mon.devops.cloud.ibm.com`   |
 | Toronto (deprecated)         | `ca-tor.devops.cloud.ibm.com`   |
 | S&atilde;o-Paulo | `br-sao.devops.cloud.ibm.com`   |
 {: caption="Public endpoints for interacting with {{site.data.keyword.contdelivery_short}} APIs over IBM Cloud's public network" caption-side="top"}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2026
-lastupdated: "2026-07-23"
+lastupdated: "2026-07-31"
 
 keywords: high availability, disaster recovery, SLA
 
@@ -20,7 +20,7 @@ subcollection: ContinuousDelivery
 {{site.data.keyword.DRA_short}} will reach end of service and be discontinued on **August 31, 2026**. {{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **us-east**. Code Risk Analyzer will also be discontinued in all regions on that date. If a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
-{{site.data.keyword.contdelivery_full}} is a general availability (GA) service with a Service Level Agreement of 99.99% availability that is offered in multiple regions: Dallas (`us-south`), Washington DC (`us-east`), Toronto (`ca-tor`), Montreal (`ca-mon`), Sao Paulo (`br-sao`), Frankfurt (`eu-de`), London (`eu-gb`), Tokyo (`jp-tok`), and Sydney (`au-syd`). Each location has three different data centers for redundancy. The data for each location is kept in the three data centers near that location. If all of the data centers in a location fail, the {{site.data.keyword.contdelivery_short}} service for that location becomes unavailable.
+{{site.data.keyword.contdelivery_full}} is a general availability (GA) service with a Service Level Agreement of 99.99% availability that is offered in multiple regions: Dallas (`us-south`), Washington DC (`us-east`), Toronto (`ca-tor`), Sao Paulo (`br-sao`), Frankfurt (`eu-de`), London (`eu-gb`), Tokyo (`jp-tok`), and Sydney (`au-syd`). Each location has three different data centers for redundancy. The data for each location is kept in the three data centers near that location. If all of the data centers in a location fail, the {{site.data.keyword.contdelivery_short}} service for that location becomes unavailable.
 
 {{site.data.keyword.contdelivery_short}} does not replicate data outside of a region, except for backup data. When possible, backup data is kept within the data centers of a country but data is always kept within a geography. European data does not leave the EU. To learn more about where {{site.data.keyword.contdelivery_short}} backup data is stored, see [Object Storage Location](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-compute-isolation#cd-object-storage).
 
@@ -37,7 +37,6 @@ In the event that a region becomes unavailable, you can use {{site.data.keyword.
 | Europe        | Frankfurt (`eu-de`)           | MZR        |
 | Europe        | London (`eu-gb`)              | MZR        |
 | North America | Dallas (`us-south`)           | MZR        |
-| North America | Montreal (`ca-mon`)           | SC-MZR     |
 | North America | Toronto (`ca-tor`)            | MZR        |
 | North America | Washington (`us-east`)        | MZR        |
 | South America | São Paulo (`br-sao`)          | MZR        |
