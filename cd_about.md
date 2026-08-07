@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-07-23"
+lastupdated: "2026-07-31"
 
 keywords: IBM Cloud Public, Use Developer Insights, toolchains, toolchain templates, toolchain tutorials, available regions, tools, Terraform 
 
@@ -31,9 +31,6 @@ You can use a template as a starting point to [create a toolchain](https://cloud
 Some toolchain templates include tool integrations that are part of the {{site.data.keyword.contdelivery_short}} service. If an instance of that service isn't already in your resource group, when you click **Create** to create the toolchain, the service is automatically added with the selected free Lite plan. For more information and terms, see the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog/services/continuous-delivery/){: external}.
 
 The predefined DevOps toolchain templates are recommended examples that solve real world scenarios and each contains a sample app. You can use your own app by specifying your Git repo when you create the toolchain from the template.
-
-Montreal (ca-mon) is a limited-availability region and not generally available.
-{: important}
 
 |Template and Available Regions |Description and Available Tutorials	|Included Tools |
 |:----------|:------------------------------|:------------------|

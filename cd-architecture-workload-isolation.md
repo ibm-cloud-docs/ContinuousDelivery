@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-07-23"
+lastupdated: "2026-07-31"
 
 keywords: public isolation for IBM Cloud Continuous Delivery, compute isolation for Continuous Delivery, Continuous Delivery architecture, workload isolation in Continuous Delivery
 
@@ -111,9 +111,6 @@ Excluding data backups, customer-owned data that is provided to the {{site.data.
 
 The following table shows the cross-region location for Object Storage in which backup data is stored for each {{site.data.keyword.contdelivery_short}} service region.
 
-Montreal (ca-mon) is a limited-availability region and not generally available.
-{: important}
-
 |{{site.data.keyword.contdelivery_short}} service location |Object Storage backup service location	|
 |:----------|:------------------------------|
 | Dallas (us-south)		|US Cross Region (Dallas, Washington, San Jose) 		|
@@ -122,9 +119,8 @@ Montreal (ca-mon) is a limited-availability region and not generally available.
 | Frankfurt	(eu-de)	|EU Cross Region (Amsterdam, Frankfurt, Milan)		|
 | Tokyo (jp-tok)		|AP Cross Region (Osaka, Sydney, Tokyo)		|
 | Sydney (au-syd)		|AP Cross Region (Osaka, Sydney, Tokyo)		|
-| Toronto (ca-tor)	|US Cross Region (Dallas, Washington, San Jose, Toronto, Montreal) 		|
-| Montreal (ca-mon)	|US Cross Region (Dallas, Washington, San Jose, Toronto, Montreal) 		|
-| Sao Paulo (br-sao)|US Cross Region (Dallas, Washington, San Jose, Toronto, Montreal, Sao Paulo) 		|
+| Toronto (ca-tor)	|US Cross Region (Dallas, Washington, San Jose, Toronto) 		|
+| Sao Paulo (br-sao)|US Cross Region (Dallas, Washington, San Jose, Toronto, Sao Paulo) 		|
 {: caption="Object Storage location" caption-side="top"}
 
 For more information about Object Storage locations, see [Regional Endpoints](/docs/cloud-object-storage?topic=cloud-object-storage-endpoints#endpoints-region).
