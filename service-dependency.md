@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-07-23"
+lastupdated: "2026-08-12"
 
 keywords:
 
@@ -123,7 +123,7 @@ The following dependencies apply to the following deployment locations: Dallas (
 | Amplitude| Operations | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
 | SOS Inventory Management| Security compliance | No | Both |  Same region  |
 | {{site.data.keyword.metrics_router_full}}| Operations | No | Both |  Same region  |
-| IBM Log Analysis Log Routing| Access management, Operations, Security compliance | No | Both |  Same region  |
+| IBM Cloud Log Routing| Access management, Operations, Security compliance | No | Both |  Same region  |
 | {{site.data.keyword.logs_full}}| Access management, Operations, Security compliance | No | Both |  Same region  |
 | OSS Platform| Operations | No | Both |  Same region  |
 | SOS SIEM| Security compliance | No | Both |  Same region  |
