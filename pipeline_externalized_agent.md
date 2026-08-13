@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-07-23"
+lastupdated: "2026-08-13"
 
 keywords: Delivery Pipeline Private Workers, externalized mode, private worker, kustomize, external secrets
 
@@ -16,7 +16,7 @@ subcollection: ContinuousDelivery
 # Using {{site.data.keyword.deliverypipeline}} Tekton Pipelines with externalized properties
 {: #external-properties}
 
-{{site.data.keyword.DRA_short}} will reach end of service and be discontinued on **August 31, 2026**. {{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **us-east**. Code Risk Analyzer will also be discontinued in all regions on that date. If a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{{site.data.keyword.DRA_short}} will reach end of service and be discontinued on **August 31, 2026**. {{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-tor**, **us-east**. Code Risk Analyzer will also be discontinued in all regions on that date. If a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
 You can run pipelines that contain pipeline properties that are not stored with the {{site.data.keyword.deliverypipeline}}. By using these externalized properties, you can manage pipeline environment properties in a Git repository (repo) and use version control and tracking.
