@@ -2,7 +2,7 @@
 
 copyright:
    years: 2021, 2026
-lastupdated: "2026-07-23"
+lastupdated: "2026-08-13"
 
 keywords: Virtual Server Instance, code repositories, DevOps Insights, non-containerized, java application, vsi, gitops, toolchain, pipeline, Virtual Machine, vm
 
@@ -21,7 +21,7 @@ completion-time: 40m
 {: toc-content-type="tutorial"}
 {: toc-completion-time="40m"}
 
-{{site.data.keyword.DRA_short}} will reach end of service and be discontinued on **August 31, 2026**. {{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **us-east**. Code Risk Analyzer will also be discontinued in all regions on that date. If a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{{site.data.keyword.DRA_short}} will reach end of service and be discontinued on **August 31, 2026**. {{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-tor**, **us-east**. Code Risk Analyzer will also be discontinued in all regions on that date. If a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
 This tutorial demonstrates how to set up a {{site.data.keyword.contdelivery_short}} toolchain and deliver a simple application (app) to a Virtual Machine. You can set up source control, and then build, test, and deploy the code to different deployment stages.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-07-23"
+lastupdated: "2026-08-13"
 
 keywords: Terraform, toolchains, Continuous Delivery
 
@@ -15,7 +15,7 @@ subcollection: ContinuousDelivery
 # Setting up Terraform for {{site.data.keyword.contdelivery_short}}
 {: #terraform-setup}
 
-{{site.data.keyword.DRA_short}} will reach end of service and be discontinued on **August 31, 2026**. {{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **us-east**. Code Risk Analyzer will also be discontinued in all regions on that date. If a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{{site.data.keyword.DRA_short}} will reach end of service and be discontinued on **August 31, 2026**. {{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-tor**, **us-east**. Code Risk Analyzer will also be discontinued in all regions on that date. If a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
 Terraform on {{site.data.keyword.cloud}} enables predictable and consistent creation of {{site.data.keyword.cloud_notm}} services so that you can rapidly build complex, multitier cloud environments by following Infrastructure as Code (IaC) principles. Similar to using the {{site.data.keyword.cloud_notm}} CLI or API and SDKs, you can automate the creation, update, and deletion of your {{site.data.keyword.contdelivery_full}} instances by using the HashiCorp Configuration Language (HCL).

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-06-27"
+  years: 2018, 2026
+lastupdated: "2026-08-13"
 
 keywords: IBM Cloud account, personal data, personal accounts, corporate accounts, access, Git Repos and Issue Tracking, pipeline data, toolchains, tool integrations
 
@@ -15,7 +15,7 @@ subcollection: ContinuousDelivery
 # Managing personal data for {{site.data.keyword.contdelivery_short}}
 {: #cd_personal_data}
 
-{{site.data.keyword.DRA_short}} will reach end of service and be discontinued on **August 31, 2026**. {{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-mon**, **ca-tor**, **us-east**. Code Risk Analyzer will also be discontinued in all regions on that date. If a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{{site.data.keyword.DRA_short}} will reach end of service and be discontinued on **August 31, 2026**. {{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-tor**, **us-east**. Code Risk Analyzer will also be discontinued in all regions on that date. If a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
 You can modify, export, or delete personal data from {{site.data.keyword.contdelivery_full}}.
