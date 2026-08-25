@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-08-08"
+lastupdated: "2026-08-21"
 
 keywords: endpoints, authentication, IBM Cloud Public
 
@@ -71,7 +71,7 @@ The following table lists the {{site.data.keyword.deliverypipeline}} endpoints t
 | `https://pwp-meter.[region].devops.cloud.ibm.com/pwprun` |  |
 | `https://pwp-meter.[region].devops.cloud.ibm.com/status` | Get the status of the Pipeline Worker Pool meter |
 | `https://pwp-meter.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
-| `https://pwp-service.[region].devops.cloud.ibm.com/:poolId/subscriptions/:subscriptionId` |  |
+| `https://pwp-service.[region].devops.cloud.ibm.com/api/v2/pools/{poolId}/subscriptions/{subscriptionId}` |  |
 | `https://pwp-service.[region].devops.cloud.ibm.com/status` | Get the status of the Pipeline Worker Pool Service service component |
 | `https://pwp-service.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
 | `https://tekton-pipeline-service.[region].devops.cloud.ibm.com/status` | Get the status of the Tekton Pipeline Service service component |
