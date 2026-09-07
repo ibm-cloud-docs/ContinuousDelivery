@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026
-lastupdated: "2026-07-23"
+lastupdated: "2026-09-07"
 
 keywords: devops insights, manage, data, quality, delete, test, tests, app, dashboard
 
@@ -15,7 +15,7 @@ subcollection: ContinuousDelivery
 # Deleting your {{site.data.keyword.DRA_short}} data
 {: #deleting_data}
 
-{{site.data.keyword.DRA_short}} will reach end of service and be discontinued on **August 31, 2026**. After this date, the service will no longer be available. New {{site.data.keyword.DRA_short}} tool integrations can no longer be created. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{{site.data.keyword.DRA_short}} has reached end of service and is no longer available. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
 {{site.data.keyword.DRA_full}} hosts your data in a highly available and secure environment. Client and system credentials are stored on encrypted disks. Access to data is limited to only those users that require the data to support and maintain {{site.data.keyword.DRA_short}}. Data that is stored in {{site.data.keyword.DRA_short}} is indexed by a toolchain ID. When you delete a toolchain, all of the data that is related to repos that was collected as part of the toolchain is deleted.

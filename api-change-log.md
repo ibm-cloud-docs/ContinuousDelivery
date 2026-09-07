@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024, 2026
-lastupdated: "2026-04-10"
+lastupdated: "2026-09-07"
 
 keywords: change log for Continuous Delivery API, updates to Continuous Delivery API
 
@@ -34,10 +34,16 @@ API requests require a `version` path parameter that takes the date in the forma
 
 When the API is changed in a way that is not compatible with previous versions, a new major version is released. To take advantage of the changes in a new version, change the value of the version parameter to the new version.
 
+## 10 August 2026
+{: #10-aug-2026}
+{: release-note}
+IBM Cloud {{site.data.keyword.contdelivery_short}} is discontinued in the following regions:
+* Montreal (ca-mon)
+
 ## 10 April 2026
 {: #10-apr-2026}
 {: release-note}
-IBM Cloud {{site.data.keyword.contdelivery_short}}, is discontinued in the following regions:
+IBM Cloud {{site.data.keyword.contdelivery_short}} is discontinued in the following regions:
 * Osaka (jp-osa)
 * Madrid (eu-es)
 
