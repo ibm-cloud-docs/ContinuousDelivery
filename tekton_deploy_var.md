@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-02-25"
+lastupdated: "2026-09-09"
 
 keywords: environment properties, environment resources, IBM Java, Tekton environments
 
@@ -64,7 +64,15 @@ spec:
 ## PipelineRun `ConfigMap` and `Secret`
 {: #tekton_envprop}
 
-The {{site.data.keyword.contdelivery_short}} Tekton `PipelineRun` resource creates a specific `ConfigMap` and `Secret` for environment properties. Secure properties are available in the `secure-properties` Kubernetes `Secret`, including any `Tool integration` properties for which the selected field contains a secure value. Nonsecure properties are available in the `environment-properties` Kubernetes `ConfigMap`. The keys are the name of the field that is provided in the pipeline authoring user interface.
+The {{site.data.keyword.contdelivery_short}} Tekton `PipelineRun` resource creates specific `ConfigMap` and `Secret` objects that are available to your tasks. The following table describes each object.
+
+| Object | Kind | Description |
+| ------ | ---- | ----------- |
+| `environment-properties` | `ConfigMap` | Contains all nonsecure pipeline properties. The keys are the property names as defined in the delivery pipeline **Properties** page. |
+| `secure-properties` | `Secret` | Contains all secure pipeline properties, including any `Tool integration` properties for which the selected field contains a secure value. The keys are the property names as defined in the delivery pipeline **Properties** page. |
+| `event-parameters` | `ConfigMap` | Contains the trigger event data for `scm` and `generic` trigger types. The `eventHeader` key holds the HTTP headers of the inbound event, and the `eventBody` key holds the event payload body. This `ConfigMap` is optional and is not present for `manual` or `timer` triggers. |
+| `toolchain` | `ConfigMap` | Contains the toolchain definition files that describe the toolchain and its integrations. |
+{: caption="PipelineRun ConfigMaps and Secrets" caption-side="top"}
 
 When you access a `ConfigMap` or `Secret`, make sure that you locate the correct object name and references so that your pipeline can successfully complete.
 {: important}
@@ -107,7 +115,7 @@ spec:
 ### Accessing all values
 {: #tekton_access_values}
 
-You can add all of the key-value pairs from the `ConfigMap` and `Secret` to your `Task` environment:
+You can add all of the key-value pairs from the `ConfigMap` and `Secret` to your `Task` environment. The following example also mounts the `event-parameters` `ConfigMap` as a volume to access the trigger event header and body. Because `event-parameters` is only present for `scm` and `generic` triggers, the volume is marked as optional so that the task does not fail for `manual` or `timer` triggered runs.
 
 ```yaml
 apiVersion: tekton.dev/v1beta1
@@ -123,10 +131,24 @@ spec:
             name: environment-properties
         - secretRef:
             name: secure-properties
+      volumeMounts:
+        - mountPath: /event-parameters
+          name: event-parameters
       command: ["/bin/bash", "-c"]
       args:
         - echo -e "The environment for this Step is ";
-          env
+          env;
+          echo "";
+          echo -e "Event header is >>";
+          cat /event-parameters/eventHeader || echo "No event header available";
+          echo "";
+          echo -e "Event body is >>";
+          cat /event-parameters/eventBody || echo "No event body available"
+  volumes:
+    - name: event-parameters
+      configMap:
+        name: event-parameters
+        optional: true
 ```
 {: codeblock}
 
