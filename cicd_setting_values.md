@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026
-lastupdated: "2026-07-23"
+lastupdated: "2026-09-07"
 
 keywords: devops insights, setting, values, cli, parameter values, consistent, other ci/cd tools, test, tests, install, app, risk
 
@@ -15,7 +15,7 @@ subcollection: ContinuousDelivery
 # Setting consistent parameter values
 {: #setting-values-cicd}
 
-{{site.data.keyword.DRA_short}} will reach end of service and be discontinued on **August 31, 2026**. After this date, the service will no longer be available. New {{site.data.keyword.DRA_short}} tool integrations can no longer be created. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{{site.data.keyword.DRA_short}} has reached end of service and is no longer available. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
 You can set consistent parameter values by using other continuous integration and continuous delivery (CI/CD) tools to integrate with {{site.data.keyword.DRA_full}}. To publish build records, test records, deployment records, and to evaluate gate policies within the same pipeline, you must use the same app name and build number for each stage. You need to pass parameter values `logicalappname` and `buildnumber`, and export your toolchain ID to use consistently with {{site.data.keyword.DRA_short}}. To use consistent identifiers, set your properties as environment properties.

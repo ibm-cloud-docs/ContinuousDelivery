@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026
-lastupdated: "2026-07-23"
+lastupdated: "2026-09-07"
 
 keywords: devops insights, observe trends, quality trends, trends, code coverage, test, tests, verification, app, sonarqube, dashboard
 
@@ -15,7 +15,7 @@ subcollection: ContinuousDelivery
 # Observing trends over time
 {: #observe-trends}
 
-{{site.data.keyword.DRA_short}} will reach end of service and be discontinued on **August 31, 2026**. After this date, the service will no longer be available. New {{site.data.keyword.DRA_short}} tool integrations can no longer be created. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{{site.data.keyword.DRA_short}} has reached end of service and is no longer available. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
 The Quality Trends page shows the number of test cases that are passed or failed for a particular build. You can view trends for quality data sets such as unit tests, functional verification tests, code coverages, SonarQube scans, and security scans for builds.

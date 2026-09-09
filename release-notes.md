@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-06-17"
+lastupdated: "2026-09-07"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -20,12 +20,26 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years.
 {: shortdesc}
 
+## 31 August 2026
+{: #ContinuousDelivery-aug3126}
+{: release-note}
+
+DevOps Insights discontinued
+:   The DevOps Insights feature of IBM Cloud {{site.data.keyword.contdelivery_short}} is discontinued in all regions.
+
+## 10 August 2026
+{: #ContinuousDelivery-aug1026}
+{: release-note}
+
+Discontinued in Montreal
+:   IBM Cloud {{site.data.keyword.contdelivery_short}} is discontinued in Montreal (ca-mon).
+
 ## 10 April 2026
 {: #ContinuousDelivery-apr1026}
 {: release-note}
 
 Discontinued in Madrid and Osaka
-:   IBM Cloud {{site.data.keyword.contdelivery_short}}, is discontinued in Osaka (jp-osa) and Madrid (eu-es).
+:   IBM Cloud {{site.data.keyword.contdelivery_short}} is discontinued in Osaka (jp-osa) and Madrid (eu-es).
 
 ## 30 March 2026
 {: #ContinuousDelivery-mar3026}

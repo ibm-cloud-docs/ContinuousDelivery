@@ -20,7 +20,7 @@ content-type: cli-docs
 The {{site.data.keyword.DRA_full}} CLI provides a set of commands that you can use to integrate your build with {{site.data.keyword.DRA_short}}. Use two different types of commands: CLI usage commands and CLI commands to integrate with {{site.data.keyword.DRA_short}}.
 {: shortdesc}
 
-{{site.data.keyword.DRA_short}} will reach end of service and be discontinued on **August 31, 2026**. After this date, the service will no longer be available. New {{site.data.keyword.DRA_short}} tool integrations can no longer be created. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{{site.data.keyword.DRA_short}} has reached end of service and is no longer available. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
 ## Before you begin

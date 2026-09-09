@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2026
-lastupdated: "2026-07-23"
+lastupdated: "2026-09-07"
 
 keywords: devops insights, devops, insights, integrate, adding, code coverage, test, tests, verification, install, app, dashboard, risk
 
@@ -15,7 +15,7 @@ subcollection: ContinuousDelivery
 # Adding {{site.data.keyword.DRA_short}} to your toolchain
 {: #add-devops-insights}
 
-{{site.data.keyword.DRA_short}} will reach end of service and be discontinued on **August 31, 2026**. After this date, the service will no longer be available. New {{site.data.keyword.DRA_short}} tool integrations can no longer be created. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{{site.data.keyword.DRA_short}} has reached end of service and is no longer available. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
 Use {{site.data.keyword.DRA_full}} to help improve build quality for your projects. {{site.data.keyword.DRA_short}} is a tool that provides data for team insights and deployment risk. Get insights about your application by uploading unit tests, code coverage, functional verification tests, and static security scans for each application to {{site.data.keyword.DRA_short}}.

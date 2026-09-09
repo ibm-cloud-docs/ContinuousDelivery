@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026
-lastupdated: "2026-07-23"
+lastupdated: "2026-09-07"
 
 keywords: devops insights, risk, analysis, application, environment, app, dashboard
 
@@ -15,7 +15,7 @@ subcollection: ContinuousDelivery
 # Analyzing risks for your deployment environments
 {: #deployment-environment}
 
-{{site.data.keyword.DRA_short}} will reach end of service and be discontinued on **August 31, 2026**. After this date, the service will no longer be available. New {{site.data.keyword.DRA_short}} tool integrations can no longer be created. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{{site.data.keyword.DRA_short}} has reached end of service and is no longer available. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
 Risk analysis is useful for customers that deploy to several environments. You can view all of your apps deployments and deployment environments. With risk analysis, you get an overview of the risks that are associated with your applications from all of your environments. The Risk Analysis page is automatically populated with the most recent information that is sent from your continuous integration and continuous delivery (CI/CD) tools.

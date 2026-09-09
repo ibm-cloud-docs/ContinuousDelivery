@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026
-lastupdated: "2026-07-23"
+lastupdated: "2026-09-07"
 
 keywords: devops insights, publish, test, results, cli, code coverage, tests, verification, app, sonarqube, dashboard
 
@@ -15,7 +15,7 @@ subcollection: ContinuousDelivery
 # Publishing test results
 {: #publish-test-cli}
 
-{{site.data.keyword.DRA_short}} will reach end of service and be discontinued on **August 31, 2026**. After this date, the service will no longer be available. New {{site.data.keyword.DRA_short}} tool integrations can no longer be created. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
+{{site.data.keyword.DRA_short}} has reached end of service and is no longer available. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
 Test results inform {{site.data.keyword.DRA_short}} about the tests that are run during the build process. These tests must generate a JSON or XML-based file. The generated test file is published as a test record. Along with the test file, this record contains the application name, build number, types of test, and other fields.
