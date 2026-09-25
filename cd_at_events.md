@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-09-25"
 
 keywords: event, security, IBM, Continuous Delivery, toolchain
 
@@ -233,44 +233,6 @@ The following table lists the actions that generate toolchain management and dat
 
 
 Activity tracking events are different from client bespoke toolchain events. When you invoke the [POST /toolchains/{toolchain_id}/events](https://cloud.ibm.com/apis/toolchain#create-toolchain-event){: external} API to send a bespoke toolchain event, the toolchain sends a notification event to any instances of {{site.data.keyword.en_short}} that are integrated into the toolchain. In addition, the toolchain sends an activity tracking event that serves as a record of the API having been invoked. {: tip}
-
-## Events for {{site.data.keyword.DRA_short}}
-{: #at_actions_insights}
-
-The following table lists the actions that generate {{site.data.keyword.DRA_short}} management and data events:
-
-| Action                           | Description                        |
-|----------------------------------|------------------------------------|
-| `toolchain.insights-tag.create` | Create a tag. |
-| `toolchain.insights-tag.read` | View a tag. |
-| `toolchain.insights-tag.update` | Update a tag. |
-| `toolchain.insights-tag.delete` | Delete a tag. |
-| `toolchain.insights-decision.evaluate` | Make a gate decision on a build. |
-{: caption="Lists of management events for {{site.data.keyword.DRA_short}}" caption-side="bottom"}
-{: #componentdra-table-1}
-{: tab-title="Management events"}
-{: tab-group="componentdra"}
-{: class="simple-tab-table"}
-{: row-headers}
-
-| Action                           | Description                        |
-|----------------------------------|------------------------------------|
-| `toolchain.insights.read` | View any build, deploy, or test record. |
-| `toolchain.insights.update` | Publish a new build, deploy, or test record. The event's metadata includes `toolchainId` (unique identifier for toolchain) and might also contain the `build_artifact` (name of application), `build_id` (id of build), `branch` (Git branch of build), `environment_name` (name of environment where the test ran), and `operationId` (indicates how the update was completed, such as `postBuild`, `postResults`, `postDeployment`, `postResultsById`, `postLifeCycleStage`, `postBuildArtifactMetaData`, `putLifeCycleStage`, `putLifeCycleStagesOrder`, and `resultsMultipart`) values. The values that are included in the event's metadata is determined by the type of record (build, deployment, or test) that is published. |
-| `toolchain.insights-policy.create` | Create a policy. |
-| `toolchain.insights-policy.read` | View a policy. |
-| `toolchain.insights-policy.update` | Update a policy. The event's metadata might include the `toolchainId` (unique identifier for toolchain) and `policyName` (name of policy that was updated) values. |
-| `toolchain.insights-policy.delete` | Delete a policy. |
-| `toolchain.insights-data-toolchain.delete` | Delete data for a toolchain. |
-| `toolchain.insights-data-environment.delete` | Delete data for a specific environment. |
-| `toolchain.insights-data-application.delete` | Delete data for a specific application. |
-| `toolchain.insights-data-branch.delete` | Delete data for a specific application and branch. |
-{: caption="Lists of data events for {{site.data.keyword.DRA_short}}" caption-side="bottom"}
-{: #componentdra-table-2}
-{: tab-title="Data events"}
-{: tab-group="componentdra"}
-{: class="simple-tab-table"}
-{: row-headers}
 
 ## Events for component {{site.data.keyword.deliverypipeline}}
 {: #at_actions_pipeline}

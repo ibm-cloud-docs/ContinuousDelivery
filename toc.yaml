@@ -58,7 +58,6 @@ toc:
               - bitbucket_integration.md
               - delivery_pipeline_integration.md
               - private_worker_integration.md
-              - insights_integration.md
               - event_notifications_integration.md
               - github_integration.md
               - grit_integration.md
@@ -109,35 +108,6 @@ toc:
           - git_toolchains.md
           - cd-ha-dr-mirrorgit.md
       - topicgroup:
-          label: DevOps Insights
-          topics:
-          - di_working.md
-          - overview_observe_trends.md
-          - overview_deploy_environment.md
-          - overview_quality_gate.md
-          - view_pipeline_activity.md
-          - data_sets.md
-          - deleting_data.md
-          - add_devops_insights.md
-          - aggregate_mult_sources.md
-          - publish_test_data.md
-          - topicgroup:
-              label: Using the IBM CLI to integrate IBM Continuous Delivery Pipeline with DevOps Insights
-              topics:
-              - cli_setting_values.md
-              - cli_publish_build.md
-              - cli_publish_deploy.md
-              - cli_publish_test.md
-              - cli_evaluate_gates.md
-          - topicgroup:
-              label: Integrating CI/CD tools with DevOps Insights
-              topics:
-              - cicd_setting_values.md
-              - cicd_publish_build.md
-              - cicd_publish_deploy.md
-              - cicd_publish_test.md
-              - cicd_evaluate_gates.md
-      - topicgroup:
           label: Enhancing security
           topics:
           - cd-architecture-workload-isolation.md
@@ -179,10 +149,6 @@ toc:
               label: Continuous Delivery Python SDK
               href: https://github.com/IBM/continuous-delivery-python-sdk
           - api-change-log.md
-      - topicgroup:
-          label: CLI reference
-          topics:
-          - devops-insights-cli.md
       - link:
           label: Open Toolchain Templates SDK
           href: https://github.com/open-toolchain/sdk/wiki
@@ -232,7 +198,6 @@ toc:
           - ts_index.md
           - faq_delivery_pipeline.md
           - faq_pipeline_private_workers.md
-          - faq_insights.md
           - faq_git.md
           - faq_toolchains.md
           - faq_region_feature_consolidation.md
@@ -242,7 +207,6 @@ toc:
           - troubleshoot_cd.md
           - troubleshoot_delivery_pipeline.md
           - troubleshoot_pipeline_private_workers.md
-          - troubleshoot_insights.md
           - troubleshoot_git.md
           - troubleshoot_toolchains.md
           - troubleshoot_toolchain_events.md

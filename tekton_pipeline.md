@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-09-25"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -1034,7 +1034,7 @@ You can delete a pipeline by using the console UI, the API, or with Terraform. T
    ```
    {: pre}
 
-1. [Determine the region and ID of the toolchain](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started&interface=api#viewing-toolchain-api) that you want to add the {{site.data.keyword.DRA_short}} tool integration to.
+1. [Determine the region and ID of the toolchain](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started&interface=api#viewing-toolchain-api) that you want to delete.
 1. Delete the pipeline.
 
    ```curl

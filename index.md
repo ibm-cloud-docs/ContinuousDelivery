@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-09-25"
 
 keywords: IBM Cloud Continuous Delivery, getting started, tutorial, create a toolchain, tool integration, toolchain template, DevOps toolchains, Terraform
 
@@ -59,7 +59,7 @@ To quickly find the toolchain template that addresses your specific requirements
    * The toolchain is created.
    * Delivery Pipelines are created and configured based on the information that you provided.
    * Source control repositories (repos) are configured for your inventory, compliance evidence, issue tracking, and a sample application for you to get started.
-   * {{site.data.keyword.DRA_short}} and SonarQube are configured to run automatically in your pipeline.
+   * SonarQube is configured to run automatically in your pipeline.
    * If you configured a secrets management tool such as {{site.data.keyword.keymanagementservicefull}}, {{site.data.keyword.secrets-manager_full}}, or HashiCorp Vault, secrets such as API keys are securely stored and retrieved by your pipeline.
    * If you configured Slack, the toolchain is set up to send notifications about deployment status to the Slack channel that you specified.
 

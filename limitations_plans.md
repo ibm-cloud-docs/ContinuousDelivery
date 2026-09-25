@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-09-25"
 
 keywords: users of a service instance, authorized users, pipeline usage, Git Repos and Issue Tracking limitations, consolidated billing
 
@@ -25,7 +25,7 @@ The use of {{site.data.keyword.contdelivery_full}} is limited to the building, d
 ## Scope of a service instance
 {: #service_scope}
 
-You must have a {{site.data.keyword.contdelivery_short}} [service instance](https://cloud.ibm.com/catalog/services/continuous-delivery){: external} to create and use DevOps toolchains that include the {{site.data.keyword.deliverypipeline}}, {{site.data.keyword.gitrepos}}, and {{site.data.keyword.DRA_short}} tool integrations. A service instance resides in a region and belongs to a [resource group](/docs/account?topic=account-rgs). The {{site.data.keyword.contdelivery_short}} service instance in a specific region and resource group governs and meters your usage of all of the toolchains in the same region and resource group.
+You must have a {{site.data.keyword.contdelivery_short}} [service instance](https://cloud.ibm.com/catalog/services/continuous-delivery){: external} to create and use DevOps toolchains that include the {{site.data.keyword.deliverypipeline}} and {{site.data.keyword.gitrepos}} tool integrations. A service instance resides in a region and belongs to a [resource group](/docs/account?topic=account-rgs). The {{site.data.keyword.contdelivery_short}} service instance in a specific region and resource group governs and meters your usage of all of the toolchains in the same region and resource group.
 
 ## Pricing plans
 {: #pricing_plans}
@@ -161,7 +161,6 @@ You can maintain an activity log related to authorized users. For more informati
 Users are counted and managed by using the list of authorized users that belongs to each {{site.data.keyword.contdelivery_short}} instance. Users are automatically added to this list when they meet any of the following criteria:
 
 * View, edit, or run (either directly in the user interface or indirectly by committing to a repo) a delivery pipeline.
-* Interact with {{site.data.keyword.DRA_short}}.
 * Have Developer (or greater) access to a repo in {{site.data.keyword.gitrepos}} that allows them to commit and push changes to that repo. Users of Git Project Access Tokens with the Developer (or greater) role are counted as authorized users. These users appear in the list of authorized users as `bot` users.
 
 Users with the Guest or Reporter roles are not automatically added to the authorized users list. To prevent users from accessing toolchains and automatically being added to the authorized user list for a {{site.data.keyword.contdelivery_short}} service instance, complete the following actions:
@@ -320,7 +319,7 @@ When you use {{site.data.keyword.gitrepos}}, the content that you contribute to 
 ## Linking an instance to a Git Project
 {: #git_projects_cd_instance_linking_validating}
 
- Git projects must be linked to a {{site.data.keyword.contdelivery_short}} instance that uses a toolchain, because Git Repos and Issue Tracking are a component of the service. Adding your project to a toolchain makes it easier to use other tools, such as {{site.data.keyword.contdelivery_short}} Pipelines or DevOps Insights. As a result, it streamlines your development workflows and improves your code quality.
+Git projects must be linked to a {{site.data.keyword.contdelivery_short}} instance that uses a toolchain, because Git Repos and Issue Tracking are a component of the service. Adding your project to a toolchain makes it easier to use other tools, such as {{site.data.keyword.contdelivery_short}} Pipelines. As a result, it streamlines your development workflows and improves your code quality.
 
 You can use the console or an API to link your instance and toolchain instance to a Git project.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-09-25"
 
 keywords: public isolation for IBM Cloud Continuous Delivery, compute isolation for Continuous Delivery, Continuous Delivery architecture, workload isolation in Continuous Delivery
 
@@ -28,7 +28,6 @@ The following table lists the major components of the {{site.data.keyword.contde
 | Toolchain platform | IBM | Shared, compute, network, and storage |
 | Third-party tool integrations | IBM | Shared, compute, network, and storage |
 | {{site.data.keyword.gitrepos}} | IBM | Shared, compute, network, and storage |
-| {{site.data.keyword.DRA_short}}| IBM | Shared, compute, network, and storage |
 | {{site.data.keyword.deliverypipeline}} | IBM | Shared, compute, network, and storage |
 | {{site.data.keyword.deliverypipeline}} shared workers | IBM | Each pipeline job or step runs in isolation, in its own container, on a pool of IBM-managed shared worker nodes with shared network and storage. |
 | {{site.data.keyword.deliverypipeline}} private workers | You | Each pipeline job or step runs in isolation, in its own container on worker nodes that you manage, supported by network and storage that you define or manage. |

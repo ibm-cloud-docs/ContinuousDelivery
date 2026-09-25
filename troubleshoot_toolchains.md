@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-04-09"
+lastupdated: "2026-09-25"
 
 keywords: troubleshoot, toolchains, tool integrations
 
@@ -95,19 +95,6 @@ To delete a toolchain:
 
 You can use the {{site.data.keyword.cloud_notm}} CLI {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands to delete toolchains. After you [install the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli), you can delete a toolchain from the command line by using the [`ibmcloud dev toolchain-delete`](/docs/cli?topic=cli-idt-cli#toolchain-delete) command. 
 {: tip}
-
-## Why can't I view my toolchains in my DevOps dashboard?
-{: #view-toolchain-ts}
-{: troubleshoot}
-
-When you go to the DevOps dashboard, your toolchains aren't displayed.
-{: tsSymptoms}
-
-Your toolchain doesn't show in the toolchain unless you have the proper location selected. {{site.data.keyword.DRA_short}} is only available in three locations: Dallas, Frankfurt, and London.
-{: tsCauses}
-
-On your toolchain page, change the location to Dallas, Frankfurt, or London to show all of your {{site.data.keyword.DRA_short}} integrated toolchains.
-{: tsResolve}
 
 ## Why can't I create a toolchain when the root key is disabled?
 {: #create-toolchain-root-key}

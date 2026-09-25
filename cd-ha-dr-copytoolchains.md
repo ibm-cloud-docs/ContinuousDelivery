@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-09-25"
 
 keywords: high availability, disaster recovery, toolchains
 
@@ -76,7 +76,6 @@ Backing up your toolchain creates a copy of the toolchain itself, but it does no
 
 * Pipeline logs and artifacts are not included in the copied toolchain.
 * Tool configuration secrets that are stored in Key Protect or HashiCorp Vault are not included in the copied toolchain.
-* {{site.data.keyword.DRA_short}} data is not included in the copied toolchain.
 
 If your toolchain is subject to these limitations, you cannot use the script to back up and restore these aspects of your toolchain. Whenever the original toolchain is updated, you must keep the backup copy current.
 

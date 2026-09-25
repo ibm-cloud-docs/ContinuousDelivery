@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-09-25"
 
 keywords: secure environment, data, Data, high availability, access
 
@@ -490,7 +490,6 @@ By default, {{site.data.keyword.contdelivery_short}} encrypts your data by using
 |Toolchain		|Properties and parameters     |
 |Pipeline		| * Property keys and values <br> * Job logs <br> * Job artifacts  | 
 |Integrations		| * Slack (Slack webhook) <br> * Pagerduty (API access key, Integration key) <br> * Sauce Labs (Access key) <br> * Artifactory (API key) <br> * HashiCorp Vault (Token, Role ID, Secret ID, Password) <br> *  Jenkins (Jenkins API token) <br> * JIRA (JIRA API token) <br> * Nexus (Authentication token) <br> * Rational Team Concert (Password) <br> * Sonarqube (SonarQube password or authentication token) |
-|{{site.data.keyword.DRA_full}}		|Attachment in test records |
 {: caption="Values that are encrypted by using your own key" caption-side="top"}
 
 The following components encrypt personal data by using only the provider-managed encryption key.

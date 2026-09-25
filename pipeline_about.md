@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-09-25"
 
 keywords: run jobs, sequences of stages, job types, Delivery Pipeline, Classic
 
@@ -147,7 +147,7 @@ The test stage specifies the test configuration. The jobs in the test stage spec
 ### Deprecated job types
 {: #deprecated_job_types}
 
-Several job types, such as the IBM Globalization Pipeline Build job, the Space Shell Test job, and the DevOps Insights Gate Test job are deprecated. Although these job types are deprecated, you might still be able to load them in the UI, with an indicator that the job type is deprecated. Alternatively, your job might revert to another job type that is still supported, with a warning notification.
+Several job types, such as the IBM Globalization Pipeline Build job and the Space Shell Test job are deprecated. Although these job types are deprecated, you might still be able to load them in the UI, with an indicator that the job type is deprecated. Alternatively, your job might revert to another job type that is still supported, with a warning notification.
 
 If you need to use the configuration from a deprecated job type, use one of the following methods to access the pipeline configuration.
 
