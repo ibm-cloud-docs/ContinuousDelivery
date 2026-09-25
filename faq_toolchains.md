@@ -80,7 +80,7 @@ Toolchains in a resource group must be accompanied by an instance of the {{site.
 {: faq}
 {: support}
 
-You can find your toolchain ID in the URL of your selected toolchain tool. For more information, see [Identifying your toolchain ID](/docs/ContinuousDelivery?topic=ContinuousDelivery-aggregating-multiple-sources). 
+You can find your toolchain ID in the URL that is displayed in your browser when you open the toolchain's Overview page. Alternatively, click **Details** in the upper right of the Overview page and find the ID listed under **GUID**. For more information about opening a toolchain, see [Viewing a toolchain](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#viewing_a_toolchain).
 
 
 ## Can I manage toolchains by using Terraform?

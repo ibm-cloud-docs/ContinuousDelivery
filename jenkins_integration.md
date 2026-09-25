@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-09-25"
 
 keywords: tool integrations, IBM Cloud Public, Jenkins
 
@@ -24,7 +24,7 @@ Jenkins is an open source, server-based tool that builds and tests software cont
 Before you create a Jenkins tool integration, you must have a Jenkins server.
 {: important}
 
-With the Jenkins tool integration, you can send your Jenkins job notifications to other tools in your toolchain, such as Slack and PagerDuty. To trace code in deployments, you can add deployment messages to your Git commits and your related Git or JIRA issues. You can also view your deployments on the Toolchain Connections page. You can feed test results to {{site.data.keyword.DRA_short}}, add automated quality gates, and track your deployment risk.
+With the Jenkins tool integration, you can send your Jenkins job notifications to other tools in your toolchain, such as Slack and PagerDuty. To trace code in deployments, you can add deployment messages to your Git commits and your related Git or JIRA issues. You can also view your deployments on the Toolchain Connections page.
 
 Configure Jenkins to automate the continuous building, testing, and deployment of your apps:
 
@@ -59,8 +59,8 @@ You must specify the `tool_type_id` property in the request body with the `jenki
 
 | Parameter | Usage | Type | Terraform argument | Description |
 | --- | --- | --- | --- | --- |
-| api_token | optional, updatable | Password | api_token | The API token to use for Jenkins REST API calls so that {{site.data.keyword.DRA_short}} can collect data from Jenkins. You can find the API token on the Configuration page of your Jenkins instance. You can use a toolchain secret reference for this parameter. For more information about secret references, see [Protecting your sensitive data in Continuous Delivery](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secure_credentials). |
-| api_user_name | optional, updatable | String | api_user_name | The username to use with the Jenkins server's API token, which is required so that {{site.data.keyword.DRA_short}} can collect data from Jenkins. You can find your API username on the Configuration page of your Jenkins instance. |
+| api_token | optional, updatable | Password | api_token | The API token to use for Jenkins REST API calls. You can find the API token on the Configuration page of your Jenkins instance. You can use a toolchain secret reference for this parameter. For more information about secret references, see [Protecting your sensitive data in Continuous Delivery](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secure_credentials). |
+| api_user_name | optional, updatable | String | api_user_name | The username to use with the Jenkins server's API token. You can find your API username on the Configuration page of your Jenkins instance. |
 | dashboard_url | required, updatable | String | dashboard_url | The URL of the Jenkins server dashboard for this tool integration. In the graphical UI, the browser goes to this dashboard when you click the Jenkins tool integration card. |
 | name | required, updatable | String | name | The name of this tool integration. |
 | webhook_url | optional, updatable | String | webhook_url | The webhook to use in your Jenkins jobs to send notifications to other tools in your toolchain. |

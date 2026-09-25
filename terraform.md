@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-09-25"
 
 keywords: Terraform, toolchains, Continuous Delivery
 
@@ -142,7 +142,6 @@ Now that you successfully created your first {{site.data.keyword.contdelivery_sh
 - [Working with Tekton pipelines](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton-pipelines)
 - [Working with Delivery Pipeline Private Workers](/docs/ContinuousDelivery?topic=ContinuousDelivery-private-workers)
 - [Creating toolchains with Git](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_git)
-- [Adding DevOps Insights to your toolchain](/docs/ContinuousDelivery?topic=ContinuousDelivery-add-devops-insights)
 - [Managing personal data for {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_personal_data)
 
 For more information about {{site.data.keyword.cloud_notm}} Provider resources and data sources, see the [Terraform Registry documentation](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs){: external}.

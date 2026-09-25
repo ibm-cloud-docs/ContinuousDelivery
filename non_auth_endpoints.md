@@ -78,29 +78,6 @@ The following table lists the {{site.data.keyword.deliverypipeline}} endpoints t
 | `https://tekton-pipeline-service.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
 {: caption="Table 2. {{site.data.keyword.deliverypipeline}}" caption-side="top"}
 
-## {{site.data.keyword.DRA_short}}
-{: #devops_insights}
-
-The following table lists the {{site.data.keyword.DRA_short}} endpoints that do not require authentication:
-
-|Endpoint|Description|
-|:-------------------------------------------|:------------------|
-| `https://dlms.[region].devopsinsights.cloud.ibm.com/status` | Get the readiness status of the service component |
-| `https://dlms.[region].devopsinsights.cloud.ibm.com/version` | Get the build version of the service component |
-| `https://otcbroker.[region].devopsinsights.cloud.ibm.com/livenessprobe` | Get the liveness status of the service component |
-| `https://otcbroker.[region].devopsinsights.cloud.ibm.com/readinessprobe` | Get the readiness status of the service component |
-| `https://otcbroker.[region].devopsinsights.cloud.ibm.com/status` | Get the status of the service component |
-| `https://pipelinemetrics.[region].devopsinsights.cloud.ibm.com/status` | Get the readiness status of the service component |
-| `https://pipelinemetrics.[region].devopsinsights.cloud.ibm.com/version` | Get the build version of the service component |
-| `https://rcbroker.[region].devopsinsights.cloud.ibm.com/cluster-healthcheck` | Get the cluster health check status for service component |
-| `https://rcbroker.[region].devopsinsights.cloud.ibm.com/healthcheck` | Get the health check status for service component |
-| `https://rcbroker.[region].devopsinsights.cloud.ibm.com/livenessprobe` | Get the liveness status of the service component |
-| `https://rcbroker.[region].devopsinsights.cloud.ibm.com/readinessprobe` | Get the readiness status of the service component |
-| `https://rcbroker.[region].devopsinsights.cloud.ibm.com/status` | Get the status of the service component |
-| `https://tagging.[region].devopsinsights.cloud.ibm.com/livenessprobe` | Get the liveness status of the service component |
-| `https://tagging.[region].devopsinsights.cloud.ibm.com/status` | Get the readiness status of the service component |
-{: caption="Table 3. {{site.data.keyword.DRA_short}}" caption-side="top"}
-
 ## {{site.data.keyword.gitrepos}}
 {: #git_repos_and_issue_tracking}
 

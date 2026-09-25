@@ -2,7 +2,7 @@
 
 copyright:
    years: 2021, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-09-25"
 
 keywords: deployment strategies, tekton, pipeline, toolchain, CD, CI, automate, automation, continuous delivery, continuous integration, DevOps, shift-left, shift left, secure DevOps, IBM Cloud
 
@@ -226,16 +226,6 @@ You can use {{site.data.keyword.cos_full_notm}} to store transient build artifac
 
 Alternatively, you can use Artifactory if you have an Artifactory instance of your own.
 {: tip}
-
-## Add optional tool integrations
-{: #vm-optional-tools}
-{: step}
-
-You can add the {{site.data.keyword.DRA_full}} tool integration to your toolchain without any additional configuration.
-
-[{{site.data.keyword.DRA_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-di_working) is included in the created toolchain. You do not need to provide any configuration steps for {{site.data.keyword.DRA_short}}. The continuous integration pipeline automatically uses the {{site.data.keyword.DRA_short}} instance that is included in the toolchain. {{site.data.keyword.DRA_short}} aggregates code, test, build, and deployment data to provide visibility into the velocity and quality of all of your teams and releases.
-
-Click **Continue**.
 
 ## Complete the toolchain setup
 {: #vm-toolchain-summary}

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-09-25"
 
-keywords: continuous delivery practices, DevOps practices, IBM Cloud Garage Method, learning resources, DevOps Insights
+keywords: continuous delivery practices, DevOps practices, IBM Cloud Garage Method, learning resources
 
 subcollection: ContinuousDelivery
 

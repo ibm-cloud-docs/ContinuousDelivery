@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-09-25"
 
 keywords: Git Repos, Issue Tracking, Collaborate, Git repository, Git source control, authentication, GitHub 
 
@@ -278,14 +278,14 @@ You can add a Git tool integration to any existing toolchain with Terraform.
    ```
    {: pre}
    
-4. Create a Terraform execution plan. This plan summarizes all of the actions that must run to add the {{site.data.keyword.DRA_short}} tool integration to the toolchain.
+4. Create a Terraform execution plan. This plan summarizes all of the actions that must run to add the tool integration to the toolchain.
 
    ```terraform
    terraform plan
    ```
    {: pre}
 
-5. Apply the Terraform execution plan. Terraform takes all of the required actions to add the {{site.data.keyword.DRA_short}} tool integration to the toolchain.
+5. Apply the Terraform execution plan. Terraform takes all of the required actions to add the tool integration to the toolchain.
 
    ```terraform
    terraform apply

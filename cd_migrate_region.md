@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2026-06-17"
+lastupdated: "2026-09-25"
 
 keywords: migrate, migration, migrating, region, resource group, Terraform, Tekton, pipeline, toolchain, git, continuous delivery, IBM Cloud, tools, resource, resources, data
 
@@ -38,7 +38,6 @@ The following resources are supported for migration to another region:
 | [{{site.data.keyword.gitrepos}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-git_working) | Yes <sup>[2](#cd-migrate-region-limitations-grit)</sup> |
 | [{{site.data.keyword.deliverypipeline}} (Tekton)](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton-pipelines) | Yes <sup>[3](#cd-migrate-region-limitations-toolchain)</sup> |
 | [{{site.data.keyword.deliverypipeline}} (Classic)](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about) | No |
-| [{{site.data.keyword.DRA_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-di_working) | No |
 | [Other Tool Integrations](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations) | Yes |
 {: caption="Supported resources" caption-side="bottom"}
 
@@ -76,7 +75,6 @@ The following sections describe each step of the migration in more detail.
 Migration of resources from one region to another is subject to the following limitations.
 
 1. [Classic pipelines](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about) are not supported.
-1. [{{site.data.keyword.DRA_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-di_working) is not supported.
 1. Secrets stored directly in Toolchains or {{site.data.keyword.deliverypipeline}} (environment properties or trigger properties) will not be copied. An `export-secrets` command is provided to export secrets into a [{{site.data.keyword.secrets-manager_short}}](/docs/secrets-manager?topic=secrets-manager-getting-started) instance, replacing the stored secrets with [secret references](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secrets_references). Secret references are supported.
 1. Tekton pipeline webhook trigger secrets will not be copied, as references are not supported for webhook trigger secrets. You will need to add the secret after copying the toolchain.
 1. Tekton pipeline run history, logs, and assets will not be copied. You can keep the original pipelines for some time to retain history.

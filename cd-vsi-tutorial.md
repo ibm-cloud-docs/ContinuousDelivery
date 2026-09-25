@@ -2,9 +2,9 @@
 
 copyright:
    years: 2021, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-09-25"
 
-keywords: Virtual Server Instance, code repositories, DevOps Insights, non-containerized, java application, vsi, gitops, toolchain, pipeline, Virtual Machine, vm
+keywords: Virtual Server Instance, code repositories, non-containerized, java application, vsi, gitops, toolchain, pipeline, Virtual Machine, vm
 
 subcollection: ContinuousDelivery
 
@@ -153,17 +153,6 @@ You can explore the pipelines to understand the toolchain flow and the different
 For example, to view multiple steps such as `cra-discovery-scan` and the details for Parameter and Status, click the CI Pipeline tool integration, and then click **Succeeded PipelineRuns**.
 
 ![CI PipelineRun details](images/ci-pipeline-details-updated.png){: caption="Continuous Integration PipelineRun details" caption-side="bottom"}
-
-### Explore {{site.data.keyword.DRA_short}}
-{: #cd-vsi-explore-dra}
-
-[{{site.data.keyword.DRA_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-di_working) aggregates data from your toolchain so that you can track and improve your end-to-end DevOps processes. View quality metrics, track build and deployment jobs, view policies and more.
-
-If your code does not meet or exceed a policy, the deployment is halted, preventing risks from being released. You can use DevOps Insights as a safety net for your continuous delivery environment or as a way to implement and improve quality standards.
-
-The following image shows the Quality Dashboard that provides quality data sets such as unit tests, code coverage, functional verification tests, and static security scans for each application. 
-
-![DevOps Insights Quality Dashboard](images/devops_insights_quality_dashbaord.png){: caption="DevOps Insights Quality Dashboard" caption-side="bottom"}
 
 ### Explore GitOps
 {: #cd-vsi-explore-gitops}

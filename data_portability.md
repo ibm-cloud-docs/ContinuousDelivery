@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-09-25"
 
 keywords: Continuous Delivery, toolchain, client owned data
 
@@ -287,30 +287,6 @@ You can obtain a copy of a project wiki by cloning the wiki repository to a loca
 
 For more information, see [Create or edit wiki pages locally](https://docs.gitlab.com/user/project/wiki/#create-or-edit-wiki-pages-locally){: external}.
 
-### DevOps Insights
-{: #data-portability-procedures-insights}
-
-Client-owned data in DevOps Insights falls into three basic categories:
-
-- Client provided configurations of DevOps Insights policy rules.
-- Client generated build, deploy, and test records that are uploaded, usually from pipeline steps and jobs, to DevOps Insights.
-- Analytics computed by DevOps Insights from uploaded build, deploy, and test records.
-
-Build record, deploy record, test record, and analytics data are the result of running {{site.data.keyword.contdelivery_short}} pipeline workloads. As computed, not configuration, data, it is not considered essential to implementing workloads similar to DevOps Insights with different service providers or on-premises software.
-
-#### DevOps Insights policies and rules
-{: #data-portability-procedures-insights-rules}
-
-A DevOps Insights policy is defined by the rules within it. These are managed by using the DevOps Insights GUI. To retrieve the details of policy rules, complete the following steps:
-
-1. Select a toolchain from the Overview page.
-1. Type "DevOps Insights" into the search field.
-1. If there is a **DevOps Insights** tool integration in the toolchain, select it.
-1. Select **Policies** in the DevOps Insights dashboard.
-1. For each policy of interest, select **Manage policies** > **Actions** ![List of actions icon](/images/action-menu-icon.svg) > **Edit Rules**.
-1. For each rule of interest, select **Manage rules** > **Actions** ![List of actions icon](/images/action-menu-icon.svg) > **Edit**.
-1. Copy the data in the resulting dialog to the clipboard, and paste to a plain text file.
-
 ### Code Risk Analyzer
 {: #data-portability-procedures-cra}
 
@@ -333,7 +309,6 @@ No client-owned data is in Code Risk Analyzer that is needed to implement simila
 {{site.data.keyword.contdelivery_short}} does not support the export of the following data format and schema of the exported data, configuration, and application:
 
 - Secret tool integration and secure pipeline properties are not exported due to the sensitive nature of the properties. For more information and best practices about managing secrets and secure properties, see [Protecting your credentials by using secrets references](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secrets_references).
-- Build, test, and deploy records that are uploaded to DevOps Insights and resulting analytics are not exported because this constitutes data that is produced in the execution of delivery pipelines, not data employed in the configuration of delivery pipeline workloads with other service providers or on-premises software.
 
 ## Data ownership
 {: #data-portability-ownership}

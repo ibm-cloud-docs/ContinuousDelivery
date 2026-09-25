@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-09-25"
 
 keywords: deployment strategies, Satellite, satellite, tekton, pipeline, toolchain, CD, CI, automate, automation, continuous delivery, continuous integration, DevOps, shift-left, shift left, secure DevOps, IBM Cloud
 
@@ -182,17 +182,6 @@ If the API key has the required access, the following fields automatically load 
 
 ![Kubernetes secure app deployment target details for Rolling or Blue-Green](images/kub_setup_satellite_dep_target.png){: caption="Kubernetes secure app Rolling deployment target details" caption-side="bottom"}
 
-## Add optional tool integrations
-{: #satellite-optional-tools}
-{: step}
-
-You can add the {{site.data.keyword.DRA_full}} tool integration to your toolchain without any additional configuration.
-
-[{{site.data.keyword.DRA_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-di_working) is included in the created toolchain. You do not need to provide any configuration steps for {{site.data.keyword.DRA_short}}. The continuous integration pipeline automatically uses the {{site.data.keyword.DRA_short}} instance that is included in the toolchain. {{site.data.keyword.DRA_short}} aggregates code, test, build, and deployment data to provide visibility into the velocity and quality of all of your teams and releases.
-
-Click **Continue**.
-
-
 ## Complete the toolchain setup
 {: #satellite-toolchain-summary}
 {: step}
@@ -252,7 +241,7 @@ In the secure app development world, shift left is a practice that prevents and 
 * Run checks that can be run on the code or the repo itself and do not need the built image, as early as possible. These checks prevent noncompliant code from being merged into the master branch of the repo. Because evidence is not collected from the pull request pipeline, its goal is to move compliance checks as early as possible in the development process.
 * All checks are run in every pipeline run. If a previous check fails, the pipeline progresses to the next check. To evaluate if you have any failures in your run, check the final step of your pipeline that has a pipeline evaluator.
 
-Results from unit tests and vulnerability scans are published to the {{site.data.keyword.DRA_short}} instance within the toolchain. To review these results, click the {{site.data.keyword.DRA_short}} tile within the toolchain and go to the Quality Dashboard page.
+
 
 To evaluate if you have any failures in your pipeline run, check the final step of your pipeline, which has a pipeline evaluator.
 {: tip}
