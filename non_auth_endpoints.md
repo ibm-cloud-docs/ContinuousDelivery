@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-10-06"
+lastupdated: "2026-10-07"
 
 keywords: endpoints, authentication, IBM Cloud Public
 
