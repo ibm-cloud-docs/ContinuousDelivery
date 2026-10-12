@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-10-12"
 
 keywords: high availability, disaster recovery, SLA
 
@@ -21,6 +21,11 @@ subcollection: ContinuousDelivery
 {: important}
 
 {{site.data.keyword.contdelivery_full}} is a general availability (GA) service with a Service Level Agreement of 99.99% availability that is offered in multiple regions: Dallas (`us-south`), Washington DC (`us-east`), Toronto (`ca-tor`), Sao Paulo (`br-sao`), Frankfurt (`eu-de`), London (`eu-gb`), Tokyo (`jp-tok`), and Sydney (`au-syd`). Each location has three different data centers for redundancy. The data for each location is kept in the three data centers near that location. If all of the data centers in a location fail, the {{site.data.keyword.contdelivery_short}} service for that location becomes unavailable.
+
+
+This topic contains specific information about the high availability and disaster recovery strategies and configurations for {{site.data.keyword.contdelivery_short}}. For more information about how high availability and disaster recovery are handled for the {{site.data.keyword.cloud_notm}} platform, including concepts like cross regions, global services, and fault domains, check out the [Resiliency documentation](/docs/resiliency?topic=resiliency-ha-redundancy).
+{: tip}
+
 
 {{site.data.keyword.contdelivery_short}} does not replicate data outside of a region, except for backup data. When possible, backup data is kept within the data centers of a country but data is always kept within a geography. European data does not leave the EU. To learn more about where {{site.data.keyword.contdelivery_short}} backup data is stored, see [Object Storage Location](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-compute-isolation#cd-object-storage).
 
