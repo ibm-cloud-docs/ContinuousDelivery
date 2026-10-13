@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-02-25"
+lastupdated: "2026-10-13"
 
-keywords: troubleshoot, GitHub integration, Git Repos and Issue Tracking integration, GitLab project, tool integrations
+keywords: troubleshoot, GitHub integration, GitHub App, Git Repos and Issue Tracking integration, GitLab project, tool integrations
 
 subcollection: ContinuousDelivery
 
@@ -38,6 +38,7 @@ If you are configuring the GitHub tool integration by using the console while yo
 
    * If you choose `OAuth`, click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize IBM-Cloud** to allow {{site.data.keyword.cloud_notm}} to access your GitHub account.
    * If you choose `Personal Access Token`, specify a valid personal access token for GitHub.
+   * If you choose `GitHub App`, select **Managed** and click **Authorize**, or select **Custom** and provide your App ID and private key.
 
 If you are using the console and you already have a toolchain, update the GitHub tool integration's configuration:
 
@@ -47,6 +48,7 @@ If you are using the console and you already have a toolchain, update the GitHub
 
    * If you choose `OAuth`, click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize IBM-Cloud** to allow {{site.data.keyword.cloud_notm}} to access your GitHub account.
    * If you choose `Personal Access Token`, provide a valid personal access token for GitHub.
+   * If you choose `GitHub App`, select **Managed** and click **Authorize**, or select **Custom** and provide a valid App ID and private key.
 
 1. When you are finished updating the settings, click **Save Integration**.
 
@@ -232,3 +234,26 @@ Although you can use other methods to resolve this error, these methods are not 
 * Change `repo_url` to a repo that is created when you apply your Terraform again. Changing a Terraform resource after the initial creation to avoid errors during subsequent updates is an anti-pattern. This method also leaves the previously created repos intact, but no longer bound to the toolchain.
 * Change `type` to `existing`, and then apply your Terraform again. Changing a Terraform resource after the initial creation to avoid errors during subsequent updates is an anti-pattern.
 * Manually delete the target repo, and then apply your Terraform again. Manual changes between otherwise automated Terraform operations are not recommended. If you delete the repo, the deletion cannot be undone, and can cause permanent data loss.
+
+## Why is my GitHub App integration failing with a "GitHub App is not installed" error?
+{: #troubleshoot-github-app-not-installed}
+{: troubleshoot}
+
+The GitHub App must be installed on the target repository before the integration can authenticate.
+
+When I save a GitHub tool integration that uses GitHub App authentication, I receive the following error message:
+{: tsSymptoms}
+
+`GitHub App is not installed on {owner}/{repo} — install the app on this repository first`
+
+The GitHub App (managed or custom) has not been installed on the organization or repository that the integration targets. {{site.data.keyword.cloud_notm}} validates the app's access to the repository when the integration is saved, and fails if the app installation cannot be found.
+{: tsCauses}
+
+Install the GitHub App on the target repository or organization before saving the tool integration:
+{: tsResolve}
+
+* **Managed app**: During the authorization flow, make sure that you grant the IBM-provided GitHub App access to the repository. On the GitHub authorization page, select **All repositories** or choose **Only select repositories** and include the target repo. If you already authorized the app but did not include the repository, go to your GitHub account settings, navigate to **Applications > Authorized GitHub Apps**, and update the app's repository access.
+
+* **Custom app**: Go to your GitHub organization or personal account settings, navigate to **Developer settings > GitHub Apps**, select your app, and then click **Install App**. Select the repositories the toolchain needs to access. After the app is installed, return to the toolchain configuration and save the integration again.
+
+After the app is installed on the repository, saving the tool integration should succeed.
