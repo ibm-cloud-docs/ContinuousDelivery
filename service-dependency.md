@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-10-13"
 
 keywords:
 
@@ -47,22 +47,22 @@ The following dependencies apply to the following deployment locations: Dallas (
 
 |Dependencies|Dependency impacts|Customer provided|Control or data plane|Location of dependency|
 |:---|:---|:---|:---|:---|
-| IBM Cloud Block Storage | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same data center  |
+| IBM Cloud Block Storage | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same region  |
 | {{site.data.keyword.cis_full}} | Availability, Change management, Disaster recovery, Instance control, Security compliance | No | Both |  Same region  |
-| {{site.data.keyword.BluVirtServers}} | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same data center  |
+| {{site.data.keyword.BluVirtServers}} | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same region  |
 | {{site.data.keyword.cos_full}} | Availability, Change management, Disaster recovery, Instance control, Security compliance | No | Both |  Same region  |
 | {{site.data.keyword.cos_full}} | Availability, Change management, Disaster recovery, Instance control, Security compliance | No | Both |  Same region  |
-| {{site.data.keyword.BluVirtServers}} | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same data center  |
+| {{site.data.keyword.BluVirtServers}} | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same region  |
 | {{site.data.keyword.cis_full}} | Availability, Change management, Disaster recovery, Instance control, Security compliance | No | Both |  Same region  |
 | {{site.data.keyword.cos_full}} | Availability, Change management, Disaster recovery, Instance control, Security compliance | No | Both |  Same region  |
 | Akamai | Availability, Change management, Disaster recovery, Instance control | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
-| IBM Cloud Classic DNS Servers | Availability, Change management, Instance control | No | Both |  Same data center  |
-| IBM Cloud Classic DNS Servers | Availability, Change management, Instance control | No | Both |  Same data center  |
-| IBM Cloud Classic DNS Servers | Availability, Change management, Instance control | No | Both |  Same data center  |
-| IBM Cloud Classic DNS Servers | Availability, Change management, Instance control | No | Both |  Same data center  |
-| {{site.data.keyword.BluVirtServers}} | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same data center  |
+| IBM Cloud Classic DNS Servers | Availability, Change management, Instance control | No | Both |  Same region  |
+| IBM Cloud Classic DNS Servers | Availability, Change management, Instance control | No | Both |  Same region  |
+| IBM Cloud Classic DNS Servers | Availability, Change management, Instance control | No | Both |  Same region  |
+| IBM Cloud Classic DNS Servers | Availability, Change management, Instance control | No | Both |  Same region  |
+| {{site.data.keyword.BluVirtServers}} | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same region  |
 | {{site.data.keyword.iamlong}} | Access management, Availability, Change management, Instance control, Security compliance | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
-| {{site.data.keyword.BluVirtServers}} | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same data center  |
+| {{site.data.keyword.BluVirtServers}} | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same region  |
 | {{site.data.keyword.iamlong}} | Access management, Availability, Change management, Instance control, Security compliance | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
 | {{site.data.keyword.cloudantfull}} | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same region  |
 | {{site.data.keyword.vpc_full}} | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same region  |
@@ -77,18 +77,18 @@ The following dependencies apply to the following deployment locations: Dallas (
 
 |Dependencies|Dependency impacts|Customer provided|Control or data plane|Location of dependency|
 |:---|:---|:---|:---|:---|
-| IBM Cloud Bare Metal | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same data center  |
+| IBM Cloud Bare Metal | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same region  |
 | {{site.data.keyword.registrylong}} | Availability, Change management, Disaster recovery, Instance control, Security compliance | No | Both |  Same region  |
 | IBM Cloud Business System Services User and Account management | Access management, Availability, Change management, Disaster recovery, Instance control, Security compliance | No | Both |  Same region  |
 | {{site.data.keyword.keymanagementservicefull}} | Availability, Change management, Disaster recovery, Instance control, Security compliance | No | Both |  Same region  |
 | IBM Cloud Business Support Services | Availability, Instance control | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
 | IBM Cloud Global Resource Catalog | Availability, Change management, Instance control | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
-| IBM Cloud Classic NTP Servers | Availability, Change management, Instance control | No | Both |  Same data center  |
-| IBM Cloud Classic NTP Servers | Availability, Change management, Instance control | No | Both |  Same data center  |
-| IBM Cloud Classic NTP Servers | Availability, Change management, Instance control | No | Both |  Same data center  |
+| IBM Cloud Classic NTP Servers | Availability, Change management, Instance control | No | Both |  Same region  |
+| IBM Cloud Classic NTP Servers | Availability, Change management, Instance control | No | Both |  Same region  |
+| IBM Cloud Classic NTP Servers | Availability, Change management, Instance control | No | Both |  Same region  |
 | {{site.data.keyword.atracker_full}} | Availability, Operations, Security compliance | No | Both |  Same region  |
 | IBM Cloud Console | Availability, Instance control, Operations | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
-| IBM Cloud Classic NTP Servers | Availability, Change management, Instance control | No | Both |  Same data center  |
+| IBM Cloud Classic NTP Servers | Availability, Change management, Instance control | No | Both |  Same region  |
 | IBM Cloud Service Endpoints | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same region  |
 | IBM Cloud Service Endpoints | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same region  |
 {: row-headers}
