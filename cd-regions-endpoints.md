@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-10-26"
 
 keywords: Continuous Delivery endpoints, available regions, locations
 
@@ -12,13 +12,13 @@ subcollection: ContinuousDelivery
 
 {{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.contdelivery_short}} regions and endpoints
+# IBM Cloud Continuous Delivery regions and service endpoints
 {: #regions}
 
 {{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-tor**, **us-east**. Code Risk Analyzer will also be discontinued in all regions on that date. If a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
-Review region and connectivity options for interacting with {{site.data.keyword.contdelivery_full}}.
+Review available regions and public, private, and direct connectivity options for IBM Cloud Continuous Delivery service endpoints.
 {: shortdesc}
 
 ## Available regions

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-09-25"
+lastupdated: "2026-10-26"
 
 keywords: continuous delivery practices, DevOps practices, IBM Cloud Garage Method, learning resources
 
@@ -12,11 +12,16 @@ subcollection: ContinuousDelivery
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Continuous delivery practices
+# Continuous delivery practices for DevOps teams
 {: #gm_cd_best}
 
 {{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-tor**, **us-east**. Code Risk Analyzer will also be discontinued in all regions on that date. If a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
+
+
+Learn DevOps and DevSecOps practices for IBM Cloud Continuous Delivery, including continuous integration, testing, deployment, and IBM Cloud Garage Method guidance.
+{: shortdesc}
+
 
 With {{site.data.keyword.contdelivery_full}}, you can build, test, and deliver applications by using DevOps or DevSecOps practices and industry-leading tools. {{site.data.keyword.contdelivery_short}} supports a wide variety of practices; but which practices should you use? There is no universal answer. The practices you employ can vary from one software delivery project to the next. The [{{site.data.keyword.cloud_notm}} Garage Method](https://www.ibm.com/garage){: external} is the IBM approach to rapidly deliver engaging applications. It combines continuous delivery with IBM Design Thinking, lean, DevOps, and agile practices. Those practices are focused on the cloud, but can benefit any software development effort.
 

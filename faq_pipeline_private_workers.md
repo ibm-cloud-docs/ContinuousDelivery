@@ -13,11 +13,11 @@ subcollection: ContinuousDelivery
 
 {{site.data.keyword.attribute-definition-list}}
 
-# FAQs for Pipeline Private Workers
+# FAQs for Delivery Pipeline Private Workers on IBM Cloud
 {: #faq_pipeline_private_workers}
 
-Get answers to frequently asked questions about using Pipeline Private Workers.
-{: shortdesc} 
+Get answers to frequently asked questions about installing and managing IBM Cloud Delivery Pipeline Private Workers, including multi-cluster pools, images, and Terraform.
+{: shortdesc}
 
 ## How do I install a multi-cluster worker pool?
 {: #install_mc_worker_pool}

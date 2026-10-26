@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-10-26"
 
 keywords: tool integrations, IBM Cloud Public, Key Protect
 
@@ -12,13 +12,13 @@ subcollection: ContinuousDelivery
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Configuring {{site.data.keyword.keymanagementserviceshort}}
+# Configuring Key Protect for toolchain secrets management
 {: #keyprotect}
 
 {{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-tor**, **us-east**. Code Risk Analyzer will also be discontinued in all regions on that date. If a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
-{{site.data.keyword.keymanagementservicefull}} helps you to securely store and apply secrets for apps across {{site.data.keyword.cloud_notm}} services.
+Configure IBM Key Protect in your IBM Cloud toolchain to securely store and access API keys and other secrets required in your toolchain workflow.
 {: shortdesc}
 
 A *secret* is anything that provides access to sensitive information, such as an [API key](/docs/iam?topic=iam-manapikey). If you store secrets as standard keys in {{site.data.keyword.keymanagementserviceshort}}, you can use this tool integration to access secrets wherever they are needed in the toolchain workflow. To learn more about standard keys in {{site.data.keyword.keymanagementserviceshort}}, see [Key types](/docs/key-protect?topic=key-protect-envelope-encryption#key-types).

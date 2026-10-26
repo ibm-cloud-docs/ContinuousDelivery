@@ -12,11 +12,11 @@ subcollection: ContinuousDelivery
 
 {{site.data.keyword.attribute-definition-list}}
 
-# FAQs for {{site.data.keyword.deliverypipeline}}
+# FAQs for Delivery Pipeline in IBM Cloud
 {: #faq_delivery_pipeline}
 
-Get answers to frequently asked questions about using {{site.data.keyword.deliverypipeline}}.
-{: shortdesc} 
+Get answers to frequently asked questions about using IBM Cloud Delivery Pipeline, including pipeline jobs, secure properties, environment variables, and Terraform management.
+{: shortdesc}
 
 
 ## How do I pass artifacts between pipeline jobs?

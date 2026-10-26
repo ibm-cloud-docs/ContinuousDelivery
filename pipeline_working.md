@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-10-26"
 
 keywords: IBM Cloud, build types, build jobs, deployment job, build script, create pipeline, 
 
@@ -12,13 +12,13 @@ subcollection: ContinuousDelivery
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Working with pipelines 
+# Working with IBM Cloud Continuous Delivery pipelines
 {: #pipeline-working}
 
 {{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-tor**, **us-east**. Code Risk Analyzer will also be discontinued in all regions on that date. If a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
-To automate your builds and deployments to {{site.data.keyword.cloud}}, use {{site.data.keyword.contdelivery_full}} pipelines.
+Automate builds and deployments to IBM Cloud using Continuous Delivery pipelines, choosing from multiple build types with one-click deployment to Kubernetes or Cloud Foundry.
 {: shortdesc}
 
 With pipelines, you can choose from several build types. You provide the build script, and {{site.data.keyword.contdelivery_short}} runs it; you don't need to set up build systems. Then, with one click, you can automatically deploy your app to one or many {{site.data.keyword.cloud_notm}} spaces or Docker containers on the {{site.data.keyword.containerlong}}.

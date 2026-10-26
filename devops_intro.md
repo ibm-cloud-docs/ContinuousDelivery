@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2015, 2026
-lastupdated: "2026-09-25"
+lastupdated: "2026-10-26"
 
 keywords: IBM Cloud DevOps, enterprise application Developer, IBM Cloud Garage Method, DevOps toolchain, DevSecOps
 
@@ -12,11 +12,16 @@ subcollection: ContinuousDelivery
 
 {{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.cloud_notm}} DevOps
+# IBM Cloud DevOps: culture, practices, and toolchains
 {: #devops_intro}
 
 {{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-tor**, **us-east**. Code Risk Analyzer will also be discontinued in all regions on that date. If a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
+
+
+Explore how IBM Cloud DevOps culture, toolchains, and practices like DevSecOps and the IBM Cloud Garage Method help teams deliver software faster and more reliably.
+{: shortdesc}
+
 
 Delivering software and services at the speed the market demands requires teams to iterate and experiment rapidly. They must deploy new versions frequently, driven by feedback and data. The most successful cloud development teams adopt modern DevSecOps culture and practices, embrace cloud-native architectures, and assemble toolchains from best-in-class tools to unleash their productivity. Doing these things efficiently is a key competitive advantage.
 

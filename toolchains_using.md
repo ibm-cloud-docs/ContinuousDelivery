@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-10-26"
 
 keywords: user management function, toolchains, tool integrations, user access
 
@@ -12,13 +12,13 @@ subcollection: ContinuousDelivery
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Using toolchains
+# Using IBM Cloud toolchains for development and deployment
 {: #toolchains-using}
 
 {{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-tor**, **us-east**. Code Risk Analyzer will also be discontinued in all regions on that date. If a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
-Open toolchains are available on {{site.data.keyword.cloud}}. You can use a toolchain to be productive in your daily development, deployment, and operations work. After you set up a toolchain, you can add, delete, or configure tool integrations and manage access to the toolchain. For more information about working with tool integrations, see [Working with tool integrations](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations).
+Learn how to use IBM Cloud toolchains to manage tool integrations, control access, and streamline your daily development, deployment, and operations work.
 {: shortdesc}
 
 ## Managing access to toolchains

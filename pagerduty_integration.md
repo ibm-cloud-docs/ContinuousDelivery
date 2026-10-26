@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-10-26"
 
 keywords: tool integrations, IBM Cloud Public, PagerDuty
 
@@ -12,13 +12,13 @@ subcollection: ContinuousDelivery
 
 {{site.data.keyword.attribute-definition-list}} 
 
-# Configuring PagerDuty
+# Configuring PagerDuty for toolchain incident notifications
 {: #pagerduty}
 
 {{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-tor**, **us-east**. Code Risk Analyzer will also be discontinued in all regions on that date. If a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
-PagerDuty integrates data from multiple monitoring systems into a single view. When a problem occurs, PagerDuty ensures that the team member who is best able to fix it at the time is notified. If the team member does not respond to the problem, escalations can be configured to route it to secondary representatives or operations managers.
+Configure PagerDuty in your IBM Cloud toolchain to route incident alerts from monitoring systems to the right team member with automatic escalation.
 {: shortdesc}
 
 You can now distribute event notifications by using the [{{site.data.keyword.en_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-integration) tool integration. {{site.data.keyword.en_full}} is the preferred method for distributing notifications to PagerDuty and other communication channels such as Slack, email, SMS, push notifications, webhook, Microsoft&reg; Teams, ServiceNow, and {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}. For more information about using {{site.data.keyword.en_short}}, see [Enabling event notifications for toolchains](/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd).

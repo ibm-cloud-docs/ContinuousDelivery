@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-09-25"
+lastupdated: "2026-10-26"
 
 keywords: public isolation for IBM Cloud Continuous Delivery, compute isolation for Continuous Delivery, Continuous Delivery architecture, workload isolation in Continuous Delivery
 
@@ -12,13 +12,13 @@ subcollection: ContinuousDelivery
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Learning about {{site.data.keyword.contdelivery_short}} and workload isolation
+# Continuous Delivery architecture and workload isolation on IBM Cloud
 {: #cd-compute-isolation}
 
 {{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-tor**, **us-east**. Code Risk Analyzer will also be discontinued in all regions on that date. If a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
-{{site.data.keyword.contdelivery_full}} is offered as a regional, shared, multi-tenant service with public endpoints. This service is composed of several major components. Most of these components are fully IBM-managed, and most support a shared compute, network, and physical storage model.
+Learn about the IBM Cloud Continuous Delivery architecture, compute isolation, and shared responsibility model for each major service component.
 {: shortdesc}
 
 The following table lists the major components of the {{site.data.keyword.contdelivery_short}} service, who manages each component, and the compute, network, and storage isolation characteristics of each component.

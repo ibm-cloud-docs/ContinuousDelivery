@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-09-25"
+lastupdated: "2026-10-26"
 
 keywords: tool integrations, IBM Cloud Public, Jenkins
 
@@ -12,13 +12,13 @@ subcollection: ContinuousDelivery
 
 {{site.data.keyword.attribute-definition-list}} 
 
-# Configuring Jenkins
+# Configuring Jenkins for continuous integration in toolchains
 {: #jenkins}
 
 {{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-tor**, **us-east**. Code Risk Analyzer will also be discontinued in all regions on that date. If a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
-Jenkins is an open source, server-based tool that builds and tests software continuously, supporting the practices of continuous integration and continuous delivery.
+Configure Jenkins in your IBM Cloud toolchain to automate continuous integration and continuous delivery builds and tests using your existing Jenkins server.
 {: shortdesc}
 
 Before you create a Jenkins tool integration, you must have a Jenkins server.

@@ -12,10 +12,10 @@ subcollection: ContinuousDelivery
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Endpoints that do not require authentication in {{site.data.keyword.contdelivery_short}}
+# Unauthenticated endpoints in IBM Cloud Continuous Delivery
 {: #non-auth-endpoints-cd}
 
-{{site.data.keyword.contdelivery_full}} provides many internet-accessible endpoints. Although most endpoints authenticate the caller before processing requests, some endpoints intentionally do not authenticate the caller.
+Learn which IBM Cloud Continuous Delivery endpoints do not require authentication, organized by service component and region.
 {: shortdesc}
 
 The following inventory of endpoints that do not require authentication is organized by the major components of the {{site.data.keyword.contdelivery_short}} service.

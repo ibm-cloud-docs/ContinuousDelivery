@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2026-09-25"
+lastupdated: "2026-10-26"
 
 keywords: migrate, migration, migrating, region, resource group, Terraform, Tekton, pipeline, toolchain, git, continuous delivery, IBM Cloud, tools, resource, resources, data
 
@@ -17,14 +17,14 @@ completion-time: 60m
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Migrate {{site.data.keyword.contdelivery_short}} resources to another region
+# Migrating Continuous Delivery resources to another IBM Cloud region
 {: #cd-migrate-region}
 {: toc-content-type="tutorial"}
 {: toc-services="ContinuousDelivery"}
 {: toc-account-plan="paid"}
 {: toc-completion-time="60m"}
 
-You can migrate {{site.data.keyword.contdelivery_short}} resources, including toolchains, tool integrations, Tekton {{site.data.keyword.deliverypipeline}}s, and {{site.data.keyword.gitrepos}} projects and groups to another region by copying the resources using the [@ibm-cloud/cd-tools](https://www.npmjs.com/package/@ibm-cloud/cd-tools){: external} tools.
+Migrate IBM Cloud Continuous Delivery resources—toolchains, pipelines, tool integrations, and Git Repos projects—to another region using the cd-tools migration utility.
 {: shortdesc}
 
 ## Supported resources

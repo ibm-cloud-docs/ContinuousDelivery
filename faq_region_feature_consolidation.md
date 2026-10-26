@@ -12,10 +12,10 @@ subcollection: ContinuousDelivery
 
 {{site.data.keyword.attribute-definition-list}}
 
-# FAQs for Continuous Delivery region and feature consolidation
+# FAQs for Continuous Delivery region and feature discontinuation
 {: #faq_region_feature_consolidation}
 
-{{site.data.keyword.contdelivery_short}} is being discontinued in select regions and deprecating [Code Risk Analyzer (CRA)](/docs/ContinuousDelivery?topic=ContinuousDelivery-cra-cli-plugin) and [DevOps Insights (DOI)](/docs/ContinuousDelivery?topic=ContinuousDelivery-di_working) across all regions to focus on the most in-demand capabilities and locations. We're providing a self-service [migration guide](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-migrate-region) to help you migrate smoothly.
+Get answers to frequently asked questions about the discontinuation of IBM Cloud Continuous Delivery in select regions and the deprecation of Code Risk Analyzer and DevOps Insights.
 {: shortdesc}
 
 

@@ -12,7 +12,7 @@ subcollection: ContinuousDelivery
 
 {{site.data.keyword.attribute-definition-list}}
 
-# FAQs for toolchains
+# FAQs for toolchains in IBM Cloud Continuous Delivery
 {: #faq_toolchains}
 
 Get answers to frequently asked questions about using toolchains.
