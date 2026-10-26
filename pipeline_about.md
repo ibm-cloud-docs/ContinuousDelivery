@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2026
-lastupdated: "2026-09-25"
+lastupdated: "2026-10-26"
 
 keywords: run jobs, sequences of stages, job types, Delivery Pipeline, Classic
 
@@ -13,13 +13,13 @@ subcollection: ContinuousDelivery
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Classic Delivery Pipeline overview
+# IBM Cloud Classic Delivery Pipeline concepts and overview
 {: #deliverypipeline_about}
 
 {{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-tor**, **us-east**. Code Risk Analyzer will also be discontinued in all regions on that date. If a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
-{{site.data.keyword.contdelivery_full}} includes the Classic Delivery Pipeline to build, test, and deploy in a repeatable way with minimal human intervention. In a pipeline, sequences of stages retrieve input and run jobs, such as builds, tests, and deployments.
+Learn how the IBM Cloud Classic Delivery Pipeline runs build, test, and deploy jobs in repeatable stage sequences with minimal human intervention.
 {: shortdesc}
 
 You can work with both Classic and Tekton delivery pipelines by using the browser, or by using the [{{site.data.keyword.cloud_notm}} CLI Developer Tools (`ibmcloud dev`) commands](/docs/cli?topic=cli-idt-cli). You can also work with Tekton delivery pipelines by using the [Tekton pipeline HTTP API and SDKs](https://cloud.ibm.com/apis/tekton-pipeline){: external}, or by using the [{{site.data.keyword.cloud_notm}} Terraform Provider](/docs/ContinuousDelivery?topic=ContinuousDelivery-terraform-setup). For more information about Tekton delivery pipelines, see [Working with Tekton pipelines](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton-pipelines#configure_tekton_pipeline).

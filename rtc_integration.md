@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-10-26"
 
 keywords: tool integrations, IBM Cloud Public, Rational Team Concert
 
@@ -12,13 +12,13 @@ subcollection: ContinuousDelivery
 
 {{site.data.keyword.attribute-definition-list}}  
 
-# Configuring Rational Team Concert
+# Configuring Rational Team Concert for IBM Cloud toolchains
 {: #rationalteamconcert}
 
 {{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-tor**, **us-east**. Code Risk Analyzer will also be discontinued in all regions on that date. If a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
-IBM Rational Team Concert&trade; is a team collaboration tool that integrates development tasks, including iteration planning, change management, defect tracking, source control, build automation, and reporting.
+Configure IBM Rational Team Concert in your IBM Cloud toolchain to integrate iteration planning, change management, defect tracking, source control, and build automation.
 {: shortdesc}
 
 Configure Rational Team Concert to practice a DevOps approach and continuous delivery in your development environment:

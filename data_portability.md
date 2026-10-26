@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-09-25"
+lastupdated: "2026-10-26"
 
 keywords: Continuous Delivery, toolchain, client owned data
 
@@ -12,13 +12,13 @@ subcollection: ContinuousDelivery
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Understanding data portability for {{site.data.keyword.contdelivery_short}}
+# Understanding data portability for IBM Cloud Continuous Delivery
 {: #data-portability}
 
 {{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-tor**, **us-east**. Code Risk Analyzer will also be discontinued in all regions on that date. If a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
-Data portability involves a set of tools and procedures that enable you to export the digital artifacts that would be needed to implement similar workloads and data processing with different service providers or on-premises software. It includes procedures for copying and storing customer-owned data that is held by the {{site.data.keyword.contdelivery_short}} service, and for related configurations used by the service to store and process customer owned data.
+Learn how to export and migrate customer-owned data from IBM Cloud Continuous Delivery toolchains and pipelines to meet data portability requirements.
 {: shortdesc}
 
 ## Responsibilities

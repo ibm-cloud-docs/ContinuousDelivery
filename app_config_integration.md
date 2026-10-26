@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-10-26"
 
 keywords: tool integrations, IBM Cloud Public, App Configuraton, AppConfig
 
@@ -12,13 +12,13 @@ subcollection: ContinuousDelivery
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Configuring {{site.data.keyword.appconfig_short}}
+# Configuring App Configuration for feature flags in toolchains
 {: #app-configuration}
 
 {{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-tor**, **us-east**. Code Risk Analyzer will also be discontinued in all regions on that date. If a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
-[{{site.data.keyword.appconfig_full}}](/docs/app-configuration?topic=app-configuration-getting-started) is a centralized feature management and configuration service that provides a convenient, consistent, and secure approach to accessing, referencing, and reusing collections of feature flags and properties within toolchains.
+Configure IBM Cloud App Configuration in your toolchain to centrally manage feature flags and configuration properties across environments in a secure, consistent way.
 {: shortdesc}
 
 You can configure an {{site.data.keyword.appconfig_short}} instance by using the {{site.data.keyword.appconfig_short}} service instance dashboard to add and manage specific environments and collections that contain sets of feature flags and properties. You can further refine the use of feature flags and properties by specifying target segments that evaluate based on user attributes and rules.

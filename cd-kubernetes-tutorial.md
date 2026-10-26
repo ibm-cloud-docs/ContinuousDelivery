@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-09-25"
+lastupdated: "2026-10-26"
 
 keywords: deployment strategies, tekton, pipeline, toolchain, CD, CI, automate, automation, continuous delivery, continuous integration, DevOps, shift-left, shift left, secure DevOps, IBM Cloud
 
@@ -18,7 +18,7 @@ completion-time: 30m
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Deploy an app on Kubernetes
+# Deploy an app on Kubernetes using IBM Cloud Continuous Delivery
 {: #tutorial-cd-kubernetes}
 {: toc-content-type="tutorial"}
 {: toc-services="openshift, containers, ContinuousDelivery"}

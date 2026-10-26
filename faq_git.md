@@ -12,10 +12,10 @@ subcollection: ContinuousDelivery
 
 {{site.data.keyword.attribute-definition-list}}
 
-# FAQs for GitHub, GitLab, and {{site.data.keyword.gitrepos}}
+# FAQs for GitHub, GitLab, and Git Repos on IBM Cloud
 {: #faq_git}
 
-Get answers to frequently asked questions about using GitHub, GitLab, and {{site.data.keyword.gitrepos}}.
+Get answers to frequently asked questions about using GitHub, GitLab, and IBM Cloud Git Repos and Issue Tracking in your toolchains, including Terraform, API, and authentication.
 {: shortdesc}
 
 

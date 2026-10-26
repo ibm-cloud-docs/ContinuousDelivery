@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-10-26"
 
 keywords: IBM Cloud Public, firewall configuration
 
@@ -13,14 +13,14 @@ subcollection: ContinuousDelivery
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Subnet ranges for Git 
+# Configuring firewall subnet ranges for Git Repos
 {: #git-subnet-ranges}
 {: support}
 
 {{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-tor**, **us-east**. Code Risk Analyzer will also be discontinued in all regions on that date. If a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
-You can update your firewall configuration to allow webhook messages from {{site.data.keyword.gitrepos}} to reach endpoints that are behind the firewall.
+Update your firewall configuration with the correct subnet ranges to allow webhook messages from IBM Cloud Git Repos and Issue Tracking to reach endpoints behind the firewall.
 {: shortdesc}
 
 To allow Git webhook messages, open traffic to the following subnet ranges for your specific region.

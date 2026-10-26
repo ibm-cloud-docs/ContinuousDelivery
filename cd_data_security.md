@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2026
-lastupdated: "2026-09-25"
+lastupdated: "2026-10-26"
 
 keywords: secure environment, data, Data, high availability, access
 
@@ -12,11 +12,14 @@ subcollection: ContinuousDelivery
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Securing your data in {{site.data.keyword.contdelivery_short}}
+# Securing your data in Continuous Delivery
 {: #cd_data_security}
 
 {{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-tor**, **us-east**. Code Risk Analyzer will also be discontinued in all regions on that date. If a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
+
+Protect sensitive data in IBM Cloud Continuous Delivery with encryption at rest and in transit, encrypted credentials, and optional customer-managed keys via Key Protect or Hyper Protect Crypto.
+{: shortdesc}
 
 {{site.data.keyword.contdelivery_full}} hosts your databases in a highly available and secure environment:
 

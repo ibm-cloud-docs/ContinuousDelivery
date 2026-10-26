@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2026
-lastupdated: "2026-10-12"
+lastupdated: "2026-10-26"
 
 keywords: high availability, disaster recovery, SLA
 
@@ -14,11 +14,14 @@ subcollection: ContinuousDelivery
 {{site.data.keyword.attribute-definition-list}}
 
 
-# {{site.data.keyword.contdelivery_short}} high availability and disaster recovery
+# High availability and disaster recovery for Continuous Delivery
 {: #ha-dr}
 
 {{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-tor**, **us-east**. Code Risk Analyzer will also be discontinued in all regions on that date. If a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
+
+Learn about the 99.99% SLA high availability and disaster recovery strategies for IBM Cloud Continuous Delivery, including multi-region data centers and backup policies.
+{: shortdesc}
 
 {{site.data.keyword.contdelivery_full}} is a general availability (GA) service with a Service Level Agreement of 99.99% availability that is offered in multiple regions: Dallas (`us-south`), Washington DC (`us-east`), Toronto (`ca-tor`), Sao Paulo (`br-sao`), Frankfurt (`eu-de`), London (`eu-gb`), Tokyo (`jp-tok`), and Sydney (`au-syd`). Each location has three different data centers for redundancy. The data for each location is kept in the three data centers near that location. If all of the data centers in a location fail, the {{site.data.keyword.contdelivery_short}} service for that location becomes unavailable.
 

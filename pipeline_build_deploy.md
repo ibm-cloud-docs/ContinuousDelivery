@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-10-26"
 
 keywords: ADD STAGE, Run Stage icon, JOBS tab, Delivery Pipeline
 
@@ -12,13 +12,13 @@ subcollection: ContinuousDelivery
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Building and deploying
+# Building and deploying apps with IBM Cloud Delivery Pipeline
 {: #deliverypipeline_build_deploy}
 
 {{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-tor**, **us-east**. Code Risk Analyzer will also be discontinued in all regions on that date. If a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
-{{site.data.keyword.contdelivery_full}} includes Delivery Pipeline, which you can use to implement a repeatable continuous integration and continuous delivery process.
+Configure IBM Cloud Delivery Pipeline stages to implement a repeatable continuous integration and continuous delivery process for building and deploying your apps.
 {: shortdesc}
 
 Complete the following tasks to configure a pipeline.

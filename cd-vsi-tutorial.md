@@ -2,7 +2,7 @@
 
 copyright:
    years: 2021, 2026
-lastupdated: "2026-09-25"
+lastupdated: "2026-10-26"
 
 keywords: Virtual Server Instance, code repositories, non-containerized, java application, vsi, gitops, toolchain, pipeline, Virtual Machine, vm
 
@@ -16,7 +16,7 @@ completion-time: 40m
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Develop and deploy an application to a Virtual Machine
+# Develop and deploy an app to a Virtual Server Instance on IBM Cloud
 {: #tutorial-cd-vsi}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="40m"}
@@ -24,7 +24,7 @@ completion-time: 40m
 {{site.data.keyword.contdelivery_short}} will be discontinued in the following regions on 12 February 2027: **au-syd**, **ca-tor**, **us-east**. Code Risk Analyzer will also be discontinued in all regions on that date. If a region has no active usage of these features, the features in that region may be discontinued earlier and stop accepting new instances. [Learn more](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_region_feature_consolidation)
 {: important}
 
-This tutorial demonstrates how to set up a {{site.data.keyword.contdelivery_short}} toolchain and deliver a simple application (app) to a Virtual Machine. You can set up source control, and then build, test, and deploy the code to different deployment stages.
+Set up an IBM Cloud Continuous Delivery toolchain to build, test, and deploy a Java application to a Virtual Server Instance using Tekton pipelines and GitOps.
 {: shortdesc}
 
 By default, the toolchain uses a sample Maven-based Java Hello World app, but you can also bring your own app and link to it instead. This toolchain is configured with pipelines for continuous integration and continuous delivery with [Code Risk Analyzer](/docs/ContinuousDelivery?topic=ContinuousDelivery-cra-cli-plugin), source control, issue tracking, and online editing.
